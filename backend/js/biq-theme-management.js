@@ -93,7 +93,7 @@ BIQThemeManagement.prototype.jQueryMobileInit = function(){
 		    <p>Loading...</p>\n\
 	    </div>\n\
 	    <div data-role="footer">\n\
-		    <h4>Page Footer</h4>\n\
+		<button class="vex-dialog-button-primary vex-dialog-button vex-first vex-last">Submit</button>\n\
 	    </div>\n\
 	</div>';
     $b('body').append( dialog_html );
@@ -117,33 +117,31 @@ BIQThemeManagement.prototype.editWidget = function(e){
     self.hover_to_edit.is_editing = true;
     var widget_input = self.generateWidgetInput();
     
-//    $b('#biq-sns-be-dialog-title').html( widget_input.title );
-//    $b('#biq-sns-be-dialog .ui-content').html( widget_input.html );
-//    $b.mobile.changePage( "#biq-sns-be-dialog" );
-    vex.dialog.buttons.YES.text = 'Okiedokie';
-    vex.dialog.buttons.NO.text = 'Aahw hell no';
-    vex.open({
-	content: widget_input.html,
-	showCloseButton : false,
-	buttons:[vex.dialog.buttons.YES,vex.dialog.buttons.NO],
-	afterOpen: function($vexContent){
-	    // console.log $vexContent.data().vex
-	    setTimeout( function(){
-		    self.hover_to_edit.set_overlay_sizes();
-		    $b( "#tabs" ).tabs();
-		}, 100
-	    );
-	},
-	afterClose: function(){
-	    self.hover_to_edit.is_editing = false;
-	    console.log('vexClose');
-	    setTimeout( function(){
-		self.hover_to_edit.onmouseleave();
-		    self.hover_to_edit.set_overlay_sizes();
-		}, 100
-	    );
-	}
-    });
+    $b('#biq-sns-be-dialog-title').html( widget_input.title );
+    $b('#biq-sns-be-dialog .ui-content').html( widget_input.html );
+    $b.mobile.changePage( "#biq-sns-be-dialog" );
+
+//    vex.open({
+//	content: widget_input.html,
+//	showCloseButton : false,
+//	afterOpen: function($vexContent){
+//	    // console.log $vexContent.data().vex
+//	    setTimeout( function(){
+//		    self.hover_to_edit.set_overlay_sizes();
+//		    $b( "#tabs" ).tabs();
+//		}, 100
+//	    );
+//	},
+//	afterClose: function(){
+//	    self.hover_to_edit.is_editing = false;
+//	    console.log('vexClose');
+//	    setTimeout( function(){
+//		self.hover_to_edit.onmouseleave();
+//		    self.hover_to_edit.set_overlay_sizes();
+//		}, 100
+//	    );
+//	}
+//    });
 };
 BIQThemeManagement.prototype.loading = function(p_selector){// #id or .class
     $b = jQuery.noConflict();
@@ -169,7 +167,15 @@ BIQThemeManagement.prototype.generateWidgetInput = function(){
     var widget_structure_name = widget_classes_split[1].replace(/-/g, '_');
     //END CONVERT CLASS NAME TO STRUCTURE ===============
     var structure = self.structure[widget_structure_name];
-    var html_form = '';
+    var html_form = '\n\
+    <div data-role="footer">\n\
+	<div data-role="navbar" data-iconpos="left">\n\
+	    <ul>\n\
+		<li><a href="#" data-icon="home" class="ui-btn-active"">Frontpage</a></li>\n\
+		<li><a href="#" data-icon="gear">Setting</a></li>\n\
+	    </ul>\n\
+	</div>\n\
+    </div>';
     for(var i=0; i<structure.attribute_main.length; i++){
 	var attribute_main = structure.attribute_main[i];
 	switch( attribute_main.type ){
