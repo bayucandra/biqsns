@@ -1,0 +1,29 @@
+{
+    "shortcode" : "bbox_wrapper_full",
+    "attributes" : { 
+        "classes" : "header layout"
+    },
+    "children" : [
+        {
+            "shortcode" : "bbox_wrapper_full_alt",
+            "attributes" : {
+                "classes" : "line-top"
+            },
+            "children" : [
+                {
+                    "shortcode" : "bbox_wrapper_short",
+                    "attributes" : {
+                        "classes" : "info"
+                    },
+                    "children" : [
+                        {
+                            "shortcode" : "contact_email_simple",
+                            "attributes" : "",
+                            "content" : "info@finefurniturecenter.com"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
