@@ -30,6 +30,14 @@
 #biq-sns-be-dialog .ui-dialog-contain{
     background: #FEFEFE;
 }
+#biq-sns-be-dialog .ui-content{
+    padding-top:0;
+}
+#biq-sns-be-dialog .ui-content .bcontent{
+    padding: 1rem 0;
+    height:15rem;
+    overflow: auto;
+}
 #biq-sns-be-dialog form .label{
     width:30%;
     box-sizing: border-box;

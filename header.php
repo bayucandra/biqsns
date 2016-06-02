@@ -14,7 +14,7 @@
 	
 	<?php wp_head(); ?>
     </head>
-    <body>
+    <body <?php body_class(); ?>>
 	<?php 
 //	    $content = '';
 //	    echo do_shortcode( '[bbox_wrapper_full css_classes="header layout"]

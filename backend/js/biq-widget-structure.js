@@ -13,7 +13,7 @@ BIQWidgetStructure.prototype.contact_email_simple = {
     ],
     'attribute_css' :[
 	{ 'key' : 'css_inline', 'type' : 'text', 'label' : 'Inline CSS'},
-	{ 'key' : 'classes', 'type' : 'text', 'label' : 'Css Classes', 'placeholder' : 'Sparate by space for multiple class name' }
+	{ 'key' : 'classes', 'type' : 'text', 'label' : 'CSS Classes', 'placeholder' : 'Sparate by space for multiple class name' }
     ]
 };
 BIQWidgetStructure.prototype.contact_phone_simple = {
