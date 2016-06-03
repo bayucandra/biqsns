@@ -4,7 +4,7 @@
 	$hidden_field= $_POST["is-biq-setting-submitted"];
     }
 ?>
-<div id="biq-sns-be-main">
+<div id="biq-sns-be-main" class="bootstrap-wrapper">
     <div data-role="footer">
 	<div data-role="navbar" data-iconpos="left">
 	    <ul>

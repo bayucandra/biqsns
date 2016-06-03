@@ -2,17 +2,14 @@ var $b = jQuery.noConflict();
 function BIQThemeManagement(){
     var self = this;
     self.structure = new BIQWidgetStructure;
-    self.init = function(p_wrapper_selector){
+    self.init = function(){
 	$b(document).ready(function(){
-	    $b.mobile.linkBindingEnabled = false;
-	    $b('#wpcontent').css({marginTop: 30});
 	    self.loading('body');
-	    self.jQueryMobileInit();
+//	    self.jQueryMobileInit();
 	    self.hoverToEdit();
 	});
     };
-}
-BIQThemeManagement.prototype.body_wrapper = '#biq-sns-be-main';
+};
 BIQThemeManagement.prototype.hoverToEdit= function(){
     var self = this;
     self.hover_to_edit = {
@@ -82,7 +79,7 @@ BIQThemeManagement.prototype.jQueryMobileInit = function(){
     self.createDialog();
     
 };
-BIQThemeManagement.prototype.createDialog = function(){
+BIQThemeManagement.prototype.createDialog = function(){//delete soon
     var self = this;
     //BEGIN DIALOG
     $b( '#biq-sns-be-dialog' ).remove();
@@ -144,18 +141,50 @@ BIQThemeManagement.prototype.dialogAttributeTab = function(){
     }
 };
 
+BIQThemeManagement.prototype.initToggleButton = function( p_parent_selector ){
+    $b(p_parent_selector+' btn-group[data-toggle-name]').each(function () {
+    var group = $b(this);
+    var form = group.parents('form').eq(0);
+    var name = group.attr('data-toggle-name');
+    var hidden = $b('input[name="' + name + '"]', form);
+    $b('button', group).each(function () {
+	var button = $b(this);
+	button.live('click', function () {
+	    hidden.val($b(this).val());
+	    alert(hidden.val());
+	});
+	if (button.val() === hidden.val()) {
+	    button.addClass('active');
+	}
+    });
+    });
+};
+
 BIQThemeManagement.prototype.editWidget = function(e){
     var self = this;
     self.hover_to_edit.is_editing = true;
     var widget_input = self.generateWidgetInputAll();
-    $b('#biq-sns-be-dialog .title').html( widget_input.title );
-    $b.mobile.changePage( "#biq-sns-be-dialog" );
-    $b('#biq-sns-be-dialog .ui-content .bcontent .attribute-main').html( widget_input.main );
-    $b('#biq-sns-be-dialog .ui-content .bcontent .attribute-css').html( widget_input.css );
+//    $b('#biq-sns-be-dialog .title').html( widget_input.title );
+//    $b.mobile.changePage( "#biq-sns-be-dialog" );
+//    $b('#biq-sns-be-dialog .ui-content .bcontent .attribute-main').html( widget_input.main );
+//    $b('#biq-sns-be-dialog .ui-content .bcontent .attribute-css').html( widget_input.css );
+//    self.dialogAttributeTabShowMain();
 
-    self.dialogAttributeTabShowMain();
+    var form_html =
+	'<div class="btn-group" data-toggle-name="sort_options" data-toggle="buttons-radio">\n\
+	    <button type="button" value="default" data-toggle="button" class="btn attribute-main active">Default</button>\n\
+	    <button type="button" value="distance" data-toggle="button" class="btn attribute-css">Distance</button>\n\
+    </div>';
+
+    BootstrapDialog.show({
+	message : form_html,
+	cssClass : 'biq-sns-be-dialog',
+	onshow : function(){
+	    self.initToggleButton('biq-sns-be-dialog');
+	}
+    });
     
-    $b('.ui-page').trigger('create');
+//    $b('.ui-page').trigger('create');
 };
 BIQThemeManagement.prototype.loading = function(p_selector){// #id or .class
     var loading_html = '<div id="biq-loading">\n\
