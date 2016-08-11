@@ -17,9 +17,9 @@
     <body <?php body_class(); ?>>
 	<?php 
 //	    $content = '';
-//	    echo do_shortcode( '[bbox_wrapper_full css_classes="header layout"]
-//		[bbox_wrapper_short css_classes="info"]Test[/bbox_wrapper_short]
-//		[/bbox_wrapper_full]' ); 
-	    echo do_shortcode( bget_head_shortcode() );
+//	    echo do_shortcode( '[biq-box-wrapper_full css_classes="header layout"]
+//		[biq-box-wrapper_short css_classes="info"]Test[/biq-box-wrapper_short]
+//		[/biq-box-wrapper_full]' ); 
+	    echo do_shortcode( biq_get_head_shortcode() );
 	?>
 	

@@ -1,3 +1,6 @@
+String.prototype.ucfirst = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+};
 function bcapitalize(p_str) {
     return p_str.charAt(0).toUpperCase() + p_str.slice(1);
 }

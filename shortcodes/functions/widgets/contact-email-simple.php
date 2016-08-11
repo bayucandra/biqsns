@@ -1,25 +1,32 @@
 <?php
-
     function contact_email_simple_shortcode($atts, $content = null){
 	global $template_uri;
 	extract(
 	    shortcode_atts (
 		array(
+                    'widget_id' => '',
 		    'icon_type' => 'image',// image / class(css)
-		    'icon_value' => $template_uri . '/images/biq/icon-contact-email-21x14.png',//icon src / class name
-		    'css_inline' => ''
+		    'icon_value' => $template_uri . '/images/biq/widgets/icon-contact-email-21x14.png',//icon src / class name
+		    'css_inline' => '',
+		    'classes' => ''
 		),
 		$atts 
-	    ) 
+	    )
 	);
 	if( !empty( $css_inline ) ) $css_inline = ' style = "'.$css_inline.'"';
 	
+	$icon_html = "";
 	if( $icon_type === 'image' ){//USING IMAGE AS ICON
-	    return '<a href="mailto:'.$content.'" class="biq-widgets contact-email-simple"'. $css_inline .'>'
-			.'<div class="icon"><img src="'.$icon_value.'"></div>' 
-			.'<div class="text">'. $content .'</div>' 
-		    .'</a>';
+	    $icon_html = '<img src="'.$icon_value.'">';
+	}elseif( $icon_type === 'class' ){//USING CLASS AS ICON
+	    $icon_html = '<span class="'.$icon_value.'"></span>';
 	}
+        $element_attributes =  'class="biq-widgets contact-email-simple '.$classes.'"'. $css_inline 
+                .' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="contact_email_simple"';
+	return '<a href="mailto:'.$content.'" '.$element_attributes.'>'
+		    .'<div class="icon">'.$icon_html.'</div>' 
+		    .'<div class="text">'. $content.'</div>' 
+		.'</a>';
     }
     add_shortcode('contact_email_simple', 'contact_email_simple_shortcode');
 

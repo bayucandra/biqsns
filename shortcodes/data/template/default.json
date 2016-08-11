@@ -1,0 +1,61 @@
+{
+    "default": {
+        "header": {
+            "shortcode" : "biq_box_wrapper_full",
+            "widget_id" : "1",
+            "attributes" : { "classes" : "biq-header biq-layout"},
+            "children" : [
+                {
+                    "shortcode" : "biq_box_wrapper_full_alt",
+                    "widget_id" : "2",
+                    "attributes" : {"classes" : "line-top"},
+                    "children" : [
+                        {
+                            "shortcode" : "biq_box_wrapper_short",
+                            "widget_id" : "3",
+                            "attributes" : { "classes" : "info" },
+                            "children" : [
+                                {
+                                    "shortcode" : "contact_email_simple", "widget_id" : "4", "attributes" : {}, "content" : "info@finefurniturecenter.com"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                
+                {
+                    "shortcode" : "biq_box_wrapper_full_alt",
+                    "widget_id" : "5",
+                    "attributes" : { "classes" : "body" },
+                    "children" :[
+                        {
+                            "shortcode" : "biq_box_wrapper_short",
+                            "widget_id" : "6",
+                            "attributes": {"classes":"biq-table"},
+                            "children"  : [
+                                {
+                                    "shortcode" : "biq_box_wrapper_short_alt",
+                                    "widget_id" : "7",
+                                    "attributes": {"classes":"biq-table-cell"},
+                                    "children"  : [
+                                        {
+                                            "shortcode":"logo",
+                                            "widget_id":"8",
+                                            "attributes" : {"img_alt" : "Logo Default"}
+                                        }
+                                    ]
+                                }
+                            ]
+                            
+                        }
+                    ]
+                }
+            ]
+        },
+        "body": {
+            "shortcode": "biq_box_wrapper_full",
+            "widget_id" : "9",
+            "attributes": {"classes" : "body biq-layout"}
+        }
+    }
+}

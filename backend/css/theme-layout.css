@@ -2,47 +2,36 @@
     Created on : May 23, 2016, 11:19:13 AM
     Author     : Bayu Candra <bayucandra@gmail.com>
 */
+
 #biq-sns-be-main{
     width:100%;
     margin: 2rem 0 0 -1%;
     overflow:visible;
     position:relative;
 }
-#biq-sns-be-main .body{
+#biq-sns-be-main .header{
+    overflow:auto;
+}
+#biq-sns-be-main .biq-body{
     margin: 0.7rem 0 0 0;
     background-color: #FFF;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     min-height: 500px;
     position:relative;
 }
-/*
-*BEGIN JQUERY MOBILE---------------------
-*/
-/*.ui-dialog{*/
-#biq-sns-be-main .ui-footer{
-    width:80%;
-    margin: 0 auto;
+/*BEGIN DIALOGS*/
+.md-dialog-container{
+    z-index: 100000;
 }
-#biq-sns-be-dialog{
-    background : rgba(0,0,0,0.5)!important;
-    z-index:1000;
+.bdialog-toolbar{
+    height:50px;
 }
-#biq-sns-be-dialog .ui-dialog-contain{
-    background: #FEFEFE;
+.bdialog-toolbar h2{
+    color: rgba(255, 255, 255, 0.87);
 }
-#biq-sns-be-dialog .ui-content{
-    padding-top:0;
+md-toolbar{
+    min-height:50px;
 }
-#biq-sns-be-dialog .ui-content .bcontent{
-    padding: 1rem 0;
-    height:15rem;
-    overflow: auto;
-}
-#biq-sns-be-dialog form .label{
-    width:30%;
-    box-sizing: border-box;
-}
-#biq-sns-be-dialog form .field{
-    width:70%;
-    box-sizing: border-box;
+.md-toolbar-tools{
+    height:50px;
 }

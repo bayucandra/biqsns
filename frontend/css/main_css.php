@@ -7,23 +7,17 @@ body{
     font-family : Lato, sans, sans-serif, arial;
     font-size: 1rem;
 }
-.bbox_wrapper{
+.biq-box-wrapper{
     margin: 0 auto; overflow: auto; position: relative;
 }
-.bbox_wrapper.full{
+.biq-box-wrapper.full{
     width:100%;
 }
-.bbox_wrapper.extra{
+.biq-box-wrapper.extra{
     max-width: 75rem;
     width:100%;
 }
-.bbox_wrapper.short{
+.biq-box-wrapper.short{
     max-width: 63rem;
     width:100%;
-}
-.header{
-    overflow:auto;
-}
-.header .line-top{
-    background-color:#f2f2f2;
 }
