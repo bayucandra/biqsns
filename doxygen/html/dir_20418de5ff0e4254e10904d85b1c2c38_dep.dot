@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-watcher/node_modules/gaze/node_modules/globule/node_modules/lodash/dist" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_567fbc59141613d1363a9fc434c21dbf {
+    graph [ bgcolor="#ddddee", pencolor="black", label="lodash" fontname="Helvetica", fontsize="10", URL="dir_567fbc59141613d1363a9fc434c21dbf.html"]
+  dir_20418de5ff0e4254e10904d85b1c2c38 [shape=box, label="dist", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_20418de5ff0e4254e10904d85b1c2c38.html"];
+  }
+}

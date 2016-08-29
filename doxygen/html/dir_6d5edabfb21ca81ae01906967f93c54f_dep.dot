@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/gulp-util/node_modules/multipipe" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_5590900bf34d85499364ffac468dd3f6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_5590900bf34d85499364ffac468dd3f6.html"]
+  subgraph clusterdir_6d5edabfb21ca81ae01906967f93c54f {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6d5edabfb21ca81ae01906967f93c54f.html"];
+    dir_6d5edabfb21ca81ae01906967f93c54f [shape=plaintext label="multipipe"];
+    dir_fdf51e55ea312060d0e029a0657ea142 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_fdf51e55ea312060d0e029a0657ea142.html"];
+    dir_078def6440afb3639bf5eb98a67e1f8d [shape=box label="test" color="black" fillcolor="white" style="filled" URL="dir_078def6440afb3639bf5eb98a67e1f8d.html"];
+  }
+  }
+}

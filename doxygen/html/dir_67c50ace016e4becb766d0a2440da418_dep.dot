@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/read-pkg/node_modules/load-json-file/node_modules/strip-bom/node_modules/is-utf8" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f40d379201330d422d8df85ab3131102 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_f40d379201330d422d8df85ab3131102.html"]
+  dir_67c50ace016e4becb766d0a2440da418 [shape=box, label="is-utf8", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_67c50ace016e4becb766d0a2440da418.html"];
+  }
+}

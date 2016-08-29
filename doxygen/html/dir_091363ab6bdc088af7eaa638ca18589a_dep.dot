@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/glob/node_modules/inherits" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_2263bb197411a9eb923e2e9116c4cecc {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_2263bb197411a9eb923e2e9116c4cecc.html"]
+  dir_091363ab6bdc088af7eaa638ca18589a [shape=box, label="inherits", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_091363ab6bdc088af7eaa638ca18589a.html"];
+  }
+}

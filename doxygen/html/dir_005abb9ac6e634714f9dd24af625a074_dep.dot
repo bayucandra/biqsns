@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/redent/node_modules/indent-string/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_16fa6c7da09cccd008626d2349343b7a {
+    graph [ bgcolor="#ddddee", pencolor="black", label="indent-string" fontname="Helvetica", fontsize="10", URL="dir_16fa6c7da09cccd008626d2349343b7a.html"]
+  subgraph clusterdir_005abb9ac6e634714f9dd24af625a074 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_005abb9ac6e634714f9dd24af625a074.html"];
+    dir_005abb9ac6e634714f9dd24af625a074 [shape=plaintext label="node_modules"];
+    dir_5ecce2dffa67855a467f414976da62d6 [shape=box label="repeating" color="red" fillcolor="white" style="filled" URL="dir_5ecce2dffa67855a467f414976da62d6.html"];
+  }
+  }
+}

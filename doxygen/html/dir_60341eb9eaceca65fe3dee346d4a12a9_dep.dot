@@ -1,0 +1,9 @@
+digraph "libs/angular/angular-material-fileinput-master/bower_components/angular" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_62eeda996942d0429ba9d811c8abf311 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="bower_components" fontname="Helvetica", fontsize="10", URL="dir_62eeda996942d0429ba9d811c8abf311.html"]
+  dir_60341eb9eaceca65fe3dee346d4a12a9 [shape=box, label="angular", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_60341eb9eaceca65fe3dee346d4a12a9.html"];
+  }
+}

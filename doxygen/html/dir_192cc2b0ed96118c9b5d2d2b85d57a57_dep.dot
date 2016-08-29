@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/node_modules/validate-npm-package-license/node_modules/spdx-correct" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_6a2914e50a4f12726734161234568408 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_6a2914e50a4f12726734161234568408.html"]
+  dir_192cc2b0ed96118c9b5d2d2b85d57a57 [shape=box, label="spdx-correct", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_192cc2b0ed96118c9b5d2d2b85d57a57.html"];
+  }
+}

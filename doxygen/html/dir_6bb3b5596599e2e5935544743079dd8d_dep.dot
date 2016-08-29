@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/multipipe/node_modules/duplexer2/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ca60c5ec14a7fe5aa12fb1fb6ce83a64 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="duplexer2" fontname="Helvetica", fontsize="10", URL="dir_ca60c5ec14a7fe5aa12fb1fb6ce83a64.html"]
+  subgraph clusterdir_6bb3b5596599e2e5935544743079dd8d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6bb3b5596599e2e5935544743079dd8d.html"];
+    dir_6bb3b5596599e2e5935544743079dd8d [shape=plaintext label="node_modules"];
+    dir_d0953e7b2a37d6ca21d1a433760cd853 [shape=box label="readable-stream" color="red" fillcolor="white" style="filled" URL="dir_d0953e7b2a37d6ca21d1a433760cd853.html"];
+  }
+  }
+}

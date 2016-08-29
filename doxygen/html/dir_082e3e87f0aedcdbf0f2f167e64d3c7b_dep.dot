@@ -1,0 +1,9 @@
+digraph "shortcodes/data" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_5a261a1b9b636e344178a7c14ac5c052 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="shortcodes" fontname="Helvetica", fontsize="10", URL="dir_5a261a1b9b636e344178a7c14ac5c052.html"]
+  dir_082e3e87f0aedcdbf0f2f167e64d3c7b [shape=box, label="data", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_082e3e87f0aedcdbf0f2f167e64d3c7b.html"];
+  }
+}

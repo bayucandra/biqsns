@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/resolve/test/precedence/aaa" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_34d1b8c4d46e1d1014022ec379043a69 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="precedence" fontname="Helvetica", fontsize="10", URL="dir_34d1b8c4d46e1d1014022ec379043a69.html"]
+  dir_38142732eec9972fc97fb979bc78e0a5 [shape=box, label="aaa", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_38142732eec9972fc97fb979bc78e0a5.html"];
+  }
+}

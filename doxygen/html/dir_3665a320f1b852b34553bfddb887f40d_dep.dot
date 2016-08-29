@@ -1,0 +1,28 @@
+digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_58d3ee944c0beec0261f8d035f88251d {
+    graph [ bgcolor="#ddddee", pencolor="black", label="gulp-util" fontname="Helvetica", fontsize="10", URL="dir_58d3ee944c0beec0261f8d035f88251d.html"]
+  subgraph clusterdir_3665a320f1b852b34553bfddb887f40d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_3665a320f1b852b34553bfddb887f40d.html"];
+    dir_3665a320f1b852b34553bfddb887f40d [shape=plaintext label="node_modules"];
+    dir_6a4819d81e79a792bee5fe8c563c9669 [shape=box label="array-differ" color="black" fillcolor="white" style="filled" URL="dir_6a4819d81e79a792bee5fe8c563c9669.html"];
+    dir_7931b3d44a63fd6172c72a5c2bcae392 [shape=box label="array-uniq" color="black" fillcolor="white" style="filled" URL="dir_7931b3d44a63fd6172c72a5c2bcae392.html"];
+    dir_08f0495c144cc022c1252d3bc0817315 [shape=box label="beeper" color="black" fillcolor="white" style="filled" URL="dir_08f0495c144cc022c1252d3bc0817315.html"];
+    dir_d460e09ba5b60602f741d19602308bba [shape=box label="dateformat" color="red" fillcolor="white" style="filled" URL="dir_d460e09ba5b60602f741d19602308bba.html"];
+    dir_d450db9b0670347eb317339a82aaa8b7 [shape=box label="fancy-log" color="red" fillcolor="white" style="filled" URL="dir_d450db9b0670347eb317339a82aaa8b7.html"];
+    dir_9fc490452989d4db8b25ef4719fa8ee7 [shape=box label="gulplog" color="red" fillcolor="white" style="filled" URL="dir_9fc490452989d4db8b25ef4719fa8ee7.html"];
+    dir_83b1e96d4e5d94f6135337dd06318006 [shape=box label="has-gulplog" color="red" fillcolor="white" style="filled" URL="dir_83b1e96d4e5d94f6135337dd06318006.html"];
+    dir_b409221c85e03d38337e328b2b3ff53f [shape=box label="lodash._reescape" color="black" fillcolor="white" style="filled" URL="dir_b409221c85e03d38337e328b2b3ff53f.html"];
+    dir_1bf59d7e241f217d74bc76a49cd090b2 [shape=box label="lodash._reevaluate" color="black" fillcolor="white" style="filled" URL="dir_1bf59d7e241f217d74bc76a49cd090b2.html"];
+    dir_b95a268ebef7d76d816bc430ba2b35b0 [shape=box label="lodash._reinterpolate" color="black" fillcolor="white" style="filled" URL="dir_b95a268ebef7d76d816bc430ba2b35b0.html"];
+    dir_00e5a9b699c1119de0a72a1e8e998c09 [shape=box label="lodash.template" color="red" fillcolor="white" style="filled" URL="dir_00e5a9b699c1119de0a72a1e8e998c09.html"];
+    dir_1b2ff19017605d35be9e2581203e7ed8 [shape=box label="multipipe" color="red" fillcolor="white" style="filled" URL="dir_1b2ff19017605d35be9e2581203e7ed8.html"];
+    dir_20a4abd40750e386eb115bc9505a54ef [shape=box label="object-assign" color="black" fillcolor="white" style="filled" URL="dir_20a4abd40750e386eb115bc9505a54ef.html"];
+    dir_ba4753b911df6cf8013f7f79019d51cb [shape=box label="replace-ext" color="red" fillcolor="white" style="filled" URL="dir_ba4753b911df6cf8013f7f79019d51cb.html"];
+    dir_c5193e8e54c78bff2ab5dc5d03280626 [shape=box label="through2" color="red" fillcolor="white" style="filled" URL="dir_c5193e8e54c78bff2ab5dc5d03280626.html"];
+    dir_0e32928ecabc53f664fa36668f277205 [shape=box label="vinyl" color="red" fillcolor="white" style="filled" URL="dir_0e32928ecabc53f664fa36668f277205.html"];
+  }
+  }
+}

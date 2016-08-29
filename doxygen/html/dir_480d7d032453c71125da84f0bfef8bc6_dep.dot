@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/glob/node_modules/once" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_2263bb197411a9eb923e2e9116c4cecc {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_2263bb197411a9eb923e2e9116c4cecc.html"]
+  subgraph clusterdir_480d7d032453c71125da84f0bfef8bc6 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_480d7d032453c71125da84f0bfef8bc6.html"];
+    dir_480d7d032453c71125da84f0bfef8bc6 [shape=plaintext label="once"];
+    dir_a6e28ea6f2e52581df0ef6ec734342ac [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_a6e28ea6f2e52581df0ef6ec734342ac.html"];
+  }
+  }
+}

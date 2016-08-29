@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-watcher/test" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c9dfa17b5c266cd52045fe1575f3327f {
+    graph [ bgcolor="#ddddee", pencolor="black", label="glob-watcher" fontname="Helvetica", fontsize="10", URL="dir_c9dfa17b5c266cd52045fe1575f3327f.html"]
+  dir_0ad1b8f0caf11098e42d67dc257d3bc0 [shape=box, label="test", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_0ad1b8f0caf11098e42d67dc257d3bc0.html"];
+  }
+}

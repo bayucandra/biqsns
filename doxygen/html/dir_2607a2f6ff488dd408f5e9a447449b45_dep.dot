@@ -1,0 +1,20 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/resolve/test/resolver" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_77096bf77faba9469f7d9e020d1ad487 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="test" fontname="Helvetica", fontsize="10", URL="dir_77096bf77faba9469f7d9e020d1ad487.html"]
+  subgraph clusterdir_2607a2f6ff488dd408f5e9a447449b45 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_2607a2f6ff488dd408f5e9a447449b45.html"];
+    dir_2607a2f6ff488dd408f5e9a447449b45 [shape=plaintext label="resolver"];
+    dir_c94bd8757fcf74c2b46f239fbdb6c608 [shape=box label="bar" color="red" fillcolor="white" style="filled" URL="dir_c94bd8757fcf74c2b46f239fbdb6c608.html"];
+    dir_8b8d2d5c0284aaa3155e470a4ffea125 [shape=box label="baz" color="black" fillcolor="white" style="filled" URL="dir_8b8d2d5c0284aaa3155e470a4ffea125.html"];
+    dir_1052c366e20bee9f7e27fd1e8172d26a [shape=box label="biz" color="red" fillcolor="white" style="filled" URL="dir_1052c366e20bee9f7e27fd1e8172d26a.html"];
+    dir_dae40b10bf52502cac01aac66e27c565 [shape=box label="incorrect_main" color="black" fillcolor="white" style="filled" URL="dir_dae40b10bf52502cac01aac66e27c565.html"];
+    dir_703ae16b603bb1c4c2eb864f65b795c7 [shape=box label="other_path" color="red" fillcolor="white" style="filled" URL="dir_703ae16b603bb1c4c2eb864f65b795c7.html"];
+    dir_7198e21adde8db15b215461deab98b29 [shape=box label="punycode" color="red" fillcolor="white" style="filled" URL="dir_7198e21adde8db15b215461deab98b29.html"];
+    dir_591bed0f9bdc1ee6fb2d2c5712b7d495 [shape=box label="quux" color="red" fillcolor="white" style="filled" URL="dir_591bed0f9bdc1ee6fb2d2c5712b7d495.html"];
+    dir_da3159e3bbe9e2263eca80f9da7a72da [shape=box label="without_basedir" color="red" fillcolor="white" style="filled" URL="dir_da3159e3bbe9e2263eca80f9da7a72da.html"];
+  }
+  }
+}

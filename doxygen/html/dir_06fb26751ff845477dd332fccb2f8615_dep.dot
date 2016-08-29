@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/read-pkg/node_modules/load-json-file/node_modules/parse-json/node_modules/error-ex/node_modules/is-arrayish" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_76e5d2a0f6600a7ebb4e6444999b66db {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_76e5d2a0f6600a7ebb4e6444999b66db.html"]
+  dir_06fb26751ff845477dd332fccb2f8615 [shape=box, label="is-arrayish", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_06fb26751ff845477dd332fccb2f8615.html"];
+  }
+}

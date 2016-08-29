@@ -1,0 +1,20 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/lodash.template/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_199e35ba14fd9f72884234aa7fab24bf {
+    graph [ bgcolor="#ddddee", pencolor="black", label="lodash.template" fontname="Helvetica", fontsize="10", URL="dir_199e35ba14fd9f72884234aa7fab24bf.html"]
+  subgraph clusterdir_649828dcb3425aceb07f050038de0f59 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_649828dcb3425aceb07f050038de0f59.html"];
+    dir_649828dcb3425aceb07f050038de0f59 [shape=plaintext label="node_modules"];
+    dir_14007aa1af9d60f93d41d082476b4e1f [shape=box label="lodash._basecopy" color="black" fillcolor="white" style="filled" URL="dir_14007aa1af9d60f93d41d082476b4e1f.html"];
+    dir_5fab2ae30b1fe238d9b51f4d16a2977e [shape=box label="lodash._basetostring" color="black" fillcolor="white" style="filled" URL="dir_5fab2ae30b1fe238d9b51f4d16a2977e.html"];
+    dir_6f54144da7cf6d251a4818e390a79f55 [shape=box label="lodash._basevalues" color="black" fillcolor="white" style="filled" URL="dir_6f54144da7cf6d251a4818e390a79f55.html"];
+    dir_cdb45e0b43fca25c14d8fa5802d77454 [shape=box label="lodash._isiterateecall" color="black" fillcolor="white" style="filled" URL="dir_cdb45e0b43fca25c14d8fa5802d77454.html"];
+    dir_7238f09f366ada67e546cd6888806945 [shape=box label="lodash.escape" color="red" fillcolor="white" style="filled" URL="dir_7238f09f366ada67e546cd6888806945.html"];
+    dir_55232116cdf2cdf200451f1ab9176657 [shape=box label="lodash.keys" color="red" fillcolor="white" style="filled" URL="dir_55232116cdf2cdf200451f1ab9176657.html"];
+    dir_2d71d11b83017912acf4852cf24f380e [shape=box label="lodash.restparam" color="black" fillcolor="white" style="filled" URL="dir_2d71d11b83017912acf4852cf24f380e.html"];
+    dir_cd838d6fc36d36d8e4c79d2567affa6a [shape=box label="lodash.templatesettings" color="black" fillcolor="white" style="filled" URL="dir_cd838d6fc36d36d8e4c79d2567affa6a.html"];
+  }
+  }
+}

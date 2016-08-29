@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/fancy-log" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_cd2eabd0a464c3c6ff930f11943b9255 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_cd2eabd0a464c3c6ff930f11943b9255.html"]
+  subgraph clusterdir_c203a40528a09f4d247e3d78d60d771d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_c203a40528a09f4d247e3d78d60d771d.html"];
+    dir_c203a40528a09f4d247e3d78d60d771d [shape=plaintext label="fancy-log"];
+    dir_41d67fa9247a8310166871727d3187b8 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_41d67fa9247a8310166871727d3187b8.html"];
+  }
+  }
+}

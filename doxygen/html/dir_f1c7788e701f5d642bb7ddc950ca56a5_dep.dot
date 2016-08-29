@@ -1,0 +1,13 @@
+digraph "libs/angular" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_6719ab1f1f7655efc2fa43f7eb574fd1 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="libs" fontname="Helvetica", fontsize="10", URL="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html"]
+  subgraph clusterdir_f1c7788e701f5d642bb7ddc950ca56a5 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_f1c7788e701f5d642bb7ddc950ca56a5.html"];
+    dir_f1c7788e701f5d642bb7ddc950ca56a5 [shape=plaintext label="angular"];
+    dir_e61747bd0128d8a782c36ae884c5dd16 [shape=box label="angular-material-fileinput-master" color="red" fillcolor="white" style="filled" URL="dir_e61747bd0128d8a782c36ae884c5dd16.html"];
+  }
+  }
+}

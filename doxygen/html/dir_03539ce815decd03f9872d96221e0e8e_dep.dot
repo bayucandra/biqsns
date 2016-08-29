@@ -1,0 +1,16 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/uglify-js/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a7636894613cdeb63ac8fa0d8e2439c3 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="uglify-js" fontname="Helvetica", fontsize="10", URL="dir_a7636894613cdeb63ac8fa0d8e2439c3.html"]
+  subgraph clusterdir_03539ce815decd03f9872d96221e0e8e {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_03539ce815decd03f9872d96221e0e8e.html"];
+    dir_03539ce815decd03f9872d96221e0e8e [shape=plaintext label="node_modules"];
+    dir_738f36bcaa00a01f4376100626cc674b [shape=box label="async" color="red" fillcolor="white" style="filled" URL="dir_738f36bcaa00a01f4376100626cc674b.html"];
+    dir_18ad89cb352784bf21e11093334caa51 [shape=box label="source-map" color="red" fillcolor="white" style="filled" URL="dir_18ad89cb352784bf21e11093334caa51.html"];
+    dir_0329381345ea384ecb048ac918285a0b [shape=box label="uglify-to-browserify" color="red" fillcolor="white" style="filled" URL="dir_0329381345ea384ecb048ac918285a0b.html"];
+    dir_53600745fc04ad52eecf8deec8a89d0c [shape=box label="yargs" color="red" fillcolor="white" style="filled" URL="dir_53600745fc04ad52eecf8deec8a89d0c.html"];
+  }
+  }
+}

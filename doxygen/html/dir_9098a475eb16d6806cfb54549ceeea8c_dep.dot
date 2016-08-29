@@ -1,0 +1,17 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/read-pkg/node_modules/load-json-file/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_99060853015278a83c23f7151f432692 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="load-json-file" fontname="Helvetica", fontsize="10", URL="dir_99060853015278a83c23f7151f432692.html"]
+  subgraph clusterdir_9098a475eb16d6806cfb54549ceeea8c {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_9098a475eb16d6806cfb54549ceeea8c.html"];
+    dir_9098a475eb16d6806cfb54549ceeea8c [shape=plaintext label="node_modules"];
+    dir_8dae38d9b7ac9f259d404d024ee90905 [shape=box label="graceful-fs" color="black" fillcolor="white" style="filled" URL="dir_8dae38d9b7ac9f259d404d024ee90905.html"];
+    dir_40ad413db4770c2b63379416de50b87c [shape=box label="parse-json" color="red" fillcolor="white" style="filled" URL="dir_40ad413db4770c2b63379416de50b87c.html"];
+    dir_f703fa0098ff2a0f5fcd47c82634c772 [shape=box label="pify" color="black" fillcolor="white" style="filled" URL="dir_f703fa0098ff2a0f5fcd47c82634c772.html"];
+    dir_722f6530bd6e982640290809b71d2d9e [shape=box label="pinkie-promise" color="red" fillcolor="white" style="filled" URL="dir_722f6530bd6e982640290809b71d2d9e.html"];
+    dir_864c515607cf09bf6c2de4c590f8de20 [shape=box label="strip-bom" color="red" fillcolor="white" style="filled" URL="dir_864c515607cf09bf6c2de4c590f8de20.html"];
+  }
+  }
+}

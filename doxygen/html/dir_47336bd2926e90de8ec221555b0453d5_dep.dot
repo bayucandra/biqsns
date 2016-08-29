@@ -1,0 +1,17 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_63608b1514c68b76984a80016b057886 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="glob-stream" fontname="Helvetica", fontsize="10", URL="dir_63608b1514c68b76984a80016b057886.html"]
+  subgraph clusterdir_47336bd2926e90de8ec221555b0453d5 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_47336bd2926e90de8ec221555b0453d5.html"];
+    dir_47336bd2926e90de8ec221555b0453d5 [shape=plaintext label="node_modules"];
+    dir_510957c318cda115bbd0ddc57f55f40f [shape=box label="glob" color="red" fillcolor="white" style="filled" URL="dir_510957c318cda115bbd0ddc57f55f40f.html"];
+    dir_4720d12d5e630fabbefec72a5dcf86a0 [shape=box label="glob2base" color="red" fillcolor="white" style="filled" URL="dir_4720d12d5e630fabbefec72a5dcf86a0.html"];
+    dir_0fc5271ff1f625ce02c4752eacfa201a [shape=box label="minimatch" color="red" fillcolor="white" style="filled" URL="dir_0fc5271ff1f625ce02c4752eacfa201a.html"];
+    dir_31a8f62a818d07dc653af0eacc00180c [shape=box label="ordered-read-streams" color="red" fillcolor="white" style="filled" URL="dir_31a8f62a818d07dc653af0eacc00180c.html"];
+    dir_1d9f036d3d208e39bb0db57689f040ad [shape=box label="unique-stream" color="red" fillcolor="white" style="filled" URL="dir_1d9f036d3d208e39bb0db57689f040ad.html"];
+  }
+  }
+}

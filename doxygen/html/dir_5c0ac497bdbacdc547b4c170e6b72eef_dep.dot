@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp-sourcemaps/node_modules/strip-bom/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_cfe2d9b55e031ee14cd904bb18d309cc {
+    graph [ bgcolor="#ddddee", pencolor="black", label="strip-bom" fontname="Helvetica", fontsize="10", URL="dir_cfe2d9b55e031ee14cd904bb18d309cc.html"]
+  subgraph clusterdir_5c0ac497bdbacdc547b4c170e6b72eef {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_5c0ac497bdbacdc547b4c170e6b72eef.html"];
+    dir_5c0ac497bdbacdc547b4c170e6b72eef [shape=plaintext label="node_modules"];
+    dir_c22ada2b3c06765abb7f83ad3bc1930a [shape=box label="is-utf8" color="black" fillcolor="white" style="filled" URL="dir_c22ada2b3c06765abb7f83ad3bc1930a.html"];
+  }
+  }
+}

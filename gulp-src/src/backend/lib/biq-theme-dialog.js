@@ -11,7 +11,7 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
     self.params = {};
     self.show = function(ev, params){
         self.params = params;//Pass this to the $scope of controller
-        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && self.customFullscreen;
+//        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && self.customFullscreen;
         $mdDialog.show({
             controller: self.controller,
             template: self.template,
@@ -19,7 +19,7 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
             parent: angular.element(document.body),
             targetEvent: self.elementWrapperDefault,
             clickOutsideToClose:true, escapeToClose:true,// disable later escapeToClose on masking
-            fullscreen: useFullScreen
+            fullscreen: self.customFullScreen
         })
         .then(function(submit) {
         }, function() {//Must be same function as 'hide' in the controller

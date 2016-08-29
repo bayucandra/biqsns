@@ -19,8 +19,9 @@
         $img_title = !empty($img_title) ? ' title="'.$img_title.'"' : ""; 
         $element_attributes =  'class="biq-widgets logo '.$classes.'"'. $css_inline 
                 .' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="logo"';
-	return '<a href="'.$url.'" '.$element_attributes.'>'
-                .'<img src="'. $template_uri . '/images/biq/widgets/'.$img_file_name.'" alt="'.$img_alt.'"'.$img_title.'>'
+	return
+            '<a href="'.$url.'" '.$element_attributes.'>'
+                .'<img src="'. $template_uri . '/images/biq/widgets/logo/'.$img_file_name.'" alt="'.$img_alt.'"'.$img_title.'>'
             .'</a>';
     }
     add_shortcode('logo', 'logo_shortcode');

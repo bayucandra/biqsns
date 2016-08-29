@@ -1,0 +1,15 @@
+digraph "gulp-src/node_modules/gulp-sourcemaps/node_modules/vinyl/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_eeed6ec71bf0d36be7f47b1ec680aaac {
+    graph [ bgcolor="#ddddee", pencolor="black", label="vinyl" fontname="Helvetica", fontsize="10", URL="dir_eeed6ec71bf0d36be7f47b1ec680aaac.html"]
+  subgraph clusterdir_a5eb1e5440ad77ded9608f497797c14a {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_a5eb1e5440ad77ded9608f497797c14a.html"];
+    dir_a5eb1e5440ad77ded9608f497797c14a [shape=plaintext label="node_modules"];
+    dir_5ee50a34e6abdaf262883449df5ffff2 [shape=box label="clone" color="black" fillcolor="white" style="filled" URL="dir_5ee50a34e6abdaf262883449df5ffff2.html"];
+    dir_7cba9623f78d4938873a4fb547fe91b8 [shape=box label="clone-stats" color="black" fillcolor="white" style="filled" URL="dir_7cba9623f78d4938873a4fb547fe91b8.html"];
+    dir_03c182c6dd254bec508e58d890093e91 [shape=box label="replace-ext" color="red" fillcolor="white" style="filled" URL="dir_03c182c6dd254bec508e58d890093e91.html"];
+  }
+  }
+}

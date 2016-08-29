@@ -1,0 +1,9 @@
+digraph "libs/angular/angular-material-fileinput-master/dist" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e61747bd0128d8a782c36ae884c5dd16 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="angular-material-fileinput-master" fontname="Helvetica", fontsize="10", URL="dir_e61747bd0128d8a782c36ae884c5dd16.html"]
+  dir_848bfd883a04eb3a0ea2c847f13a3917 [shape=box, label="dist", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_848bfd883a04eb3a0ea2c847f13a3917.html"];
+  }
+}

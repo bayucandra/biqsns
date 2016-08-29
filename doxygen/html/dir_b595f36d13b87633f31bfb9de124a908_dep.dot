@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules/gulplog/node_modules/glogg/node_modules/sparkles" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8fb67b0b0b738bbf2ddbfb6ee58b1265 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_8fb67b0b0b738bbf2ddbfb6ee58b1265.html"]
+  dir_b595f36d13b87633f31bfb9de124a908 [shape=box, label="sparkles", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_b595f36d13b87633f31bfb9de124a908.html"];
+  }
+}

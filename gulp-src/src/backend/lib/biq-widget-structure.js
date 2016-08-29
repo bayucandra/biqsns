@@ -14,7 +14,8 @@ BIQWidgetStructure.prototype.contact_email_simple = {
 		{ 'label': 'Class', 'value': 'class'}
 	    ] 
 	},
-	{ 'key' : 'icon_value', 'type' : 'text', 'label' : 'URL Image / class', 'default': template_uri+'/images/biq/widgets/icon-contact-email-21x14.png'
+	{ 'key' : 'icon_value', 'type' : 'text', 'label' : 'URL Image / class',
+            'default': template_uri+'/images/biq/widgets/contact-email-simple/icon-contact-email-21x14.png'
 	    , 'placeholder' :'Leave empty for default value' }
     ],
     'attribute_css' :[

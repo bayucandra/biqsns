@@ -1,0 +1,17 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/fancy-log/node_modules/chalk/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e3fe384883327316ca364faffa28d376 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="chalk" fontname="Helvetica", fontsize="10", URL="dir_e3fe384883327316ca364faffa28d376.html"]
+  subgraph clusterdir_84708774be81118f6ade075f9831130b {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_84708774be81118f6ade075f9831130b.html"];
+    dir_84708774be81118f6ade075f9831130b [shape=plaintext label="node_modules"];
+    dir_63f27dc0f1934471b62e8eb48506a063 [shape=box label="ansi-styles" color="black" fillcolor="white" style="filled" URL="dir_63f27dc0f1934471b62e8eb48506a063.html"];
+    dir_07e189d93a991b4f30bf973c1481b84a [shape=box label="escape-string-regexp" color="black" fillcolor="white" style="filled" URL="dir_07e189d93a991b4f30bf973c1481b84a.html"];
+    dir_c4346eaa6a9a0c0ef07d3579b6be6f89 [shape=box label="has-ansi" color="red" fillcolor="white" style="filled" URL="dir_c4346eaa6a9a0c0ef07d3579b6be6f89.html"];
+    dir_1b11d63a33e9a16f346afd709c514a9d [shape=box label="strip-ansi" color="red" fillcolor="white" style="filled" URL="dir_1b11d63a33e9a16f346afd709c514a9d.html"];
+    dir_551825fa88fcd04b69055b52a0f391cd [shape=box label="supports-color" color="black" fillcolor="white" style="filled" URL="dir_551825fa88fcd04b69055b52a0f391cd.html"];
+  }
+  }
+}

@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/node_modules/validate-npm-package-license/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_3d9a20eccf2f9a84e8faa1858a464741 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="validate-npm-package-license" fontname="Helvetica", fontsize="10", URL="dir_3d9a20eccf2f9a84e8faa1858a464741.html"]
+  subgraph clusterdir_6a2914e50a4f12726734161234568408 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6a2914e50a4f12726734161234568408.html"];
+    dir_6a2914e50a4f12726734161234568408 [shape=plaintext label="node_modules"];
+    dir_192cc2b0ed96118c9b5d2d2b85d57a57 [shape=box label="spdx-correct" color="black" fillcolor="white" style="filled" URL="dir_192cc2b0ed96118c9b5d2d2b85d57a57.html"];
+    dir_2a1e94abb10a6a45eecbfcd5365cc5e8 [shape=box label="spdx-expression-parse" color="black" fillcolor="white" style="filled" URL="dir_2a1e94abb10a6a45eecbfcd5365cc5e8.html"];
+  }
+  }
+}

@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/mkdirp/node_modules/minimist/example" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_fc63ea355acbb25b8dbaa2a01a5a2641 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="minimist" fontname="Helvetica", fontsize="10", URL="dir_fc63ea355acbb25b8dbaa2a01a5a2641.html"]
+  dir_f1cbfd5558a0774dddbd40117ed3ae5c [shape=box, label="example", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f1cbfd5558a0774dddbd40117ed3ae5c.html"];
+  }
+}

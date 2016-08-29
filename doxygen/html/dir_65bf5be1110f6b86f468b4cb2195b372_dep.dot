@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-watcher/node_modules/gaze/node_modules/globule/node_modules/minimatch/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_6780d4aaab45ec1229c937680362e328 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="minimatch" fontname="Helvetica", fontsize="10", URL="dir_6780d4aaab45ec1229c937680362e328.html"]
+  subgraph clusterdir_65bf5be1110f6b86f468b4cb2195b372 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_65bf5be1110f6b86f468b4cb2195b372.html"];
+    dir_65bf5be1110f6b86f468b4cb2195b372 [shape=plaintext label="node_modules"];
+    dir_f440ba51d6ac49f9fe2b3aac10dc1db1 [shape=box label="lru-cache" color="red" fillcolor="white" style="filled" URL="dir_f440ba51d6ac49f9fe2b3aac10dc1db1.html"];
+    dir_04df3dc166eae0a79610608586367086 [shape=box label="sigmund" color="red" fillcolor="white" style="filled" URL="dir_04df3dc166eae0a79610608586367086.html"];
+  }
+  }
+}

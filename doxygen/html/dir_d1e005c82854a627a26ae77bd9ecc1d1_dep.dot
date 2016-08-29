@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/camelcase-keys/node_modules/camelcase" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_5edb17b38891464791ad3636d21bfe18 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_5edb17b38891464791ad3636d21bfe18.html"]
+  dir_d1e005c82854a627a26ae77bd9ecc1d1 [shape=box, label="camelcase", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_d1e005c82854a627a26ae77bd9ecc1d1.html"];
+  }
+}

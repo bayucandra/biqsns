@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/loud-rejection/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_cd3522e86e0ba83116365346ac3cc7d0 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="loud-rejection" fontname="Helvetica", fontsize="10", URL="dir_cd3522e86e0ba83116365346ac3cc7d0.html"]
+  subgraph clusterdir_f65025de81e1f0ee8975b1f5b89175f7 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_f65025de81e1f0ee8975b1f5b89175f7.html"];
+    dir_f65025de81e1f0ee8975b1f5b89175f7 [shape=plaintext label="node_modules"];
+    dir_0ea1eee6b0973faaf1c283239c80acfa [shape=box label="currently-unhandled" color="red" fillcolor="white" style="filled" URL="dir_0ea1eee6b0973faaf1c283239c80acfa.html"];
+    dir_9fdf4a3702a95ddf7cf068e92c7c33be [shape=box label="signal-exit" color="red" fillcolor="white" style="filled" URL="dir_9fdf4a3702a95ddf7cf068e92c7c33be.html"];
+  }
+  }
+}

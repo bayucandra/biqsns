@@ -1,0 +1,15 @@
+digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_9c02d37d0f553b76aca085749b9bd70b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="normalize-package-data" fontname="Helvetica", fontsize="10", URL="dir_9c02d37d0f553b76aca085749b9bd70b.html"]
+  subgraph clusterdir_74c47d3407eea8e6e04efda062c5e612 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_74c47d3407eea8e6e04efda062c5e612.html"];
+    dir_74c47d3407eea8e6e04efda062c5e612 [shape=plaintext label="node_modules"];
+    dir_f8bd8950eac91eabe610cf98f33870c2 [shape=box label="hosted-git-info" color="black" fillcolor="white" style="filled" URL="dir_f8bd8950eac91eabe610cf98f33870c2.html"];
+    dir_d0c2c21657e26fb29bf3b734a5d3dfe8 [shape=box label="is-builtin-module" color="red" fillcolor="white" style="filled" URL="dir_d0c2c21657e26fb29bf3b734a5d3dfe8.html"];
+    dir_d48a07e7f6a7f6f96adaa523d1179d65 [shape=box label="validate-npm-package-license" color="red" fillcolor="white" style="filled" URL="dir_d48a07e7f6a7f6f96adaa523d1179d65.html"];
+  }
+  }
+}

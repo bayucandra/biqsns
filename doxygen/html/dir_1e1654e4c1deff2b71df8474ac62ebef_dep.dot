@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/read-pkg/node_modules/load-json-file/node_modules/pinkie-promise/node_modules/pinkie" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_561b7f3ee582390aa93f8fd2cc237aa9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_561b7f3ee582390aa93f8fd2cc237aa9.html"]
+  dir_1e1654e4c1deff2b71df8474ac62ebef [shape=box, label="pinkie", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_1e1654e4c1deff2b71df8474ac62ebef.html"];
+  }
+}

@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/find-up/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d90ac53032f0db0c75d4c1bce118676f {
+    graph [ bgcolor="#ddddee", pencolor="black", label="find-up" fontname="Helvetica", fontsize="10", URL="dir_d90ac53032f0db0c75d4c1bce118676f.html"]
+  subgraph clusterdir_9ac135d592454a50f147f33cc981e7eb {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_9ac135d592454a50f147f33cc981e7eb.html"];
+    dir_9ac135d592454a50f147f33cc981e7eb [shape=plaintext label="node_modules"];
+    dir_5c41301e650c797c3904ef6d9f67da78 [shape=box label="path-exists" color="black" fillcolor="white" style="filled" URL="dir_5c41301e650c797c3904ef6d9f67da78.html"];
+    dir_06a75aa4bb93a8cf879c6e2c99612c86 [shape=box label="pinkie-promise" color="red" fillcolor="white" style="filled" URL="dir_06a75aa4bb93a8cf879c6e2c99612c86.html"];
+  }
+  }
+}

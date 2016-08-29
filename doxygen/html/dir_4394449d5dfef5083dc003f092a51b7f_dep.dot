@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/kind-of" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_bf4921ee2cc75d15717936482aa1687e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_bf4921ee2cc75d15717936482aa1687e.html"]
+  subgraph clusterdir_4394449d5dfef5083dc003f092a51b7f {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_4394449d5dfef5083dc003f092a51b7f.html"];
+    dir_4394449d5dfef5083dc003f092a51b7f [shape=plaintext label="kind-of"];
+    dir_aa39eb2a913ac6989cbe316873d5b4b5 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_aa39eb2a913ac6989cbe316873d5b4b5.html"];
+  }
+  }
+}

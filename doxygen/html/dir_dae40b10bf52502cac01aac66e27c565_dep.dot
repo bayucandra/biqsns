@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/resolve/test/resolver/incorrect_main" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_2607a2f6ff488dd408f5e9a447449b45 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="resolver" fontname="Helvetica", fontsize="10", URL="dir_2607a2f6ff488dd408f5e9a447449b45.html"]
+  dir_dae40b10bf52502cac01aac66e27c565 [shape=box, label="incorrect_main", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_dae40b10bf52502cac01aac66e27c565.html"];
+  }
+}

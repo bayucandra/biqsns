@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/fancy-log/node_modules/chalk/node_modules/escape-string-regexp" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_84708774be81118f6ade075f9831130b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_84708774be81118f6ade075f9831130b.html"]
+  dir_07e189d93a991b4f30bf973c1481b84a [shape=box, label="escape-string-regexp", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_07e189d93a991b4f30bf973c1481b84a.html"];
+  }
+}

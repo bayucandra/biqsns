@@ -1,0 +1,15 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/read-pkg/node_modules/path-type/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_26f5fb260c530d57261158017459618b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="path-type" fontname="Helvetica", fontsize="10", URL="dir_26f5fb260c530d57261158017459618b.html"]
+  subgraph clusterdir_c12780a0e58ce0e6c2e489ec550ac8b3 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_c12780a0e58ce0e6c2e489ec550ac8b3.html"];
+    dir_c12780a0e58ce0e6c2e489ec550ac8b3 [shape=plaintext label="node_modules"];
+    dir_b4f01e454162f6bcfa8cf21529464e78 [shape=box label="graceful-fs" color="black" fillcolor="white" style="filled" URL="dir_b4f01e454162f6bcfa8cf21529464e78.html"];
+    dir_cd7ca90e6ab45b85a89ed55eb5439c89 [shape=box label="pify" color="black" fillcolor="white" style="filled" URL="dir_cd7ca90e6ab45b85a89ed55eb5439c89.html"];
+    dir_65b691fc10f8a34fa295c50f2210d870 [shape=box label="pinkie-promise" color="red" fillcolor="white" style="filled" URL="dir_65b691fc10f8a34fa295c50f2210d870.html"];
+  }
+  }
+}

@@ -1,0 +1,15 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-watcher/node_modules/gaze/node_modules/globule/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_92a5cb16c8d6c577159b7c856b25d6ef {
+    graph [ bgcolor="#ddddee", pencolor="black", label="globule" fontname="Helvetica", fontsize="10", URL="dir_92a5cb16c8d6c577159b7c856b25d6ef.html"]
+  subgraph clusterdir_e378fc2522472ce3365e5db04ad24f49 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_e378fc2522472ce3365e5db04ad24f49.html"];
+    dir_e378fc2522472ce3365e5db04ad24f49 [shape=plaintext label="node_modules"];
+    dir_86bdae991bc3db8255b64d71caffaf60 [shape=box label="glob" color="red" fillcolor="white" style="filled" URL="dir_86bdae991bc3db8255b64d71caffaf60.html"];
+    dir_567fbc59141613d1363a9fc434c21dbf [shape=box label="lodash" color="red" fillcolor="white" style="filled" URL="dir_567fbc59141613d1363a9fc434c21dbf.html"];
+    dir_6780d4aaab45ec1229c937680362e328 [shape=box label="minimatch" color="red" fillcolor="white" style="filled" URL="dir_6780d4aaab45ec1229c937680362e328.html"];
+  }
+  }
+}

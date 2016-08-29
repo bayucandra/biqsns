@@ -14,7 +14,8 @@ BIQWidgetStructure.prototype.contact_email_simple = {
 		{ 'label': 'Class', 'value': 'class'}
 	    ] 
 	},
-	{ 'key' : 'icon_value', 'type' : 'text', 'label' : 'URL Image / class', 'default': template_uri+'/images/biq/widgets/icon-contact-email-21x14.png'
+	{ 'key' : 'icon_value', 'type' : 'text', 'label' : 'URL Image / class',
+            'default': template_uri+'/images/biq/widgets/contact-email-simple/icon-contact-email-21x14.png'
 	    , 'placeholder' :'Leave empty for default value' }
     ],
     'attribute_css' :[
@@ -54,7 +55,7 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
     self.params = {};
     self.show = function(ev, params){
         self.params = params;//Pass this to the $scope of controller
-        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && self.customFullscreen;
+//        var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && self.customFullscreen;
         $mdDialog.show({
             controller: self.controller,
             template: self.template,
@@ -62,7 +63,7 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
             parent: angular.element(document.body),
             targetEvent: self.elementWrapperDefault,
             clickOutsideToClose:true, escapeToClose:true,// disable later escapeToClose on masking
-            fullscreen: useFullScreen
+            fullscreen: self.customFullScreen
         })
         .then(function(submit) {
         }, function() {//Must be same function as 'hide' in the controller
@@ -161,10 +162,16 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
     };
 }
 
-/*
- *Created by: Bayu candra <bayucandra@gmail.com>
- *Creation Year: 2016
- *Description: Main theme manager for widget interface
+/**
+ * @file biq-theme-manager.js
+ * @brief Main theme manager for widget interface
+ * 
+ * This is the main Class which controll the widget interaction trough angular main module. Will instantiated as angular service. Depend on:
+ * - BIQThemeDialog => linked to variable member self.dialog
+ * - BIQWidgetElementParser => linked to variable member self.BIQWidgetElementParser
+ * <br>Both of them linked as a member / properties, since will result as circular reference if directly put as argument at angular 'factory' declaration.
+ * 
+ * @author Bayu candra <bayucandra@gmail.com>
 */
 
 function BIQThemeManager(  ){
@@ -172,17 +179,30 @@ function BIQThemeManager(  ){
     self.BIQWidgetElementParser = null;
     self.structure = new BIQWidgetStructure;
     self.structure_item = null; // will set at generateWidgetImputAll()
-    self.dialog = null;
-    self.init = function(){
-	$b(document).ready(function(){
-	    self.loading('body', 1500);
-	    self.hoverToEdit();
-	    window.onbeforeunload=function(){
-		self.loading('body');
-	    };
-	});
-    };
+    self.dialog = null; /// <i>self.dialog</i> variable will be referenced to md-dialog to show. Set this class by pointer to those md-dialog.
 }
+
+/**
+ * @brief initializing the main Object/Class
+ * 
+ * Run main hover mask functions and set body events
+ */
+BIQThemeManager.prototype.init = function(){
+    var self = this;
+    $b(document).ready(function(){
+        self.loading('body', 1500);
+        self.hoverToEdit();
+        window.onbeforeunload=function(){
+            self.loading('body');
+        };
+    });
+};
+
+/**
+ * @brief generate overlay mask over widget
+ * 
+ * Will be initialy called by init() function to generate overlay element above widget which will need to edit. 
+ */
 BIQThemeManager.prototype.hoverToEdit= function(){
     var self = this;
     self.hover_to_edit = {
@@ -206,14 +226,18 @@ BIQThemeManager.prototype.hoverToEdit= function(){
 	    var self2 = this;
 	    self2.hide_timeout_obj = setTimeout( function(){ self2.auto_hide();}, self2.hide_delay );
 	},
-	set_overlay_sizes : function(){
-	    var self2 = this;
+	set_overlay_sizes : function(p_callback){
+//	    var self2 = this;
 	    var el_sel_position = self.hover_to_edit.widget_sel.offset();
 
 	    $b('.hover-to-edit').css({left : el_sel_position.left+'px', top : el_sel_position.top+'px'});
 	    $b('.hover-to-edit .highlight').css({
 		width: self.hover_to_edit.widget_sel.outerWidth(),
-		height: self.hover_to_edit.widget_sel.outerHeight()});
+		height: self.hover_to_edit.widget_sel.outerHeight()
+            });
+            if(typeof p_callback === 'function'){
+                p_callback();
+            }
 	}
     };
     
@@ -237,58 +261,47 @@ BIQThemeManager.prototype.hoverToEdit= function(){
 	    self.hover_to_edit.onmouseleave();
 	}
     });
-    self.widgetHoverApplyAll();
+    self.widgetHoverApply();
 };
-BIQThemeManager.prototype.widgetHoverApplyAll = function(){
-    var self = this;
-    $b('.biq-widgets').on('hover', function(e){
-	if(e.type === 'mouseenter'){
-//	    $b('.hover-to-edit').hide(0);//Hide first it was shown for other widget
-//	    setTimeout( function(){
-                    $b('.hover-to-edit .highlight').stop(true, true);
-		    self.hover_to_edit.widget_sel = $b(this);
-//		    self.BIQWidgetElementParser.contactEmailSimple(self.hover_to_edit.widget_sel);
-		    self.hover_to_edit.set_overlay_sizes();
-		    $b('.hover-to-edit').show(0, function(){
-			$b('.hover-to-edit .highlight').show(200);
-		    });
-//		}, 100);
-	}
-    });
-};
+/**
+ * @brief apply hover mask to widget based whether "individually" per element or "all in once" to all elements
+ * 
+ * The "individual" procedure necessary to apply the hover overlay mask only to individual widget after creation.
+ * Usually called by biq-theme-dialog.js when submit widget is finished and success
+ * <br><br>The "all in once" procedure will executed on the first time whole page loaded
+ * @param {String} p_widget_id the ID of widget which usually got from AJAX response generated by PHP/Wordpress server,
+ *  if omitted / undefined then it is mean for "all in once procedure"
+ */
 BIQThemeManager.prototype.widgetHoverApply = function(p_widget_id){
     var self = this;
-    $b('.biq-widgets[data-biq-widget-id="'+p_widget_id+'"]').on('hover', function(e){
+    var selector = typeof p_widget_id!=='undefined' ?
+            '.biq-widgets[data-biq-widget-id="'+p_widget_id+'"]'//Only match to specific data-biq-widget-id
+            :'.biq-widgets'; //All widget
+    $b(selector).on('hover', function(e){
 	if(e.type === 'mouseenter'){
+            clearTimeout( self.hover_to_edit.hide_timeout_obj );
+            $b('.hover-to-edit .highlight').stop(false, true);//stop previous animation: $b('.hover-to-edit .highlight').show(200);
+            self.hover_to_edit.widget_sel = null;
             self.hover_to_edit.widget_sel = $b(this);
-            self.hover_to_edit.set_overlay_sizes();
-            $b('.hover-to-edit').show(0, function(){
-                $b('.hover-to-edit .highlight').show(200);
-            });
+            self.hover_to_edit.set_overlay_sizes(
+                function(){
+                    $b('.hover-to-edit').show(0, function(){
+                        $b('.hover-to-edit .highlight').show(200);
+                    });
+                }
+            );
 	}
     });
 };
-
-
-BIQThemeManager.prototype.initToggleButton = function( p_parent_selector ){
-    $b(p_parent_selector+' btn-group[data-toggle-name]').each(function () {
-    var group = $b(this);
-    var form = group.parents('form').eq(0);
-    var name = group.attr('data-toggle-name');
-    var hidden = $b('input[name="' + name + '"]', form);
-    $b('button', group).each(function () {
-	var button = $b(this);
-	button.live('click', function () {
-	    hidden.val($b(this).val());
-	    alert(hidden.val());
-	});
-	if (button.val() === hidden.val()) {
-	    button.addClass('active');
-	}
-    });
-    });
-};
-
+/**
+ * @brief executed on "edit" button click or mask overlay doubleclick
+ * 
+ * 1.generate template for md-dialog interface and input content <br>
+ * 2.show the md-dialog <br>
+ * 3.hide the overlay mask interface <br>
+ * 
+ * @param {Object} e DOM emitted on the event click button and doubleclick overlay mask
+ */
 BIQThemeManager.prototype.editWidget = function(e){
     var self = this;
     self.hover_to_edit.is_editing = true;
@@ -326,7 +339,6 @@ BIQThemeManager.prototype.editWidget = function(e){
 		</md-dialog-actions> \
 	    </form> \
 	</md-dialog>';
-//    var values = self.BIQWidgetElementParser.contactEmailSimple(self.hover_to_edit.widget_sel, self.structure_item);
     var values = self.BIQWidgetElementParser.getValues(
             self.hover_to_edit.widget_sel.data('biqWidgetType'), // the type of widget eg : contact_email_simple
             self.hover_to_edit.widget_sel, self.structure_item
@@ -336,18 +348,16 @@ BIQThemeManager.prototype.editWidget = function(e){
     
     self.hover_to_edit.onmouseleave();
 };
-BIQThemeManager.prototype.getLayoutClass = function(){
-    var self = this;
-    var ret = '';//return class name of main layout wrapper
-    
-    var layout_class_arr = ["header", "body", "footer"];
-    
-    var layout_el = self.hover_to_edit.widget_sel.closest('.layout');
-    for(var i=0; i<layout_class_arr.length; i++){
-	if( layout_el.hasClass( layout_class_arr[i] ) ) ret = layout_class_arr[i];
-    }
-    return ret;
-};
+/**
+ * @brief Generate input markup element for md-dialog interface
+ * 
+ * Produce {Object} data type, has 2 main properties. One is 'main' for the main widget input, the other is 'css' for inline and classes option.
+ * @returns {Object} ret return object for input at md-dialog : <br>
+ * - main : for main widget setting input
+ * - css : for css input, usually 'inline' and 'classes'
+ * - title: for using as md-dialog title
+ * - layout: currently unused
+ */
 BIQThemeManager.prototype.generateWidgetInputAll = function(){
     var self = this;
     var ret = {main : '-', css : '-', title: '-', layout: ''};//layout is for the main layout root ( "header", "body" or "footer" )
@@ -390,10 +400,15 @@ BIQThemeManager.prototype.generateWidgetInputAll = function(){
     ret.css = '<biq-tab-item title="CSS">'+html_form_css+'</biq-tab-item>';
     
     ret.title = self.structure_item.title;
-    ret.layout = self.getLayoutClass();
+//    ret.layout = self.getLayoutClass(); //currently unused
 //    self.getStructureIdx();
     return ret;
 };
+/**
+ * @brief Generate input form per element to call in generateWidgetInputAll()
+ * 
+ * The element produced in angular material style. Will call inside loop check each element of 'main' and 'css' tab.
+ */
 BIQThemeManager.prototype.generateInputForm = {
     text : function( p_structure_item ){
 	var is_required = ( p_structure_item.hasOwnProperty('required') && (p_structure_item.required) );
@@ -433,7 +448,11 @@ BIQThemeManager.prototype.generateInputForm = {
 	return ret_html;
     }
 };
-
+/**
+ * @brief display loading inside an element.
+ * @param {String} p_selector jQuery format selector where the loading will be displayed
+ * @param {Integer} p_timeout Delay timeout for the loading to be displayed ( in millisecond )
+ */
 BIQThemeManager.prototype.loading = function(p_selector, p_timeout){// #id or .class
     var loading_html = '<div id="biq-loading">\n\
 	<div class="image">\n\
@@ -448,9 +467,26 @@ BIQThemeManager.prototype.loading = function(p_selector, p_timeout){// #id or .c
 	},p_timeout);
     }
 };
+/**
+ * Currently unused, basicly it will get to which layout belong: "header", "body" or "footer"
+ */
+BIQThemeManager.prototype.getLayoutClass = function(){
+    var self = this;
+    var ret = '';//return class name of main layout wrapper
+    
+    var layout_class_arr = ["header", "body", "footer"];
+    
+    var layout_el = self.hover_to_edit.widget_sel.closest('.layout');
+    for(var i=0; i<layout_class_arr.length; i++){
+	if( layout_el.hasClass( layout_class_arr[i] ) ) ret = layout_class_arr[i];
+    }
+    return ret;
+};
 
-/*
- *Created by: Bayu candra <bayucandra@gmail.com>
+/** @file biq-widget-element-parser.js
+ * @brief Parsing HTML DOM element to get the structure data of widget
+ *
+ *@author Bayu candra <bayucandra@gmail.com>
  *Creation Year: 2016
 */
 function BIQWidgetElementParser(){
@@ -459,8 +495,7 @@ function BIQWidgetElementParser(){
 /**
  * Main function to Get values based on widget name by call other functions 
  * 
- * @param {String} p_widget_type is based on widget type wich is belong to html attribute named data-biq-widget-type which need to convert to
- *      function name which is using camel case convention ( by using typeToFunction() function)
+ * @param {String} p_widget_type is based on widget type wich is belong to html attribute named data-biq-widget-type which need to convert to function name which is using camel case convention ( by using typeToFunction() function)
  * @param {Object} p_widget_sel HTML element got from jQuery function $('#id'). It is selected widget by click 'Edit' after hovering
  * @param {Object} p_structure_sel Selected structure by matching p_widget_sel and defined at biq-widget-structure.js.
  * @returns {Object} generated by function called with self[p_widget_type] which give reference to a function

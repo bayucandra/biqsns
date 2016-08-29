@@ -1,12 +1,16 @@
 <?php
-/**
- * \class BIQTheme
- * \brief For updating widget data of theme
+/** 
+ * @class BIQTheme
+ * @brief For updating widget data of theme
+ * 
  * This class is mainly purposed for updating widget which stored at Wordpress 'option' table
  */
     class BIQTheme{
         private $template_arr;//!< global variables which store value that generated with get_option() at function.php file
         private $biq_sns_settings, $bimage, $template_directory;
+        /**
+         * Mostly initializing global variables
+         */
         public function __construct($arr_params=array()){
             global $template_arr; global $biq_sns_settings; global $bimage; global $template_directory;
             $this->template_arr = &$template_arr;
@@ -14,8 +18,15 @@
             $this->bimage = $bimage;
             $this->template_directory = $template_directory;
         }
-        public function save($p_arr){// 'widget_type', 'data'
-//            print_r($p_arr);
+        /**
+         * @brief Save modified widget with wordpress function : update_option()
+         * 
+         * This function should be called via AJAX at file backend/ajax-submit.php by using wp-ajax-.
+         * It will first detect 'widget_type' from $_POST variable then call appropriate function related to widget type. e.g : contact_email_simple_update()
+         * 
+         * @param array $p_arr got from $_POST PHP variable contain 'widget_type' and other widget detail
+         */
+        public function save($p_arr){
             if(!isset($p_arr["widget_type"])){
                 echo '<h3>Error class BIQTheme::save()</h3>';
                 return;
@@ -32,6 +43,9 @@
             echo json_encode($widget_result);
             update_option('biq-sns-template', $this->template_arr);
         }
+        /**
+         * @brief Generate widget structure by using widget_update() function and called with save()
+         */
         function contact_email_simple_update($p_data){
             $attributes = array( "widget_id"=>$p_data["widget_id"] );
             if( !empty($p_data["icon_type"]) ){ $attributes["icon_type"] = $p_data["icon_type"]; }
@@ -46,6 +60,9 @@
                 );
             return $widget_update_res;
         }
+        /**
+         * @brief Generate widget structure by using widget_update() function and called with save()
+         */
         function logo_update($p_data){
             $attributes = array("widget_id"=>$p_data["widget_id"]);
             
@@ -55,7 +72,7 @@
                 $this->bimage->load_image($img_file_name["tmp_name"]);
                 $image_is_valid=$this->bimage->get_error("success");
                 if($image_is_valid){
-                    $logo_path = $this->template_directory."/images/biq/widgets/".$img_file_name["name"];
+                    $logo_path = $this->template_directory."/images/biq/widgets/contact-email-simple/".$img_file_name["name"];
                     $logo_upload_process = $this->bimage->save($logo_path);
                     if(!$logo_upload_process["success"]){
                         return $this->widget_error("Please make sure theme folder has write permission. Error when uploading logo image: ".$logo_upload_process["message"]);
@@ -119,6 +136,11 @@
                 $p_arr_widget[$key] = $val;
             }
         }
+        /**
+         * Generate and give array return which represent error state
+         * 
+         * @param string String of error message to be shown
+         */
         function widget_error($p_message = ""){
             $arr_ret = array("is_found"=>false, "widget_id"=>-1, "html"=>$p_message);
             return $arr_ret;

@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/node_modules/semver/test" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f8cff0300f49a79120b79aefd4ca1046 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="semver" fontname="Helvetica", fontsize="10", URL="dir_f8cff0300f49a79120b79aefd4ca1046.html"]
+  dir_e21e7e86c5af035e68fb40ae9d11f5f7 [shape=box, label="test", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_e21e7e86c5af035e68fb40ae9d11f5f7.html"];
+  }
+}

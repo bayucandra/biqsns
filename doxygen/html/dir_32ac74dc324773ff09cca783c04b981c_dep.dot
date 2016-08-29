@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/loud-rejection/node_modules/signal-exit/test" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a18a85fc06c5737eff3feba4d1be4fc8 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="signal-exit" fontname="Helvetica", fontsize="10", URL="dir_a18a85fc06c5737eff3feba4d1be4fc8.html"]
+  subgraph clusterdir_32ac74dc324773ff09cca783c04b981c {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_32ac74dc324773ff09cca783c04b981c.html"];
+    dir_32ac74dc324773ff09cca783c04b981c [shape=plaintext label="test"];
+    dir_445313e0350ddc29afad5f81db542af6 [shape=box label="fixtures" color="black" fillcolor="white" style="filled" URL="dir_445313e0350ddc29afad5f81db542af6.html"];
+  }
+  }
+}

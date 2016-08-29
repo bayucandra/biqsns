@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/redent/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_4d60b9531dc10750d73d685d7f882492 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="redent" fontname="Helvetica", fontsize="10", URL="dir_4d60b9531dc10750d73d685d7f882492.html"]
+  subgraph clusterdir_a154a9f9911462a6cfdc5acc2756e596 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_a154a9f9911462a6cfdc5acc2756e596.html"];
+    dir_a154a9f9911462a6cfdc5acc2756e596 [shape=plaintext label="node_modules"];
+    dir_16fa6c7da09cccd008626d2349343b7a [shape=box label="indent-string" color="red" fillcolor="white" style="filled" URL="dir_16fa6c7da09cccd008626d2349343b7a.html"];
+    dir_b0891c6f7febc0b93d9dae610a7cc2d2 [shape=box label="strip-indent" color="black" fillcolor="white" style="filled" URL="dir_b0891c6f7febc0b93d9dae610a7cc2d2.html"];
+  }
+  }
+}

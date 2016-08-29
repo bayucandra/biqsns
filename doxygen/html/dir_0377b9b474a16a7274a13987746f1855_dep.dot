@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/glob/node_modules/inflight" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_2263bb197411a9eb923e2e9116c4cecc {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_2263bb197411a9eb923e2e9116c4cecc.html"]
+  subgraph clusterdir_0377b9b474a16a7274a13987746f1855 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_0377b9b474a16a7274a13987746f1855.html"];
+    dir_0377b9b474a16a7274a13987746f1855 [shape=plaintext label="inflight"];
+    dir_8824a9bf21f2937a54a1a88eabb256e8 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_8824a9bf21f2937a54a1a88eabb256e8.html"];
+  }
+  }
+}

@@ -1,0 +1,55 @@
+digraph "libs/angular/angular-material-fileinput-master/bower_components/angular-material/modules/js" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_9a01bcb1e0ccd983732fab7293854df9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="modules" fontname="Helvetica", fontsize="10", URL="dir_9a01bcb1e0ccd983732fab7293854df9.html"]
+  subgraph clusterdir_d897d99c4631079a19f1e8c9bbae1589 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_d897d99c4631079a19f1e8c9bbae1589.html"];
+    dir_d897d99c4631079a19f1e8c9bbae1589 [shape=plaintext label="js"];
+    dir_201fb3e8edb85fe8566e5ec55e078197 [shape=box label="autocomplete" color="black" fillcolor="white" style="filled" URL="dir_201fb3e8edb85fe8566e5ec55e078197.html"];
+    dir_b16de93deff19a51fa5cebfb25f8acd1 [shape=box label="backdrop" color="black" fillcolor="white" style="filled" URL="dir_b16de93deff19a51fa5cebfb25f8acd1.html"];
+    dir_8c14433cde3eee01d1607ac396e34689 [shape=box label="bottomSheet" color="black" fillcolor="white" style="filled" URL="dir_8c14433cde3eee01d1607ac396e34689.html"];
+    dir_aff195e324122ecdae9984a1530eb457 [shape=box label="button" color="black" fillcolor="white" style="filled" URL="dir_aff195e324122ecdae9984a1530eb457.html"];
+    dir_e5d5d788c4c2f3c589c42be23b75c256 [shape=box label="card" color="black" fillcolor="white" style="filled" URL="dir_e5d5d788c4c2f3c589c42be23b75c256.html"];
+    dir_a6f3820839ef444268fbf833672c158b [shape=box label="checkbox" color="black" fillcolor="white" style="filled" URL="dir_a6f3820839ef444268fbf833672c158b.html"];
+    dir_ecc175e0cef5564fba8b7babc258fbe7 [shape=box label="chips" color="black" fillcolor="white" style="filled" URL="dir_ecc175e0cef5564fba8b7babc258fbe7.html"];
+    dir_39f7f5095766e964b731058fa2785fbc [shape=box label="colors" color="black" fillcolor="white" style="filled" URL="dir_39f7f5095766e964b731058fa2785fbc.html"];
+    dir_8afc5e0cae0f7c72b1db19b3647484e6 [shape=box label="content" color="black" fillcolor="white" style="filled" URL="dir_8afc5e0cae0f7c72b1db19b3647484e6.html"];
+    dir_aab8231380dc78a41e2b5314b95a7abe [shape=box label="core" color="black" fillcolor="white" style="filled" URL="dir_aab8231380dc78a41e2b5314b95a7abe.html"];
+    dir_79aafa952ba543b6675e5da5c805f651 [shape=box label="datepicker" color="black" fillcolor="white" style="filled" URL="dir_79aafa952ba543b6675e5da5c805f651.html"];
+    dir_932c00dbf296bb4ab3bba43df5c21e54 [shape=box label="dialog" color="black" fillcolor="white" style="filled" URL="dir_932c00dbf296bb4ab3bba43df5c21e54.html"];
+    dir_b112e7cf04dfed7b6c4d6641e2c7ecfe [shape=box label="divider" color="black" fillcolor="white" style="filled" URL="dir_b112e7cf04dfed7b6c4d6641e2c7ecfe.html"];
+    dir_83bf32166ac2baa7769185524d47fe14 [shape=box label="fabActions" color="black" fillcolor="white" style="filled" URL="dir_83bf32166ac2baa7769185524d47fe14.html"];
+    dir_97e3e0fdc3df8c59efdb2062c7d37450 [shape=box label="fabSpeedDial" color="black" fillcolor="white" style="filled" URL="dir_97e3e0fdc3df8c59efdb2062c7d37450.html"];
+    dir_793a8f65114ee5b196853d66a3233c92 [shape=box label="fabToolbar" color="black" fillcolor="white" style="filled" URL="dir_793a8f65114ee5b196853d66a3233c92.html"];
+    dir_2979e3d30be6210a5ea4dccabd48211d [shape=box label="fabTrigger" color="black" fillcolor="white" style="filled" URL="dir_2979e3d30be6210a5ea4dccabd48211d.html"];
+    dir_c8795185784894f23eaefea637c3e324 [shape=box label="gridList" color="black" fillcolor="white" style="filled" URL="dir_c8795185784894f23eaefea637c3e324.html"];
+    dir_12454bf9d1938933a4c0fcb71d4551f9 [shape=box label="icon" color="black" fillcolor="white" style="filled" URL="dir_12454bf9d1938933a4c0fcb71d4551f9.html"];
+    dir_4dd275ef4d7748b8f5fd23cc28923d0f [shape=box label="input" color="black" fillcolor="white" style="filled" URL="dir_4dd275ef4d7748b8f5fd23cc28923d0f.html"];
+    dir_990d2c262bea1c1a8bf4682fdb6dad9b [shape=box label="list" color="black" fillcolor="white" style="filled" URL="dir_990d2c262bea1c1a8bf4682fdb6dad9b.html"];
+    dir_76a996f5ed3f7e5220c555c64e96492b [shape=box label="menu" color="black" fillcolor="white" style="filled" URL="dir_76a996f5ed3f7e5220c555c64e96492b.html"];
+    dir_d433c77e455357372cfcf500713e0a75 [shape=box label="menuBar" color="black" fillcolor="white" style="filled" URL="dir_d433c77e455357372cfcf500713e0a75.html"];
+    dir_bc922e01e566395b8de5965b302046c4 [shape=box label="navBar" color="black" fillcolor="white" style="filled" URL="dir_bc922e01e566395b8de5965b302046c4.html"];
+    dir_73a4d507c73cbce3d34e4a1fbcd1f535 [shape=box label="panel" color="black" fillcolor="white" style="filled" URL="dir_73a4d507c73cbce3d34e4a1fbcd1f535.html"];
+    dir_32f48cbf6ce2d40f36e4eb3ee1d0534e [shape=box label="progressCircular" color="black" fillcolor="white" style="filled" URL="dir_32f48cbf6ce2d40f36e4eb3ee1d0534e.html"];
+    dir_a244f4655839dd7e859daee3c47c62eb [shape=box label="progressLinear" color="black" fillcolor="white" style="filled" URL="dir_a244f4655839dd7e859daee3c47c62eb.html"];
+    dir_f39fbf1a36031da06bb034d0ca57b0a9 [shape=box label="radioButton" color="black" fillcolor="white" style="filled" URL="dir_f39fbf1a36031da06bb034d0ca57b0a9.html"];
+    dir_783c76af815c632ff7ba58d1bc2b9913 [shape=box label="select" color="black" fillcolor="white" style="filled" URL="dir_783c76af815c632ff7ba58d1bc2b9913.html"];
+    dir_c74311dd7f392c48a02531eeb0e7dcf0 [shape=box label="showHide" color="black" fillcolor="white" style="filled" URL="dir_c74311dd7f392c48a02531eeb0e7dcf0.html"];
+    dir_2fcf0e284387fca42819029e483e30fc [shape=box label="sidenav" color="black" fillcolor="white" style="filled" URL="dir_2fcf0e284387fca42819029e483e30fc.html"];
+    dir_f44dfdc8ec0bd3c34cf87c7cd5e6f938 [shape=box label="slider" color="black" fillcolor="white" style="filled" URL="dir_f44dfdc8ec0bd3c34cf87c7cd5e6f938.html"];
+    dir_9a9f552ab90e20ac44a5c9ef04dd6c07 [shape=box label="sticky" color="black" fillcolor="white" style="filled" URL="dir_9a9f552ab90e20ac44a5c9ef04dd6c07.html"];
+    dir_1badf42e91680bb07ce9156db6c35243 [shape=box label="subheader" color="black" fillcolor="white" style="filled" URL="dir_1badf42e91680bb07ce9156db6c35243.html"];
+    dir_947ffd34b59766b6451c67e2a135bf9d [shape=box label="swipe" color="black" fillcolor="white" style="filled" URL="dir_947ffd34b59766b6451c67e2a135bf9d.html"];
+    dir_4c13cde2e631af746ca0523288558d1c [shape=box label="switch" color="black" fillcolor="white" style="filled" URL="dir_4c13cde2e631af746ca0523288558d1c.html"];
+    dir_d825d97324d75864dcd6daa8dac85e69 [shape=box label="tabs" color="black" fillcolor="white" style="filled" URL="dir_d825d97324d75864dcd6daa8dac85e69.html"];
+    dir_6210fa60c672bd0023be051d00c3cebe [shape=box label="textField" color="black" fillcolor="white" style="filled" URL="dir_6210fa60c672bd0023be051d00c3cebe.html"];
+    dir_ad3a1d2013d5e560a15185e5672e9126 [shape=box label="toast" color="black" fillcolor="white" style="filled" URL="dir_ad3a1d2013d5e560a15185e5672e9126.html"];
+    dir_d9b5e0568c323a68ee6e4554beb1d085 [shape=box label="toolbar" color="black" fillcolor="white" style="filled" URL="dir_d9b5e0568c323a68ee6e4554beb1d085.html"];
+    dir_c9da2f5e45cedd13392178e5344e241f [shape=box label="tooltip" color="black" fillcolor="white" style="filled" URL="dir_c9da2f5e45cedd13392178e5344e241f.html"];
+    dir_1efe719e8ffdf67c07fd9c010598eec9 [shape=box label="virtualRepeat" color="black" fillcolor="white" style="filled" URL="dir_1efe719e8ffdf67c07fd9c010598eec9.html"];
+    dir_1d2646a62694f78a1cd82ac69b260197 [shape=box label="whiteframe" color="black" fillcolor="white" style="filled" URL="dir_1d2646a62694f78a1cd82ac69b260197.html"];
+  }
+  }
+}

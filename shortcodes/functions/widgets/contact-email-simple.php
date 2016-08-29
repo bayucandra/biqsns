@@ -6,7 +6,7 @@
 		array(
                     'widget_id' => '',
 		    'icon_type' => 'image',// image / class(css)
-		    'icon_value' => $template_uri . '/images/biq/widgets/icon-contact-email-21x14.png',//icon src / class name
+		    'icon_value' => $template_uri . '/images/biq/widgets/contact-email-simple/icon-contact-email-21x14.png',//icon src / class name
 		    'css_inline' => '',
 		    'classes' => ''
 		),

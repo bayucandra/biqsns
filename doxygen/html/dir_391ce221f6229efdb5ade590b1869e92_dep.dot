@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/fancy-log/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7b493bbec6c07a6371e61890ee03bf52 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_7b493bbec6c07a6371e61890ee03bf52.html"]
+  dir_391ce221f6229efdb5ade590b1869e92 [shape=box, label="ansi-regex", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_391ce221f6229efdb5ade590b1869e92.html"];
+  }
+}

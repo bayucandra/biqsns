@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/glob/node_modules/once/node_modules/wrappy" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a6e28ea6f2e52581df0ef6ec734342ac {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_a6e28ea6f2e52581df0ef6ec734342ac.html"]
+  dir_1171a65f9b389a798712ec18ce3e244f [shape=box, label="wrappy", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_1171a65f9b389a798712ec18ce3e244f.html"];
+  }
+}

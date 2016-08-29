@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/front-matter" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e285bd5bca29aba0a0109aa778e1b5d6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_e285bd5bca29aba0a0109aa778e1b5d6.html"]
+  subgraph clusterdir_34053d56fff91b42313af665b7d1dce4 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_34053d56fff91b42313af665b7d1dce4.html"];
+    dir_34053d56fff91b42313af665b7d1dce4 [shape=plaintext label="front-matter"];
+    dir_a9d520c1c597bcff8ea1d222ca3d5939 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_a9d520c1c597bcff8ea1d222ca3d5939.html"];
+    dir_be1d9b654a08af1af986a0df0f4d18a7 [shape=box label="tests" color="black" fillcolor="white" style="filled" URL="dir_be1d9b654a08af1af986a0df0f4d18a7.html"];
+  }
+  }
+}

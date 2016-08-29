@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/minimatch" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_47336bd2926e90de8ec221555b0453d5 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_47336bd2926e90de8ec221555b0453d5.html"]
+  subgraph clusterdir_0fc5271ff1f625ce02c4752eacfa201a {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_0fc5271ff1f625ce02c4752eacfa201a.html"];
+    dir_0fc5271ff1f625ce02c4752eacfa201a [shape=plaintext label="minimatch"];
+    dir_2027b7acd8352031484b70c6eeb37013 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_2027b7acd8352031484b70c6eeb37013.html"];
+  }
+  }
+}

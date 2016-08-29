@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/loud-rejection/node_modules/currently-unhandled" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f65025de81e1f0ee8975b1f5b89175f7 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_f65025de81e1f0ee8975b1f5b89175f7.html"]
+  subgraph clusterdir_0ea1eee6b0973faaf1c283239c80acfa {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_0ea1eee6b0973faaf1c283239c80acfa.html"];
+    dir_0ea1eee6b0973faaf1c283239c80acfa [shape=plaintext label="currently-unhandled"];
+    dir_e88a93bd717c3b0bc1c9e5da66375c1d [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_e88a93bd717c3b0bc1c9e5da66375c1d.html"];
+  }
+  }
+}

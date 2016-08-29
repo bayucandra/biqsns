@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/resolve/test/precedence" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_77096bf77faba9469f7d9e020d1ad487 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="test" fontname="Helvetica", fontsize="10", URL="dir_77096bf77faba9469f7d9e020d1ad487.html"]
+  subgraph clusterdir_34d1b8c4d46e1d1014022ec379043a69 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_34d1b8c4d46e1d1014022ec379043a69.html"];
+    dir_34d1b8c4d46e1d1014022ec379043a69 [shape=plaintext label="precedence"];
+    dir_38142732eec9972fc97fb979bc78e0a5 [shape=box label="aaa" color="black" fillcolor="white" style="filled" URL="dir_38142732eec9972fc97fb979bc78e0a5.html"];
+    dir_f7847b639fe3267c46d96e76272c39c7 [shape=box label="bbb" color="black" fillcolor="white" style="filled" URL="dir_f7847b639fe3267c46d96e76272c39c7.html"];
+  }
+  }
+}

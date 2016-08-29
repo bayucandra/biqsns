@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_883abe6152bd7d82b8215b796b077315 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_883abe6152bd7d82b8215b796b077315.html"]
+  subgraph clusterdir_7ee447991a60ffddc722d1c905cc04a4 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_7ee447991a60ffddc722d1c905cc04a4.html"];
+    dir_7ee447991a60ffddc722d1c905cc04a4 [shape=plaintext label="minimatch"];
+    dir_4d88f2cdd2ffd34e645564239288011b [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_4d88f2cdd2ffd34e645564239288011b.html"];
+  }
+  }
+}

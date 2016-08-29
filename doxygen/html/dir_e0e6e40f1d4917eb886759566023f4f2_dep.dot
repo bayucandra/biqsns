@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules/through2/node_modules/xtend" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_2740ea9c2dfa2cc055ea2ba648f0a8fe {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_2740ea9c2dfa2cc055ea2ba648f0a8fe.html"]
+  dir_e0e6e40f1d4917eb886759566023f4f2 [shape=box, label="xtend", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_e0e6e40f1d4917eb886759566023f4f2.html"];
+  }
+}

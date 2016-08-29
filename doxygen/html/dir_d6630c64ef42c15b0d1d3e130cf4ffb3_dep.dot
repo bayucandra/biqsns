@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/read-pkg/node_modules/load-json-file/node_modules/parse-json" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_dbd31830462bd67f561ff5f303bf32dc {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_dbd31830462bd67f561ff5f303bf32dc.html"]
+  subgraph clusterdir_d6630c64ef42c15b0d1d3e130cf4ffb3 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_d6630c64ef42c15b0d1d3e130cf4ffb3.html"];
+    dir_d6630c64ef42c15b0d1d3e130cf4ffb3 [shape=plaintext label="parse-json"];
+    dir_185adadbd47a913d663984c68cebb75e [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_185adadbd47a913d663984c68cebb75e.html"];
+    dir_4fb7d5693f90b60c7bbb66d6ef9d719b [shape=box label="vendor" color="black" fillcolor="white" style="filled" URL="dir_4fb7d5693f90b60c7bbb66d6ef9d719b.html"];
+  }
+  }
+}

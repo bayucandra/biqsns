@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/strip-bom/node_modules/first-chunk-stream" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_90602809e329344c859dad1bd8e6227c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_90602809e329344c859dad1bd8e6227c.html"]
+  dir_b00f6b4990d1221ed482f07a16db183b [shape=box, label="first-chunk-stream", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_b00f6b4990d1221ed482f07a16db183b.html"];
+  }
+}

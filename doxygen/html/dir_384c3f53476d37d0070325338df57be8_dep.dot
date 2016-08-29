@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/multipipe/node_modules/duplexer2" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e99fcfc7900bed4e875764b3276b1dde {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_e99fcfc7900bed4e875764b3276b1dde.html"]
+  subgraph clusterdir_384c3f53476d37d0070325338df57be8 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_384c3f53476d37d0070325338df57be8.html"];
+    dir_384c3f53476d37d0070325338df57be8 [shape=plaintext label="duplexer2"];
+    dir_68c6b1bc84ddfb6b6a1552372067b448 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_68c6b1bc84ddfb6b6a1552372067b448.html"];
+    dir_3c43dccede414abda9f061f11811cd8a [shape=box label="test" color="black" fillcolor="white" style="filled" URL="dir_3c43dccede414abda9f061f11811cd8a.html"];
+  }
+  }
+}

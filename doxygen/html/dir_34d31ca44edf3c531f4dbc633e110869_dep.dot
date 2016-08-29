@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/event-stream/node_modules/from/test" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_af4ab0df4ddb12ab01e052edef1e6767 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="from" fontname="Helvetica", fontsize="10", URL="dir_af4ab0df4ddb12ab01e052edef1e6767.html"]
+  dir_34d31ca44edf3c531f4dbc633e110869 [shape=box, label="test", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_34d31ca44edf3c531f4dbc633e110869.html"];
+  }
+}

@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/fancy-log/node_modules/time-stamp" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_41d67fa9247a8310166871727d3187b8 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_41d67fa9247a8310166871727d3187b8.html"]
+  dir_9e6da574916d83ea4224473d9c3f8025 [shape=box, label="time-stamp", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_9e6da574916d83ea4224473d9c3f8025.html"];
+  }
+}

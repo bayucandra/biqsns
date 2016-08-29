@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/test/bin" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_81551d69135160d8a3bf5e33555cf42c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="test" fontname="Helvetica", fontsize="10", URL="dir_81551d69135160d8a3bf5e33555cf42c.html"]
+  dir_4370cb3d42f6bd4b3484cd191114e06b [shape=box, label="bin", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_4370cb3d42f6bd4b3484cd191114e06b.html"];
+  }
+}

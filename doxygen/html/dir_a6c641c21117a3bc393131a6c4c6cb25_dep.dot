@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/read-pkg/node_modules/load-json-file/node_modules/parse-json/vendor" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_40ad413db4770c2b63379416de50b87c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="parse-json" fontname="Helvetica", fontsize="10", URL="dir_40ad413db4770c2b63379416de50b87c.html"]
+  dir_a6c641c21117a3bc393131a6c4c6cb25 [shape=box, label="vendor", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_a6c641c21117a3bc393131a6c4c6cb25.html"];
+  }
+}

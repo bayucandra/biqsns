@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/archy/examples" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_46f3fbadcf712cba88971a33985bf0e9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="archy" fontname="Helvetica", fontsize="10", URL="dir_46f3fbadcf712cba88971a33985bf0e9.html"]
+  dir_6faf8b706980fcaa7aaee14643c855db [shape=box, label="examples", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_6faf8b706980fcaa7aaee14643c855db.html"];
+  }
+}

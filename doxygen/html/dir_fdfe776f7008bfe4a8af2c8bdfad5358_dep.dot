@@ -1,0 +1,9 @@
+digraph "libs/php" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ab66791167d0a97a2e5ffcff49441a53 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="libs" fontname="Helvetica", fontsize="10", URL="dir_ab66791167d0a97a2e5ffcff49441a53.html"]
+  dir_fdfe776f7008bfe4a8af2c8bdfad5358 [shape=box, label="php", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_fdfe776f7008bfe4a8af2c8bdfad5358.html"];
+  }
+}

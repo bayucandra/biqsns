@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/chalk/node_modules/has-ansi/node_modules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_13a577b13a85a6e28a7f1555f6bd9bd9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="has-ansi" fontname="Helvetica", fontsize="10", URL="dir_13a577b13a85a6e28a7f1555f6bd9bd9.html"]
+  subgraph clusterdir_12918d4e0bc2f2c66376282764669135 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_12918d4e0bc2f2c66376282764669135.html"];
+    dir_12918d4e0bc2f2c66376282764669135 [shape=plaintext label="node_modules"];
+    dir_44ab04172ccaacfe8d52e0d63f41f590 [shape=box label="ansi-regex" color="black" fillcolor="white" style="filled" URL="dir_44ab04172ccaacfe8d52e0d63f41f590.html"];
+  }
+  }
+}

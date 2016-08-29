@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/gulp-util/node_modules/multipipe/node_modules/duplexer2/node_modules/readable-stream/node_modules/isarray/build" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f424f330edef781cf2d5a03f2ee4f0fc {
+    graph [ bgcolor="#ddddee", pencolor="black", label="isarray" fontname="Helvetica", fontsize="10", URL="dir_f424f330edef781cf2d5a03f2ee4f0fc.html"]
+  dir_c8705e8a3bf633b6f930c177c9d8d64d [shape=box, label="build", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_c8705e8a3bf633b6f930c177c9d8d64d.html"];
+  }
+}

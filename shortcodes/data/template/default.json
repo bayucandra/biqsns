@@ -34,16 +34,14 @@
                             "attributes": {"classes":"biq-table"},
                             "children"  : [
                                 {
-                                    "shortcode" : "biq_box_wrapper_short_alt",
-                                    "widget_id" : "7",
-                                    "attributes": {"classes":"biq-table-cell"},
-                                    "children"  : [
-                                        {
-                                            "shortcode":"logo",
-                                            "widget_id":"8",
-                                            "attributes" : {"img_alt" : "Logo Default"}
-                                        }
-                                    ]
+                                    "shortcode":"logo",
+                                    "widget_id":"8",
+                                    "attributes" : {"img_alt" : "Logo Default", "classes": "biq-table-cell"}
+                                },
+                                {
+                                    "shortcode":"main_menu",
+                                    "widget_id":"9",
+                                    "attributes": {}
                                 }
                             ]
                             
@@ -54,7 +52,7 @@
         },
         "body": {
             "shortcode": "biq_box_wrapper_full",
-            "widget_id" : "9",
+            "widget_id" : "10",
             "attributes": {"classes" : "body biq-layout"}
         }
     }

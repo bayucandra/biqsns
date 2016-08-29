@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-watcher/node_modules/gaze/node_modules/globule/node_modules/glob/node_modules/graceful-fs" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c5843f000a5250cee4a9c1e4d8adc1f3 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_c5843f000a5250cee4a9c1e4d8adc1f3.html"]
+  subgraph clusterdir_5be8a6eea4cca874abab14e6d6124852 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_5be8a6eea4cca874abab14e6d6124852.html"];
+    dir_5be8a6eea4cca874abab14e6d6124852 [shape=plaintext label="graceful-fs"];
+    dir_57b44774298ea89c08cdf4a7b8be777b [shape=box label="test" color="black" fillcolor="white" style="filled" URL="dir_57b44774298ea89c08cdf4a7b8be777b.html"];
+  }
+  }
+}

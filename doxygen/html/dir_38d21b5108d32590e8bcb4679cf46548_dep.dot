@@ -1,0 +1,16 @@
+digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/gulp-util/node_modules/dateformat" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_5590900bf34d85499364ffac468dd3f6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_5590900bf34d85499364ffac468dd3f6.html"]
+  subgraph clusterdir_38d21b5108d32590e8bcb4679cf46548 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_38d21b5108d32590e8bcb4679cf46548.html"];
+    dir_38d21b5108d32590e8bcb4679cf46548 [shape=plaintext label="dateformat"];
+    dir_08e1ddf0dac3b3254761fb46c5272b1d [shape=box label="bin" color="black" fillcolor="white" style="filled" URL="dir_08e1ddf0dac3b3254761fb46c5272b1d.html"];
+    dir_92017bd034af467597c3d9ef7b49602a [shape=box label="lib" color="black" fillcolor="white" style="filled" URL="dir_92017bd034af467597c3d9ef7b49602a.html"];
+    dir_e53ec83e83aa1b8b823b85ef6aa2063d [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_e53ec83e83aa1b8b823b85ef6aa2063d.html"];
+    dir_c0bd19257dfded56bf96c1e030e814db [shape=box label="test" color="red" fillcolor="white" style="filled" URL="dir_c0bd19257dfded56bf96c1e030e814db.html"];
+  }
+  }
+}

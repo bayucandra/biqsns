@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/event-stream/node_modules/pause-stream" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_b77593aa0de68a9859ef9873ff0aea96 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_b77593aa0de68a9859ef9873ff0aea96.html"]
+  subgraph clusterdir_6755d071eeb90b1f8b89d23358637f60 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6755d071eeb90b1f8b89d23358637f60.html"];
+    dir_6755d071eeb90b1f8b89d23358637f60 [shape=plaintext label="pause-stream"];
+    dir_276b0ccaeb14053222c969865319ae82 [shape=box label="test" color="black" fillcolor="white" style="filled" URL="dir_276b0ccaeb14053222c969865319ae82.html"];
+  }
+  }
+}

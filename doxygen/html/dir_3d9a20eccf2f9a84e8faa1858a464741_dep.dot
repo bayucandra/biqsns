@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/node_modules/validate-npm-package-license" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_02c0e89feae25c12a9ead053841120e8 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_02c0e89feae25c12a9ead053841120e8.html"]
+  subgraph clusterdir_3d9a20eccf2f9a84e8faa1858a464741 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_3d9a20eccf2f9a84e8faa1858a464741.html"];
+    dir_3d9a20eccf2f9a84e8faa1858a464741 [shape=plaintext label="validate-npm-package-license"];
+    dir_6a2914e50a4f12726734161234568408 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_6a2914e50a4f12726734161234568408.html"];
+  }
+  }
+}

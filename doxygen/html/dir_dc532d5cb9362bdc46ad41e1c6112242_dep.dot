@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/resolve/test/pathfilter/deep_ref" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_413f8da2afe7e5068c020d181a76832b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="pathfilter" fontname="Helvetica", fontsize="10", URL="dir_413f8da2afe7e5068c020d181a76832b.html"]
+  subgraph clusterdir_dc532d5cb9362bdc46ad41e1c6112242 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_dc532d5cb9362bdc46ad41e1c6112242.html"];
+    dir_dc532d5cb9362bdc46ad41e1c6112242 [shape=plaintext label="deep_ref"];
+    dir_2957d9108f0987f5c3ae5c3f35f93fc6 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_2957d9108f0987f5c3ae5c3f35f93fc6.html"];
+  }
+  }
+}

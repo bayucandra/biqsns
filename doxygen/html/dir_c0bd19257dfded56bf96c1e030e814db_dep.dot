@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/gulp-util/node_modules/dateformat/test" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_38d21b5108d32590e8bcb4679cf46548 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="dateformat" fontname="Helvetica", fontsize="10", URL="dir_38d21b5108d32590e8bcb4679cf46548.html"]
+  subgraph clusterdir_c0bd19257dfded56bf96c1e030e814db {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_c0bd19257dfded56bf96c1e030e814db.html"];
+    dir_c0bd19257dfded56bf96c1e030e814db [shape=plaintext label="test"];
+    dir_88f6fd2c5b2629f7304cd9581220c43a [shape=box label="weekofyear" color="black" fillcolor="white" style="filled" URL="dir_88f6fd2c5b2629f7304cd9581220c43a.html"];
+  }
+  }
+}

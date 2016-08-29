@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/resolve/test/resolver/punycode" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_2607a2f6ff488dd408f5e9a447449b45 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="resolver" fontname="Helvetica", fontsize="10", URL="dir_2607a2f6ff488dd408f5e9a447449b45.html"]
+  subgraph clusterdir_7198e21adde8db15b215461deab98b29 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_7198e21adde8db15b215461deab98b29.html"];
+    dir_7198e21adde8db15b215461deab98b29 [shape=plaintext label="punycode"];
+    dir_b272e07c236bd933de3f4b9a71d96234 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_b272e07c236bd933de3f4b9a71d96234.html"];
+  }
+  }
+}

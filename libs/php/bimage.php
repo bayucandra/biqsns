@@ -1,6 +1,6 @@
 <?php
-/**
- * bimage is class to processing image (upload, resize, convert etc.)
+/*! \class BImage
+ * \brief class to processing image (upload, resize, convert, convert stream etc.)
  *
  * @author bayucandra@gmail.com
  * V.0.1 (2015-05-11)

@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules/multipipe/node_modules/duplexer2/node_modules/readable-stream/node_modules/isarray" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_202a8c577da2b2e365554eca17ea4ee1 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_202a8c577da2b2e365554eca17ea4ee1.html"]
+  subgraph clusterdir_e7f757e39c1cf7a661483bb87bfb361d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_e7f757e39c1cf7a661483bb87bfb361d.html"];
+    dir_e7f757e39c1cf7a661483bb87bfb361d [shape=plaintext label="isarray"];
+    dir_cfce2f20ac51a5a036f7bb96ac1789a8 [shape=box label="build" color="black" fillcolor="white" style="filled" URL="dir_cfce2f20ac51a5a036f7bb96ac1789a8.html"];
+  }
+  }
+}

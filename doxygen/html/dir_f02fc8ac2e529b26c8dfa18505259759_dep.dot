@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ffdcdf755bc9eb93572acb3f59824149 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="concat-map" fontname="Helvetica", fontsize="10", URL="dir_ffdcdf755bc9eb93572acb3f59824149.html"]
+  dir_f02fc8ac2e529b26c8dfa18505259759 [shape=box, label="example", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f02fc8ac2e529b26c8dfa18505259759.html"];
+  }
+}

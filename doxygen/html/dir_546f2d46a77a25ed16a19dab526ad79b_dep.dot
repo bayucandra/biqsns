@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-sourcemaps/node_modules/through2/node_modules/readable-stream/lib" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_73fcfbd1fefb21c19393d56011bc47cd {
+    graph [ bgcolor="#ddddee", pencolor="black", label="readable-stream" fontname="Helvetica", fontsize="10", URL="dir_73fcfbd1fefb21c19393d56011bc47cd.html"]
+  dir_546f2d46a77a25ed16a19dab526ad79b [shape=box, label="lib", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_546f2d46a77a25ed16a19dab526ad79b.html"];
+  }
+}

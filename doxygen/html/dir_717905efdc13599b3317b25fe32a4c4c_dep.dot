@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_826188f3bbde588cc1b964b52c7e8781 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_826188f3bbde588cc1b964b52c7e8781.html"]
+  subgraph clusterdir_717905efdc13599b3317b25fe32a4c4c {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_717905efdc13599b3317b25fe32a4c4c.html"];
+    dir_717905efdc13599b3317b25fe32a4c4c [shape=plaintext label="liftoff"];
+    dir_364835b326660906d4fb1faa4a59abcd [shape=box label="lib" color="black" fillcolor="white" style="filled" URL="dir_364835b326660906d4fb1faa4a59abcd.html"];
+    dir_d35284238081c6528dc0689dc34e890d [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_d35284238081c6528dc0689dc34e890d.html"];
+  }
+  }
+}

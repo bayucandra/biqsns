@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp-sourcemaps/node_modules/convert-source-map/test" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_b3942eeed19fa16601ae9f674e404dce {
+    graph [ bgcolor="#ddddee", pencolor="black", label="convert-source-map" fontname="Helvetica", fontsize="10", URL="dir_b3942eeed19fa16601ae9f674e404dce.html"]
+  dir_6185db490763985b6c2e1fd2c0360ee8 [shape=box, label="test", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_6185db490763985b6c2e1fd2c0360ee8.html"];
+  }
+}

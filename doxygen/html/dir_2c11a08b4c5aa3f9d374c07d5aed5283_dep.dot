@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/once/node_modules/wrappy" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d74498d90bb381322c3fcd902c509191 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_d74498d90bb381322c3fcd902c509191.html"]
+  dir_2c11a08b4c5aa3f9d374c07d5aed5283 [shape=box, label="wrappy", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2c11a08b4c5aa3f9d374c07d5aed5283.html"];
+  }
+}

@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/read-pkg/node_modules/load-json-file/node_modules/strip-bom" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_08b343c25d47ca28cdf35c425bc949a6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_08b343c25d47ca28cdf35c425bc949a6.html"]
+  subgraph clusterdir_3bf412d8b817b2bc16aae757bb2af6ee {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_3bf412d8b817b2bc16aae757bb2af6ee.html"];
+    dir_3bf412d8b817b2bc16aae757bb2af6ee [shape=plaintext label="strip-bom"];
+    dir_f40d379201330d422d8df85ab3131102 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_f40d379201330d422d8df85ab3131102.html"];
+  }
+  }
+}

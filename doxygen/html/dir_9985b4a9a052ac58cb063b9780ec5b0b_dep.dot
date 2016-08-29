@@ -1,0 +1,9 @@
+digraph "shortcodes/functions/widgets" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_227bb69074bdc2d2b19e4617d03714af {
+    graph [ bgcolor="#ddddee", pencolor="black", label="functions" fontname="Helvetica", fontsize="10", URL="dir_227bb69074bdc2d2b19e4617d03714af.html"]
+  dir_9985b4a9a052ac58cb063b9780ec5b0b [shape=box, label="widgets", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_9985b4a9a052ac58cb063b9780ec5b0b.html"];
+  }
+}

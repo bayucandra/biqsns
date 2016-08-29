@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/pretty-hrtime" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_826188f3bbde588cc1b964b52c7e8781 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_826188f3bbde588cc1b964b52c7e8781.html"]
+  dir_cc3c112f125fce54db69dfe2b533d7ba [shape=box, label="pretty-hrtime", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_cc3c112f125fce54db69dfe2b533d7ba.html"];
+  }
+}

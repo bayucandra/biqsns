@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/findup-sync/node_modules/glob" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_56f58c243d9e3d912f927701ca3bc888 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_56f58c243d9e3d912f927701ca3bc888.html"]
+  subgraph clusterdir_ce693b41987448036411eab2f34eb907 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_ce693b41987448036411eab2f34eb907.html"];
+    dir_ce693b41987448036411eab2f34eb907 [shape=plaintext label="glob"];
+    dir_883abe6152bd7d82b8215b796b077315 [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_883abe6152bd7d82b8215b796b077315.html"];
+  }
+  }
+}

@@ -1,0 +1,9 @@
+digraph "libs/angular/angular-material-fileinput-master/bower_components/angular-material/modules/closure/sticky" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_9508a65cdb91278c0406c0d6c7b30c42 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="closure" fontname="Helvetica", fontsize="10", URL="dir_9508a65cdb91278c0406c0d6c7b30c42.html"]
+  dir_9dd433ed5670799eac4d87e88df645a2 [shape=box, label="sticky", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_9dd433ed5670799eac4d87e88df645a2.html"];
+  }
+}

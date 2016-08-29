@@ -1,0 +1,9 @@
+digraph "libs/angular/angular-material-fileinput-master/bower_components/angular-material/modules/closure/sidenav" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_9508a65cdb91278c0406c0d6c7b30c42 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="closure" fontname="Helvetica", fontsize="10", URL="dir_9508a65cdb91278c0406c0d6c7b30c42.html"]
+  dir_a9642d82c2dd55d4bfd79f368df62df4 [shape=box, label="sidenav", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_a9642d82c2dd55d4bfd79f368df62df4.html"];
+  }
+}

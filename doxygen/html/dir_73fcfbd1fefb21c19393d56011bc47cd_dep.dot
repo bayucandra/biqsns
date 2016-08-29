@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp-sourcemaps/node_modules/through2/node_modules/readable-stream" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_1097a7f02d60397722d048acb2c2e0f2 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_1097a7f02d60397722d048acb2c2e0f2.html"]
+  subgraph clusterdir_73fcfbd1fefb21c19393d56011bc47cd {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_73fcfbd1fefb21c19393d56011bc47cd.html"];
+    dir_73fcfbd1fefb21c19393d56011bc47cd [shape=plaintext label="readable-stream"];
+    dir_546f2d46a77a25ed16a19dab526ad79b [shape=box label="lib" color="black" fillcolor="white" style="filled" URL="dir_546f2d46a77a25ed16a19dab526ad79b.html"];
+    dir_4c3215182eeb476f786d15787c40ed9e [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_4c3215182eeb476f786d15787c40ed9e.html"];
+  }
+  }
+}

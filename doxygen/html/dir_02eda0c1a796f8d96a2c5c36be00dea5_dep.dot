@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/vinyl" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7dbf8f39bf160a39c2d4400f640e4130 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_7dbf8f39bf160a39c2d4400f640e4130.html"]
+  subgraph clusterdir_02eda0c1a796f8d96a2c5c36be00dea5 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_02eda0c1a796f8d96a2c5c36be00dea5.html"];
+    dir_02eda0c1a796f8d96a2c5c36be00dea5 [shape=plaintext label="vinyl"];
+    dir_2a4cd0a189c170fc8a67e2145a93c696 [shape=box label="lib" color="black" fillcolor="white" style="filled" URL="dir_2a4cd0a189c170fc8a67e2145a93c696.html"];
+    dir_fbc7970588dba255172d6465406ecf4c [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_fbc7970588dba255172d6465406ecf4c.html"];
+  }
+  }
+}

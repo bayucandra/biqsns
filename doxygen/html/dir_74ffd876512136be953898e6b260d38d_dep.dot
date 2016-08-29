@@ -1,0 +1,14 @@
+digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d35284238081c6528dc0689dc34e890d {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_d35284238081c6528dc0689dc34e890d.html"]
+  subgraph clusterdir_74ffd876512136be953898e6b260d38d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_74ffd876512136be953898e6b260d38d.html"];
+    dir_74ffd876512136be953898e6b260d38d [shape=plaintext label="flagged-respawn"];
+    dir_292755181c2a74ebd5de354dd2b1c205 [shape=box label="lib" color="black" fillcolor="white" style="filled" URL="dir_292755181c2a74ebd5de354dd2b1c205.html"];
+    dir_81551d69135160d8a3bf5e33555cf42c [shape=box label="test" color="red" fillcolor="white" style="filled" URL="dir_81551d69135160d8a3bf5e33555cf42c.html"];
+  }
+  }
+}

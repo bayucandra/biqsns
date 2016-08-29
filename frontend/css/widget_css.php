@@ -24,10 +24,7 @@ a.biq-widgets.contact-email-simple .text{
     margin-left: 5px;
     color : #666666;
 }
-a.biq-widgets.logo{
-    display: inline-block;
-    margin:0.5rem 2rem;
-}
-a.biq-widgets.logo img{
-    display: block;/*avoid extra bottom margin to the wrapper when in default ( inline display )*/
-}
+<?php
+require 'widgets/logo.php';
+require 'widgets/main-menu.php';
+?>

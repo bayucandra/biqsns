@@ -1,0 +1,13 @@
+digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/read-pkg" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_5e1b73323567c798277d8e2b57b7af2d {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_5e1b73323567c798277d8e2b57b7af2d.html"]
+  subgraph clusterdir_47f0842ad030c46dc1f31d34238d2002 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_47f0842ad030c46dc1f31d34238d2002.html"];
+    dir_47f0842ad030c46dc1f31d34238d2002 [shape=plaintext label="read-pkg"];
+    dir_aa9239283aaf2dea73d165bc211e9c8e [shape=box label="node_modules" color="red" fillcolor="white" style="filled" URL="dir_aa9239283aaf2dea73d165bc211e9c8e.html"];
+  }
+  }
+}

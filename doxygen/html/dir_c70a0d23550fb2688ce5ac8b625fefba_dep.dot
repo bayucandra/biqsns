@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/vinyl/node_modules/clone-stats" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_fbc7970588dba255172d6465406ecf4c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_fbc7970588dba255172d6465406ecf4c.html"]
+  dir_c70a0d23550fb2688ce5ac8b625fefba [shape=box, label="clone-stats", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_c70a0d23550fb2688ce5ac8b625fefba.html"];
+  }
+}

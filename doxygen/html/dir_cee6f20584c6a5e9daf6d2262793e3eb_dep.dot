@@ -1,0 +1,9 @@
+digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/through2/node_modules/readable-stream/node_modules/isarray/build" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_fa1b3179ae402973b03f7b8ace0d2b0d {
+    graph [ bgcolor="#ddddee", pencolor="black", label="isarray" fontname="Helvetica", fontsize="10", URL="dir_fa1b3179ae402973b03f7b8ace0d2b0d.html"]
+  dir_cee6f20584c6a5e9daf6d2262793e3eb [shape=box, label="build", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_cee6f20584c6a5e9daf6d2262793e3eb.html"];
+  }
+}
