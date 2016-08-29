@@ -3,7 +3,7 @@
     function biq_register_theme_menus(){
         register_nav_menus(
             array(
-                'biq-main-menu' => __('Main Menu')
+                'biq-menu-main' => __('Main Menu')
             )
         );
     }

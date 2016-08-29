@@ -2,6 +2,10 @@
     header("Content-type: text/css; charset: UTF-8");
 ?>
 
+.biq-widgets .widget-not-ready{
+    display: none;
+}
+
 a.biq-widgets.contact-email-simple{
     float : left;
     padding : 5px 5px 5px 0;
@@ -25,6 +29,6 @@ a.biq-widgets.contact-email-simple .text{
     color : #666666;
 }
 <?php
-require 'widgets/logo.php';
-require 'widgets/main-menu.php';
+require 'widgets/logo-css.php';
+require 'widgets/menu-main-css.php';
 ?>

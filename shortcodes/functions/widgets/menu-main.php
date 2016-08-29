@@ -1,40 +1,40 @@
 <?php
-    function main_menu_shortcode($atts){
+    function menu_main_shortcode($atts){
 	global $template_uri;
         extract(
             shortcode_atts(
                 array(
                     'widget_id' => '', 'css_inline' => '', 'classes' => '',
-                    'home_show' => true, 'float' => 'right', 'all_pages' => true,
+                    'float' => 'right', 'all_pages' => true,
                     'selected_pages' => array()//IF all_pages => false
                 ),
                 $atts
             )
         );
 	if( !empty( $css_inline ) ) $css_inline = ' style = "'.$css_inline.'"';
-        $main_menu_attribute =  'class="biq-widgets main-menu '.$float.' '.$classes.'"'. $css_inline 
-                .' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="main_menu"';
+        $menu_main_attribute =  'class="biq-widgets menu-main '.$float.' '.$classes.'"'. $css_inline 
+                .' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="menu_main"';
         
         
         $options = array(
-            'container'=>false, 'theme_location' => 'biq-main-menu', 'echo'=>false, 'fallback_cb' => 'main_menu_fallback'
+            'container'=>false, 'theme_location' => 'biq-menu-main', 'echo'=>false, 'fallback_cb' => 'menu_main_fallback'
         );
         $menu = wp_nav_menu($options);
         
         return
-            '<div '.$main_menu_attribute.'>'
+            '<div '.$menu_main_attribute.'>'
+                .'<label for="show-menu-main" class="show-menu-main">Menu</label>'
+                .'<input id="show-menu-main" type="checkbox">'
                 .$menu
             .'</div>';
     }
-    add_shortcode('main_menu', 'main_menu_shortcode');
+    add_shortcode('menu_main', 'menu_main_shortcode');
     
     
-    function main_menu_fallback(){
-        $main_menu_attribute =  'class="biq-widgets main-menu right"'
-                .' data-biq-widget-id="-1" data-biq-widget-type="main_menu"';
-        $menu_item_home = 
+    function menu_main_fallback(){
+        $menu_item = 
                 '<li>
-                    <a href="'.site_url().'">Home</a>
+                    <a href="'.site_url().'">Homes</a>
                 </li>';
         //BEGIN PAGES============
         $pages_args = array(
@@ -56,20 +56,17 @@
             );
         $pages = get_pages();
         foreach($pages as $page){
-            $menu_item_home .=
+            $menu_item .=
                 '<li>
-                    <a href="'.$page->guid.'">'.$page->post_title.'</a>
+                    <a href="'.get_permalink($page->ID).'">'.$page->post_title.'</a>
                 </li>';
         }
         //END PAGES**********
 //        return '<h3>Please setup a menu for your theme</h3>';
         return
-            '<div '.$main_menu_attribute.'>'
-                .'<label for="show-main-menu" class="show-main-menu">Menu</label>'
-                .'<input id="show-main-menu" type="checkbox">'
-                .'<ul>'
-                    .$menu_item_home
-                .'</ul>'
-            .'</div>';
+            '<span class="widget-not-ready">Please setup Wordpress theme menu first</span>'.
+            '<ul>'
+                .$menu_item
+            .'</ul>';
     }
 ?>

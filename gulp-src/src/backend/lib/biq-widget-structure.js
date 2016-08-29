@@ -41,3 +41,19 @@ BIQWidgetStructure.prototype.logo = {
 	{ 'key' : 'classes', 'type' : 'text', 'label' : 'CSS Classes', 'placeholder' : 'Sparate by space for multiple class name' }
     ]
 };
+
+BIQWidgetStructure.prototype.menu_main = {
+    'title' : 'Setting Main Menu',
+    'attribute_main':[
+        { 'key': 'float', 'type' : 'radio', 'label' : 'Float', 
+	    'value' : [
+		{ 'label': 'Right', 'value': 'right'},
+		{ 'label': 'Left', 'value': 'left'}
+	    ]
+        }
+    ],
+    'attribute_css' :[
+	{ 'key' : 'css_inline', 'type' : 'text', 'label' : 'Inline CSS'},
+	{ 'key' : 'classes', 'type' : 'text', 'label' : 'CSS Classes', 'placeholder' : 'Sparate by space for multiple class name' }
+    ]
+};

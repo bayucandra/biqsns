@@ -10,12 +10,13 @@
  * @author Bayu candra <bayucandra@gmail.com>
 */
 
-function BIQThemeManager(  ){
+function BIQThemeManager( Notification, BIQThemeDialog, BIQWidgetElementParser ){
     var self = this;
-    self.BIQWidgetElementParser = null;
+    self.Notification = Notification;
+    self.BIQWidgetElementParser = BIQWidgetElementParser;
     self.structure = new BIQWidgetStructure;
     self.structure_item = null; // will set at generateWidgetImputAll()
-    self.dialog = null; /// <i>self.dialog</i> variable will be referenced to md-dialog to show. Set this class by pointer to those md-dialog.
+    self.dialog = BIQThemeDialog; /// <i>self.dialog</i> variable will be referenced to md-dialog to show. Set this class by pointer to those md-dialog.
 }
 
 /**
@@ -140,6 +141,7 @@ BIQThemeManager.prototype.widgetHoverApply = function(p_widget_id){
  */
 BIQThemeManager.prototype.editWidget = function(e){
     var self = this;
+    
     self.hover_to_edit.is_editing = true;
     var widget_input = self.generateWidgetInputAll();
     self.dialog.biq_theme_manager = self;
@@ -160,7 +162,7 @@ BIQThemeManager.prototype.editWidget = function(e){
 		    </md-button> \
 		  </div> \
 		</md-toolbar> \
-		<md-dialog-content layout="column" layout-padding> \
+		<md-dialog-content layout="column" layout-padding ng-if="widget_not_ready==null"> \
                     <input type="hidden" name="widget_type" ng-model="input_value.widget_type">\
                     <input type="hidden" name="widget_id" ng-model="input_value.widget_id">\
 			<biq-tab tab-type="tab" header-height="40" style="margin:5px;" container-width="100%">\
@@ -168,19 +170,29 @@ BIQThemeManager.prototype.editWidget = function(e){
 			widget_input.main + widget_input.css
 		    +'  </biq-tab>\
 		</md-dialog-content> \
-		<md-dialog-actions layout="row"> \
+		<md-dialog-actions layout="row" ng-if="widget_not_ready==null"> \
 		    <span flex></span> \
 		    <md-button type="submit" ng-click="submit(true)" class="md-primary" md-autofocus>Submit</md-button> \
 		    <md-button ng-click="hide()" style="margin-left:10px;">Cancel</md-button> \
 		</md-dialog-actions> \
+                    \
+                <md-dialog-content ng-if="widget_not_ready!=null" layout-padding>\
+                    <h4 style="color:red;">Widget not ready for setting:</h4> \
+                    <h3>{{widget_not_ready.message}}</h3>\
+                </md-dialog-content>\
 	    </form> \
 	</md-dialog>';
     var values = self.BIQWidgetElementParser.getValues(
             self.hover_to_edit.widget_sel.data('biqWidgetType'), // the type of widget eg : contact_email_simple
             self.hover_to_edit.widget_sel, self.structure_item
         );
+    var widget_not_ready = null;
+    var widget_not_ready_el = self.hover_to_edit.widget_sel.children('.widget-not-ready');
+    if( widget_not_ready_el.length ){
+        widget_not_ready = {message: widget_not_ready_el.html()};
+    }
 //    values["layout"] = self.getLayoutClass();//currently unused, used widget_id instead via BIQWidgetElementParser on each
-    self.dialog.show(e, {values: values});
+    self.dialog.show(e, {values: values, widget_not_ready:widget_not_ready});
     
     self.hover_to_edit.onmouseleave();
 };

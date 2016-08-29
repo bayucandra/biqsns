@@ -35,7 +35,7 @@ require 'backend/ajax-submit.php';
 require 'shortcodes/functions/wrappers.php';
 require 'shortcodes/functions/widgets/contact-email-simple.php';
 require 'shortcodes/functions/widgets/logo.php';
-require 'shortcodes/functions/widgets/main-menu.php';
+require 'shortcodes/functions/widgets/menu-main.php';
 
 
 //END SHORTCODES***************************

@@ -39,7 +39,7 @@
                                     "attributes" : {"img_alt" : "Logo Default", "classes": "biq-table-cell"}
                                 },
                                 {
-                                    "shortcode":"main_menu",
+                                    "shortcode":"menu_main",
                                     "widget_id":"9",
                                     "attributes": {}
                                 }

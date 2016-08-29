@@ -18,10 +18,10 @@ var bngapp=angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', '
     
     return ref;
 })
-.factory('BIQThemeManager', function($mdMedia, BIQThemeDialog, BIQWidgetElementParser){
-    var ref = new BIQThemeManager($mdMedia);
-    ref.BIQWidgetElementParser = BIQWidgetElementParser;
-    ref.dialog = BIQThemeDialog;
+.factory('BIQThemeManager', function(Notification, BIQThemeDialog, BIQWidgetElementParser){
+    var ref = new BIQThemeManager(Notification, BIQThemeDialog, BIQWidgetElementParser);
+//    ref.BIQWidgetElementParser = BIQWidgetElementParser;
+//    ref.dialog = BIQThemeDialog;
     return ref;
 })
 .factory( 'BIQWidgetElementParser', function(){

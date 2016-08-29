@@ -29,6 +29,8 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
 
     self.controller = function($scope, $mdDialog) {
         $scope.input_value = self.params.values;
+        $scope.widget_not_ready = self.params.widget_not_ready;
+        
         $scope.hide = function(p_success) {// for hiding outside scope, pass 'true' to avoid 'Notification()'
             p_success = typeof p_success !== 'undefined' ? p_success : false;
             self.hide(p_success);
