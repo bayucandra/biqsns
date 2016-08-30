@@ -39,6 +39,9 @@
                 case 'logo':
                     $widget_result = $this->logo_update($p_arr);
                     break;
+                case 'menu_main':
+                    $widget_result = $this->menu_main_update($p_arr);
+                    break;
             }
             echo json_encode($widget_result);
             update_option('biq-sns-template', $this->template_arr);
@@ -96,7 +99,20 @@
                 );
             return $widget_update_res;
         }
-        
+        /**
+         * @brief Generate widget structure by using widget_update() function and called with save()
+         */
+        function menu_main_update($p_data){
+            $attributes = array("widget_id"=>$p_data["widget_id"]);
+            $attributes["float"] = $p_data["float"];
+            
+            $update_arr = array("attribute" => $attributes);
+            $widget_update_res = $this->widget_update(
+                    $this->template_arr[ $this->biq_sns_settings["active_template"] ],
+                    $update_arr, $attributes["widget_id"]
+                );
+            return $widget_update_res;
+        }
         /**
          * Search template array for match widget. The array stored as global variable referenced by $this->template_arr.
          * 

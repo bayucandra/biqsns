@@ -101,6 +101,7 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
             for(var key in $scope.input_value){
                 var value = !bisnull($scope.input_value[key]) && ( $scope.input_value[key]!== 'undefined' ) ? $scope.input_value[key] : '';
                 formData.append(key, value);
+                console.log(key+' '+$scope.input_value[key]);
             }
             //BEGIN IF has files to upload===============
             var files = $b('.lf-ng-md-file-input');
@@ -137,7 +138,8 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
                         Notification("Widget succesfully updated","success");
                     }else{
                         self.functions.maskHide('widget-dialog');
-                        Notification("Widget update failed: "+response_json.html, "error");
+                        var error_message = !bisnull(response_json.html) ? response_json.html : 'Empty response, seem widget functions not defined properly.';
+                        Notification("Widget update failed: "+error_message, "error");
                     }
                 }
             });
@@ -533,7 +535,6 @@ function BIQWidgetElementParser(){
 BIQWidgetElementParser.prototype.getValues = function(p_widget_type, p_widget_sel, p_structure_sel){
     var values = {};
     var self = this;
-    console.log(p_widget_type+' '+p_widget_sel+' '+p_structure_sel);
     var widget_function = self.typeToFunction(p_widget_type);
     values= self[widget_function](p_widget_sel, p_structure_sel);
     return values;
@@ -580,7 +581,12 @@ BIQWidgetElementParser.prototype.logo = function(p_el, p_structure_item){
 BIQWidgetElementParser.prototype.menuMain = function(p_el, p_structure_item){
     var values = {};
     var self = this;
+    
+    values["widget_id"] = p_el.data('biqWidgetId'); values["widget_type"] = p_el.data('biqWidgetType');
     values['float'] = p_el.hasClass('right') ? 'right' : 'left';
+    
+    values['css_inline'] = p_el.attr('style');
+    values['classes'] = self.getClassNames( p_el.attr('class') );
     return values;
 };
 /**

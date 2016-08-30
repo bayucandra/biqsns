@@ -26,7 +26,7 @@
                 {
                     "shortcode" : "biq_box_wrapper_full_alt",
                     "widget_id" : "5",
-                    "attributes" : { "classes" : "body" },
+                    "attributes" : { "classes" : "body overflow-visible" },
                     "children" :[
                         {
                             "shortcode" : "biq_box_wrapper_short",

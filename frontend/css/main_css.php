@@ -21,3 +21,6 @@ body{
     max-width: 63rem;
     width:100%;
 }
+.biq-box-wrapper.overflow-visible{
+    overflow: visible;
+}

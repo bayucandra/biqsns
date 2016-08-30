@@ -18,7 +18,6 @@ function BIQWidgetElementParser(){
 BIQWidgetElementParser.prototype.getValues = function(p_widget_type, p_widget_sel, p_structure_sel){
     var values = {};
     var self = this;
-    console.log(p_widget_type+' '+p_widget_sel+' '+p_structure_sel);
     var widget_function = self.typeToFunction(p_widget_type);
     values= self[widget_function](p_widget_sel, p_structure_sel);
     return values;
@@ -65,7 +64,12 @@ BIQWidgetElementParser.prototype.logo = function(p_el, p_structure_item){
 BIQWidgetElementParser.prototype.menuMain = function(p_el, p_structure_item){
     var values = {};
     var self = this;
+    
+    values["widget_id"] = p_el.data('biqWidgetId'); values["widget_type"] = p_el.data('biqWidgetType');
     values['float'] = p_el.hasClass('right') ? 'right' : 'left';
+    
+    values['css_inline'] = p_el.attr('style');
+    values['classes'] = self.getClassNames( p_el.attr('class') );
     return values;
 };
 /**

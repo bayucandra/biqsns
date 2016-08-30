@@ -41,6 +41,7 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
             for(var key in $scope.input_value){
                 var value = !bisnull($scope.input_value[key]) && ( $scope.input_value[key]!== 'undefined' ) ? $scope.input_value[key] : '';
                 formData.append(key, value);
+                console.log(key+' '+$scope.input_value[key]);
             }
             //BEGIN IF has files to upload===============
             var files = $b('.lf-ng-md-file-input');
@@ -77,7 +78,8 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
                         Notification("Widget succesfully updated","success");
                     }else{
                         self.functions.maskHide('widget-dialog');
-                        Notification("Widget update failed: "+response_json.html, "error");
+                        var error_message = !bisnull(response_json.html) ? response_json.html : 'Empty response, seem widget functions not defined properly.';
+                        Notification("Widget update failed: "+error_message, "error");
                     }
                 }
             });

@@ -10,7 +10,7 @@
 }
 
 .biq-header{
-    overflow:auto;
+    overflow:visible;
 }
 .biq-header .line-top{
     background-color:#f2f2f2;
