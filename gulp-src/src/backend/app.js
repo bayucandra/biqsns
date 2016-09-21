@@ -3,7 +3,7 @@
  *Creation Year: 2016
  */
 
-var bngapp=angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', 'bsLoadingOverlay', 'ui-notification'])
+var bngapp=angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', 'bsLoadingOverlay', 'ui-notification', 'ngMessages'])
 .controller('BCtrl', function($scope, $mdMedia, $rootScope, BIQThemeManager){
     $rootScope.BIQThemeManager = BIQThemeManager;
     $rootScope.BIQThemeManager.init();

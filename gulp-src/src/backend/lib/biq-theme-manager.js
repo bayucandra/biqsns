@@ -152,7 +152,7 @@ BIQThemeManager.prototype.editWidget = function(e){
 		     bs-loading-overlay="widget-dialog" bs-loading-overlay-template-url="'+template_uri+'/backend/app/template/dialog/dialog-default.html" \
 		     bs-loading-overlay-delay="2000" flex="{{dialog.flex}}" style="height:{{dialog.height}}" \
 		ng-cloak> \
-	    <form name="widget-form" class="biq-dialog"> \
+	    <form name="widgetForm" class="biq-dialog"> \
 		<md-toolbar class="bdialog-toolbar"> \
 		  <div class="md-toolbar-tools"> \
 		    <h2>'+widget_input.title+'</h2> \
@@ -267,7 +267,7 @@ BIQThemeManager.prototype.generateInputForm = {
 		'<md-input-container class="md-block" flex> \
 		    <label>'+p_structure_item.label+': '+placeholder+'</label> \
 		    <input name="'+p_structure_item.key+'"'+ngRequired+' ng-model="input_value.'+p_structure_item.key+'" '+input_attrs+'> \
-		    <div ng-if="'+is_required+'" ng-messages="widget-form.'+p_structure_item.key+'.$error"> \
+		    <div ng-if="'+is_required+'" ng-messages="widgetForm.'+p_structure_item.key+'.$error"> \
 			<div ng-message="required" style="text-align:right;">'+p_structure_item.label+' is required.</div> \
 		    </div> \
 		</md-input-container>';

@@ -6,6 +6,7 @@ body{
     padding:0;
     font-family : Lato, sans, sans-serif, arial;
     font-size: 1rem;
+    color: #444444;
 }
 .biq-box-wrapper{
     margin: 0 auto; overflow: auto; position: relative;

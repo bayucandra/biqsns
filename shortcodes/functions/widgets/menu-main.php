@@ -1,6 +1,6 @@
 <?php
     function menu_main_shortcode($atts){
-	global $template_uri;
+//	global $template_uri;
         extract(
             shortcode_atts(
                 array(
@@ -11,9 +11,13 @@
                 $atts
             )
         );
-	if( !empty( $css_inline ) ) $css_inline = ' style = "'.$css_inline.'"';
-        $menu_main_attribute =  'class="biq-widgets menu-main '.$float.' '.$classes.'"'. $css_inline 
-                .' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="menu_main"';
+	$css_inline = !empty( $css_inline ) ? ' style = "'.$css_inline.'"' : '';
+	$classes = !empty( $classes ) ? ' '.$classes : '';
+        
+        $element_attributes =  'class="biq-widgets menu-main '.$float.$classes.'"'. $css_inline ;
+        $element_attributes .= is_admin() ?
+                ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="menu_main" data-biq-css-default="menu-main right left"'
+                : '';
         
         
         $options = array(
@@ -22,7 +26,7 @@
         $menu = wp_nav_menu($options);
         
         return
-            '<div '.$menu_main_attribute.'>'
+            '<div '.$element_attributes.'>'
                 .'<label for="show-menu-main" class="show-menu-main">Menu</label>'
                 .'<input id="show-menu-main" type="checkbox">'
                 .$menu

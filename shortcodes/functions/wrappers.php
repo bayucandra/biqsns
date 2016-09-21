@@ -4,6 +4,7 @@
 	extract(
 	    shortcode_atts (
 		array(
+                    'widget_id'=>'',
 		    'classes'=>'',//CSS classes in space separated
 		    'css_inline'=> ''//inline styles
 		),
@@ -11,8 +12,8 @@
 	    ) 
 	);
 	
-	if( !empty( $css_inline ) ) $css_inline = ' style = "'.$css_inline.'"';
-	if( !empty( $classes ) ) $classes = ' '.$classes;
+	$css_inline = !empty( $css_inline ) ? ' style = "'.$css_inline.'"' : '';
+	$classes = !empty( $classes ) ? ' '.$classes : '';
 	
 	return '<div'.$css_inline.' class="biq-box-wrapper full biq-container'.$classes.'">' . do_shortcode($content) . '</div>';
     }

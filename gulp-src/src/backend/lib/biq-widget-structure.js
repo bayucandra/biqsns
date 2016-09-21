@@ -1,9 +1,15 @@
 function BIQWidgetStructure(){
-    
+
 }
 /*
  * 'key' is the main key of $atts at wordpress shortcode function. If 'key' = 'content, it is eman $content
  */
+BIQWidgetStructureDefaults = {
+    'attribute_css' :[
+	{ 'key' : 'css_inline', 'type' : 'text', 'label' : 'Inline CSS'},
+	{ 'key' : 'classes', 'type' : 'text', 'label' : 'CSS Classes', 'placeholder' : 'Sparate by space for multiple class name' }
+    ]
+};
 BIQWidgetStructure.prototype.contact_email_simple = {
     'title' : 'Setting - Contact Email Simple',
     'attribute_main' : [
@@ -56,4 +62,18 @@ BIQWidgetStructure.prototype.menu_main = {
 	{ 'key' : 'css_inline', 'type' : 'text', 'label' : 'Inline CSS'},
 	{ 'key' : 'classes', 'type' : 'text', 'label' : 'CSS Classes', 'placeholder' : 'Sparate by space for multiple class name' }
     ]
+};
+BIQWidgetStructure.prototype.heading_section_left = {
+    'title' : 'Setting - Heading section left',
+    'attribute_main' :[
+        {'key':'content', 'type':'text', 'label': 'Header Text', 'required':true},
+        {'key':'tag', 'type':'radio', 'label':'Tag type',
+            'value': [
+                { 'label': 'H3','value':'h3' },
+                { 'label': 'H2','value':'h2' },
+                { 'label': 'H1','value':'h1' }
+            ]
+        }
+    ],
+    'attribute_css' : BIQWidgetStructureDefaults.attribute_css
 };

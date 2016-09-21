@@ -15,6 +15,6 @@
             "active_template": "default"
         }';
     $settings_arr = json_decode($settings, true);
-    add_option('biq-sns-settings', $settings_arr);
+    add_option( 'biq-sns-settings', $settings_arr );
     //END DEFAULT SETTINGS**************
 ?>

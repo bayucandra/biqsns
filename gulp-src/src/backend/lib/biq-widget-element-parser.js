@@ -31,9 +31,9 @@ BIQWidgetElementParser.prototype.contactEmailSimple = function( p_el, p_structur
 //			.'<div class="icon"><img src="'.$icon_value.'"></div>' 
 //			.'<div class="text">'. $content .'</div>' 
 //		    .'</a>'
-    var values={};
     var self = this;
-    values["widget_id"] = p_el.data('biqWidgetId'); values["widget_type"] = p_el.data('biqWidgetType');
+    var values = self.defaultFormValues(p_el);
+    
     values["content"] = p_el.children('.text').html();
      
     if( p_el.children('.icon').children('img').length ){
@@ -46,31 +46,34 @@ BIQWidgetElementParser.prototype.contactEmailSimple = function( p_el, p_structur
     }
     //BEGIN CSS PART===========
     values['css_inline'] = p_el.attr('style');
-    values['classes'] = self.getClassNames( p_el.attr('class') );
+    values['classes'] = self.getClassNames(p_el);
+    
     return values;
 };
 BIQWidgetElementParser.prototype.logo = function(p_el, p_structure_item){
-    var values={};
     var self = this;
-    values['widget_id'] = p_el.data('biqWidgetId'); values['widget_type'] = p_el.data('biqWidgetType');
+    var values = self.defaultFormValues(p_el);
     
     values['img_title'] = p_el.children('img').attr('title');
     values['img_alt'] = p_el.children('img').attr('alt');
     
     values['css_inline'] = p_el.attr('style');
-    values['classes'] = self.getClassNames( p_el.attr('class') );
+    values['classes'] = self.getClassNames( p_el );
     return values;
 };
 BIQWidgetElementParser.prototype.menuMain = function(p_el, p_structure_item){
-    var values = {};
     var self = this;
-    
-    values["widget_id"] = p_el.data('biqWidgetId'); values["widget_type"] = p_el.data('biqWidgetType');
+    var values = self.defaultFormValues(p_el);
+
     values['float'] = p_el.hasClass('right') ? 'right' : 'left';
     
     values['css_inline'] = p_el.attr('style');
-    values['classes'] = self.getClassNames( p_el.attr('class') );
+    values['classes'] = self.getClassNames( p_el );
     return values;
+};
+BIQWidgetElementParser.prototype.headingSectionLeft = function(p_el, p_structure_item){
+    var self = this;
+    var values = self.defaultFormValues(p_el);
 };
 /**
  * Important to get default value of 'key'. Usually necessary when default input can be empty to load based on default value.
@@ -93,24 +96,38 @@ BIQWidgetElementParser.prototype.getDefaultValue = function(p_structure_item, p_
     }
     return ret;
 };
+
+BIQWidgetElementParser.prototype.defaultFormValues = function(p_el){
+    return {"widget_id": p_el.data('biqWidgetId'), "widget_type": p_el.data('biqWidgetType')};
+};
 /**
  * Get class name which belong to attributes only, by remove first 2 classes which is default to be exist ( 'biq-widgets' and a class name of widget )
  * 
  * @param {String} p_class_names is the value of 'class' attribute at HTML element
  * @returns {String} contain class filtered ( 2 default class removed )
  */
-BIQWidgetElementParser.prototype.getClassNames = function( p_class_names ){
-    var ret = "";
-    var class_names_arr = p_class_names.split(' ');
-    class_names_arr.splice(0,2);
-    for(var i=0; i<class_names_arr.length; i++){
-	ret = ret+class_names_arr[i];
-	if(i !== (class_names_arr.length-1) ){
-	    ret = ret+' ';
-	}
-    }
-    return ret;
+BIQWidgetElementParser.prototype.getClassNames = function( p_el ){
+    var css_default_arr = typeof p_el.data('biqCssDefault') !=='undefined'?
+            $b.trim( p_el.data('biqCssDefault') ).split(' ')
+            :[];
+    css_default_arr.push('biq-widgets');
+    css_default_arr.push('biq-container');
+    var css_all_arr = $b.trim( p_el.attr('class') ).split(' ');
+    
+    return css_all_arr.diff( css_default_arr );
 };
+//BIQWidgetElementParser.prototype.getClassNames = function( p_class_names ){
+//    var ret = "";
+//    var class_names_arr = p_class_names.split(' ');
+//    class_names_arr.splice(0,2);
+//    for(var i=0; i<class_names_arr.length; i++){
+//	ret = ret+class_names_arr[i];
+//	if(i !== (class_names_arr.length-1) ){
+//	    ret = ret+' ';
+//	}
+//    }
+//    return ret;
+//};
 /*
  * @param {String) p_str is the type name of widget based on convention usualy generated for data-biq-widget-type html attribute
  * @returns {String} Return the string name of function converted from data-biq-widget-type. By converting from underscore separator to camelCase

@@ -1,11 +1,19 @@
 <?php
-    function biq_get_head_shortcode(){
+    function biq_get_head_shortcode($p_part=""){ //$p_part : "home", "page", "product"
 //	$content_json = get_option('biq-sns-template');
 	global $template_arr;
 	global $biq_sns_settings;
-        
-	$template = $template_arr[ $biq_sns_settings["active_template"] ]["header"];
+        $template = !empty($p_part) && array_key_exists( "header", $template_arr[ $biq_sns_settings["active_template"] ] [$p_part] ) ? // IF part has custom "header" part
+                $template_arr[ $biq_sns_settings["active_template"] ][$p_part]["header"] // Use the custom "header" of the part
+                : $template_arr[ $biq_sns_settings["active_template"] ]["header"]; //Use the main default "header"
 	return biq_array_to_shortcode($template);
+    }
+    function biq_get_body_shortcode($p_part){
+	global $template_arr;
+	global $biq_sns_settings;
+        $template = $template_arr[ $biq_sns_settings["active_template"] ][$p_part]["body"];
+//        print_r(biq_array_to_shortcode($template));
+        return biq_array_to_shortcode($template);
     }
     function biq_array_to_shortcode($p_arr, $p_is_init = true){
 	$short_code_str = "[" . $p_arr["shortcode"] ;//OPEN SHORT CODE TAG

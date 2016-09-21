@@ -29,6 +29,7 @@ a.biq-widgets.contact-email-simple .text{
     color : #666666;
 }
 <?php
-require 'widgets/logo-css.php';
-require 'widgets/menu-main-css.php';
+    require 'widgets/logo-css.php';
+    require 'widgets/menu-main-css.php';
+    require 'widgets/heading-section-css.php';
 ?>

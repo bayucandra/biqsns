@@ -15,3 +15,6 @@
 .biq-header .line-top{
     background-color:#f2f2f2;
 }
+<?php
+    require("layout/sidebar-css.php");
+?>

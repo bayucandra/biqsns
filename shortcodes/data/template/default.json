@@ -22,7 +22,7 @@
                         }
                     ]
                 },
-                
+
                 {
                     "shortcode" : "biq_box_wrapper_full_alt",
                     "widget_id" : "5",
@@ -44,16 +44,35 @@
                                     "attributes": {}
                                 }
                             ]
-                            
+
                         }
                     ]
                 }
             ]
         },
-        "body": {
-            "shortcode": "biq_box_wrapper_full",
-            "widget_id" : "10",
-            "attributes": {"classes" : "body biq-layout"}
+        "footer":{},
+        "home":{
+            "label":"Home Page",
+            "body": {
+                "shortcode": "biq_box_wrapper_short",
+                "widget_id" : "10",
+                "attributes": {"classes" : "body biq-layout"},
+                "children" : [
+                    {
+                        "shortcode": "biq_box_sidebar", "widget_id":"11",
+                        "children" :[
+                            {
+                                "shortcode":"heading_section_left",
+                                "widget_id": "12",
+                                "content": "Categories"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "page" : {
+            
         }
     }
 }

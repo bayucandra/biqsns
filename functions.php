@@ -1,4 +1,6 @@
 <?php
+add_theme_support( 'woocommerce' );
+add_theme_support( 'menus' );
 //BEGIN GLOBAL VARS===================
 $template_uri = get_template_directory_uri();
 $template_directory = get_template_directory();
@@ -36,6 +38,9 @@ require 'shortcodes/functions/wrappers.php';
 require 'shortcodes/functions/widgets/contact-email-simple.php';
 require 'shortcodes/functions/widgets/logo.php';
 require 'shortcodes/functions/widgets/menu-main.php';
+require 'shortcodes/functions/widgets/heading-section-left.php';
+
+require 'shortcodes/functions/layout/sidebar.php';
 
 
 //END SHORTCODES***************************

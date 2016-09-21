@@ -56,6 +56,8 @@
 	    wp_enqueue_script( 'angular_material', $template_uri . '/libs/angular/angular-material.min.js',
 		array( 'angular' ), null, true );
 	}
+        wp_enqueue_script( 'angular_messages', $template_uri . '/libs/angular/angular-messages.min.js',
+            array( 'angular' ), null, true );
 	wp_enqueue_script( 'lf-ng-md-file-input', $template_uri . '/libs/angular/lf-ng-md-file-input.min.js',
 	    array( 'angular' ), null, true );
 	wp_enqueue_script( 'jquery-ui.min', $template_uri . '/libs/jquery-ui/jquery-ui.min.js',

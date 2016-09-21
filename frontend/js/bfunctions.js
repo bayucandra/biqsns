@@ -157,22 +157,22 @@ function binput_validation(p_conf){
     }
     return is_form_valid;
 }
-function bexplode(p_str, p_separator){
-    var arr_ret=[];
-    var tmp_str='';
-    for(var i=0; i<p_str.length;i++){
-	if(p_str.substring(i,(i+1))===p_separator){
-	    arr_ret.push(tmp_str);
-	    tmp_str='';
-	}else{
-	    tmp_str=tmp_str+p_str.substring(i,(i+1));
-	}
-	if(i===(p_str.length-1)){
-	    arr_ret.push(tmp_str);
-	}
-    }
-    return arr_ret;
-}
+//function bexplode(p_str, p_separator){
+//    var arr_ret=[];
+//    var tmp_str='';
+//    for(var i=0; i<p_str.length;i++){
+//	if(p_str.substring(i,(i+1))===p_separator){
+//	    arr_ret.push(tmp_str);
+//	    tmp_str='';
+//	}else{
+//	    tmp_str=tmp_str+p_str.substring(i,(i+1));
+//	}
+//	if(i===(p_str.length-1)){
+//	    arr_ret.push(tmp_str);
+//	}
+//    }
+//    return arr_ret;
+//}
 function b_arr_contain(arr, obj) {
     var i = arr.length;
     while (i--) {
@@ -182,3 +182,6 @@ function b_arr_contain(arr, obj) {
     }
     return false;
 }
+Array.prototype.diff = function(a) {
+    return this.filter(function(i) {return a.indexOf(i) < 0;});
+};

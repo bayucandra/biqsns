@@ -13,7 +13,8 @@
 		$atts 
 	    )
 	);
-	if( !empty( $css_inline ) ) $css_inline = ' style = "'.$css_inline.'"';
+	$css_inline = !empty( $css_inline ) ? ' style = "'.$css_inline.'"' : '';
+	$classes = !empty( $classes ) ? ' '.$classes : '';
 	
 	$icon_html = "";
 	if( $icon_type === 'image' ){//USING IMAGE AS ICON
@@ -21,8 +22,10 @@
 	}elseif( $icon_type === 'class' ){//USING CLASS AS ICON
 	    $icon_html = '<span class="'.$icon_value.'"></span>';
 	}
-        $element_attributes =  'class="biq-widgets contact-email-simple '.$classes.'"'. $css_inline 
-                .' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="contact_email_simple"';
+        $element_attributes =  'class="biq-widgets contact-email-simple'.$classes.'"'. $css_inline;
+        $element_attributes .= is_admin() ?
+                ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="contact_email_simple" data-biq-css-default="contact-email-simple"'
+                : '';
 	return '<a href="mailto:'.$content.'" '.$element_attributes.'>'
 		    .'<div class="icon">'.$icon_html.'</div>' 
 		    .'<div class="text">'. $content.'</div>' 
