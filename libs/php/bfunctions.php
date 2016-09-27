@@ -6,13 +6,16 @@
         $template = !empty($p_part) && array_key_exists( "header", $template_arr[ $biq_sns_settings["active_template"] ] [$p_part] ) ? // IF part has custom "header" part
                 $template_arr[ $biq_sns_settings["active_template"] ][$p_part]["header"] // Use the custom "header" of the part
                 : $template_arr[ $biq_sns_settings["active_template"] ]["header"]; //Use the main default "header"
+//        print_r($template);
+//        echo biq_array_to_shortcode($template);
 	return biq_array_to_shortcode($template);
     }
     function biq_get_body_shortcode($p_part){
 	global $template_arr;
 	global $biq_sns_settings;
         $template = $template_arr[ $biq_sns_settings["active_template"] ][$p_part]["body"];
-//        print_r(biq_array_to_shortcode($template));
+//        print_r( $template );
+//        echo biq_array_to_shortcode($template);
         return biq_array_to_shortcode($template);
     }
     function biq_array_to_shortcode($p_arr, $p_is_init = true){

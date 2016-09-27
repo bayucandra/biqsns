@@ -67,11 +67,19 @@ BIQWidgetStructure.prototype.heading_section_left = {
     'title' : 'Setting - Heading section left',
     'attribute_main' :[
         {'key':'content', 'type':'text', 'label': 'Header Text', 'required':true},
-        {'key':'tag', 'type':'radio', 'label':'Tag type',
+        {'key':'tag_name', 'type':'radio', 'label':'Tag name',
             'value': [
+                { 'label': 'H4','value':'h4' },
                 { 'label': 'H3','value':'h3' },
                 { 'label': 'H2','value':'h2' },
                 { 'label': 'H1','value':'h1' }
+            ]
+        },
+        {'key':'highlight', 'type':'radio', 'label':'Highlight',
+            'value': [
+                { 'label':'<font style="color:#113481">Default</font>', 'value':'highlight-default' },
+                { 'label':'<font style="color:#df1f26">Red</font>', 'value':'highlight-red' },
+                { 'label':'None', 'value':'none' }
             ]
         }
     ],
@@ -118,10 +126,11 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
         };
         $scope.submit = function(submit) {
             var formData = new FormData($b('#widget-dialog form')[0]);
+
             for(var key in $scope.input_value){
-                var value = !bisnull($scope.input_value[key]) && ( $scope.input_value[key]!== 'undefined' ) ? $scope.input_value[key] : '';
+                var value = !bisnull($scope.input_value[key]) ? $scope.input_value[key] : '';
                 formData.append(key, value);
-                console.log(key+' '+$scope.input_value[key]);
+//                console.log(key+' '+$scope.input_value[key]);
             }
             //BEGIN IF has files to upload===============
             var files = $b('.lf-ng-md-file-input');
@@ -140,7 +149,6 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
             //END IF has files to upload****************
             
             formData.append('action', 'widget_save');//The Wordpress ajax name
-            
             self.functions.maskShow('widget-dialog');
             $b.ajax({
                 'url': ajaxurl,
@@ -414,8 +422,8 @@ BIQThemeManager.prototype.generateWidgetInputAll = function(){
     var self = this;
     var ret = {main : '-', css : '-', title: '-', layout: ''};//layout is for the main layout root ( "header", "body" or "footer" )
     //BEGIN CONVERT CLASS NAME TO STRUCTURE NAME Eg. contact-email-simple to contact_email_simpleXXXXXXXX change to using data-
-    var widget_classes = self.hover_to_edit.widget_sel.attr('class');
-    var widget_classes_split = widget_classes.split(' ');
+//    var widget_classes = self.hover_to_edit.widget_sel.attr('class');
+//    var widget_classes_split = widget_classes.split(' ');
     var widget_structure_name = self.hover_to_edit.widget_sel.data('biqWidgetType');//widget_classes_split[1].replace(/-/g, '_');
     //END CONVERT CLASS NAME TO STRUCTURE ===============
     self.structure_item = self.structure[widget_structure_name];
@@ -581,9 +589,6 @@ BIQWidgetElementParser.prototype.contactEmailSimple = function( p_el, p_structur
 	values['icon_type'] = 'css';
 	values["icon_value"] = p_el.children('.icon').children('span').attr('class');
     }
-    //BEGIN CSS PART===========
-    values['css_inline'] = p_el.attr('style');
-    values['classes'] = self.getClassNames(p_el);
     
     return values;
 };
@@ -594,8 +599,6 @@ BIQWidgetElementParser.prototype.logo = function(p_el, p_structure_item){
     values['img_title'] = p_el.children('img').attr('title');
     values['img_alt'] = p_el.children('img').attr('alt');
     
-    values['css_inline'] = p_el.attr('style');
-    values['classes'] = self.getClassNames( p_el );
     return values;
 };
 BIQWidgetElementParser.prototype.menuMain = function(p_el, p_structure_item){
@@ -604,13 +607,21 @@ BIQWidgetElementParser.prototype.menuMain = function(p_el, p_structure_item){
 
     values['float'] = p_el.hasClass('right') ? 'right' : 'left';
     
-    values['css_inline'] = p_el.attr('style');
-    values['classes'] = self.getClassNames( p_el );
     return values;
 };
 BIQWidgetElementParser.prototype.headingSectionLeft = function(p_el, p_structure_item){
     var self = this;
     var values = self.defaultFormValues(p_el);
+    values["content"] = p_el.html();
+    values["tag_name"] = p_el.prop("tagName").toLowerCase();
+    if(p_el.hasClass('highlight-default')){
+        values['highlight'] = 'highlight-default';
+    }else if( p_el.hasClass('highlight-red') ){
+        values['highlight'] = 'highlight-red';
+    }else{
+        values['highlight'] = 'none';
+    }
+    return values;
 };
 /**
  * Important to get default value of 'key'. Usually necessary when default input can be empty to load based on default value.
@@ -635,7 +646,10 @@ BIQWidgetElementParser.prototype.getDefaultValue = function(p_structure_item, p_
 };
 
 BIQWidgetElementParser.prototype.defaultFormValues = function(p_el){
-    return {"widget_id": p_el.data('biqWidgetId'), "widget_type": p_el.data('biqWidgetType')};
+    var self = this;
+    var default_values={"widget_id": p_el.data('biqWidgetId'), "widget_type": p_el.data('biqWidgetType'), "css_inline": p_el.attr('style'),
+        "classes":self.getClassNames( p_el )};
+    return default_values;
 };
 /**
  * Get class name which belong to attributes only, by remove first 2 classes which is default to be exist ( 'biq-widgets' and a class name of widget )
@@ -651,7 +665,7 @@ BIQWidgetElementParser.prototype.getClassNames = function( p_el ){
     css_default_arr.push('biq-container');
     var css_all_arr = $b.trim( p_el.attr('class') ).split(' ');
     
-    return css_all_arr.diff( css_default_arr );
+    return css_all_arr.diff( css_default_arr ).join(' ');
 };
 //BIQWidgetElementParser.prototype.getClassNames = function( p_class_names ){
 //    var ret = "";

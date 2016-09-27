@@ -67,11 +67,19 @@ BIQWidgetStructure.prototype.heading_section_left = {
     'title' : 'Setting - Heading section left',
     'attribute_main' :[
         {'key':'content', 'type':'text', 'label': 'Header Text', 'required':true},
-        {'key':'tag', 'type':'radio', 'label':'Tag type',
+        {'key':'tag_name', 'type':'radio', 'label':'Tag name',
             'value': [
+                { 'label': 'H4','value':'h4' },
                 { 'label': 'H3','value':'h3' },
                 { 'label': 'H2','value':'h2' },
                 { 'label': 'H1','value':'h1' }
+            ]
+        },
+        {'key':'highlight', 'type':'radio', 'label':'Highlight',
+            'value': [
+                { 'label':'<font style="color:#113481">Default</font>', 'value':'highlight-default' },
+                { 'label':'<font style="color:#df1f26">Red</font>', 'value':'highlight-red' },
+                { 'label':'None', 'value':'none' }
             ]
         }
     ],

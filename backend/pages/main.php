@@ -1,5 +1,7 @@
 <?php
     global $template_directory;
+    global $template_arr;
+    global $biq_sns_settings;
     if( isset($_POST["is-biq-setting-submitted"]) ){
 	$hidden_field= $_POST["is-biq-setting-submitted"];
     }
@@ -25,32 +27,32 @@
 			$has_active = true;
 		    }
 		}
+                $template_active = $template_arr[ $biq_sns_settings["active_template"] ];
 		if(!$has_active) $main_tab_arr["frontpage"]["active"]=true;//SET frontpage as default active if $action not match any array
 //		print_r($main_tab_arr);
 	    ?>
 	    <biq-tab tab-type="url" header-height="40">
-		<biq-tab-item title="<?php echo $main_tab_arr["frontpage"]["title"]?>"
-		    <?php echo $main_tab_arr["frontpage"]["active"]?"active":"";?>
-		    url="<?php echo menu_page_url( 'biq-sns-theme-setting', false ); ?>">
-		</biq-tab-item>
-		<biq-tab-item title="<?php echo $main_tab_arr["template"]["title"]?>"
-		    <?php echo $main_tab_arr["template"]["active"]?"active":"";?>
-		    url="<?php echo menu_page_url( 'biq-sns-theme-setting', false ).'&action=template'; ?>">
-		</biq-tab-item>
+                <?php
+                    foreach( $template_active AS $key=>$val ){
+                        if( empty($action) ) { $action = $key; }
+                ?>
+                    <biq-tab-item title="<?php echo $template_active[$key]["label"]?>"
+                        <?php echo $action == $key ? 'active' : '';?>
+                        url="<?php echo menu_page_url( 'biq-sns-theme-setting', false ).'&action='.$key; ?>"
+                    </biq-tab-item>
+                <?php
+                    }
+                ?>
 	    </biq-tab>
 	</div>
 	<div class="biq-body">
 	    <?php
-		if( isset($_REQUEST['sub_page']) ){
-		    switch($_REQUEST['sub_page']){
-			case 'frontpage':
-			    require_once $template_directory.'/backend/pages/frontpage.php';
-			default:
-			    require_once $template_directory.'/backend/pages/frontpage.php';
-		    }
-		}else{
-		    require_once $template_directory.'/backend/pages/frontpage.php';
-		}
+                $template_file = $template_directory.'/backend/pages/'.$action.".php";
+                if(file_exists($template_file)){
+                    require_once $template_file;
+                }else{
+                    echo '<h2 class="template-not-found"><span class="fa fa-warning fa-lg"></span> Template file not found for: "'.ucfirst($action).'" </h2>';
+                }
 	    ?>
 	</div>
     </div>

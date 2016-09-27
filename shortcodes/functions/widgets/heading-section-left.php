@@ -4,7 +4,7 @@
             shortcode_atts(
                 array(
                     'widget_id' => '', 'css_inline' => '', 'classes' =>'',
-                    'tag'=>'h3','highlight' => '',//highlight class
+                    'tag_name'=>'','highlight' => '',//highlight class
                     'border' => ''
                 ),
                 $atts
@@ -18,11 +18,16 @@
         }else{
             $highlight=" ".$highlight;
         }
+        $tag_name = empty($tag_name) ? 'h3' : $tag_name;
+        
+	$css_inline = !empty( $css_inline ) ? ' style = "'.$css_inline.'"' : '';
+	$classes = !empty( $classes ) ? ' '.$classes : '';
+        
         $element_attributes =  'class="biq-widgets section-left'.$highlight.$classes.'"'. $css_inline;
         $element_attributes .= is_admin() ?
-                ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="heading-section-left" data-biq-css-default="section-left highlight-default"'
+                ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="heading_section_left" data-biq-css-default="section-left highlight-default highlight-red"'
                 : '';
-        return '<'.$tag.' '.$element_attributes.'>'.$content.'</'.$tag.'>';
+        return '<'.$tag_name.' '.$element_attributes.'>'.$content.'</'.$tag_name.'>';
     }
     add_shortcode('heading_section_left', 'heading_section_left_shortcode');
 ?>

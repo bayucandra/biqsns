@@ -5,7 +5,7 @@
             shortcode_atts(
                 array(
                     'widget_id' => '', 'css_inline' => '', 'classes' => '',
-                    'float' => 'right', 'all_pages' => true,
+                    'float' => '', 'all_pages' => true,
                     'selected_pages' => array()//IF all_pages => false
                 ),
                 $atts
@@ -14,6 +14,7 @@
 	$css_inline = !empty( $css_inline ) ? ' style = "'.$css_inline.'"' : '';
 	$classes = !empty( $classes ) ? ' '.$classes : '';
         
+        $float = empty('float') ? 'right' : $float;
         $element_attributes =  'class="biq-widgets menu-main '.$float.$classes.'"'. $css_inline ;
         $element_attributes .= is_admin() ?
                 ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="menu_main" data-biq-css-default="menu-main right left"'

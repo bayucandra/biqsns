@@ -44,9 +44,6 @@ BIQWidgetElementParser.prototype.contactEmailSimple = function( p_el, p_structur
 	values['icon_type'] = 'css';
 	values["icon_value"] = p_el.children('.icon').children('span').attr('class');
     }
-    //BEGIN CSS PART===========
-    values['css_inline'] = p_el.attr('style');
-    values['classes'] = self.getClassNames(p_el);
     
     return values;
 };
@@ -57,8 +54,6 @@ BIQWidgetElementParser.prototype.logo = function(p_el, p_structure_item){
     values['img_title'] = p_el.children('img').attr('title');
     values['img_alt'] = p_el.children('img').attr('alt');
     
-    values['css_inline'] = p_el.attr('style');
-    values['classes'] = self.getClassNames( p_el );
     return values;
 };
 BIQWidgetElementParser.prototype.menuMain = function(p_el, p_structure_item){
@@ -67,13 +62,21 @@ BIQWidgetElementParser.prototype.menuMain = function(p_el, p_structure_item){
 
     values['float'] = p_el.hasClass('right') ? 'right' : 'left';
     
-    values['css_inline'] = p_el.attr('style');
-    values['classes'] = self.getClassNames( p_el );
     return values;
 };
 BIQWidgetElementParser.prototype.headingSectionLeft = function(p_el, p_structure_item){
     var self = this;
     var values = self.defaultFormValues(p_el);
+    values["content"] = p_el.html();
+    values["tag_name"] = p_el.prop("tagName").toLowerCase();
+    if(p_el.hasClass('highlight-default')){
+        values['highlight'] = 'highlight-default';
+    }else if( p_el.hasClass('highlight-red') ){
+        values['highlight'] = 'highlight-red';
+    }else{
+        values['highlight'] = 'none';
+    }
+    return values;
 };
 /**
  * Important to get default value of 'key'. Usually necessary when default input can be empty to load based on default value.
@@ -98,7 +101,10 @@ BIQWidgetElementParser.prototype.getDefaultValue = function(p_structure_item, p_
 };
 
 BIQWidgetElementParser.prototype.defaultFormValues = function(p_el){
-    return {"widget_id": p_el.data('biqWidgetId'), "widget_type": p_el.data('biqWidgetType')};
+    var self = this;
+    var default_values={"widget_id": p_el.data('biqWidgetId'), "widget_type": p_el.data('biqWidgetType'), "css_inline": p_el.attr('style'),
+        "classes":self.getClassNames( p_el )};
+    return default_values;
 };
 /**
  * Get class name which belong to attributes only, by remove first 2 classes which is default to be exist ( 'biq-widgets' and a class name of widget )
@@ -114,7 +120,7 @@ BIQWidgetElementParser.prototype.getClassNames = function( p_el ){
     css_default_arr.push('biq-container');
     var css_all_arr = $b.trim( p_el.attr('class') ).split(' ');
     
-    return css_all_arr.diff( css_default_arr );
+    return css_all_arr.diff( css_default_arr ).join(' ');
 };
 //BIQWidgetElementParser.prototype.getClassNames = function( p_class_names ){
 //    var ret = "";

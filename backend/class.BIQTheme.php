@@ -42,6 +42,9 @@
                 case 'menu_main':
                     $widget_result = $this->menu_main_update($p_arr);
                     break;
+                case 'heading_section_left':
+                    $widget_result = $this->heading_section_left_update($p_arr);
+                    break;
             }
             echo json_encode($widget_result);
             update_option('biq-sns-template', $this->template_arr);
@@ -105,8 +108,28 @@
         function menu_main_update($p_data){
             $attributes = array("widget_id"=>$p_data["widget_id"]);
             $attributes["float"] = $p_data["float"];
+            if( !empty($p_data["css_inline"]) ){ $attributes["css_inline"] = $p_data["css_inline"]; }
+            if( !empty($p_data["classes"]) ){ $attributes["classes"] = $p_data["classes"]; }
             
-            $update_arr = array("attribute" => $attributes);
+            $update_arr = array("attributes" => $attributes);
+            $widget_update_res = $this->widget_update(
+                    $this->template_arr[ $this->biq_sns_settings["active_template"] ],
+                    $update_arr, $attributes["widget_id"]
+                );
+            return $widget_update_res;
+        }
+        /**
+         * @brief Generate widget structure by using widget_update() function and called with save()
+         */
+        function heading_section_left_update($p_data){
+            $attributes = array( "widget_id"=>$p_data["widget_id"] );
+            if( !empty($p_data["css_inline"]) ){ $attributes["css_inline"] = $p_data["css_inline"]; }
+            if( !empty($p_data["classes"]) ){ $attributes["classes"] = $p_data["classes"]; }
+            
+            $attributes["tag_name"] = $p_data["tag_name"];
+            $attributes["highlight"] = $p_data["highlight"];
+            
+            $update_arr = array("attributes"=>$attributes, "content"=>$p_data["content"] );
             $widget_update_res = $this->widget_update(
                     $this->template_arr[ $this->biq_sns_settings["active_template"] ],
                     $update_arr, $attributes["widget_id"]

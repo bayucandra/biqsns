@@ -38,10 +38,11 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
         };
         $scope.submit = function(submit) {
             var formData = new FormData($b('#widget-dialog form')[0]);
+
             for(var key in $scope.input_value){
-                var value = !bisnull($scope.input_value[key]) && ( $scope.input_value[key]!== 'undefined' ) ? $scope.input_value[key] : '';
+                var value = !bisnull($scope.input_value[key]) ? $scope.input_value[key] : '';
                 formData.append(key, value);
-                console.log(key+' '+$scope.input_value[key]);
+//                console.log(key+' '+$scope.input_value[key]);
             }
             //BEGIN IF has files to upload===============
             var files = $b('.lf-ng-md-file-input');
@@ -60,7 +61,6 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
             //END IF has files to upload****************
             
             formData.append('action', 'widget_save');//The Wordpress ajax name
-            
             self.functions.maskShow('widget-dialog');
             $b.ajax({
                 'url': ajaxurl,

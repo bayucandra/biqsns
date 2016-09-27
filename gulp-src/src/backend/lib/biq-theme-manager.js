@@ -210,8 +210,8 @@ BIQThemeManager.prototype.generateWidgetInputAll = function(){
     var self = this;
     var ret = {main : '-', css : '-', title: '-', layout: ''};//layout is for the main layout root ( "header", "body" or "footer" )
     //BEGIN CONVERT CLASS NAME TO STRUCTURE NAME Eg. contact-email-simple to contact_email_simpleXXXXXXXX change to using data-
-    var widget_classes = self.hover_to_edit.widget_sel.attr('class');
-    var widget_classes_split = widget_classes.split(' ');
+//    var widget_classes = self.hover_to_edit.widget_sel.attr('class');
+//    var widget_classes_split = widget_classes.split(' ');
     var widget_structure_name = self.hover_to_edit.widget_sel.data('biqWidgetType');//widget_classes_split[1].replace(/-/g, '_');
     //END CONVERT CLASS NAME TO STRUCTURE ===============
     self.structure_item = self.structure[widget_structure_name];

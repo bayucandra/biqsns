@@ -1,6 +1,7 @@
 {
     "default": {
         "header": {
+            "label" : "Header",
             "shortcode" : "biq_box_wrapper_full",
             "widget_id" : "1",
             "attributes" : { "classes" : "biq-header biq-layout"},
@@ -50,7 +51,12 @@
                 }
             ]
         },
-        "footer":{},
+        "footer":{
+            "label" : "Footer"
+        },
+        "page" : {
+            "label":"Page"
+        },
         "home":{
             "label":"Home Page",
             "body": {
@@ -70,9 +76,6 @@
                     }
                 ]
             }
-        },
-        "page" : {
-            
         }
     }
 }

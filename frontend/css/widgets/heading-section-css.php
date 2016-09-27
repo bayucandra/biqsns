@@ -1,15 +1,26 @@
-h3.section-left{
+.section-left{
+    color:#666666;
     position:relative;
     padding-bottom: 0.3rem;
     margin: 0.5rem 0;
-    border-bottom: 1px solid #666666;
+    border-bottom: 1px solid #999999;
+    font-size:18.7167px;
 }
-h3.section-left.highlight-default::after{
+.section-left.highlight-default::after{
+    position:absolute;
+    display:block;
+    height:3px;
+    background-color:#113481;
+    content:"";
+    bottom:-1px; left:0;
+    width: 80px;
+}
+.section-left.highlight-red::after{
     position:absolute;
     display:block;
     height:2px;
-    background-color:#113481;
+    background-color:#df1f26;
     content:"";
-    bottom:0; left:0;
+    bottom:-1px; left:0;
     width: 80px;
 }

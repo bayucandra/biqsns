@@ -35,3 +35,6 @@ md-toolbar{
 .md-toolbar-tools{
     height:50px;
 }
+h2.template-not-found{
+    padding: 1rem 0.5rem;
+}
