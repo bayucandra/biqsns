@@ -1,0 +1,27 @@
+.biq-widgets.category-list{
+    list-style-type: none;
+    margin:0;
+    padding:0 0 0 3px;
+    position:relative;
+    overflow:visible;
+}
+.biq-widgets.category-list > li > a{
+    line-height: 30px;
+    clear: both;
+    display: block;
+    padding: 0 15px;
+    color: #444444;
+    text-decoration: none;
+    position: relative;
+}
+.biq-widgets.category-list > li > a:hover{
+    background-color: #f2f2f2;
+}
+.biq-widgets.category-list > li > a:hover:after{
+    content:"";
+    display:block;
+    background-color: #ff8d41;
+    width:5px; height:100%;
+    position:absolute;
+    top:0; left:0;
+}

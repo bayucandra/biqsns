@@ -85,3 +85,30 @@ BIQWidgetStructure.prototype.heading_section_left = {
     ],
     'attribute_css' : BIQWidgetStructureDefaults.attribute_css
 };
+BIQWidgetStructure.prototype.category_list = {
+    'title' : 'Setting - Category list',
+    'attribute_main' :[
+        { 'key':'taxonomy', 'type':'text', 'label':'Taxonomy', 'default':'product_cat' },
+        { 'key':'orderby', 'type':'radio', 'label':'Order By',
+            'value':[
+                { 'label': 'name', 'value':'name' }, { 'label':'description', 'value':'description' }, {'label':'slug', 'value':'slug'}
+            ]
+        },
+        { 'key':'order', 'type':'radio', 'label':'Order',
+            'value':[
+                {'label':'ASC', 'value':'ASC'}, {'label':'DESC', 'value':'DESC'}
+            ]
+        },
+        { 'key':'hide_empty', 'type':'radio', 'label':'hide_empty',
+            'value':[
+                {'label':'true', 'value':'1'}, {'label':'false', 'value':'0'}
+            ]
+        },
+        { 'key':'hierarchical', 'type':'radio', 'label':'hierarchical',
+            'value':[
+                {'label':'true', 'value':'1'}, {'label':'false', 'value':'0'}
+            ]
+        }
+    ],
+    'attribute_css' : BIQWidgetStructureDefaults.attribute_css
+};

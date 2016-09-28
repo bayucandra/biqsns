@@ -78,6 +78,16 @@ BIQWidgetElementParser.prototype.headingSectionLeft = function(p_el, p_structure
     }
     return values;
 };
+BIQWidgetElementParser.prototype.categoryList = function(p_el, p_structure_item){
+    var self = this;
+    var values = self.defaultFormValues(p_el);
+    values['taxonomy'] = p_el.data('taxonomy');
+    values['orderby'] = p_el.data('orderby');
+    values['order'] = p_el.data('order');
+    values['hide_empty'] = p_el.data('hideEmpty');
+    values['hierarchical'] = p_el.data('hierarchical');
+    return values;
+};
 /**
  * Important to get default value of 'key'. Usually necessary when default input can be empty to load based on default value.
  * 

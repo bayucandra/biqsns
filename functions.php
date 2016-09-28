@@ -39,6 +39,7 @@ require 'shortcodes/functions/widgets/contact-email-simple.php';
 require 'shortcodes/functions/widgets/logo.php';
 require 'shortcodes/functions/widgets/menu-main.php';
 require 'shortcodes/functions/widgets/heading-section-left.php';
+require 'shortcodes/functions/widgets/category-list.php';
 
 require 'shortcodes/functions/layout/sidebar.php';
 

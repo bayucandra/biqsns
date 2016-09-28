@@ -32,4 +32,5 @@ a.biq-widgets.contact-email-simple .text{
     require 'widgets/logo-css.php';
     require 'widgets/menu-main-css.php';
     require 'widgets/heading-section-css.php';
+    require 'widgets/category-list.css';
 ?>
