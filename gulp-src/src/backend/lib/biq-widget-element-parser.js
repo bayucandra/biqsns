@@ -4,8 +4,11 @@
  *@author Bayu candra <bayucandra@gmail.com>
  *Creation Year: 2016
 */
-function BIQWidgetElementParser(){
-    
+function BIQWidgetElementParser($http, $q, Notification){
+    var self = this;
+    self.$http = $http;
+    self.$q = $q;
+    self.Notification = Notification;
 }
 /**
  * Main function to Get values based on widget name by call other functions 
@@ -87,6 +90,51 @@ BIQWidgetElementParser.prototype.categoryList = function(p_el, p_structure_item)
     values['hide_empty'] = p_el.data('hideEmpty');
     values['hierarchical'] = p_el.data('hierarchical');
     return values;
+};
+BIQWidgetElementParser.prototype.slider = function(p_el, p_structure_item){
+    var self = this;
+    var deferred = self.$q.defer();
+    var values = self.defaultFormValues(p_el);
+    
+    values["no_submit"] = true;
+    values["main_attribute"] = p_structure_item.attribute_main[0];
+    
+    $b.ajax({
+        method:'POST', url:ajaxurl,
+        data:{ action:'widget_query', query_type:'slider', widget_id:values.widget_id },
+        'success':function(response){//ajaxurl is default by Wordpress
+            var response_json = JSON.parse(response);
+            values['list'] = response_json.list;
+            deferred.resolve(values);
+//            if( response_json.is_found ){
+//                $scope.hide(true);
+//                $b('body').find('[data-biq-widget-id="'+response_json.widget_id+'"]').replaceWith(response_json.html);//continue here 160801
+//                $timeout(function(){
+//                    $rootScope.BIQThemeManager.widgetHoverApply(response_json.widget_id);
+//                });
+//                Notification("Widget succesfully updated","success");
+//            }else{
+//                self.functions.maskHide('widget-dialog');
+//                var error_message = !bisnull(response_json.html) ? response_json.html : 'Empty response, seem widget functions not defined properly.';
+//                Notification("Widget update failed: "+error_message, "error");
+//            }
+        },
+        'error':function(xhr){
+            self.Notification('Error server. Status: '+xhr.status,'error');
+            deferred.reject(values);
+        }
+    });
+//        .then(
+//            function(response){
+//                deferred.resolve(values);
+//            },
+//            function(response){
+//                self.Notification("Error server. Status: "+response.status+" "+response.statusText, "error");
+//                deferred.reject(values);
+//            }
+//        );
+
+    return deferred.promise;
 };
 /**
  * Important to get default value of 'key'. Usually necessary when default input can be empty to load based on default value.

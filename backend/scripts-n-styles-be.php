@@ -13,6 +13,7 @@
 	wp_enqueue_style( 'widget', $template_uri . '/frontend/css/widget_css.php' );
 	//BEGIN EXTERNAL LIBRARY=================
 	wp_enqueue_style( 'angular-ui-notification', $template_uri . '/libs/angular/angular-ui-notification.css' );
+	wp_enqueue_style( 'biq-slider', $template_uri . '/libs/biq-slider/biq-slider.css' );
 	if( WP_DEBUG ){
 	    wp_enqueue_style( 'font-awesome', $template_uri . '/frontend/libs/font-awesome-4.6.3/css/font-awesome.css' );
 	    wp_enqueue_style( 'angular-material', $template_uri . '/libs/angular/angular-material.css' );
@@ -61,6 +62,8 @@
 	wp_enqueue_script( 'lf-ng-md-file-input', $template_uri . '/libs/angular/lf-ng-md-file-input.min.js',
 	    array( 'angular' ), null, true );
 	wp_enqueue_script( 'jquery-ui.min', $template_uri . '/libs/jquery-ui/jquery-ui.min.js',
+	    array( 'jquery' ), null, true );
+	wp_enqueue_script( 'biq_slider', $template_uri . '/libs/biq-slider/biq-slider.js',
 	    array( 'jquery' ), null, true );
 	//END EXTERNAL LIBRARY*************
 	//BEGIN BIQ LIBRARY============

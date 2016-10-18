@@ -1,9 +1,12 @@
 .biq-box-content{
+    width:750px;
     position: relative;
 }
 .biq-box-content.right{
-    margin-left:250px;
+    float:right;
+    margin-right: 0.5rem;
 }
 .biq-box-content.left{
-    margin-right:250px;
+    float:left;
+    margin-left: 0.5rem;
 }

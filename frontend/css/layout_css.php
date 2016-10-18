@@ -17,4 +17,5 @@
 }
 <?php
     require("layout/sidebar-css.php");
+    require("layout/content-css.php");
 ?>

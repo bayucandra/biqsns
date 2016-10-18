@@ -5,16 +5,20 @@
 	global $biq_sns_settings;
         $template = !empty($p_part) && array_key_exists( "header", $template_arr[ $biq_sns_settings["active_template"] ] [$p_part] ) ? // IF part has custom "header" part
                 $template_arr[ $biq_sns_settings["active_template"] ][$p_part]["header"] // Use the custom "header" of the part
-                : $template_arr[ $biq_sns_settings["active_template"] ]["header"]; //Use the main default "header"
+                : $template_arr[ $biq_sns_settings["active_template"] ]["header"]["widget"]; //Use the main default "header"
 //        print_r($template);
 //        echo biq_array_to_shortcode($template);
 	return biq_array_to_shortcode($template);
     }
-    function biq_get_body_shortcode($p_part){
+    function biq_get_shortcode_part($p_part, $p_sub_part){
 	global $template_arr;
 	global $biq_sns_settings;
-        $template = $template_arr[ $biq_sns_settings["active_template"] ][$p_part]["body"];
+        $template = $template_arr[ $biq_sns_settings["active_template"] ][$p_part][$p_sub_part];
+        
+//        echo "<pre>";
 //        print_r( $template );
+//        echo "</pre>";
+
 //        echo biq_array_to_shortcode($template);
         return biq_array_to_shortcode($template);
     }
@@ -24,6 +28,9 @@
 	if(isset($p_arr["attributes"])){
 	    if( is_array( $p_arr["attributes"] ) ){
 		foreach($p_arr["attributes"] as $key=>$val){
+                    if($key=='list'){ //block 'list' keyword to be stand as attribute, it must be have a special treatment
+                        continue;
+                    }
 		    $short_code_str .= ' '.$key .'="'. $val .'"';
 		}
 	    }
@@ -41,7 +48,14 @@
 	if( isset($p_arr["children"]) ){
 	    if( is_array($p_arr["children"]) ){
 		foreach($p_arr["children"] as $child){
-		    $short_code_str .= biq_array_to_shortcode( $child, false );//recursive
+                    if( isset($child["part"]) ){//IF reference to other part, e.g: "home", "footer", "header" etc.
+                        global $template_arr;
+                        global $biq_sns_settings;
+                        $short_code = $template_arr[ $biq_sns_settings["active_template"] ] [ $child["part"] ] [ $child["sub_part"] ];
+                        $short_code_str .= biq_array_to_shortcode( $short_code, false );
+                    }else{
+                        $short_code_str .= biq_array_to_shortcode( $child, false );//recursive
+                    }
 		}
 	    }
 	}elseif( !$p_is_init ){
@@ -52,6 +66,31 @@
 	return $short_code_str;
     }
 
+    /**
+     * Find template item with specific widget_id
+     * @param array $p_arr array of widget structure
+     * @param array $p_widget_id The id of widget to find
+     * @return array return array contain "is_found"(bool) and "data"(array)
+     */
+    function biq_widget_find($p_arr, $p_widget_id){
+        $arr_ret = array("is_found"=>false, "data"=>array());
+        foreach($p_arr AS $key=>$val){
+            if( is_array($val) ){
+                if( isset($val["widget_id"]) && ($val["widget_id"]==$p_widget_id) ){
+                    $arr_ret["is_found"] = true;
+                    $arr_ret["data"] = $val;
+                    return $arr_ret;
+                }else{
+                    $arr_ret = biq_widget_find($val, $p_widget_id);
+                }
+            }
+            if($arr_ret["is_found"]){
+                break;
+            }
+        }
+        return $arr_ret;
+    }
+    
     function biq_get_path_separator(){
 	return (strstr(strtoupper(substr(PHP_OS, 0, 3)), "WIN")) ? "\\" : "/";
     }
