@@ -124,15 +124,6 @@ BIQWidgetElementParser.prototype.slider = function(p_el, p_structure_item){
             deferred.reject(values);
         }
     });
-//        .then(
-//            function(response){
-//                deferred.resolve(values);
-//            },
-//            function(response){
-//                self.Notification("Error server. Status: "+response.status+" "+response.statusText, "error");
-//                deferred.reject(values);
-//            }
-//        );
 
     return deferred.promise;
 };
