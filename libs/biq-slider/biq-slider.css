@@ -1,0 +1,223 @@
+/* 
+    Created on : Sep 29, 2016, 3:41 PM
+    Author     : bayucandra@gmail.com
+    Version    : 0.6
+*/
+.biq-widgets.slider{
+    height:400px;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    /*background-color:#DDDDDD;*/
+    /*border-bottom:#ddaf94 2px solid;*/
+    background-image:url('images/loading.gif');
+    background-repeat: no-repeat;
+    background-position:center center;
+/*    -moz-box-shadow: 0 2px 3px #999999;
+    -webkit-box-shadow: 0 2px 3px #999999;
+    box-shadow: 0 2px 3px #999999;*/
+    /*border-bottom: 5px solid #f4911e;*/
+    margin: 0;
+}
+/*.biq-widgets.slider img{
+    position:absolute;
+    width:800px;
+    height:auto;*/
+/*    -webkit-box-shadow: 0px 1px 5px 3px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 3px #4a4a4a;
+    box-shadow: 0px 1px 5px 3px #4a4a4a;*/
+    /*border-bottom: #CCCCCC 1px solid;*/
+/*}*/
+.biq-widgets.slider .slide{
+    position:absolute; top:0; left:0;
+    width:100%; pointer-events: none;
+}
+.biq-widgets.slider .slide .text{
+    position:absolute; top:0; left:0;
+    width:100%; height:100%;
+    text-align: center;
+}
+.biq-widgets.slider .slide .text h2{
+    text-align: center;
+    color:#FFFFFF;
+    text-shadow: 2px 2px 1px rgba(0,0,0, 0.7);
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+.biq-widgets.slider .slide .text p{
+    margin-top: 0rem;
+    text-align:center;
+    font-size:1.5rem;
+    color:#FFFFFF;
+    text-shadow: 2px 2px 1px rgba(0,0,0, 0.7);
+}
+.biq-widgets.slider .slide .text a.button:link{
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 8px 20px;
+    text-decoration: none;
+    pointer-events: auto;
+    box-shadow: 4px 5px 2px rgba(0,0,0,0.6);
+    box-sizing: content-box;
+    border:none; height: auto; line-height: inherit;
+}
+.biq-widgets.slider .slide .text a.button:hover{
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.biq-widgets.slider .slide.visible{
+    opacity:1;
+    filter:alpha(opacity=100);
+    
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+.biq-widgets.slider .slide.hidden{
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+.biq-widgets.slider .slide.hidden .text a{/*prevent invisible buttons from being clicked*/
+    display:none;
+}
+.biq-widgets.slider .next{
+    position:absolute;
+    right:0;
+    top:0;
+    width:8%;
+    height:100%;
+}
+.biq-widgets.slider .prev{
+    position:absolute;
+    left:0;
+    top:0;
+    width:8%;
+    height:100%;
+}
+.biq-widgets.slider .pager{
+    position:absolute;
+    bottom:7%;
+    right:45%;
+}
+.biq-widgets.slider .pager .item{
+    display:block;
+    width:10px;
+    height:10px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    float:left;
+    margin:0 0 0 20px;
+    outline:0;
+    cursor: pointer;
+}
+.biq-widgets.slider .pager .item.inactive{
+    /*background-image:url('images/pager.png');*/
+    background-color: rgba(255,255,255, 0.5);
+    border-color: #bfbfbf;
+}
+.biq-widgets.slider .pager .item.inactive:hover{
+    background-color: #ff6f0f;
+    border-color: #f9f9f9;
+}
+
+.biq-widgets.slider .pager .item.active{
+    /*background-image:url('images/pager_active.png');*/
+    border-color: #f9f9f9;
+    background-color: #328cc1;
+}
+.biq-widgets.slider_sh{
+    width:95%;
+    height:25px;
+    margin: 0 auto 0 auto;
+    background-image:url('images/sh_m.png');
+    background-repeat: repeat-x;
+}
+.biq-widgets.slider_sh .left{
+    background-image:url('images/sh_l.png');
+    position:absolute;
+    left:0;
+    height:25px;
+    width:50px;
+}
+
+.biq-widgets.slider_sh .right{
+    background-image:url('images/sh_r.png');
+    background-repeat: no-repeat;
+    position:absolute;
+    right:0;
+    height:25px;
+    width:50px;
+}
+.biq-widgets.slider .description{
+    position:absolute;
+    height:340px;
+    width:525px;
+    text-align:left;
+    left:800px;
+    bottom:0;
+    color:#FFFFFF;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.6);
+    padding: 0 0 0 1rem;
+    box-shadow: 0px 0px 1rem rgba(0,0,0,0.7);
+}
+.biq-widgets.slider .description h3{
+    font-size: 2em;
+    position:absolute;
+    top:0;
+    width:100%;
+    display:block;
+}
+.biq-widgets.slider .description h3.visible{
+    opacity:1;
+    filter:alpha(opacity=100);
+    -webkit-transition: 1s ease-out;
+    -moz-transition: 1s ease-out;
+    -o-transition: 1s ease-out;
+    transition: 1s ease-out;
+}
+.biq-widgets.slider .description h3.hidden{
+    opacity:0;
+    filter:alpha(opacity=0);
+    -webkit-transform: translate(10em,0);
+    -moz-transform: translate(10em,0);
+    -o-transform: translate(10em,0);
+    -ms-transform: translate(10em,0);
+    transform: translate(10em,0);
+}
+.biq-widgets.slider .description p{
+    position:absolute;
+    bottom:0;
+    height:14rem;
+    text-align: justify;
+    padding:0 2rem 0 0;
+    font-size:1.1rem;
+}
+.biq-widgets.slider .description p.visible{
+    opacity:1;
+    filter:alpha(opacity=100);
+    -webkit-transition: 2s ease-out;
+    -moz-transition: 2s ease-out;
+    -o-transition: 2s ease-out;
+    transition: 2s ease-out;
+}
+.biq-widgets.slider .description p.hidden{
+    opacity:0;
+    filter:alpha(opacity=0);
+    filter:alpha(opacity=0);
+}

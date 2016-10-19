@@ -21,6 +21,7 @@
                     .'" data-hide-empty="'.($hide_empty ? '1' : '0').'" data-hierarchical="'.($hierarchical ? '1' : '0') .'"'
                 : '';
         //BEGIN CATEGORY QUERY==============
+        $taxonomy = empty($taxonomy) ? 'product_cat' : $taxonomy;
         $args = array(
             'taxonomy'      => $taxonomy,
             'orderby'       => $orderby,
@@ -41,7 +42,7 @@
                     .'</li>';
         }
         if( (count($categories) == 0) && is_admin() ){
-            $ret_html_li = "<li>***Category data empty***</li>";
+            $ret_html_li = "<li>***Category empty for current setting***</li>";
         }
         
         //END CATEGORY QUERY**************

@@ -5,6 +5,7 @@ add_theme_support( 'menus' );
 $template_uri = get_template_directory_uri();
 $template_directory = get_template_directory();
 //END GLOBAL VARS*************
+//require 'functions/post-biq-slider.php';
 require 'functions/menu-functions.php';
 require 'libs/php/bfunctions.php';
 require 'libs/php/bimage.php';
@@ -40,8 +41,10 @@ require 'shortcodes/functions/widgets/logo.php';
 require 'shortcodes/functions/widgets/menu-main.php';
 require 'shortcodes/functions/widgets/heading-section-left.php';
 require 'shortcodes/functions/widgets/category-list.php';
+require 'shortcodes/functions/widgets/slider.php';
 
 require 'shortcodes/functions/layout/sidebar.php';
+require 'shortcodes/functions/layout/content.php';
 
 
 //END SHORTCODES***************************

@@ -112,12 +112,28 @@ BIQWidgetStructure.prototype.category_list = {
     ],
     'attribute_css' : BIQWidgetStructureDefaults.attribute_css
 };
+BIQWidgetStructure.prototype.slider = {
+    'title' : 'Setting - Slider',
+    'attribute_main':[
+        { 'key':'slider', type:'list', 'label':'Upload Slider',
+            'inputs':[
+                { 'key':'title', type:'text', 'label':'Title' },
+                { 'key':'caption', type:'text', 'label':'Caption' },
+                { 'key':'url', type:'text', 'label':'URL' }
+            ],
+            'inputs_disp':[
+                {'key':'title', 'tag':'h6'},{'key':'caption','tag':'div'}
+            ]
+        }
+    ],
+    'attribute_css' : BIQWidgetStructureDefaults.attribute_css
+};
 
 /*
  *Created by: Bayu candra <bayucandra@gmail.com>
  *Creation Year: 2016
 */
-function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout ){
+function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout, $mdSidenav ){
     var self=this;
     self.biq_theme_manager = null;
     self.customFullScreen=$mdMedia('xs') || $mdMedia('sm');
@@ -141,17 +157,174 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
             self.hide();
         });
     };
-
+    self.buttons = null;//link 'buttons' object at $scope
     self.controller = function($scope, $mdDialog) {
         $scope.input_value = self.params.values;
+        $scope.structure = self.params.structure;
+        $scope.buttons = {
+            text: {submit:'Submit',cancel:'Cancel'},
+            message: { 
+                cancel:{ text: 'Widget edit canceled', type:'warning'} 
+            } 
+        };
+        self.buttons = $scope.buttons;
+        
         $scope.widget_not_ready = self.params.widget_not_ready;
+        $scope.inputs ={ list:{ mode:'',values:{}, server_data:[] }, date:new Date().getTime() };
+        if( $scope.input_value.hasOwnProperty('list') ){
+            $scope.inputs.list.server_data = $scope.input_value.list;
+            $scope.buttons.text.cancel = 'Finish';
+            $scope.buttons.message.cancel.text = 'Widget edit finish';
+            $scope.buttons.message.cancel.type = 'success';
+        }
+        $scope.inputs.list.submit = function(){//Create / Submit
+            if($scope.inputs.list.mode===''){
+                $scope.inputs.list.values = {};
+                $scope.inputs.list.api.removeAll();
+                $scope.inputs.list.mode ='create';
+                return;
+            }
+            var formData = new FormData();
+            //BEGIN FILE UPLOAD========
+            var file = $b('.lf-ng-md-file-input');
+            var model_value = angular.element($b(file[0])).data('$ngModelController').$modelValue[0];
+            if(bisnull(model_value) && ($scope.inputs.list.mode==='create')){
+                Notification("Error, you must select file to upload","error");
+                return;
+            }
+            if(!bisnull(model_value) && ( model_value.hasOwnProperty('lfFile') )){//if has file
+                formData.append(
+                    $b(file[0]).attr('lf-files'),
+                    model_value.lfFile
+                );
+            }
+            if($scope.inputs.list.hasOwnProperty('img_name_old')){
+                formData.append( 'img_name_old', $scope.inputs.list.img_name_old );
+            }
+            formData.append( 'file_key', $b(file[0]).attr('lf-files') );
+            formData.append( 'mode', $scope.inputs.list.mode );
+            //END FILE UPLOAD****
+            //BEGIN INPUT======
+//            for(var key in $scope.inputs.list.values){
+//                var value =  !bisnull($scope.inputs.list.values[key]) ? $scope.inputs.list.values[key] : '';
+//                formData.append(key, value);
+//            }
+            var inputs = JSON.stringify($scope.inputs.list.values);
+            formData.append('inputs', inputs );
+            formData.append('widget_type', $scope.input_value.widget_type);
+            formData.append('widget_id', $scope.input_value.widget_id);
+            //END INPUT********
+//            formData.append('create_record', true);
+            formData.append('action', 'widget_save');//The wordpress ajax name
+            self.functions.maskShow('widget-dialog');
+            $b.ajax({
+                'url': ajaxurl,
+                'type':'POST', 'data':formData,
+                'async': false, 'cache': false,
+                'contentType': false, 'processData': false,
+                'success':function(response){
+                    var response_json = JSON.parse(response);
+                    if(response_json.is_found){
+//                        $scope.inputs.list.server_data.splice( 0, $scope.inputs.list.server_data.length );
+                        
+                        var server_data = JSON.parse(response_json.json_data);
+                        $scope.inputs.list.server_data = server_data;
+//                        angular.copy(server_data, $scope.inputs.list.server_data);
+                        $scope.inputs.list.values = {};
+                        $scope.inputs.list.mode = '';
+                        $scope.inputs.list.api.removeAll();
+                        
+                        $b('#biq-sns-be-main [data-biq-widget-id="'+response_json.widget_id+'"]').replaceWith(response_json.html);
+                        $timeout(function(){
+                            $rootScope.BIQThemeManager.widgetHoverApply(response_json.widget_id);
+                        });
+                        Notification("Widget succesfully updated","success");
+                    }else{
+//                        var error_message = !bisnull(response_json.html) ? response_json.html : 'Empty response, seem widget functions not defined properly.';
+                        Notification("Widget input failed: "+response_json.message, "error");
+                    }
+                    self.functions.maskHide('widget-dialog');
+                },
+                'error':function(response){
+                    Notification("There is error with server","error");
+                }
+            });
+        };
+        $scope.inputs.list.update = function(img_name){
+            $scope.inputs.list.mode = 'update';
+            var inputs = {};
+            for( var i=0; i<$scope.inputs.list.server_data.length;i++ ){
+                if( $scope.inputs.list.server_data[i].img_name === img_name ){
+                    angular.copy($scope.inputs.list.server_data[i].inputs, inputs);
+                }
+            }
+            $scope.inputs.list.values = inputs;
+            $scope.inputs.list.img_name_old = img_name;
+            $scope.inputs.date = new Date().getTime();
+        };
+        $scope.inputs.list.delete = function(){
+            var formData = new FormData();
+            var delete_select = $scope.inputs.list.delete_select;//set at deleteConfirm() parameters
+            var img_name = delete_select.img_name;
+            var widget_id = delete_select.widget_id;
+            var widget_type = delete_select.widget_type;
+            var title =delete_select.title;
+            
+            formData.append('action', 'widget_save');//The wordpress ajax name
+            formData.append('widget_type', widget_type);
+            formData.append('mode', 'destroy');
+            formData.append('img_name', img_name);
+            formData.append('widget_id', widget_id);
+            self.functions.maskShow('widget-dialog');
+            $b.ajax({
+                'url': ajaxurl,
+                'type':'POST', 'data':formData,
+                'async': false, 'cache': false,
+                'contentType': false, 'processData': false,
+                'success':function(response){
+                    var response_json = JSON.parse(response);
+                    if(response_json.is_found){
+                        var server_data = JSON.parse(response_json.json_data);
+                        $scope.inputs.list.server_data = server_data;
+                        $b('body').find('[data-biq-widget-id="'+response_json.widget_id+'"]').replaceWith(response_json.html);
+                        Notification("Success deleting slider: "+title,"success");
+                        $mdSidenav('list-delete-confirm').close();
+                    }else{
+                        Notification("Error deleting slider: "+title, "error");
+                    }
+                    self.functions.maskHide('widget-dialog');
+                },
+                'error':function(response){
+                    console.log(response);
+                    Notification("There is error with server","error");
+                    self.functions.maskHide('widget-dialog');
+                }
+            });
+        };
+        $scope.inputs.list.deleteConfirm = function(img_name, widget_id, widget_type, title){
+            $scope.inputs.list.mode = '';
+            $scope.inputs.list.delete_select = { img_name:img_name, widget_id: widget_id, widget_type: widget_type, title:title };
+            $mdSidenav('list-delete-confirm').open();
+        };
+        if( $scope.input_value.hasOwnProperty('list') ){//IF input is 'list' type
+            $scope.input_value.no_submit_callback = $scope.inputs.list.submit;
+        }
+        $scope.inputs.list.deleteCancel = function(){
+            $mdSidenav('list-delete-confirm').close();
+        };
         
         $scope.hide = function(p_success) {// for hiding outside scope, pass 'true' to avoid 'Notification()'
             p_success = typeof p_success !== 'undefined' ? p_success : false;
             self.hide(p_success);
             $mdDialog.hide();
         };
-        $scope.submit = function(submit) {
+        $scope.submit = function(submit){
+            if($scope.input_value.no_submit){
+                if( typeof $scope.input_value.no_submit_callback === 'function' ){
+                    $scope.input_value.no_submit_callback();
+                }
+                return;
+            }
             var formData = new FormData($b('#widget-dialog form')[0]);
 
             for(var key in $scope.input_value){
@@ -186,7 +359,7 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
                     var response_json = JSON.parse(response);
                     if( response_json.is_found ){
                         $scope.hide(true);
-                        $b('body').find('[data-biq-widget-id="'+response_json.widget_id+'"]').replaceWith(response_json.html);//continue here 160801
+                        $b('body').find('[data-biq-widget-id="'+response_json.widget_id+'"]').replaceWith(response_json.html);
                         $timeout(function(){
                             $rootScope.BIQThemeManager.widgetHoverApply(response_json.widget_id);
                         });
@@ -218,7 +391,7 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
     self.hide = function(p_success){
         p_success = typeof p_success !== 'undefined' ? p_success : false;
         self.functions.maskHide('widget-dialog');
-        if(!p_success) Notification('Widget edit canceled', 'warning');
+        if(!p_success) Notification( self.buttons.message.cancel.text, self.buttons.message.cancel.type);
 //        self.biq_theme_manager.hover_to_edit.is_editing = false;
 //        self.biq_theme_manager.hover_to_edit.onmouseleave();
     };
@@ -249,9 +422,10 @@ function BIQThemeDialog( $mdDialog, $mdMedia, bsLoadingOverlayService, Notificat
  * @author Bayu candra <bayucandra@gmail.com>
 */
 
-function BIQThemeManager( Notification, BIQThemeDialog, BIQWidgetElementParser ){
+function BIQThemeManager( Notification, $q, BIQThemeDialog, BIQWidgetElementParser ){
     var self = this;
     self.Notification = Notification;
+    self.$q = $q;
     self.BIQWidgetElementParser = BIQWidgetElementParser;
     self.structure = new BIQWidgetStructure;
     self.structure_item = null; // will set at generateWidgetImputAll()
@@ -389,7 +563,7 @@ BIQThemeManager.prototype.editWidget = function(e){
 	'\
 	    <md-dialog id="widget-dialog" aria-label="'+widget_input.title+'" class="bs-loading-container" \
 		     bs-loading-overlay="widget-dialog" bs-loading-overlay-template-url="'+template_uri+'/backend/app/template/dialog/dialog-default.html" \
-		     bs-loading-overlay-delay="2000" flex="{{dialog.flex}}" style="height:{{dialog.height}}" \
+		     bs-loading-overlay-delay="1000" flex="{{dialog.flex}}" style="height:{{dialog.height}}" \
 		ng-cloak> \
 	    <form name="widgetForm" class="biq-dialog"> \
 		<md-toolbar class="bdialog-toolbar"> \
@@ -411,8 +585,8 @@ BIQThemeManager.prototype.editWidget = function(e){
 		</md-dialog-content> \
 		<md-dialog-actions layout="row" ng-if="widget_not_ready==null"> \
 		    <span flex></span> \
-		    <md-button type="submit" ng-click="submit(true)" class="md-primary" md-autofocus>Submit</md-button> \
-		    <md-button ng-click="hide()" style="margin-left:10px;">Cancel</md-button> \
+		    <md-button type="submit" ng-hide="input_value.no_submit" ng-click="submit(true)" class="md-primary" md-autofocus>Submit</md-button> \
+		    <md-button ng-click="hide()" style="margin-left:10px;">{{buttons.text.cancel}}</md-button> \
 		</md-dialog-actions> \
                     \
                 <md-dialog-content ng-if="widget_not_ready!=null" layout-padding>\
@@ -425,15 +599,18 @@ BIQThemeManager.prototype.editWidget = function(e){
             self.hover_to_edit.widget_sel.data('biqWidgetType'), // the type of widget eg : contact_email_simple
             self.hover_to_edit.widget_sel, self.structure_item
         );
-    var widget_not_ready = null;
-    var widget_not_ready_el = self.hover_to_edit.widget_sel.children('.widget-not-ready');
-    if( widget_not_ready_el.length ){
-        widget_not_ready = {message: widget_not_ready_el.html()};
-    }
-//    values["layout"] = self.getLayoutClass();//currently unused, used widget_id instead via BIQWidgetElementParser on each
-    self.dialog.show(e, {values: values, widget_not_ready:widget_not_ready});
-    
-    self.hover_to_edit.onmouseleave();
+    self.$q.when(values).then(//whether promise or not
+        function(data){//the promise data or just data
+            var widget_not_ready = null;
+            var widget_not_ready_el = self.hover_to_edit.widget_sel.children('.widget-not-ready');
+            if( widget_not_ready_el.length ){
+                widget_not_ready = {message: widget_not_ready_el.html()};
+            }
+        //    values["layout"] = self.getLayoutClass();//currently unused, used widget_id instead via BIQWidgetElementParser on each
+            self.dialog.show(e, {values: data, structure: self.structure_item, widget_not_ready:widget_not_ready});
+
+            self.hover_to_edit.onmouseleave();
+        });
 };
 /**
  * @brief Generate input markup element for md-dialog interface
@@ -445,7 +622,7 @@ BIQThemeManager.prototype.editWidget = function(e){
  * - title: for using as md-dialog title
  * - layout: currently unused
  */
-BIQThemeManager.prototype.generateWidgetInputAll = function(){
+BIQThemeManager.prototype.generateWidgetInputAll = function(input_model){
     var self = this;
     var ret = {main : '-', css : '-', title: '-', layout: ''};//layout is for the main layout root ( "header", "body" or "footer" )
     //BEGIN CONVERT CLASS NAME TO STRUCTURE NAME Eg. contact-email-simple to contact_email_simpleXXXXXXXX change to using data-
@@ -455,32 +632,20 @@ BIQThemeManager.prototype.generateWidgetInputAll = function(){
     //END CONVERT CLASS NAME TO STRUCTURE ===============
     self.structure_item = self.structure[widget_structure_name];
     
-    var html_form_main = '';
-    for(var i=0; i<self.structure_item.attribute_main.length; i++){
-	var attribute_main = self.structure_item.attribute_main[i];
-	switch( attribute_main.type ){
-	    case "text":
-		html_form_main = html_form_main + self.generateInputForm.text( attribute_main );
-		break;
-	    case "radio":
-		html_form_main = html_form_main + self.generateInputForm.radio( attribute_main );
-		break;
-            case "file":
-                html_form_main = html_form_main + self.generateInputForm.file( attribute_main );
-                break;
-	}
-    }
+    var html_form_main = self.formMainConstruct();
     ret.main = '<biq-tab-item title="Main">'+html_form_main+'</biq-tab-item>';
+    
+    input_model = typeof input_model !== 'undefined' ? input_model : 'input_value.';
     
     var html_form_css = '';
     for(var i=0; i<self.structure_item.attribute_css.length; i++){
 	var attribute_css = self.structure_item.attribute_css[i];
 	switch( attribute_css.type ){
 	    case "text":
-		html_form_css = html_form_css + self.generateInputForm.text( attribute_css );
+		html_form_css = html_form_css + self.generateInputForm.text( attribute_css, input_model );
 		break;
 	    case "radio":
-		html_form_css = html_form_css + self.generateInputForm.radio( attribute_css );
+		html_form_css = html_form_css + self.generateInputForm.radio( attribute_css, input_model );
 		break;
 	}
     }
@@ -492,12 +657,41 @@ BIQThemeManager.prototype.generateWidgetInputAll = function(){
     return ret;
 };
 /**
+ * @brief Convert all structure data records to HTML input form based on functions inside generateInputForm
+ * @params {Object} attribute_main by default using selected widget structure data, but it can be overide with other structure data
+ * @returns {String} string in HTML format of input form
+ */
+BIQThemeManager.prototype.formMainConstruct = function( attribute_main, input_model ){
+    var self = this;
+    var html_form_main = '';
+    input_model = typeof input_model !== 'undefined' ? input_model : 'input_value.';
+    attribute_main = typeof attribute_main !== 'undefined' ? attribute_main : self.structure_item.attribute_main;
+    for(var i=0; i<attribute_main.length; i++){
+	var attribute_main_item = attribute_main[i];
+	switch( attribute_main_item.type ){
+	    case "text":
+		html_form_main = html_form_main + self.generateInputForm.text( attribute_main_item,input_model );
+		break;
+	    case "radio":
+		html_form_main = html_form_main + self.generateInputForm.radio( attribute_main_item,input_model );
+		break;
+            case "file":
+                html_form_main = html_form_main + self.generateInputForm.file( attribute_main_item );
+                break;
+            case "list":
+                html_form_main = html_form_main + self.generateInputForm.list( attribute_main_item,input_model );
+                break;
+	}
+    }
+    return html_form_main;
+};
+/**
  * @brief Generate input form per element to call in generateWidgetInputAll()
  * 
  * The element produced in angular material style. Will call inside loop check each element of 'main' and 'css' tab.
  */
 BIQThemeManager.prototype.generateInputForm = {
-    text : function( p_structure_item ){
+    text : function( p_structure_item, input_model ){
 	var is_required = ( p_structure_item.hasOwnProperty('required') && (p_structure_item.required) );
 	var ngRequired = is_required ? ' ng-required="true"' : '';
 	var input_attrs = p_structure_item.hasOwnProperty('input_attrs') ? p_structure_item.input_attrs : '';
@@ -505,7 +699,7 @@ BIQThemeManager.prototype.generateInputForm = {
 	var ret_html = 
 		'<md-input-container class="md-block" flex> \
 		    <label>'+p_structure_item.label+': '+placeholder+'</label> \
-		    <input name="'+p_structure_item.key+'"'+ngRequired+' ng-model="input_value.'+p_structure_item.key+'" '+input_attrs+'> \
+		    <input name="'+p_structure_item.key+'"'+ngRequired+' ng-model="'+input_model+p_structure_item.key+'" '+input_attrs+'> \
 		    <div ng-if="'+is_required+'" ng-messages="widgetForm.'+p_structure_item.key+'.$error"> \
 			<div ng-message="required" style="text-align:right;">'+p_structure_item.label+' is required.</div> \
 		    </div> \
@@ -520,10 +714,10 @@ BIQThemeManager.prototype.generateInputForm = {
                     </lf-ng-md-file-input>';
         return ret_html;
     },
-    radio : function(p_structure_item){
+    radio : function(p_structure_item, input_model){
 	var ret_html=
 		'<md-input-container class="md-block" flex>\
-		    <md-radio-group ng-model="input_value.'+p_structure_item.key+'" layout="row">\n\
+		    <md-radio-group ng-model="'+input_model+p_structure_item.key+'" layout="row">\n\
 		    <span class="label1 w10">'+p_structure_item.label+'</span>';
 	for(var i=0; i< p_structure_item.value.length; i++){
 	    var label = p_structure_item.value[i].label; var value = p_structure_item.value[i].value;
@@ -533,6 +727,50 @@ BIQThemeManager.prototype.generateInputForm = {
 		    '</md-radio-group>\n\
 		</md-input-container>';
 	return ret_html;
+    },
+    list: function(p_structure_item){
+        var ret_html=
+                '<input type="hidden" name="mode" ng-model="inputs.list.mode"/>'
+                +'<md-content ng-show="inputs.list.mode!==\'\'" class="animate-show">'
+                    +'<lf-ng-md-file-input ng-disable="inputs.list.mode===\'update\'" lf-files="'+p_structure_item.key+'" lf-api="inputs.list.api" lf-browse-label="'+p_structure_item.label+'" \
+                             accept="image/*" ng-disabled="ctrl.disabled01"> \
+                    </lf-ng-md-file-input>'
+                    +BIQThemeManager.prototype.formMainConstruct(p_structure_item.inputs, 'inputs.list.values.')
+                +'</md-content>'
+                +'<div layout="row">'
+                    +'<md-button class="md-primary md-raised" ng-click="inputs.list.submit()">\n\
+                            {{(inputs.list.mode==\'\')?\'Add\': (inputs.list.mode===\'create\' ? \'Submit\' : \'Update\' ) }}\n\
+                        </md-button>'
+                    +'<md-button ng-show="inputs.list.mode!=\'\'" class="md-warn md-raised" ng-click="inputs.list.mode=\'\'">\n\
+                            Cancel\n\
+                        </md-button>'
+                +'</div>'
+                +'<br>'
+                +'<md-list layout-padding>'
+                    +'<md-list-item ng-repeat="record in inputs.list.server_data track by record.img_name">'
+                        +'<div style="height:80px;overflow:hidden;" layout="row" layout-align="center center"><img ng-cloack src="{{record.uri_base}}/thumb_{{record.img_name}}?token={{inputs.date}}"/></div>'
+                        +'<div style="height:80px;overflow:hidden;font-size:1.1rem;" layout="row" layout-padding layout-align="start center" class="flex">'
+                            +'<span>{{record.inputs.title!==\'\' ? record.inputs.title : record.img_name }}</span>'
+                        +'</div>'
+                        +'<div layout="column">'
+                            +'<md-button class="md-primary" style="margin:0;" ng-click="inputs.list.update(record.img_name)">edit</md-button>'
+                            +'<md-button class="md-warn" style="margin:0;" ng-click="inputs.list.deleteConfirm(record.img_name, input_value.widget_id, input_value.widget_type, record.inputs.title)">delete</md-button>'
+                        +'</div>'
+                        +'<md-divider ng-if="!$last"></md-divider>'
+                    +'</md-list-item>'
+                +'</md-list>'
+                +'<md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="list-delete-confirm" flex style="max-width:100%; width:100%;">'
+                    +'<h3 style="text-align:center;"><font style="color:#999999">Confirm to delete :</font> {{inputs.list.delete_select.title}} ?</h3>\n\
+                        <div layout="column" layout-align="center center">\n\
+                                <md-button class="md-warn md-raised" ng-click="inputs.list.delete()">\n\
+                                    Yes\n\
+                                </md-button>\n\
+                                <md-button class="md-raised" ng-click="inputs.list.deleteCancel()">\n\
+                                    No\n\
+                                </md-button>\n\
+                        </div>'
+                +'</md-sidenav>';
+        return ret_html;
     }
 };
 /**
@@ -576,8 +814,11 @@ BIQThemeManager.prototype.getLayoutClass = function(){
  *@author Bayu candra <bayucandra@gmail.com>
  *Creation Year: 2016
 */
-function BIQWidgetElementParser(){
-    
+function BIQWidgetElementParser($http, $q, Notification){
+    var self = this;
+    self.$http = $http;
+    self.$q = $q;
+    self.Notification = Notification;
 }
 /**
  * Main function to Get values based on widget name by call other functions 
@@ -659,6 +900,42 @@ BIQWidgetElementParser.prototype.categoryList = function(p_el, p_structure_item)
     values['hide_empty'] = p_el.data('hideEmpty');
     values['hierarchical'] = p_el.data('hierarchical');
     return values;
+};
+BIQWidgetElementParser.prototype.slider = function(p_el, p_structure_item){
+    var self = this;
+    var deferred = self.$q.defer();
+    var values = self.defaultFormValues(p_el);
+    
+    values["no_submit"] = true;
+    values["main_attribute"] = p_structure_item.attribute_main[0];
+    
+    $b.ajax({
+        method:'POST', url:ajaxurl,
+        data:{ action:'widget_query', query_type:'slider', widget_id:values.widget_id },
+        'success':function(response){//ajaxurl is default by Wordpress
+            var response_json = JSON.parse(response);
+            values['list'] = response_json.list;
+            deferred.resolve(values);
+//            if( response_json.is_found ){
+//                $scope.hide(true);
+//                $b('body').find('[data-biq-widget-id="'+response_json.widget_id+'"]').replaceWith(response_json.html);//continue here 160801
+//                $timeout(function(){
+//                    $rootScope.BIQThemeManager.widgetHoverApply(response_json.widget_id);
+//                });
+//                Notification("Widget succesfully updated","success");
+//            }else{
+//                self.functions.maskHide('widget-dialog');
+//                var error_message = !bisnull(response_json.html) ? response_json.html : 'Empty response, seem widget functions not defined properly.';
+//                Notification("Widget update failed: "+error_message, "error");
+//            }
+        },
+        'error':function(xhr){
+            self.Notification('Error server. Status: '+xhr.status,'error');
+            deferred.reject(values);
+        }
+    });
+
+    return deferred.promise;
 };
 /**
  * Important to get default value of 'key'. Usually necessary when default input can be empty to load based on default value.
@@ -815,7 +1092,7 @@ var biqTabItem = function(){
  */
 
 var bngapp=angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', 'bsLoadingOverlay', 'ui-notification', 'ngMessages'])
-.controller('BCtrl', function($scope, $mdMedia, $rootScope, BIQThemeManager){
+.controller('BCtrl', function($scope, $mdMedia, $rootScope, BIQThemeManager, $http, $q){
     $rootScope.BIQThemeManager = BIQThemeManager;
     $rootScope.BIQThemeManager.init();
     $rootScope.scopeCtrl = $scope;
@@ -824,19 +1101,19 @@ var bngapp=angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', '
 	
     });
 })
-.factory('BIQThemeDialog', function($mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout){
-    var ref = new BIQThemeDialog($mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout);
+.factory('BIQThemeDialog', function($mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout, $mdSidenav){
+    var ref = new BIQThemeDialog($mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout, $mdSidenav);
     
     return ref;
 })
-.factory('BIQThemeManager', function(Notification, BIQThemeDialog, BIQWidgetElementParser){
-    var ref = new BIQThemeManager(Notification, BIQThemeDialog, BIQWidgetElementParser);
+.factory('BIQThemeManager', function(Notification, $q, BIQThemeDialog, BIQWidgetElementParser){
+    var ref = new BIQThemeManager(Notification, $q, BIQThemeDialog, BIQWidgetElementParser);
 //    ref.BIQWidgetElementParser = BIQWidgetElementParser;
 //    ref.dialog = BIQThemeDialog;
     return ref;
 })
-.factory( 'BIQWidgetElementParser', function(){
-    var ref = new BIQWidgetElementParser;
+.factory( 'BIQWidgetElementParser', function($http, $q, Notification){
+    var ref = new BIQWidgetElementParser($http, $q, Notification);
     return ref;
 })
 .directive('biqTab', biqTab)

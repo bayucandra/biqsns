@@ -10,9 +10,10 @@
  * @author Bayu candra <bayucandra@gmail.com>
 */
 
-function BIQThemeManager( Notification, BIQThemeDialog, BIQWidgetElementParser ){
+function BIQThemeManager( Notification, $q, BIQThemeDialog, BIQWidgetElementParser ){
     var self = this;
     self.Notification = Notification;
+    self.$q = $q;
     self.BIQWidgetElementParser = BIQWidgetElementParser;
     self.structure = new BIQWidgetStructure;
     self.structure_item = null; // will set at generateWidgetImputAll()
@@ -150,7 +151,7 @@ BIQThemeManager.prototype.editWidget = function(e){
 	'\
 	    <md-dialog id="widget-dialog" aria-label="'+widget_input.title+'" class="bs-loading-container" \
 		     bs-loading-overlay="widget-dialog" bs-loading-overlay-template-url="'+template_uri+'/backend/app/template/dialog/dialog-default.html" \
-		     bs-loading-overlay-delay="2000" flex="{{dialog.flex}}" style="height:{{dialog.height}}" \
+		     bs-loading-overlay-delay="1000" flex="{{dialog.flex}}" style="height:{{dialog.height}}" \
 		ng-cloak> \
 	    <form name="widgetForm" class="biq-dialog"> \
 		<md-toolbar class="bdialog-toolbar"> \
@@ -172,8 +173,8 @@ BIQThemeManager.prototype.editWidget = function(e){
 		</md-dialog-content> \
 		<md-dialog-actions layout="row" ng-if="widget_not_ready==null"> \
 		    <span flex></span> \
-		    <md-button type="submit" ng-click="submit(true)" class="md-primary" md-autofocus>Submit</md-button> \
-		    <md-button ng-click="hide()" style="margin-left:10px;">Cancel</md-button> \
+		    <md-button type="submit" ng-hide="input_value.no_submit" ng-click="submit(true)" class="md-primary" md-autofocus>Submit</md-button> \
+		    <md-button ng-click="hide()" style="margin-left:10px;">{{buttons.text.cancel}}</md-button> \
 		</md-dialog-actions> \
                     \
                 <md-dialog-content ng-if="widget_not_ready!=null" layout-padding>\
@@ -186,15 +187,18 @@ BIQThemeManager.prototype.editWidget = function(e){
             self.hover_to_edit.widget_sel.data('biqWidgetType'), // the type of widget eg : contact_email_simple
             self.hover_to_edit.widget_sel, self.structure_item
         );
-    var widget_not_ready = null;
-    var widget_not_ready_el = self.hover_to_edit.widget_sel.children('.widget-not-ready');
-    if( widget_not_ready_el.length ){
-        widget_not_ready = {message: widget_not_ready_el.html()};
-    }
-//    values["layout"] = self.getLayoutClass();//currently unused, used widget_id instead via BIQWidgetElementParser on each
-    self.dialog.show(e, {values: values, widget_not_ready:widget_not_ready});
-    
-    self.hover_to_edit.onmouseleave();
+    self.$q.when(values).then(//whether promise or not
+        function(data){//the promise data or just data
+            var widget_not_ready = null;
+            var widget_not_ready_el = self.hover_to_edit.widget_sel.children('.widget-not-ready');
+            if( widget_not_ready_el.length ){
+                widget_not_ready = {message: widget_not_ready_el.html()};
+            }
+        //    values["layout"] = self.getLayoutClass();//currently unused, used widget_id instead via BIQWidgetElementParser on each
+            self.dialog.show(e, {values: data, structure: self.structure_item, widget_not_ready:widget_not_ready});
+
+            self.hover_to_edit.onmouseleave();
+        });
 };
 /**
  * @brief Generate input markup element for md-dialog interface
@@ -206,7 +210,7 @@ BIQThemeManager.prototype.editWidget = function(e){
  * - title: for using as md-dialog title
  * - layout: currently unused
  */
-BIQThemeManager.prototype.generateWidgetInputAll = function(){
+BIQThemeManager.prototype.generateWidgetInputAll = function(input_model){
     var self = this;
     var ret = {main : '-', css : '-', title: '-', layout: ''};//layout is for the main layout root ( "header", "body" or "footer" )
     //BEGIN CONVERT CLASS NAME TO STRUCTURE NAME Eg. contact-email-simple to contact_email_simpleXXXXXXXX change to using data-
@@ -216,32 +220,20 @@ BIQThemeManager.prototype.generateWidgetInputAll = function(){
     //END CONVERT CLASS NAME TO STRUCTURE ===============
     self.structure_item = self.structure[widget_structure_name];
     
-    var html_form_main = '';
-    for(var i=0; i<self.structure_item.attribute_main.length; i++){
-	var attribute_main = self.structure_item.attribute_main[i];
-	switch( attribute_main.type ){
-	    case "text":
-		html_form_main = html_form_main + self.generateInputForm.text( attribute_main );
-		break;
-	    case "radio":
-		html_form_main = html_form_main + self.generateInputForm.radio( attribute_main );
-		break;
-            case "file":
-                html_form_main = html_form_main + self.generateInputForm.file( attribute_main );
-                break;
-	}
-    }
+    var html_form_main = self.formMainConstruct();
     ret.main = '<biq-tab-item title="Main">'+html_form_main+'</biq-tab-item>';
+    
+    input_model = typeof input_model !== 'undefined' ? input_model : 'input_value.';
     
     var html_form_css = '';
     for(var i=0; i<self.structure_item.attribute_css.length; i++){
 	var attribute_css = self.structure_item.attribute_css[i];
 	switch( attribute_css.type ){
 	    case "text":
-		html_form_css = html_form_css + self.generateInputForm.text( attribute_css );
+		html_form_css = html_form_css + self.generateInputForm.text( attribute_css, input_model );
 		break;
 	    case "radio":
-		html_form_css = html_form_css + self.generateInputForm.radio( attribute_css );
+		html_form_css = html_form_css + self.generateInputForm.radio( attribute_css, input_model );
 		break;
 	}
     }
@@ -253,12 +245,41 @@ BIQThemeManager.prototype.generateWidgetInputAll = function(){
     return ret;
 };
 /**
+ * @brief Convert all structure data records to HTML input form based on functions inside generateInputForm
+ * @params {Object} attribute_main by default using selected widget structure data, but it can be overide with other structure data
+ * @returns {String} string in HTML format of input form
+ */
+BIQThemeManager.prototype.formMainConstruct = function( attribute_main, input_model ){
+    var self = this;
+    var html_form_main = '';
+    input_model = typeof input_model !== 'undefined' ? input_model : 'input_value.';
+    attribute_main = typeof attribute_main !== 'undefined' ? attribute_main : self.structure_item.attribute_main;
+    for(var i=0; i<attribute_main.length; i++){
+	var attribute_main_item = attribute_main[i];
+	switch( attribute_main_item.type ){
+	    case "text":
+		html_form_main = html_form_main + self.generateInputForm.text( attribute_main_item,input_model );
+		break;
+	    case "radio":
+		html_form_main = html_form_main + self.generateInputForm.radio( attribute_main_item,input_model );
+		break;
+            case "file":
+                html_form_main = html_form_main + self.generateInputForm.file( attribute_main_item );
+                break;
+            case "list":
+                html_form_main = html_form_main + self.generateInputForm.list( attribute_main_item,input_model );
+                break;
+	}
+    }
+    return html_form_main;
+};
+/**
  * @brief Generate input form per element to call in generateWidgetInputAll()
  * 
  * The element produced in angular material style. Will call inside loop check each element of 'main' and 'css' tab.
  */
 BIQThemeManager.prototype.generateInputForm = {
-    text : function( p_structure_item ){
+    text : function( p_structure_item, input_model ){
 	var is_required = ( p_structure_item.hasOwnProperty('required') && (p_structure_item.required) );
 	var ngRequired = is_required ? ' ng-required="true"' : '';
 	var input_attrs = p_structure_item.hasOwnProperty('input_attrs') ? p_structure_item.input_attrs : '';
@@ -266,7 +287,7 @@ BIQThemeManager.prototype.generateInputForm = {
 	var ret_html = 
 		'<md-input-container class="md-block" flex> \
 		    <label>'+p_structure_item.label+': '+placeholder+'</label> \
-		    <input name="'+p_structure_item.key+'"'+ngRequired+' ng-model="input_value.'+p_structure_item.key+'" '+input_attrs+'> \
+		    <input name="'+p_structure_item.key+'"'+ngRequired+' ng-model="'+input_model+p_structure_item.key+'" '+input_attrs+'> \
 		    <div ng-if="'+is_required+'" ng-messages="widgetForm.'+p_structure_item.key+'.$error"> \
 			<div ng-message="required" style="text-align:right;">'+p_structure_item.label+' is required.</div> \
 		    </div> \
@@ -281,10 +302,10 @@ BIQThemeManager.prototype.generateInputForm = {
                     </lf-ng-md-file-input>';
         return ret_html;
     },
-    radio : function(p_structure_item){
+    radio : function(p_structure_item, input_model){
 	var ret_html=
 		'<md-input-container class="md-block" flex>\
-		    <md-radio-group ng-model="input_value.'+p_structure_item.key+'" layout="row">\n\
+		    <md-radio-group ng-model="'+input_model+p_structure_item.key+'" layout="row">\n\
 		    <span class="label1 w10">'+p_structure_item.label+'</span>';
 	for(var i=0; i< p_structure_item.value.length; i++){
 	    var label = p_structure_item.value[i].label; var value = p_structure_item.value[i].value;
@@ -294,6 +315,50 @@ BIQThemeManager.prototype.generateInputForm = {
 		    '</md-radio-group>\n\
 		</md-input-container>';
 	return ret_html;
+    },
+    list: function(p_structure_item){
+        var ret_html=
+                '<input type="hidden" name="mode" ng-model="inputs.list.mode"/>'
+                +'<md-content ng-show="inputs.list.mode!==\'\'" class="animate-show">'
+                    +'<lf-ng-md-file-input ng-disable="inputs.list.mode===\'update\'" lf-files="'+p_structure_item.key+'" lf-api="inputs.list.api" lf-browse-label="'+p_structure_item.label+'" \
+                             accept="image/*" ng-disabled="ctrl.disabled01"> \
+                    </lf-ng-md-file-input>'
+                    +BIQThemeManager.prototype.formMainConstruct(p_structure_item.inputs, 'inputs.list.values.')
+                +'</md-content>'
+                +'<div layout="row">'
+                    +'<md-button class="md-primary md-raised" ng-click="inputs.list.submit()">\n\
+                            {{(inputs.list.mode==\'\')?\'Add\': (inputs.list.mode===\'create\' ? \'Submit\' : \'Update\' ) }}\n\
+                        </md-button>'
+                    +'<md-button ng-show="inputs.list.mode!=\'\'" class="md-warn md-raised" ng-click="inputs.list.mode=\'\'">\n\
+                            Cancel\n\
+                        </md-button>'
+                +'</div>'
+                +'<br>'
+                +'<md-list layout-padding>'
+                    +'<md-list-item ng-repeat="record in inputs.list.server_data track by record.img_name">'
+                        +'<div style="height:80px;overflow:hidden;" layout="row" layout-align="center center"><img ng-cloack src="{{record.uri_base}}/thumb_{{record.img_name}}?token={{inputs.date}}"/></div>'
+                        +'<div style="height:80px;overflow:hidden;font-size:1.1rem;" layout="row" layout-padding layout-align="start center" class="flex">'
+                            +'<span>{{record.inputs.title!==\'\' ? record.inputs.title : record.img_name }}</span>'
+                        +'</div>'
+                        +'<div layout="column">'
+                            +'<md-button class="md-primary" style="margin:0;" ng-click="inputs.list.update(record.img_name)">edit</md-button>'
+                            +'<md-button class="md-warn" style="margin:0;" ng-click="inputs.list.deleteConfirm(record.img_name, input_value.widget_id, input_value.widget_type, record.inputs.title)">delete</md-button>'
+                        +'</div>'
+                        +'<md-divider ng-if="!$last"></md-divider>'
+                    +'</md-list-item>'
+                +'</md-list>'
+                +'<md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="list-delete-confirm" flex style="max-width:100%; width:100%;">'
+                    +'<h3 style="text-align:center;"><font style="color:#999999">Confirm to delete :</font> {{inputs.list.delete_select.title}} ?</h3>\n\
+                        <div layout="column" layout-align="center center">\n\
+                                <md-button class="md-warn md-raised" ng-click="inputs.list.delete()">\n\
+                                    Yes\n\
+                                </md-button>\n\
+                                <md-button class="md-raised" ng-click="inputs.list.deleteCancel()">\n\
+                                    No\n\
+                                </md-button>\n\
+                        </div>'
+                +'</md-sidenav>';
+        return ret_html;
     }
 };
 /**

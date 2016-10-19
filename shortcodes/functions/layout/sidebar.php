@@ -16,7 +16,7 @@
 	$classes = !empty( $classes ) ? ' '.$classes : '';
         $float = empty($float) ? 'left' : $float;
         
-        $element_attributes =  'class="biq-box-sidebar biq-container'.$float.$classes.'"'. $css_inline;
+        $element_attributes =  'class="biq-box-sidebar biq-container '.$float.$classes.'"'. $css_inline;
         $element_attributes .= is_admin() ?
                 ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="sidebar" data-biq-css-default="biq-box-sidebar"'
                 : '';

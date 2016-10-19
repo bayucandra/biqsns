@@ -112,3 +112,19 @@ BIQWidgetStructure.prototype.category_list = {
     ],
     'attribute_css' : BIQWidgetStructureDefaults.attribute_css
 };
+BIQWidgetStructure.prototype.slider = {
+    'title' : 'Setting - Slider',
+    'attribute_main':[
+        { 'key':'slider', type:'list', 'label':'Upload Slider',
+            'inputs':[
+                { 'key':'title', type:'text', 'label':'Title' },
+                { 'key':'caption', type:'text', 'label':'Caption' },
+                { 'key':'url', type:'text', 'label':'URL' }
+            ],
+            'inputs_disp':[
+                {'key':'title', 'tag':'h6'},{'key':'caption','tag':'div'}
+            ]
+        }
+    ],
+    'attribute_css' : BIQWidgetStructureDefaults.attribute_css
+};

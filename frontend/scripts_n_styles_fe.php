@@ -7,6 +7,7 @@
 	wp_enqueue_style( 'main', $template_uri . '/frontend/css/main_css.php' );
 	wp_enqueue_style( 'layout', $template_uri . '/frontend/css/layout_css.php' );
 	wp_enqueue_style( 'widget', $template_uri . '/frontend/css/widget_css.php' );
+	wp_enqueue_style( 'biq-slider', $template_uri . '/libs/biq-slider/biq-slider.css' );
 	if(WP_DEBUG){
 	    wp_enqueue_style( 'font_', $template_uri . '/frontend/libs/font-awesome-4.6.3/css/font-awesome.css' );
 	}else{
@@ -19,6 +20,8 @@
 	global $template_uri;
 	wp_enqueue_script( 'bfunctions', $template_uri . '/frontend/js/bfunctions.js', array( 'jquery' ), '', false );
 	wp_enqueue_script( 'main', $template_uri . '/frontend/js/main.js', array( 'bfunctions', 'jquery' ), '', false );
+	wp_enqueue_script( 'biq_slider', $template_uri . '/libs/biq-slider/biq-slider.js',
+	    array( 'jquery' ), null, true );
     }
     add_action( 'wp_enqueue_scripts', 'biq_sns_fe_js' );
     

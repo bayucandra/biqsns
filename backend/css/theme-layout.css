@@ -20,6 +20,9 @@
     position:relative;
 }
 /*BEGIN DIALOGS*/
+#widget-dialog md-backdrop.md-sidenav-backdrop{
+    display:none;
+}
 .md-dialog-container{
     z-index: 100000;
 }
