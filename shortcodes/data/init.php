@@ -7,6 +7,7 @@
     fclose($ftemplate);
     
     $template_arr = json_decode($template, true);
+    biq_widget_id_init($template_arr);//applying widget_id
     add_option('biq-sns-template',$template_arr);
     
     //BEGIN DEFAULT SETTINGS===================

@@ -1,5 +1,5 @@
 <?php
-
+//CURENTLY UNUSED 161019
 add_action( 'init', 'create_post_biq_slider' );
 
 function create_post_biq_slider() {

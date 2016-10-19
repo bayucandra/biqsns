@@ -622,7 +622,7 @@ BIQThemeManager.prototype.editWidget = function(e){
  * - title: for using as md-dialog title
  * - layout: currently unused
  */
-BIQThemeManager.prototype.generateWidgetInputAll = function(){
+BIQThemeManager.prototype.generateWidgetInputAll = function(input_model){
     var self = this;
     var ret = {main : '-', css : '-', title: '-', layout: ''};//layout is for the main layout root ( "header", "body" or "footer" )
     //BEGIN CONVERT CLASS NAME TO STRUCTURE NAME Eg. contact-email-simple to contact_email_simpleXXXXXXXX change to using data-
@@ -635,15 +635,17 @@ BIQThemeManager.prototype.generateWidgetInputAll = function(){
     var html_form_main = self.formMainConstruct();
     ret.main = '<biq-tab-item title="Main">'+html_form_main+'</biq-tab-item>';
     
+    input_model = typeof input_model !== 'undefined' ? input_model : 'input_value.';
+    
     var html_form_css = '';
     for(var i=0; i<self.structure_item.attribute_css.length; i++){
 	var attribute_css = self.structure_item.attribute_css[i];
 	switch( attribute_css.type ){
 	    case "text":
-		html_form_css = html_form_css + self.generateInputForm.text( attribute_css );
+		html_form_css = html_form_css + self.generateInputForm.text( attribute_css, input_model );
 		break;
 	    case "radio":
-		html_form_css = html_form_css + self.generateInputForm.radio( attribute_css );
+		html_form_css = html_form_css + self.generateInputForm.radio( attribute_css, input_model );
 		break;
 	}
     }

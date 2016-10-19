@@ -90,7 +90,25 @@
         }
         return $arr_ret;
     }
-    
+    function biq_widget_id_init(&$p_arr){
+        global $widget_id_next;
+        if(!isset($widget_id_next)){ $widget_id_next=1; }
+        foreach($p_arr AS $key=> &$val){
+//            echo "<pre>";
+//            print_r($val);
+//            echo "</pre>";
+            if( is_array($val) && array_key_exists("shortcode", $val) ){
+                $val["widget_id"] = $widget_id_next;
+                $widget_id_next++;
+                if(array_key_exists("children", $val) ){
+                    biq_widget_id_init($val["children"]);
+                }
+            }
+            elseif(is_array($val)){
+                biq_widget_id_init($val);
+            }
+        }
+    }
     function biq_get_path_separator(){
 	return (strstr(strtoupper(substr(PHP_OS, 0, 3)), "WIN")) ? "\\" : "/";
     }

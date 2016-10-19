@@ -109,7 +109,7 @@
             if( !empty($p_data["img_title"]) ){ $attributes["img_title"] = $p_data["img_title"]; }
             if( !empty($p_data["css_inline"]) ){ $attributes["css_inline"] = $p_data["css_inline"]; }
             if( !empty($p_data["classes"]) ){ $attributes["classes"] = $p_data["classes"]; }
-            
+
             $update_arr = array( "attributes" => $attributes  );
             $widget_update_res = $this->widget_update(
                     $this->template_arr[ $this->biq_sns_settings["active_template"] ],
