@@ -12,6 +12,7 @@ $icon_svg = " data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5X
 	60
     );
     add_submenu_page( 'biq-sns-theme-setting', 'BIQ - Show And Shop Theme Layout', 'Layout', 'manage_options', 'biq-sns-theme-setting' );
+    add_submenu_page( 'biq-sns-theme-setting', 'BIQ - Woocommerce setting', 'Woocommerce setting', 'manage_options', 'biq-sns-woocommerce', 'biq_sns_woocommerce' );
     add_submenu_page( 'biq-sns-theme-setting', 'BIQ - Option', 'Option', 'manage_options', 'biq-sns-theme-option', 'biq_sns_theme_option' );
 }
 add_action('admin_menu', 'biq_sns_be_menus');
@@ -23,5 +24,12 @@ function biq_sns_theme_setting_page(){
 }
 function biq_sns_theme_option(){
     echo "<h1>Under Construction</h1>";
+}
+function biq_sns_woocommerce(){
+    if( !current_user_can('manage_options') ){
+        wp_die( '<h2>You do not have sufficient privilege to access this page</h2>' );
+    }
+    require_once 'pages/woocommerce-setting.php';
+    require_once 'pages/views/woocommerce-setting-view.php';
 }
 ?>

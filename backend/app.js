@@ -1098,7 +1098,7 @@ var bngapp=angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', '
     $rootScope.scopeCtrl = $scope;
 	
     angular.element(document).ready(function(){
-	
+	$b('.notice').remove();
     });
 })
 .factory('BIQThemeDialog', function($mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout, $mdSidenav){
