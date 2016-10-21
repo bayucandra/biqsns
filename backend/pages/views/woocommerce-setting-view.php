@@ -25,6 +25,22 @@
                         </fieldset>
                     </td>
                 </tr>
+                <tr>
+                    <th>
+                        <label>loop_shop_column</label>
+                    </th>
+                    <td>
+                        <input type="number" class="small-text" value="<?php echo $biq_sns_settings["woocommerce"]["loop_shop_columns"];?>" min="2" step="1" name="loop_shop_columns">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>loop_shop_per_page</label>
+                    </th>
+                    <td>
+                        <input type="number" class="small-text" value="<?php echo $biq_sns_settings["woocommerce"]["loop_shop_per_page"];?>" min="2" step="1" name="loop_shop_per_page">
+                    </td>
+                </tr>
             </tbody>
         </table>
         <p class="submit">

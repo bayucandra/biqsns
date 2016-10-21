@@ -10,12 +10,6 @@ require 'functions/menu-functions.php';
 require 'libs/php/bfunctions.php';
 require 'libs/php/bimage.php';
 
-
-//BEGIN WOOCOMMERCE HOOKS================
-add_filter( 'loop_shop_columns', function(){ return 3; } );
-add_filter( 'loop_shop_per_page', function(){ return 12; } );
-//END WOOCOMMERCE HOOKS*************
-
 //BEGIN SESSION================
 //define("SESSION_BIQ_BE", "BIQ-SOFT-BE");//BACKEND SESSION NAME
 //define("SESSION_BIQ_FE", "BIQ-SOFT-FE");//FRONTEND SESSION NAME
@@ -28,6 +22,11 @@ require 'shortcodes/data/init.php';//INIT TEMPLATE
 $biq_sns_settings = get_option('biq-sns-settings');
 $template_arr= get_option('biq-sns-template');
 $bimage = new BImage("");
+
+//BEGIN WOOCOMMERCE HOOKS================
+add_filter( 'loop_shop_columns', function(){ global $biq_sns_settings; return $biq_sns_settings["woocommerce"]["loop_shop_columns"]; } );
+add_filter( 'loop_shop_per_page', function(){  global $biq_sns_settings; return $biq_sns_settings["woocommerce"]["loop_shop_per_page"]; } );
+//END WOOCOMMERCE HOOKS*************
 
 //BEGIN FRONTEND====================
 require 'frontend/scripts_n_styles_fe.php';
