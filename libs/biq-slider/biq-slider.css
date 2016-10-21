@@ -70,6 +70,11 @@
     box-sizing: content-box;
     border:none; height: auto; line-height: inherit;
 }
+
+.biq-widgets.slider .slide .text a.button:visited{
+    color:#ffffff;
+    text-decoration: none;
+}
 .biq-widgets.slider .slide .text a.button:hover{
   background: #3cb0fd;
   background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);

@@ -1090,6 +1090,7 @@ var biqTabItem = function(){
  *Created by: Bayu candra <bayucandra@gmail.com>
  *Creation Year: 2016
  */
+"use strict";
 
 var bngapp=angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', 'bsLoadingOverlay', 'ui-notification', 'ngMessages'])
 .controller('BCtrl', function($scope, $mdMedia, $rootScope, BIQThemeManager, $http, $q){
@@ -1098,7 +1099,7 @@ var bngapp=angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', '
     $rootScope.scopeCtrl = $scope;
 	
     angular.element(document).ready(function(){
-	
+	$b('.notice').remove();
     });
 })
 .factory('BIQThemeDialog', function($mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout, $mdSidenav){

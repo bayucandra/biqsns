@@ -13,7 +13,12 @@
     //BEGIN DEFAULT SETTINGS===================
     $settings = 
         '{
-            "active_template": "default"
+            "active_template": "default",
+            "woocommerce" : {
+                "product_display_mode" : "show",
+                "loop_shop_columns" : 3,
+                "loop_shop_per_page" : 12
+            }
         }';
     $settings_arr = json_decode($settings, true);
     add_option( 'biq-sns-settings', $settings_arr );
