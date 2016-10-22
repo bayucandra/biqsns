@@ -1,6 +1,6 @@
 .biq-widgets.menu-main{
     min-height:5rem;
-    margin:0 10px 0 0;
+    margin:0 0.5rem;
     font-size:1em;
     overflow:visible;
     z-index:30;

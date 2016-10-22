@@ -20,6 +20,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+//APPLY biq-sns-settings
+global $biq_sns_settings;
+
+$product_display_mode = $biq_sns_settings["woocommerce"]["product_display_mode"];
+if( $product_display_mode == 'show' ){//begin removing some actions for this file
+    remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+    remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+}
+
 global $product;
 
 // Ensure visibility

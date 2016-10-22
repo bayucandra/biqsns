@@ -20,10 +20,14 @@ function biq_sns_theme_setting_page(){
     if( !current_user_can('manage_options') ){
 	wp_die( __('You have no privilege to access this page', 'biqsoft') );
     }
-    require_once 'pages/main.php';
+    require_once 'pages/layout.php';
 }
 function biq_sns_theme_option(){
-    echo "<h1>Under Construction</h1>";
+    if( !current_user_can('manage_options') ){
+        wp_die( __('You have no privilege to access this page', 'biqsoft') );
+    }
+    require_once 'pages/option.php';
+    require_once 'pages/views/option-view.php';
 }
 function biq_sns_woocommerce(){
     if( !current_user_can('manage_options') ){

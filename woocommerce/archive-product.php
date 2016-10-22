@@ -20,17 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-//APPLY biq-sns-settings
-global $biq_sns_settings;
-//global $template_arr;
-//$template_arr = $template_arr[ $biq_sns_settings["active_template"] ];
-
-$product_display_mode = $biq_sns_settings["woocommerce"]["product_display_mode"];
-if( $product_display_mode == 'show' ){
-    remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
-    remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
-}
-
 get_header( 'shop' ); 
 ?>
     <div class="biq-box-wrapper short biq-container body biq-layout">
