@@ -39,7 +39,7 @@
 	</div>
 	<div class="biq-body">
 	    <?php
-                $template_file = $template_directory.'/backend/pages/'.$action.".php";
+                $template_file = $template_directory.'/backend/pages/layout/'.$action.".php";
                 if(file_exists($template_file)){
                     require_once $template_file;
                 }else{

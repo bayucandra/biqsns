@@ -1,6 +1,6 @@
 <?php
     global $biq_sns_settings;
-    if( isset( $_POST["biq_sns_woocommerce_setting_submit"] ) ){
+    if( isset( $_POST["biq-sns-woocommerce-setting-submit"] ) ){
         $biq_sns_settings["woocommerce"]["product_display_mode"] = $_POST["mode"];//BEGIN SET WOOCOMMERCE PRODUCT DISPLAY MODE
         $biq_sns_settings["woocommerce"]["loop_shop_columns"] = esc_html( $_POST["loop_shop_columns"] );
         $biq_sns_settings["woocommerce"]["loop_shop_per_page"] = esc_html( $_POST["loop_shop_per_page"] );

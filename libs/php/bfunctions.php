@@ -149,8 +149,20 @@
 	    echo "<h1><red>There is error with session directory</red></h1>";
 	}
     }
-    function biq_get_setting($p_str){//parameter is the key
+    function biq_settings_file_gen(){//Generate biq_settings.php at the root theme folder which contain array comes from get_option()
+        global $template_directory;
         global $biq_sns_settings;
-        
+        $biq_settings_path = $template_directory."/biq_sns_settings.php";
+        if( !file_exists( $biq_settings_path ) ){
+            $biq_settings_file = fopen($biq_settings_path, "w") or wp_die("Failed to write biq_settings.php at theme folder, please make sure your web server have sufficient permission to write there.");
+            
+            $var_script = "<?php /*This file is purposed to read theme settings for CSS files and other files outside wrodpress scope.*/\r";
+                $var_script .= "\r";
+                $var_script .= '$biq_sns_settings_serialized = \''. serialize($biq_sns_settings).'\';'." \r \r";
+            $var_script .= '?>';
+            fwrite($biq_settings_file, print_r($var_script, true));
+            fclose($biq_settings_file);
+            chmod( $biq_settings_path, 0775 );
+        }
     }
 ?>
