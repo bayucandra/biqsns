@@ -25,6 +25,5 @@
         }';
     $settings_arr = json_decode($settings, true);
     add_option( 'biq-sns-settings', $settings_arr );
-    biq_settings_file_gen();//genereate biq_settings.php file
     //END DEFAULT SETTINGS**************
 ?>

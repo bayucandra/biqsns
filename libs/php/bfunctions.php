@@ -149,11 +149,16 @@
 	    echo "<h1><red>There is error with session directory</red></h1>";
 	}
     }
-    function biq_settings_file_gen(){//Generate biq_settings.php at the root theme folder which contain array comes from get_option()
+    /**
+     * Create biq_sns_settings.php file at theme root directory if at load the file not exist, or update when $init = false
+     * @param $init will be false by default, when set to true it will only for the first load and generate the file if not exist.
+     *       The false one is for update_option(), so it will ignore the file_exist() check
+     */
+    function biq_sns_settings_file_gen( $init = false ){//Generate biq_sns_settings.php at the root theme folder which contain array comes from get_option()
         global $template_directory;
         global $biq_sns_settings;
         $biq_settings_path = $template_directory."/biq_sns_settings.php";
-        if( !file_exists( $biq_settings_path ) ){
+        if( !file_exists( $biq_settings_path || !$init ) ){
             $biq_settings_file = fopen($biq_settings_path, "w") or wp_die("Failed to write biq_settings.php at theme folder, please make sure your web server have sufficient permission to write there.");
             
             $var_script = "<?php /*This file is purposed to read theme settings for CSS files and other files outside wrodpress scope.*/\r";

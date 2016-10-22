@@ -14,7 +14,7 @@
                         <fieldset>
                             <legend class="screen-reader-text">Display product mode</legend>
                             <label>
-                                <input type="radio" name="mode" value="show"<?php echo ($biq_sns_settings["woocommerce"]["product_display_mode"]=="show") ? ' checked="true"' : ""; ?>/>
+                                <input type="radio" id="mode" name="mode" value="show"<?php echo ($biq_sns_settings["woocommerce"]["product_display_mode"]=="show") ? ' checked="true"' : ""; ?>/>
                                 <span><?php esc_attr_e( 'Show mode ( For display product only )', 'biqsoft')?></span>
                             </label>
                             <br/>
