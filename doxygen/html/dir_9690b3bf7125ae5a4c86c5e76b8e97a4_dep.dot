@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/read-pkg-up/node_modules/find-up/node_modules/path-exists" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_010af57ea8103b03de4782728b8dd104 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_010af57ea8103b03de4782728b8dd104.html"]
-  dir_9690b3bf7125ae5a4c86c5e76b8e97a4 [shape=box, label="path-exists", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_9690b3bf7125ae5a4c86c5e76b8e97a4.html"];
-  }
-}

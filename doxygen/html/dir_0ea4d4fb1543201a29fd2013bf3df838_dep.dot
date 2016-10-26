@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/node_modules/is-builtin-module/node_modules/builtin-modules" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_078ac318da9128c3f48c1bd0a4f83a24 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_078ac318da9128c3f48c1bd0a4f83a24.html"]
-  dir_0ea4d4fb1543201a29fd2013bf3df838 [shape=box, label="builtin-modules", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_0ea4d4fb1543201a29fd2013bf3df838.html"];
-  }
-}

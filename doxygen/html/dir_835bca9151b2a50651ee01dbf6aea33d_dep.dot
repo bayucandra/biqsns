@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/marked/lib" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_be7efd460a2ed58d0396da91948a8915 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="marked" fontname="Helvetica", fontsize="10", URL="dir_be7efd460a2ed58d0396da91948a8915.html"]
-  dir_835bca9151b2a50651ee01dbf6aea33d [shape=box, label="lib", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_835bca9151b2a50651ee01dbf6aea33d.html"];
-  }
-}

@@ -1,9 +1,0 @@
-digraph "libs/jquery-ui" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_6719ab1f1f7655efc2fa43f7eb574fd1 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="libs" fontname="Helvetica", fontsize="10", URL="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html"]
-  dir_ce2d5194fa4c0573f622e612dc603fa4 [shape=box, label="jquery-ui", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ce2d5194fa4c0573f622e612dc603fa4.html"];
-  }
-}

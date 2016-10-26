@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/gulp-util/node_modules/lodash.template/node_modules/lodash._basetostring" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_17758bbfa661f70e51d26f23838e53d5 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_17758bbfa661f70e51d26f23838e53d5.html"]
-  dir_59867a5b6a83b4d37591df9cd76ea8b3 [shape=box, label="lodash._basetostring", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_59867a5b6a83b4d37591df9cd76ea8b3.html"];
-  }
-}

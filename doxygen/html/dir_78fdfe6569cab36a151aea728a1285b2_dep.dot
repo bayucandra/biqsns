@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-uglify/node_modules/uglify-js/node_modules/yargs/node_modules/decamelize" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_27bb43d87c9b65f5b11d784234b06411 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_27bb43d87c9b65f5b11d784234b06411.html"]
-  dir_78fdfe6569cab36a151aea728a1285b2 [shape=box, label="decamelize", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_78fdfe6569cab36a151aea728a1285b2.html"];
-  }
-}

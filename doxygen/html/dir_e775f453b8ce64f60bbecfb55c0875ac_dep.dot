@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-watcher/node_modules/gaze/node_modules/globule/node_modules/minimatch/node_modules/lru-cache/lib" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_f440ba51d6ac49f9fe2b3aac10dc1db1 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="lru-cache" fontname="Helvetica", fontsize="10", URL="dir_f440ba51d6ac49f9fe2b3aac10dc1db1.html"]
-  dir_e775f453b8ce64f60bbecfb55c0875ac [shape=box, label="lib", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_e775f453b8ce64f60bbecfb55c0875ac.html"];
-  }
-}

@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-uglify/node_modules/uglify-js/node_modules/uglify-to-browserify/test" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_0329381345ea384ecb048ac918285a0b {
-    graph [ bgcolor="#ddddee", pencolor="black", label="uglify-to-browserify" fontname="Helvetica", fontsize="10", URL="dir_0329381345ea384ecb048ac918285a0b.html"]
-  dir_b28630f4364ec44954ca33180b11b345 [shape=box, label="test", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_b28630f4364ec44954ca33180b11b345.html"];
-  }
-}

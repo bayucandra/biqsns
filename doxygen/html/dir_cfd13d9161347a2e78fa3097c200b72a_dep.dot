@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/trim-newlines" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_e2f3b68544ea30204804b70c649e3516 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_e2f3b68544ea30204804b70c649e3516.html"]
-  dir_cfd13d9161347a2e78fa3097c200b72a [shape=box, label="trim-newlines", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_cfd13d9161347a2e78fa3097c200b72a.html"];
-  }
-}

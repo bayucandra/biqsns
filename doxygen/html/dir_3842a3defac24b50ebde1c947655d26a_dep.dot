@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/resolve/test/resolver/without_basedir/node_modules" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_da3159e3bbe9e2263eca80f9da7a72da {
-    graph [ bgcolor="#ddddee", pencolor="black", label="without_basedir" fontname="Helvetica", fontsize="10", URL="dir_da3159e3bbe9e2263eca80f9da7a72da.html"]
-  dir_3842a3defac24b50ebde1c947655d26a [shape=box, label="node_modules", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_3842a3defac24b50ebde1c947655d26a.html"];
-  }
-}

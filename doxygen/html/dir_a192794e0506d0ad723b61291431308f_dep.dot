@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/get-stdin" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_d26fd7bb9b0653250470fa08a78bf274 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_d26fd7bb9b0653250470fa08a78bf274.html"]
-  dir_a192794e0506d0ad723b61291431308f [shape=box, label="get-stdin", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_a192794e0506d0ad723b61291431308f.html"];
-  }
-}

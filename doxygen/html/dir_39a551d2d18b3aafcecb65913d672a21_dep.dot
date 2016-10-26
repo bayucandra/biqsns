@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-stream/node_modules/glob2base/node_modules/find-index" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_a6e864904448b7850d932db6e2b2e7b4 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_a6e864904448b7850d932db6e2b2e7b4.html"]
-  dir_39a551d2d18b3aafcecb65913d672a21 [shape=box, label="find-index", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_39a551d2d18b3aafcecb65913d672a21.html"];
-  }
-}

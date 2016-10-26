@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp/node_modules/liftoff/node_modules/findup-sync/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_c518e94ecfd7fb8c7f152e5bfa6c0b15 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_c518e94ecfd7fb8c7f152e5bfa6c0b15.html"]
-  dir_df6ba50220b5db8de715495abb6911e5 [shape=box, label="balanced-match", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_df6ba50220b5db8de715495abb6911e5.html"];
-  }
-}

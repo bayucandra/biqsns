@@ -1,9 +1,0 @@
-digraph "libs/angular/angular-material-fileinput-master/bower_components/angular-material/modules/closure/autocomplete" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_9508a65cdb91278c0406c0d6c7b30c42 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="closure" fontname="Helvetica", fontsize="10", URL="dir_9508a65cdb91278c0406c0d6c7b30c42.html"]
-  dir_53a5ff8b3b1be099c1851764cff63c9f [shape=box, label="autocomplete", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_53a5ff8b3b1be099c1851764cff63c9f.html"];
-  }
-}

@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/loud-rejection/node_modules/currently-unhandled/node_modules/array-find-index" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_713f384a6c22ef67832c54ce83bab8bf {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_713f384a6c22ef67832c54ce83bab8bf.html"]
-  dir_97ed87e0e9d0ae9b29d0637ac7ca1f54 [shape=box, label="array-find-index", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_97ed87e0e9d0ae9b29d0637ac7ca1f54.html"];
-  }
-}

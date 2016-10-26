@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules/replace-ext/test" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_ba4753b911df6cf8013f7f79019d51cb {
-    graph [ bgcolor="#ddddee", pencolor="black", label="replace-ext" fontname="Helvetica", fontsize="10", URL="dir_ba4753b911df6cf8013f7f79019d51cb.html"]
-  dir_2de18d2b8ea2b418a4df5f1236efd996 [shape=box, label="test", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2de18d2b8ea2b418a4df5f1236efd996.html"];
-  }
-}

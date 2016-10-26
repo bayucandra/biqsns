@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/loud-rejection/node_modules/signal-exit/test/fixtures" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_659f23d7dafe32bc825e1024f2962a9b {
-    graph [ bgcolor="#ddddee", pencolor="black", label="test" fontname="Helvetica", fontsize="10", URL="dir_659f23d7dafe32bc825e1024f2962a9b.html"]
-  dir_0e1094b2959215d1d343075ca5f79b99 [shape=box, label="fixtures", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_0e1094b2959215d1d343075ca5f79b99.html"];
-  }
-}

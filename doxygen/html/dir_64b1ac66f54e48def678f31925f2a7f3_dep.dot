@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/multipipe/node_modules/duplexer2/test" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_ca60c5ec14a7fe5aa12fb1fb6ce83a64 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="duplexer2" fontname="Helvetica", fontsize="10", URL="dir_ca60c5ec14a7fe5aa12fb1fb6ce83a64.html"]
-  dir_64b1ac66f54e48def678f31925f2a7f3 [shape=box, label="test", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_64b1ac66f54e48def678f31925f2a7f3.html"];
-  }
-}

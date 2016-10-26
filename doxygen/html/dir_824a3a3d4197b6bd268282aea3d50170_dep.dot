@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/gulp-util/node_modules/through2/node_modules/readable-stream/node_modules/process-nextick-args" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_e7f735eb533f70dbc2f8cc77df2a44cf {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_e7f735eb533f70dbc2f8cc77df2a44cf.html"]
-  dir_824a3a3d4197b6bd268282aea3d50170 [shape=box, label="process-nextick-args", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_824a3a3d4197b6bd268282aea3d50170.html"];
-  }
-}

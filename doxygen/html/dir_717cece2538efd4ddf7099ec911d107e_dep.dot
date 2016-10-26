@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/node_modules/hosted-git-info" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_792f7683e61bc561246e1f41e2544737 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_792f7683e61bc561246e1f41e2544737.html"]
-  dir_717cece2538efd4ddf7099ec911d107e [shape=box, label="hosted-git-info", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_717cece2538efd4ddf7099ec911d107e.html"];
-  }
-}

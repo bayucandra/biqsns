@@ -1,9 +1,0 @@
-digraph "frontend/js" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_ca0386ec887ae6362f93b0d653b52e0c {
-    graph [ bgcolor="#ddddee", pencolor="black", label="frontend" fontname="Helvetica", fontsize="10", URL="dir_ca0386ec887ae6362f93b0d653b52e0c.html"]
-  dir_94e869027adc4aea3b63119d94d8fec6 [shape=box, label="js", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_94e869027adc4aea3b63119d94d8fec6.html"];
-  }
-}
