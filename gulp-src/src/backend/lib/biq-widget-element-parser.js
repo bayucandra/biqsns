@@ -121,8 +121,6 @@ BIQWidgetElementParser.prototype.footerShortDescription = function(p_el, p_struc
     values["description_source"] = p_el.data('descriptionSource');
     values["title"] = p_el.children('.biq-title').html();
     values["description"] = p_el.data('description');
-    console.log(values["description"]);
-    console.log(values["title"]);
     return values;
 };
 /**

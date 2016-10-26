@@ -1,7 +1,5 @@
 <?php
     header("Content-type: text/css; charset: UTF-8");
-    require_once '../../biq_sns_settings.php';
-    $biq_sns_settings = unserialize($biq_sns_settings_serialized);
 ?>
 .biq-table{
     display:table;

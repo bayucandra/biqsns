@@ -23,7 +23,8 @@ $biq_sns_settings = get_option('biq-sns-settings');
 $template_arr= get_option('biq-sns-template');
 $bimage = new BImage("");
 
-biq_sns_settings_file_gen( true );//genereate biq_settings.php file, always do this after any modification to 'biq-sns-settings' for add_option() / update_uption()
+//Temporary disabling following 161026
+//biq_sns_settings_file_gen( true );//genereate biq_settings.php file, always do this after any modification to 'biq-sns-settings' for add_option() / update_uption()
 
 //BEGIN WOOCOMMERCE HOOKS================
 add_filter( 'loop_shop_columns', function(){ global $biq_sns_settings; return $biq_sns_settings["woocommerce"]["loop_shop_columns"]; } );
