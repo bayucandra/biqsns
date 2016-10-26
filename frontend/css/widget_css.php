@@ -1,7 +1,5 @@
 <?php
     header("Content-type: text/css; charset: UTF-8");
-    require_once '../../biq_sns_settings.php';
-    $biq_sns_settings = unserialize($biq_sns_settings_serialized);
 ?>
 
 .biq-widgets .widget-not-ready{
@@ -9,7 +7,7 @@
 }
 
 a.biq-widgets.contact-email-simple{
-    width : <?php echo $biq_sns_settings["option"]["sidebar_width"];?>px;
+    width : 250px;
     float : left;
     padding : 5px 5px 5px 0;
 }

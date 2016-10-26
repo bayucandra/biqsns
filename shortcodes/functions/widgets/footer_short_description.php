@@ -18,16 +18,18 @@
         $element_attributes =  'class="biq-widgets footer-short-description'.$classes.'"'. $css_inline;
         $element_attributes .= is_admin() ?
                 ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="footer_short_description" data-biq-css-default="footer-short-description"'
+                .' data-description-source="'.$description_source.'" data-description="'.$description.'"'
                 : '';
-        $element_attributes .= ' data-description-source="'.$description_source.'"';
         
-        $description = $description_source == 'equal_to_meta' ?
+        $description_display = $description_source == 'equal_to_meta' ?
                 $biq_sns_settings["option"]["home_meta_description"]
                 : $description;
+        $description_display_final = empty($description_display) && is_admin() ? "**This widget has empty text**" : $description_display;
+        
         $ret_html =
             '<div '.$element_attributes.'>'
                 .'<h4 class="biq-title">'.$title.'</h4>'
-                .'<p class="biq-description">'.$description.'</p>'
+                .'<p class="biq-description">'.$description_display_final.'</p>'
             .'</div>';
         return $ret_html;
     }

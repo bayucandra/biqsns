@@ -137,7 +137,9 @@ BIQWidgetStructure.prototype.footer_short_description = {
                 {'label':'Custom', 'value':'custom'}, {'label':'Equal Home Meta', 'value':'equal_to_meta'}
             ]
         },
-        { 'key':'description', 'type':'text', 'label':'Description', 'input_wrapper_attrs':'ng-show="input_value.description_source===\'custom\'"' }
+        { 'key':'description', 'type':'textarea',
+            'textarea_attrs' : 'md-maxlength="254" rows="5"',
+            'label':'Description', 'input_wrapper_attrs':'ng-show="input_value.description_source===\'custom\'"' }
     ],
     'attribute_css' : BIQWidgetStructureDefaults.attribute_css
 };

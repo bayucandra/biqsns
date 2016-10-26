@@ -60,6 +60,9 @@
                         $widget_result = $this->slider_list();
                     }
                     break;
+                case 'footer_short_description':
+                    $widget_result = $this->footer_short_description_update($p_arr);
+                    break;
             }
             echo json_encode($widget_result);
             update_option('biq-sns-template', $this->template_arr);
@@ -160,6 +163,20 @@
             if( !empty($p_data["classes"]) ){ $attributes["classes"] = $p_data["classes"]; }
             $attributes["taxonomy"] = $p_data["taxonomy"]; $attributes["orderby"] = $p_data["orderby"]; $attributes["order"] = $p_data["order"];
             $attributes["hide_empty"] = $p_data["hide_empty"]; $attributes["hierarchical"] = $p_data["hierarchical"];
+            
+            $update_arr = array( "attributes"=>$attributes );
+            $widget_update_res = $this->widget_update(
+                    $this->template_arr[ $this->biq_sns_settings["active_template"] ],
+                    $update_arr, $p_data["widget_id"]
+                );
+            return $widget_update_res;
+        }
+        function footer_short_description_update($p_data){
+            $attributes = array();
+            if( !empty($p_data["css_inline"]) ){ $attributes["css_inline"] = $p_data["css_inline"]; }
+            if( !empty($p_data["classes"]) ){ $attributes["classes"] = $p_data["classes"]; }
+            $attributes["title"] = $p_data["title"];
+            $attributes["description"] = $p_data["description"]; $attributes["description_source"] =$p_data["description_source"];
             
             $update_arr = array( "attributes"=>$attributes );
             $widget_update_res = $this->widget_update(
