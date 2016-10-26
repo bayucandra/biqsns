@@ -282,12 +282,15 @@ BIQThemeManager.prototype.generateInputForm = {
     text : function( p_structure_item, input_model ){
 	var is_required = ( p_structure_item.hasOwnProperty('required') && (p_structure_item.required) );
 	var ngRequired = is_required ? ' ng-required="true"' : '';
-	var input_attrs = p_structure_item.hasOwnProperty('input_attrs') ? p_structure_item.input_attrs : '';
+        var input_wrapper_attrs = p_structure_item.hasOwnProperty( 'input_wrapper_attrs' ) ?
+                ' '+p_structure_item.input_wrapper_attrs
+                : '';
+	var input_attrs = p_structure_item.hasOwnProperty('input_attrs') ? ' '+p_structure_item.input_attrs : '';
 	var placeholder = bisnull(p_structure_item.placeholder) ? '' : '( '+p_structure_item.placeholder+' )';
 	var ret_html = 
-		'<md-input-container class="md-block" flex> \
-		    <label>'+p_structure_item.label+': '+placeholder+'</label> \
-		    <input name="'+p_structure_item.key+'"'+ngRequired+' ng-model="'+input_model+p_structure_item.key+'" '+input_attrs+'> \
+		'<md-input-container class="md-block" flex'+input_wrapper_attrs+'>'
+		    +'<label>'+p_structure_item.label+': '+placeholder+'</label> \
+		    <input name="'+p_structure_item.key+'"'+ngRequired+'+ ng-model="'+input_model+p_structure_item.key+'"'+input_attrs+'> \
 		    <div ng-if="'+is_required+'" ng-messages="widgetForm.'+p_structure_item.key+'.$error"> \
 			<div ng-message="required" style="text-align:right;">'+p_structure_item.label+' is required.</div> \
 		    </div> \

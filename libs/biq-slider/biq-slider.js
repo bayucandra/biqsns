@@ -188,6 +188,7 @@ BIQSlider.prototype.check_images_isloaded = function(){
 	}else{
 	    self.slide_show_current(1);
 	}
+        jQuery(self.conf.wrapper+' .pager').show();
     }
 };
 
@@ -232,6 +233,7 @@ BIQSlider.prototype.pager = function(){
     }
     var main_wrapper= jQuery(self.conf.wrapper);
     main_wrapper.append(pager_wrapper);
+    pager_wrapper.hide();//Initially hide and show latter when the main wrapper configured which triggered by check_images_isloaded() function
 // 	jQuery('#'+conf.id_wrapper).append(pager_wrapper);
 };
 

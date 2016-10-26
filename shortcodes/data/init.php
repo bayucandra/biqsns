@@ -20,7 +20,9 @@
                 "loop_shop_per_page" : 12
             },
             "option" : {
-                "sidebar_width" : 250
+                "sidebar_width" : 250,
+                "home_meta_description" : "",
+                "home_meta_keywords" : ""
             }
         }';
     $settings_arr = json_decode($settings, true);

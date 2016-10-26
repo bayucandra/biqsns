@@ -128,6 +128,19 @@ BIQWidgetStructure.prototype.slider = {
     ],
     'attribute_css' : BIQWidgetStructureDefaults.attribute_css
 };
+BIQWidgetStructure.prototype.footer_short_description = {
+    'title' : 'Setting - Footer short description',
+    'attribute_main':[
+        { 'key':'title', 'type':'text', 'label':'Title' },
+        { 'key':'description_source', 'type':'radio', 'label' :'Description source',
+            'value':[
+                {'label':'Custom', 'value':'custom'}, {'label':'Equal Home Meta', 'value':'equal_to_meta'}
+            ]
+        },
+        { 'key':'description', 'type':'text', 'label':'Description', 'input_wrapper_attrs':'ng-show="input_value.description_source===\'custom\'"' }
+    ],
+    'attribute_css' : BIQWidgetStructureDefaults.attribute_css
+};
 
 /*
  *Created by: Bayu candra <bayucandra@gmail.com>
@@ -694,12 +707,15 @@ BIQThemeManager.prototype.generateInputForm = {
     text : function( p_structure_item, input_model ){
 	var is_required = ( p_structure_item.hasOwnProperty('required') && (p_structure_item.required) );
 	var ngRequired = is_required ? ' ng-required="true"' : '';
-	var input_attrs = p_structure_item.hasOwnProperty('input_attrs') ? p_structure_item.input_attrs : '';
+        var input_wrapper_attrs = p_structure_item.hasOwnProperty( 'input_wrapper_attrs' ) ?
+                ' '+p_structure_item.input_wrapper_attrs
+                : '';
+	var input_attrs = p_structure_item.hasOwnProperty('input_attrs') ? ' '+p_structure_item.input_attrs : '';
 	var placeholder = bisnull(p_structure_item.placeholder) ? '' : '( '+p_structure_item.placeholder+' )';
 	var ret_html = 
-		'<md-input-container class="md-block" flex> \
-		    <label>'+p_structure_item.label+': '+placeholder+'</label> \
-		    <input name="'+p_structure_item.key+'"'+ngRequired+' ng-model="'+input_model+p_structure_item.key+'" '+input_attrs+'> \
+		'<md-input-container class="md-block" flex'+input_wrapper_attrs+'>'
+		    +'<label>'+p_structure_item.label+': '+placeholder+'</label> \
+		    <input name="'+p_structure_item.key+'"'+ngRequired+'+ ng-model="'+input_model+p_structure_item.key+'"'+input_attrs+'> \
 		    <div ng-if="'+is_required+'" ng-messages="widgetForm.'+p_structure_item.key+'.$error"> \
 			<div ng-message="required" style="text-align:right;">'+p_structure_item.label+' is required.</div> \
 		    </div> \
@@ -916,18 +932,6 @@ BIQWidgetElementParser.prototype.slider = function(p_el, p_structure_item){
             var response_json = JSON.parse(response);
             values['list'] = response_json.list;
             deferred.resolve(values);
-//            if( response_json.is_found ){
-//                $scope.hide(true);
-//                $b('body').find('[data-biq-widget-id="'+response_json.widget_id+'"]').replaceWith(response_json.html);//continue here 160801
-//                $timeout(function(){
-//                    $rootScope.BIQThemeManager.widgetHoverApply(response_json.widget_id);
-//                });
-//                Notification("Widget succesfully updated","success");
-//            }else{
-//                self.functions.maskHide('widget-dialog');
-//                var error_message = !bisnull(response_json.html) ? response_json.html : 'Empty response, seem widget functions not defined properly.';
-//                Notification("Widget update failed: "+error_message, "error");
-//            }
         },
         'error':function(xhr){
             self.Notification('Error server. Status: '+xhr.status,'error');
@@ -936,6 +940,13 @@ BIQWidgetElementParser.prototype.slider = function(p_el, p_structure_item){
     });
 
     return deferred.promise;
+};
+BIQWidgetElementParser.prototype.footerShortDescription = function(p_el, p_structure_item){
+    var self = this;
+    var values = self.defaultFormValues(p_el);
+    values["description_source"] = p_el.data('descriptionSource');
+    values["title"] = p_el.children('.title').html();
+    return values;
 };
 /**
  * Important to get default value of 'key'. Usually necessary when default input can be empty to load based on default value.

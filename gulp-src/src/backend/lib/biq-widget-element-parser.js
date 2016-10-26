@@ -106,18 +106,6 @@ BIQWidgetElementParser.prototype.slider = function(p_el, p_structure_item){
             var response_json = JSON.parse(response);
             values['list'] = response_json.list;
             deferred.resolve(values);
-//            if( response_json.is_found ){
-//                $scope.hide(true);
-//                $b('body').find('[data-biq-widget-id="'+response_json.widget_id+'"]').replaceWith(response_json.html);//continue here 160801
-//                $timeout(function(){
-//                    $rootScope.BIQThemeManager.widgetHoverApply(response_json.widget_id);
-//                });
-//                Notification("Widget succesfully updated","success");
-//            }else{
-//                self.functions.maskHide('widget-dialog');
-//                var error_message = !bisnull(response_json.html) ? response_json.html : 'Empty response, seem widget functions not defined properly.';
-//                Notification("Widget update failed: "+error_message, "error");
-//            }
         },
         'error':function(xhr){
             self.Notification('Error server. Status: '+xhr.status,'error');
@@ -126,6 +114,13 @@ BIQWidgetElementParser.prototype.slider = function(p_el, p_structure_item){
     });
 
     return deferred.promise;
+};
+BIQWidgetElementParser.prototype.footerShortDescription = function(p_el, p_structure_item){
+    var self = this;
+    var values = self.defaultFormValues(p_el);
+    values["description_source"] = p_el.data('descriptionSource');
+    values["title"] = p_el.children('.title').html();
+    return values;
 };
 /**
  * Important to get default value of 'key'. Usually necessary when default input can be empty to load based on default value.
