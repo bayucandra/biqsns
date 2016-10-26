@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/mkdirp/examples" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_558c8ec8da9a71f4cb8376cfedc55265 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="mkdirp" fontname="Helvetica", fontsize="10", URL="dir_558c8ec8da9a71f4cb8376cfedc55265.html"]
-  dir_894f12bc611f777cdedfbac51c4362fa [shape=box, label="examples", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_894f12bc611f777cdedfbac51c4362fa.html"];
-  }
-}

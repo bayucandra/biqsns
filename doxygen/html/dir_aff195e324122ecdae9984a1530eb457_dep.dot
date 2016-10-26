@@ -1,9 +1,0 @@
-digraph "libs/angular/angular-material-fileinput-master/bower_components/angular-material/modules/js/button" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_d897d99c4631079a19f1e8c9bbae1589 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="js" fontname="Helvetica", fontsize="10", URL="dir_d897d99c4631079a19f1e8c9bbae1589.html"]
-  dir_aff195e324122ecdae9984a1530eb457 [shape=box, label="button", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_aff195e324122ecdae9984a1530eb457.html"];
-  }
-}

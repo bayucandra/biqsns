@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-uglify/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/test" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_66a8c546b74330acca21335ff930e092 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="normalize-package-data" fontname="Helvetica", fontsize="10", URL="dir_66a8c546b74330acca21335ff930e092.html"]
-  dir_818a00d7df34bcd785257b4168e5e26c [shape=box, label="test", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_818a00d7df34bcd785257b4168e5e26c.html"];
-  }
-}

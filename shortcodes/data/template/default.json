@@ -50,11 +50,16 @@
             "label" : "Footer Default",
             "widget" : {
                 "shortcode" : "biq_box_wrapper_full",
-                "attributes" : { "classes" : "biq-header biq-layout"},
+                "attributes" : { "classes" : "biq-footer biq-layout"},
                 "children" : [
                     {
                         "shortcode" : "biq_box_wrapper_short",
-                        "attributes" : { "classes" : "footer" }
+                        "children" :[
+                            {
+                                "shortcode": "footer_short_description",
+                                "attributes" : { "description": "Lorem ipsum dolor sit amet, nemore constituam cum te, id aperiam convenire sit." }
+                            }
+                        ]
                     }
                 ]
             }
@@ -80,18 +85,24 @@
         "home":{
             "label":"Home Page",
             "body": {
-                "shortcode": "biq_box_wrapper_short",
-                "attributes": {"classes" : "body biq-layout"},
-                "children" : [
+                "shortcode" : "biq_box_wrapper_full",
+                "attributes" : { "classes" : "biq-home biq-layout"},
+                "children":[
                     {
-                        "part":"sidebar", "sub_part":"widget"
-                    },
-                    {
-                        "shortcode":"biq_box_content",
-                        "children":[
+                        "shortcode": "biq_box_wrapper_short",
+                        "attributes": {"classes" : "biq-home-body biq-layout"},
+                        "children" : [
                             {
-                                "shortcode":"biq_slider",
-                                "attributes": { "list":"" }
+                                "part":"sidebar", "sub_part":"widget"
+                            },
+                            {
+                                "shortcode":"biq_box_content",
+                                "children":[
+                                    {
+                                        "shortcode":"biq_slider",
+                                        "attributes": { "list":"" }
+                                    }
+                                ]
                             }
                         ]
                     }

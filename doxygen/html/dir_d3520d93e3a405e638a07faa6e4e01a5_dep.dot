@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-uglify/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/longest" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_72108bc5aeec1ebbf68462e43272cd81 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_72108bc5aeec1ebbf68462e43272cd81.html"]
-  dir_d3520d93e3a405e638a07faa6e4e01a5 [shape=box, label="longest", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_d3520d93e3a405e638a07faa6e4e01a5.html"];
-  }
-}

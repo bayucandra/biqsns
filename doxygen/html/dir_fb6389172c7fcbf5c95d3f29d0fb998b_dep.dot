@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/object-assign" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_e2f3b68544ea30204804b70c649e3516 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_e2f3b68544ea30204804b70c649e3516.html"]
-  dir_fb6389172c7fcbf5c95d3f29d0fb998b [shape=box, label="object-assign", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_fb6389172c7fcbf5c95d3f29d0fb998b.html"];
-  }
-}

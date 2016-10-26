@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-uglify/node_modules/through2/node_modules/readable-stream/node_modules/string_decoder" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_73217d0c7c8b97bb17873d39b7e896e6 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_73217d0c7c8b97bb17873d39b7e896e6.html"]
-  dir_eb568f275ab4057f05a1deea9e9c873d [shape=box, label="string_decoder", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_eb568f275ab4057f05a1deea9e9c873d.html"];
-  }
-}

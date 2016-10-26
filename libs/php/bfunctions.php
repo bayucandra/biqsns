@@ -10,10 +10,25 @@
 //        echo biq_array_to_shortcode($template);
 	return biq_array_to_shortcode($template);
     }
+    /**
+     * Generate shortcode from template structure by it array address
+     * @global type $template_arr
+     * @global type $biq_sns_settings
+     * @param type $p_part
+     * @param type $p_sub_part If this is array, then it is mean address to multi dimensional array, otherwise it will get the first child match
+     * @return type short code generate by biq_array_to_shortcode() function
+     */
     function biq_get_shortcode_part($p_part, $p_sub_part){
 	global $template_arr;
 	global $biq_sns_settings;
-        $template = $template_arr[ $biq_sns_settings["active_template"] ][$p_part][$p_sub_part];
+        $template = $template_arr[ $biq_sns_settings["active_template"] ][$p_part];
+        if( !is_array($p_sub_part) ){
+            $template = $template[$p_sub_part];
+        }else{
+            foreach( $p_sub_part AS $sub_part ){
+                $template = $template[ $sub_part];
+            }
+        }
         
 //        echo "<pre>";
 //        print_r( $template );

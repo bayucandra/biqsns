@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-uglify/node_modules/uglify-js/node_modules/yargs/node_modules/cliui/node_modules/wordwrap/test" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_f412a889889f3f4849897650b10d5a5d {
-    graph [ bgcolor="#ddddee", pencolor="black", label="wordwrap" fontname="Helvetica", fontsize="10", URL="dir_f412a889889f3f4849897650b10d5a5d.html"]
-  dir_ccbc687604c0127ed9216cc8daab3b6a [shape=box, label="test", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ccbc687604c0127ed9216cc8daab3b6a.html"];
-  }
-}

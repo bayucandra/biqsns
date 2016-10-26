@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-sourcemaps/node_modules/graceful-fs" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_2bbc6d33c0388a624016d692d8ef47a9 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_2bbc6d33c0388a624016d692d8ef47a9.html"]
-  dir_9a27f8aea7479374e658aa55b7d6a06e [shape=box, label="graceful-fs", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_9a27f8aea7479374e658aa55b7d6a06e.html"];
-  }
-}

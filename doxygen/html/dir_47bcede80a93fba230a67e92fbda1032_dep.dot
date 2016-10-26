@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/glob/node_modules/once/node_modules/wrappy" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_be001c73b360fac94410380f4333e394 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_be001c73b360fac94410380f4333e394.html"]
-  dir_47bcede80a93fba230a67e92fbda1032 [shape=box, label="wrappy", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_47bcede80a93fba230a67e92fbda1032.html"];
-  }
-}

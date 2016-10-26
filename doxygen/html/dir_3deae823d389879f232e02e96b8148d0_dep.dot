@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/lib" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_d460e09ba5b60602f741d19602308bba {
-    graph [ bgcolor="#ddddee", pencolor="black", label="dateformat" fontname="Helvetica", fontsize="10", URL="dir_d460e09ba5b60602f741d19602308bba.html"]
-  dir_3deae823d389879f232e02e96b8148d0 [shape=box, label="lib", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_3deae823d389879f232e02e96b8148d0.html"];
-  }
-}

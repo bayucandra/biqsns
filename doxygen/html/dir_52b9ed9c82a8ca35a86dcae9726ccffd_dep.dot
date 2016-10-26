@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-uglify/node_modules/uglify-js/node_modules/yargs/lib" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_53600745fc04ad52eecf8deec8a89d0c {
-    graph [ bgcolor="#ddddee", pencolor="black", label="yargs" fontname="Helvetica", fontsize="10", URL="dir_53600745fc04ad52eecf8deec8a89d0c.html"]
-  dir_52b9ed9c82a8ca35a86dcae9726ccffd [shape=box, label="lib", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_52b9ed9c82a8ca35a86dcae9726ccffd.html"];
-  }
-}

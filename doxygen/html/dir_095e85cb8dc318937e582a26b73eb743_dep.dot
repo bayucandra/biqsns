@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/node_modules/strip-bom/node_modules/is-utf8" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_90602809e329344c859dad1bd8e6227c {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_90602809e329344c859dad1bd8e6227c.html"]
-  dir_095e85cb8dc318937e582a26b73eb743 [shape=box, label="is-utf8", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_095e85cb8dc318937e582a26b73eb743.html"];
-  }
-}

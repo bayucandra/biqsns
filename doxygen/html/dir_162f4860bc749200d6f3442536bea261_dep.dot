@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/redent/node_modules/strip-indent" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_21e0f658ef0bcad017981e7e4cc4fdab {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_21e0f658ef0bcad017981e7e4cc4fdab.html"]
-  dir_162f4860bc749200d6f3442536bea261 [shape=box, label="strip-indent", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_162f4860bc749200d6f3442536bea261.html"];
-  }
-}

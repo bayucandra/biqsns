@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/gulp-util/node_modules/chalk/node_modules/escape-string-regexp" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_d666c915806d9d01dc98d47ffb382ee1 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_d666c915806d9d01dc98d47ffb382ee1.html"]
-  dir_67029e82f101dc34085a2557f6d3e08c [shape=box, label="escape-string-regexp", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_67029e82f101dc34085a2557f6d3e08c.html"];
-  }
-}

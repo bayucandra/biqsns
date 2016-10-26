@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/front-matter/node_modules/yaml-js/test/yaml-spec/platform" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_0e7b487831dad3315558b0905367d70f {
-    graph [ bgcolor="#ddddee", pencolor="black", label="yaml-spec" fontname="Helvetica", fontsize="10", URL="dir_0e7b487831dad3315558b0905367d70f.html"]
-  dir_f3683f37971dbb46a9b0bb2296e54e9f [shape=box, label="platform", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f3683f37971dbb46a9b0bb2296e54e9f.html"];
-  }
-}

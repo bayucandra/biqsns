@@ -1,9 +1,0 @@
-digraph "gulp-src/src/backend/lib/biq-angular/biq-tab" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_bfa7621f288133438f8d0808ba2a0a1b {
-    graph [ bgcolor="#ddddee", pencolor="black", label="biq-angular" fontname="Helvetica", fontsize="10", URL="dir_bfa7621f288133438f8d0808ba2a0a1b.html"]
-  dir_ca1c12aa15118204f9ee8449b138b212 [shape=box, label="biq-tab", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ca1c12aa15118204f9ee8449b138b212.html"];
-  }
-}

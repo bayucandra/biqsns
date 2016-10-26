@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp/node_modules/vinyl-fs/lib/dest/writeContents" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_031af51d6c04c18655adaca6231f80a3 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="dest" fontname="Helvetica", fontsize="10", URL="dir_031af51d6c04c18655adaca6231f80a3.html"]
-  dir_b157931c13905fd8cc709e32c882247b [shape=box, label="writeContents", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_b157931c13905fd8cc709e32c882247b.html"];
-  }
-}

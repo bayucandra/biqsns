@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-concat/node_modules/gulp-util/node_modules/multipipe/test" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_9c5091e42984ab6794b32ee76a8770a1 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="multipipe" fontname="Helvetica", fontsize="10", URL="dir_9c5091e42984ab6794b32ee76a8770a1.html"]
-  dir_52e4141c110dcb0b906fa9320772afee [shape=box, label="test", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_52e4141c110dcb0b906fa9320772afee.html"];
-  }
-}

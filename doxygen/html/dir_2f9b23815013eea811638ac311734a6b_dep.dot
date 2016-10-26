@@ -1,9 +1,0 @@
-digraph "gulp-src/node_modules/gulp-html-to-json/node_modules/gulp-util/node_modules/vinyl/node_modules/clone" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_0ef5c5bed4b90f99f8f77e4dfee06e8a {
-    graph [ bgcolor="#ddddee", pencolor="black", label="node_modules" fontname="Helvetica", fontsize="10", URL="dir_0ef5c5bed4b90f99f8f77e4dfee06e8a.html"]
-  dir_2f9b23815013eea811638ac311734a6b [shape=box, label="clone", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2f9b23815013eea811638ac311734a6b.html"];
-  }
-}
