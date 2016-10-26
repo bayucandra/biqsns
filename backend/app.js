@@ -137,7 +137,9 @@ BIQWidgetStructure.prototype.footer_short_description = {
                 {'label':'Custom', 'value':'custom'}, {'label':'Equal Home Meta', 'value':'equal_to_meta'}
             ]
         },
-        { 'key':'description', 'type':'text', 'label':'Description', 'input_wrapper_attrs':'ng-show="input_value.description_source===\'custom\'"' }
+        { 'key':'description', 'type':'textarea',
+            'textarea_attrs' : 'md-maxlength="254" rows="5"',
+            'label':'Description', 'input_wrapper_attrs':'ng-show="input_value.description_source===\'custom\'"' }
     ],
     'attribute_css' : BIQWidgetStructureDefaults.attribute_css
 };
@@ -685,6 +687,9 @@ BIQThemeManager.prototype.formMainConstruct = function( attribute_main, input_mo
 	    case "text":
 		html_form_main = html_form_main + self.generateInputForm.text( attribute_main_item,input_model );
 		break;
+	    case "textarea":
+		html_form_main = html_form_main + self.generateInputForm.textarea( attribute_main_item,input_model );
+		break;
 	    case "radio":
 		html_form_main = html_form_main + self.generateInputForm.radio( attribute_main_item,input_model );
 		break;
@@ -715,7 +720,30 @@ BIQThemeManager.prototype.generateInputForm = {
 	var ret_html = 
 		'<md-input-container class="md-block" flex'+input_wrapper_attrs+'>'
 		    +'<label>'+p_structure_item.label+': '+placeholder+'</label> \
-		    <input name="'+p_structure_item.key+'"'+ngRequired+'+ ng-model="'+input_model+p_structure_item.key+'"'+input_attrs+'> \
+		    <input name="'+p_structure_item.key+'"'+ngRequired+' ng-model="'+input_model+p_structure_item.key+'"'+input_attrs+'> \
+		    <div ng-if="'+is_required+'" ng-messages="widgetForm.'+p_structure_item.key+'.$error"> \
+			<div ng-message="required" style="text-align:right;">'+p_structure_item.label+' is required.</div> \
+		    </div> \
+		</md-input-container>';
+	
+	return ret_html;
+    },
+    textarea : function( p_structure_item, input_model ){
+	var is_required = ( p_structure_item.hasOwnProperty('required') && (p_structure_item.required) );
+	var ngRequired = is_required ? ' ng-required="true"' : '';
+        var input_wrapper_attrs = p_structure_item.hasOwnProperty( 'input_wrapper_attrs' ) ?
+                ' '+p_structure_item.input_wrapper_attrs
+                : '';
+        var textarea_attrs = p_structure_item.hasOwnProperty('textarea_attrs') ?
+                ' '+p_structure_item.textarea_attrs
+                : '';
+	var input_attrs = p_structure_item.hasOwnProperty('input_attrs') ? ' '+p_structure_item.input_attrs : '';
+	var placeholder = bisnull(p_structure_item.placeholder) ? '' : '( '+p_structure_item.placeholder+' )';
+	var ret_html = 
+		'<md-input-container class="md-block" flex'+input_wrapper_attrs+'>'
+		    +'<label>'+p_structure_item.label+': '+placeholder+'</label> \
+		    <textarea ng-model="'+input_model+p_structure_item.key+'" name="'+p_structure_item.key+'"'+ngRequired+input_attrs+textarea_attrs+'> \n\
+                    </textarea>\
 		    <div ng-if="'+is_required+'" ng-messages="widgetForm.'+p_structure_item.key+'.$error"> \
 			<div ng-message="required" style="text-align:right;">'+p_structure_item.label+' is required.</div> \
 		    </div> \
@@ -945,7 +973,10 @@ BIQWidgetElementParser.prototype.footerShortDescription = function(p_el, p_struc
     var self = this;
     var values = self.defaultFormValues(p_el);
     values["description_source"] = p_el.data('descriptionSource');
-    values["title"] = p_el.children('.title').html();
+    values["title"] = p_el.children('.biq-title').html();
+    values["description"] = p_el.data('description');
+    console.log(values["description"]);
+    console.log(values["title"]);
     return values;
 };
 /**
