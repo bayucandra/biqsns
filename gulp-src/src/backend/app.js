@@ -4,7 +4,7 @@
  */
 "use strict";
 
-var bngapp=angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', 'bsLoadingOverlay', 'ui-notification', 'ngMessages'])
+var bngapp = angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', 'bsLoadingOverlay', 'ui-notification', 'ngMessages'])
 .controller('BCtrl', function($scope, $mdMedia, $rootScope, BIQThemeManager, $http, $q){
     $rootScope.BIQThemeManager = BIQThemeManager;
     $rootScope.BIQThemeManager.init();
