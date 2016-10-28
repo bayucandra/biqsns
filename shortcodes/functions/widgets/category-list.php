@@ -1,5 +1,6 @@
 <?php
     function category_list_shortcode( $atts, $content = null ){
+        global $wp_query;
         extract(
             shortcode_atts(
                 array(
@@ -30,12 +31,18 @@
             'hierarchical'  => $hierarchical,
             'parent'        => 0
         );
-        $categories = get_categories( $args );
+        $queried_object = is_archive() ? $wp_query->get_queried_object() : '';
+        $root_term = biq_woo_get_root_term();
+        $root_term_id = count( $root_term ) > 0 ? $root_term->term_id : -1;
         
+        $categories = get_categories( $args );
         $ret_html_li = '';
         foreach($categories as $category){
+            $active_class = ( !empty( $queried_object ) && ( $queried_object->term_id == $category->term_id ) )
+                    || ( ( $root_term_id != -1 ) && ( $root_term_id == $category->term_id ) )
+                    ? ' class="active"' : '';
             $ret_html_li .= 
-                    '<li>'
+                    '<li'.$active_class.'>'
                         .'<a href="'.esc_url( get_category_link( $category->term_id ) ).'">'
                             .esc_html( $category->name )
                         .'</a>'

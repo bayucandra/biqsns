@@ -8,7 +8,7 @@
     <li>A Wordpress theme which emphasize on interactive backend management.</li>
     <li>Using the power of shortcode in producing parameterized widget</li>
     <li>Using the power of Angular JS & Angular Material for interactive backend interface</li>
-    <li>Highly compatible and Woocommerce recommended to using along with this theme for product display</li>
+    <li>Highly compatible and recommend to using Woocommerce along with this theme for product display</li>
 </ul>
 
 <h3>Preview</h3>
