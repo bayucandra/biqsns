@@ -185,4 +185,27 @@
             chmod( $biq_settings_path, 0775 );
         }
     }
+    function biq_woo_get_root_term() {
+        global $post;
+        $root_term=array();
+        if( !is_product() ){
+            return $root_term;
+        }
+        $terms = wc_get_product_terms( $post->ID, 'product_cat', array( 'orderby' => 'parent', 'order' => 'DESC' ) );
+        if ( ! empty( $terms ) ) {
+            $main_term = $terms[0];
+            $ancestors = get_ancestors( $main_term->term_id, 'product_cat' );
+            if ( ! empty( $ancestors ) ) {
+                $ancestors = array_reverse( $ancestors );
+                // first element in $ancestors has the root category ID
+                // get root category object
+                $root_term = get_term( $ancestors[0], 'product_cat' );
+            }else {
+                $root_term = $main_term;
+            }
+        }else {
+            // no category assigned to the product
+        }
+        return $root_term;
+    }
 ?>
