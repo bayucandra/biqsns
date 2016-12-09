@@ -17,7 +17,8 @@
             "woocommerce" : {
                 "product_display_mode" : "show",
                 "loop_shop_columns" : 3,
-                "loop_shop_per_page" : 12
+                "loop_shop_per_page" : 12,
+                "hide_shorting" : 0
             },
             "option" : {
                 "home_meta_description" : "",

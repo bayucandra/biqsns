@@ -1,0 +1,10 @@
+.biq-box-sidebar{
+    position:relative;
+    width: 250px;
+    &.right{
+        float:right;
+    }
+    &.left{
+        float:left;
+    }
+}

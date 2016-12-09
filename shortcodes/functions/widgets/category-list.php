@@ -37,8 +37,10 @@
         
         $categories = get_categories( $args );
         $ret_html_li = '';
+        
         foreach($categories as $category){
-            $active_class = ( !empty( $queried_object ) && ( $queried_object->term_id == $category->term_id ) )
+            $active_class = ( !empty( $queried_object ) && (property_exists($queried_object, 'term_id')) 
+                    && ( $queried_object->term_id == $category->term_id ) )
                     || ( ( $root_term_id != -1 ) && ( $root_term_id == $category->term_id ) )
                     ? ' class="active"' : '';
             $ret_html_li .= 

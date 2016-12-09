@@ -5,8 +5,9 @@
     function biq_sns_fe_styles(){
 	global $template_uri;
 	wp_enqueue_style( 'main', $template_uri . '/frontend/css/main_css.php' );
-	wp_enqueue_style( 'layout', $template_uri . '/frontend/css/layout_css.php' );
-	wp_enqueue_style( 'widget', $template_uri . '/frontend/css/widget_css.php' );
+	wp_enqueue_style( 'biq-woocommerce', $template_uri . '/frontend/css/woocommerce/main.php' );
+	wp_enqueue_style( 'layout', $template_uri . '/frontend/css/layout.css' );
+	wp_enqueue_style( 'widget', $template_uri . '/frontend/css/widget.css' );
 	wp_enqueue_style( 'biq-slider', $template_uri . '/libs/biq-slider/biq-slider.css' );
 	if(WP_DEBUG){
 	    wp_enqueue_style( 'font_', $template_uri . '/frontend/libs/font-awesome-4.6.3/css/font-awesome.css' );
