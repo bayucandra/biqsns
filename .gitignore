@@ -1,2 +1,3 @@
-/gulp-src/node_modules/
+node_modules/
+.sass-cache/
 /_dev/

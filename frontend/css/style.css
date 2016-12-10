@@ -1,0 +1,284 @@
+.biq-box-content {
+  width: 750px;
+  position: relative;
+}
+.biq-box-content.right {
+  float: right;
+  margin-right: 0.5rem;
+}
+.biq-box-content.left {
+  float: left;
+  margin-left: 0.5rem;
+  overflow: hidden;
+}
+
+.biq-box-sidebar {
+  position: relative;
+  width: 250px;
+}
+.biq-box-sidebar.right {
+  float: right;
+}
+.biq-box-sidebar.left {
+  float: left;
+}
+
+.biq-table {
+  display: table;
+}
+
+.biq-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.biq-header {
+  overflow: visible;
+}
+
+.biq-header .line-top {
+  background-color: #f2f2f2;
+}
+
+.biq-footer {
+  background-color: #f2f2f2;
+  padding: 1rem auto;
+  margin-top: 1rem;
+}
+
+.biq-footer .column {
+  width: 33%;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+}
+
+.biq-widgets.category-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 3px;
+  position: relative;
+  overflow: visible;
+}
+.biq-widgets.category-list > li > a {
+  line-height: 30px;
+  clear: both;
+  display: block;
+  padding: 0 15px;
+  color: #444444;
+  text-decoration: none;
+  position: relative;
+}
+.biq-widgets.category-list > li > a:hover {
+  background-color: #f2f2f2;
+}
+.biq-widgets.category-list > li > a:after {
+  display: none;
+  content: "";
+  background-color: #ff8d41;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.biq-widgets.category-list > li > a:hover:after {
+  display: block;
+}
+.biq-widgets.category-list > li.active > a {
+  background-color: #f5f5f5;
+}
+.biq-widgets.category-list > li.active > a:after {
+  display: block;
+  background-color: #ffc2ab;
+}
+
+.section-left {
+  color: #666666;
+  position: relative;
+  padding-bottom: 0.3rem;
+  margin: 0.5rem 0;
+  border-bottom: 1px solid #999999;
+  font-size: 18.7167px;
+}
+.section-left.highlight-default::after {
+  position: absolute;
+  display: block;
+  height: 3px;
+  background-color: #113481;
+  content: "";
+  bottom: -1px;
+  left: 0;
+  width: 80px;
+}
+.section-left.highlight-red::after {
+  position: absolute;
+  display: block;
+  height: 2px;
+  background-color: #df1f26;
+  content: "";
+  bottom: -1px;
+  left: 0;
+  width: 80px;
+}
+
+a.biq-widgets.logo {
+  min-height: 5rem;
+  width: 250px;
+}
+
+a.biq-widgets.logo img {
+  margin-left: 0.5rem;
+  display: inline-block;
+  /*avoid extra bottom margin to the wrapper when in default ( inline display )*/
+}
+
+.biq-widgets.menu-main {
+  min-height: 5rem;
+  margin: 0 0.5rem;
+  font-size: 1em;
+  overflow: visible;
+  z-index: 30;
+}
+.biq-widgets.menu-main.left {
+  float: left;
+}
+.biq-widgets.menu-main.right {
+  float: right;
+}
+.biq-widgets.menu-main input[type=checkbox] {
+  display: none;
+}
+.biq-widgets.menu-main label.show-menu-main {
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.6);
+  color: #fff;
+  background: #1f8fb4;
+  text-align: center;
+  padding: 0 10px;
+  display: none;
+}
+.biq-widgets.menu-main > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: visible;
+}
+.biq-widgets.menu-main > ul li {
+  display: inline-block;
+  float: left;
+  position: relative;
+  margin-right: 1px;
+  overflow: visible;
+}
+.biq-widgets.menu-main > ul li:hover ul {
+  width: 190px;
+  margin: 0 0 0 -10px;
+  padding: 10px;
+  position: relative;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.biq-widgets.menu-main > ul > li > a {
+  transition: background-color 0.5s ease;
+  display: block;
+  min-width: 110px;
+  height: 100%;
+  text-align: center;
+  line-height: 70px;
+  color: #000000;
+  text-decoration: none;
+}
+.biq-widgets.menu-main > ul > li.current-menu-item > a {
+  color: #328cc1;
+}
+.biq-widgets.menu-main > ul > li.current-menu-item:before, .biq-widgets.menu-main > ul > li.current-menu-ancestor:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #00a6db;
+  border-top: #1f8fb4 1px solid;
+  border-bottom: #1f8fb4 1px solid;
+}
+.biq-widgets.menu-main > ul > li:hover > a {
+  color: #ffffff;
+  background-color: #05c2ff;
+  font-weight: bold;
+}
+.biq-widgets.menu-main > ul > li:hover ul a:hover {
+  text-decoration: underline;
+}
+.biq-widgets.menu-main > ul > li ul {
+  display: none;
+}
+.biq-widgets.menu-main > ul > li ul a {
+  font-size: 0.95em;
+  width: auto;
+  text-align: left;
+  padding: 6px 0 6px 3px;
+  border-bottom: #05c2ff;
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+}
+.biq-widgets.menu-main > ul > li ul li {
+  display: block;
+  float: none;
+}
+.biq-widgets.menu-main > ul > li a:hover + .sub-menu {
+  display: block;
+  position: absolute;
+  z-index: 25;
+}
+.biq-widgets.menu-main .sub-menu:hover {
+  display: block;
+  position: absolute;
+  z-index: 25;
+}
+
+/*Prevent text wrapping*/
+/*
+.biq-widgets.menu-main li ul li a{
+    width:auto;
+    padding:0 10px;
+}
+*/
+/*Display dropdown on hover*/
+/*.biq-widgets.menu-main > ul > li a:hover + .sub-menu, .biq-widgets.menu-main .sub-menu:hover{
+    display:block;
+    position:absolute;
+    z-index: 25;
+}*/
+.biq-widgets .widget-not-ready {
+  display: none;
+}
+
+a.biq-widgets.contact-email-simple {
+  width: 250px;
+  float: left;
+  padding: 5px 5px 5px 0;
+}
+
+a.biq-widgets.contact-email-simple > * {
+  height: 1rem;
+  line-height: 1rem;
+  white-space: nowrap;
+  position: relative;
+}
+
+a.biq-widgets.contact-email-simple > div {
+  float: left;
+}
+
+a.biq-widgets.contact-email-simple .icon {
+  float: left;
+  width: 21px;
+}
+
+a.biq-widgets.contact-email-simple .text {
+  margin-left: 5px;
+  color: #666666;
+}

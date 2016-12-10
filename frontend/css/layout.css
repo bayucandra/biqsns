@@ -1,28 +1,58 @@
-.biq-box-content {
-  width: 750px;
-  position: relative;
-}
-.biq-box-content.right {
-  float: right;
-  margin-right: 0.5rem;
-}
-.biq-box-content.left {
-  float: left;
-  margin-left: 0.5rem;
-  overflow: hidden;
-}
+/*
+Error: File to import not found or unreadable: layout/content.
+        on line 1 of frontend/layout.scss
 
-.biq-box-sidebar {
-  position: relative;
-  width: 250px;
-}
-.biq-box-sidebar.right {
-  float: right;
-}
-.biq-box-sidebar.left {
-  float: left;
-}
+1: @import "layout/content";
+2: @import "layout/sidebar";
+3: .biq-table{
+4:     display:table;
+5: }
+6: .biq-table-cell{
 
+Backtrace:
+frontend/layout.scss:1
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/plugin.rb:82:in `update_stylesheets'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/var/lib/gems/2.1.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: layout/content.\A         on line 1 of frontend/layout.scss\A \A 1: @import \"layout/content\";\A 2: @import \"layout/sidebar\";\A 3: .biq-table{\A 4:     display:table;\A 5: }\A 6: .biq-table-cell{"; }
 
-
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0VBQ1osS0FBSyxFQUFDLEtBQUs7RUFDWCxRQUFRLEVBQUUsUUFBUTs7QUFDbEIsc0JBQU87RUFDSCxLQUFLLEVBQUMsS0FBSztFQUNYLFlBQVksRUFBRSxNQUFNOztBQUV4QixxQkFBTTtFQUNGLEtBQUssRUFBQyxJQUFJO0VBQ1YsV0FBVyxFQUFFLE1BQU07RUFDbkIsUUFBUSxFQUFDLE1BQU07OztBQ1Z2QixnQkFBZ0I7RUFDWixRQUFRLEVBQUMsUUFBUTtFQUNqQixLQUFLLEVBQUUsS0FBSzs7QUFDWixzQkFBTztFQUNILEtBQUssRUFBQyxLQUFLOztBQUVmLHFCQUFNO0VBQ0YsS0FBSyxFQUFDLElBQUkiLCJzb3VyY2VzIjpbImxheW91dC9jb250ZW50LnNjc3MiLCJsYXlvdXQvc2lkZWJhci5zY3NzIl0sIm5hbWVzIjpbXSwiZmlsZSI6ImxheW91dC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmlxLWJveC1jb250ZW50e1xuICAgIHdpZHRoOjc1MHB4O1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAmLnJpZ2h0e1xuICAgICAgICBmbG9hdDpyaWdodDtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAwLjVyZW07XG4gICAgfVxuICAgICYubGVmdHtcbiAgICAgICAgZmxvYXQ6bGVmdDtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDAuNXJlbTtcbiAgICAgICAgb3ZlcmZsb3c6aGlkZGVuO1xuICAgIH1cbn1cbiIsIi5iaXEtYm94LXNpZGViYXJ7XG4gICAgcG9zaXRpb246cmVsYXRpdmU7XG4gICAgd2lkdGg6IDI1MHB4O1xuICAgICYucmlnaHR7XG4gICAgICAgIGZsb2F0OnJpZ2h0O1xuICAgIH1cbiAgICAmLmxlZnR7XG4gICAgICAgIGZsb2F0OmxlZnQ7XG4gICAgfVxufVxuIl19 */
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0VBQ1osS0FBSyxFQUFDLEtBQUs7RUFDWCxRQUFRLEVBQUUsUUFBUTs7QUFDbEIsc0JBQU87RUFDSCxLQUFLLEVBQUMsS0FBSztFQUNYLFlBQVksRUFBRSxNQUFNOztBQUV4QixxQkFBTTtFQUNGLEtBQUssRUFBQyxJQUFJO0VBQ1YsV0FBVyxFQUFFLE1BQU07RUFDbkIsUUFBUSxFQUFDLE1BQU07OztBQ1Z2QixnQkFBZ0I7RUFDWixRQUFRLEVBQUMsUUFBUTtFQUNqQixLQUFLLEVBQUUsS0FBSzs7QUFDWixzQkFBTztFQUNILEtBQUssRUFBQyxLQUFLOztBQUVmLHFCQUFNO0VBQ0YsS0FBSyxFQUFDLElBQUk7OztBQ0xsQixVQUFVO0VBQ04sT0FBTyxFQUFDLEtBQUs7OztBQUVqQixlQUFlO0VBQ1gsT0FBTyxFQUFFLFVBQVU7RUFDbkIsY0FBYyxFQUFFLE1BQU07OztBQUcxQixXQUFXO0VBQ1AsUUFBUSxFQUFDLE9BQU87OztBQUVwQixxQkFBcUI7RUFDakIsZ0JBQWdCLEVBQUMsT0FBTzs7O0FBRTVCLFdBQVc7RUFDUCxnQkFBZ0IsRUFBQyxPQUFPO0VBQ3hCLE9BQU8sRUFBRSxTQUFTO0VBQ2xCLFVBQVUsRUFBRSxJQUFJOzs7QUFFcEIsbUJBQW1CO0VBQ2YsS0FBSyxFQUFFLEdBQUc7RUFDVixVQUFVLEVBQUUsVUFBVTtFQUN0QixPQUFPLEVBQUUsV0FBVyIsInNvdXJjZXMiOlsibGF5b3V0L2NvbnRlbnQuc2NzcyIsImxheW91dC9zaWRlYmFyLnNjc3MiLCJsYXlvdXQuc2NzcyJdLCJuYW1lcyI6W10sImZpbGUiOiJsYXlvdXQuY3NzIiwic291cmNlc0NvbnRlbnQiOltudWxsLG51bGwsIkBpbXBvcnQgXCJsYXlvdXQvY29udGVudFwiO1xuQGltcG9ydCBcImxheW91dC9zaWRlYmFyXCI7XG4uYmlxLXRhYmxle1xuICAgIGRpc3BsYXk6dGFibGU7XG59XG4uYmlxLXRhYmxlLWNlbGx7XG4gICAgZGlzcGxheTogdGFibGUtY2VsbDtcbiAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xufVxuXG4uYmlxLWhlYWRlcntcbiAgICBvdmVyZmxvdzp2aXNpYmxlO1xufVxuLmJpcS1oZWFkZXIgLmxpbmUtdG9we1xuICAgIGJhY2tncm91bmQtY29sb3I6I2YyZjJmMjtcbn1cbi5iaXEtZm9vdGVye1xuICAgIGJhY2tncm91bmQtY29sb3I6I2YyZjJmMjtcbiAgICBwYWRkaW5nOiAxcmVtIGF1dG87XG4gICAgbWFyZ2luLXRvcDogMXJlbTtcbn1cbi5iaXEtZm9vdGVyIC5jb2x1bW57XG4gICAgd2lkdGg6IDMzJTtcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICAgIHBhZGRpbmc6IDAuNXJlbSAxcmVtO1xufVxuIl19 */

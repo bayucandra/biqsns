@@ -1,0 +1,20 @@
+ul{
+    &.biq-products{
+        list-style: none;
+        list-style-type: none;
+        position:relative;
+        overflow:auto;
+        padding:0;
+        li{
+            &.product{
+                list-style: none;
+                display: inline-block;
+                box-sizing: border-box;
+                /*width: <?php echo floor( 100/$biq_sns_settings['woocommerce']['loop_shop_columns'] *100) / 100;?>%;*/
+            }
+        }
+        &.col-3{
+            @include container( 3 of 12);
+        }
+    }
+}
