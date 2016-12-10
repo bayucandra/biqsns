@@ -59,7 +59,7 @@ gulp.task('JS',['JS-backend']);
 
 gulp.task('watch', function(){
     gulp.watch('./js/backend/**/*.js', ['JS']);
-    gulp.watch('./sass/frontend/**/*.scss', ['compass']);
+    gulp.watch(['./sass/frontend/**/*.scss', './sass/frontend/*.scss'], ['compass']);
 });
 
 gulp.task('default',['watch', 'JS', 'compass']);

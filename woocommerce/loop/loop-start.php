@@ -15,5 +15,8 @@
  * @package 	WooCommerce/Templates
  * @version     2.0.0
  */
+global $biq_sns_settings;
+$loop_shop_columns = $biq_sns_settings["woocommerce"]["loop_shop_columns"];
+$css_col = "col-$loop_shop_columns";
 ?>
-<ul class="biq-products">
+<ul class="biq-products <?php echo $css_col;?>">

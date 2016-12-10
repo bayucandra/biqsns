@@ -1,6 +1,6 @@
 .biq-box-sidebar{
     position:relative;
-    width: 250px;
+    width: $width-sidebar;
     &.right{
         float:right;
     }
