@@ -5,9 +5,11 @@ body {
   font-size: 1rem;
   color: #444444;
 }
-
 body p {
   font-size: 1rem;
+}
+body a {
+  outline: 0 none;
 }
 
 h1 {
@@ -351,6 +353,7 @@ ul.biq-products {
   padding: 0;
 }
 ul.biq-products li.product {
+  position: relative;
   list-style: none;
   display: inline-block;
   box-sizing: border-box;
@@ -359,9 +362,18 @@ ul.biq-products li.product {
   text-align: center;
   /*width: <?php echo floor( 100/$biq_sns_settings['woocommerce']['loop_shop_columns'] *100) / 100;?>%;*/
 }
-ul.biq-products li.product img.wp-post-image {
+ul.biq-products li.product a {
+  display: block;
+  position: relative;
+}
+ul.biq-products li.product a img.wp-post-image {
   width: 100%;
   height: auto;
+}
+ul.biq-products li.product a .onsale {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 ul.biq-products.col-3 {
   max-width: 100%;

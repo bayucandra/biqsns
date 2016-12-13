@@ -7,15 +7,24 @@ ul{
         padding:0;
         li{
             &.product{
+                position: relative;
                 list-style: none;
                 display: inline-block;
                 box-sizing: border-box;
                 height: 350px;
                 overflow: hidden;
                 text-align: center;
-                img.wp-post-image{
-                    width: 100%;
-                    height: auto;
+                a{
+                    display:block;
+                    position: relative;
+                    img.wp-post-image{
+                        width: 100%;
+                        height: auto;
+                    }
+                    .onsale{
+                       position: absolute;
+                       top:0;left:0;
+                    }
                 }
                 /*width: <?php echo floor( 100/$biq_sns_settings['woocommerce']['loop_shop_columns'] *100) / 100;?>%;*/
             }
@@ -33,3 +42,4 @@ ul{
         }
     }
 }
+
