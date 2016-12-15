@@ -19,10 +19,24 @@ ul{
                     position: relative;
                     color: #444444;
                     text-decoration: none;
-                    img.wp-post-image{
+                    .image{
                         width: 100%;
-                        height: auto;
-                    }//img-wp-post-image
+                        height: 250px;
+                        overflow: hidden;
+                        @include display-flex(inline-flex);
+                        @include align-items(center);
+                        @include justify-content(center);
+                        img.wp-post-image{
+                            width: 100%;
+                            height: auto;
+                        }//img.wp-post-image
+                        &:hover{
+                            img.wp-post-image{
+                                width: 130%;
+                                height: 130%;
+                            }
+                        }
+                    }//.image
                     h3{
                         margin: 0.5rem 0;
                         font-size: 1.1rem;

@@ -7,6 +7,7 @@ $template_directory = get_template_directory();
 //END GLOBAL VARS*************
 //require 'functions/post-biq-slider.php';
 require 'functions/menu-functions.php';
+require 'functions/woocommerce/woocommerce_get_product_thumbnail.php';
 require 'libs/php/bfunctions.php';
 require 'libs/php/bimage.php';
 
