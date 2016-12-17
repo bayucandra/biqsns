@@ -1,6 +1,7 @@
-<?php
-    header("Content-type: text/css; charset: UTF-8");
-?>
+@import "widget/category-list";
+@import "widget/heading-section";
+@import "widget/logo";
+@import "widget/menu-main";
 
 .biq-widgets .widget-not-ready{
     display: none;
@@ -29,9 +30,3 @@ a.biq-widgets.contact-email-simple .text{
     margin-left: 5px;
     color : #666666;
 }
-<?php
-    require 'widgets/logo-css.php';
-    require 'widgets/menu-main-css.php';
-    require 'widgets/heading-section-css.php';
-    require 'widgets/category-list.css';
-?>

@@ -1,0 +1,117 @@
+ul{
+    &.biq-products{
+        list-style: none;
+        list-style-type: none;
+        position:relative;
+        overflow:auto;
+        padding:0;
+        li{
+            &.product{
+                position: relative;
+                list-style: none;
+                display: inline-block;
+                box-sizing: border-box;
+                height: 350px;
+                overflow: hidden;
+                text-align: center;
+                a{
+                    display:block;
+                    position: relative;
+                    color: #444444;
+                    text-decoration: none;
+                    img.wp-post-image{
+                        width: 100%;
+                        height: auto;
+                    }//img-wp-post-image
+                    h3{
+                        margin: 0.5rem 0;
+                        font-size: 1.1rem;
+                    }//h3
+                    .price{
+                        color: $highlight-dark;
+                        font-weight: bold;
+                        margin: 5px auto;
+                        display: block;
+                        .woocommerce-Price-currencySymbol{
+                            margin-right: 5px;
+                            text-decoration: none;
+                        }
+                    }//.price
+                    .onsale{
+                       position: absolute;
+                       top:0;left:0;
+                    }//.onsale
+                    del{
+                        font-weight: normal;
+                        color: lighten(black, 50);
+                        margin-right: 5px;
+                        font-size: 0.9rem;
+                    }
+
+                    
+                    .star-rating {
+                        $start-rating-width: 80px;
+                        $starActive: '1F99CD';
+                        $starInactive: '082532';
+                        
+                        height: $start-rating-width/5;
+                        position: absolute;
+                        top: 3px; right: 5px;
+                        width: $start-rating-width;
+                        @include opacity(0.5);
+                        &:before {
+                            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22929%22%20height%3D%22886%22%20viewBox%3D%220%200%20929%20886%22%3E%3Cstyle%3Epath%20%7B%20fill%3A%20%23#{$starInactive}%20!important%20%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M929%20343c0%208-5%2017-15%2027L711%20567l48%20279c1%203%201%207%201%2012%200%2015-8%2027-22%2027-7%201-15-1-23-6L464%20747%20214%20879c-9%205-16%207-23%207-14%200-23-15-23-28%200-3%200-7%201-12l48-279L14%20370c-9-10-14-19-14-27%200-14%2010-23%2031-26l280-40L437%2023c7-15%2016-23%2027-23s20%208%2028%2023l125%20254%20280%2040c21%203%2032%2012%2032%2026z%22%2F%3E%3C%2Fsvg%3E") !important;
+                            background-repeat: repeat-x;
+                            background-size: $start-rating-width/5;
+                            /*background-color: $starActive;*/
+                            bottom: 0;
+                            content: "";
+                            display: block;
+                            height: $start-rating-width/5;
+                            left: 0;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            width: $start-rating-width;
+                        }
+                        > span {
+                            display: block;
+                            text-indent: -10000px;
+                            width: $start-rating-width;
+                            height: $start-rating-width/5;
+                            position: absolute;
+                            overflow: hidden;
+                        }
+                        > span:before {
+                            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22929%22%20height%3D%22886%22%20viewBox%3D%220%200%20929%20886%22%3E%3Cstyle%3Epath%20%7B%20fill%3A%20%23#{$starActive}%20!important%20%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M929%20343c0%208-5%2017-15%2027L711%20567l48%20279c1%203%201%207%201%2012%200%2015-8%2027-22%2027-7%201-15-1-23-6L464%20747%20214%20879c-9%205-16%207-23%207-14%200-23-15-23-28%200-3%200-7%201-12l48-279L14%20370c-9-10-14-19-14-27%200-14%2010-23%2031-26l280-40L437%2023c7-15%2016-23%2027-23s20%208%2028%2023l125%20254%20280%2040c21%203%2032%2012%2032%2026z%22%2F%3E%3C%2Fsvg%3E") !important;
+                            background-repeat: repeat-x;
+                            background-size: $start-rating-width/5;
+                            bottom: 0;
+                            content: "";
+                            display: block;
+                            height: $start-rating-width/5;
+                            left: 0;
+                            position: absolute;
+                            right: 0;
+                            text-indent: 10000px;
+                            top: 0;
+                        }
+                    }//.start-rating
+                }//a
+                /*width: <?php echo floor( 100/$biq_sns_settings['woocommerce']['loop_shop_columns'] *100) / 100;?>%;*/
+            }//&.product
+        }//li
+        &.col-3{
+            @include container( 100% );
+            li{
+                &.product{
+                    @include span(4 of 12 (gutter-position: after));
+                }//&.product
+                &.last{
+                    @include span(4 of 12 last (gutter-position: after));
+                }//&.last
+            }//li
+        }//&.col-3
+    }//&.biq-products
+}//ul
+

@@ -85,17 +85,11 @@
   text-decoration: none;
 }
 .biq-widgets.slider .slide.visible{
-    opacity:1;
-    filter:alpha(opacity=100);
-    
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
+    @include opacity(1);
+    @include transition(opacity 1s ease-in-out);
 }
 .biq-widgets.slider .slide.hidden{
-    opacity:0;
-    filter:alpha(opacity=0);
+    @include opacity(0);
 }
 .biq-widgets.slider .slide.hidden .text a{/*prevent invisible buttons from being clicked*/
     display:none;
@@ -189,16 +183,14 @@
     display:block;
 }
 .biq-widgets.slider .description h3.visible{
-    opacity:1;
-    filter:alpha(opacity=100);
+    @include opacity(1);
     -webkit-transition: 1s ease-out;
     -moz-transition: 1s ease-out;
     -o-transition: 1s ease-out;
     transition: 1s ease-out;
 }
 .biq-widgets.slider .description h3.hidden{
-    opacity:0;
-    filter:alpha(opacity=0);
+    @include opacity(0);
     -webkit-transform: translate(10em,0);
     -moz-transform: translate(10em,0);
     -o-transform: translate(10em,0);
@@ -214,15 +206,12 @@
     font-size:1.1rem;
 }
 .biq-widgets.slider .description p.visible{
-    opacity:1;
-    filter:alpha(opacity=100);
+    @include opacity(1);
     -webkit-transition: 2s ease-out;
     -moz-transition: 2s ease-out;
     -o-transition: 2s ease-out;
     transition: 2s ease-out;
 }
 .biq-widgets.slider .description p.hidden{
-    opacity:0;
-    filter:alpha(opacity=0);
-    filter:alpha(opacity=0);
+    @include opacity(0);
 }

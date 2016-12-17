@@ -20,6 +20,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+global $biq_sns_settings;
+
+if( $biq_sns_settings["woocommerce"]["hide_shorting"] ){
+    remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+}
+
 get_header( 'shop' ); 
 ?>
     <div class="biq-box-wrapper short biq-container body biq-layout">

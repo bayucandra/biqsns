@@ -6,6 +6,7 @@
 <h3>About</h3>
 <ul>
     <li>A Wordpress theme which emphasize on interactive backend management.</li>
+    <li>The basic concept is about user and SEO friendliness.</li>
     <li>Using the power of shortcode in producing parameterized widget</li>
     <li>Using the power of Angular JS & Angular Material for interactive backend interface</li>
     <li>Highly compatible and recommend to using Woocommerce along with this theme for product display</li>

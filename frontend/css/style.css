@@ -1,0 +1,725 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Lato, sans, sans-serif, arial;
+  font-size: 1rem;
+  color: #444444;
+}
+body p {
+  font-size: 1rem;
+}
+body a {
+  outline: 0 none;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.8em;
+}
+
+h6 {
+  font-size: 0.7em;
+}
+
+.biq-box-wrapper {
+  margin: 0 auto;
+  overflow: auto;
+  position: relative;
+}
+
+.biq-box-wrapper.full {
+  width: 100%;
+}
+
+.biq-box-wrapper.extra {
+  max-width: 75rem;
+  width: 100%;
+}
+
+.biq-box-wrapper.short {
+  max-width: 63rem;
+  width: 100%;
+}
+
+.biq-box-wrapper.overflow-visible {
+  overflow: visible;
+}
+
+.biq-box-content {
+  width: 750px;
+  position: relative;
+}
+.biq-box-content.right {
+  float: right;
+  margin-right: 0.5rem;
+}
+.biq-box-content.left {
+  float: left;
+  margin-left: 0.5rem;
+  overflow: hidden;
+}
+
+.biq-box-sidebar {
+  position: relative;
+  width: 250px;
+}
+.biq-box-sidebar.right {
+  float: right;
+}
+.biq-box-sidebar.left {
+  float: left;
+}
+
+.biq-table {
+  display: table;
+}
+
+.biq-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.biq-header {
+  overflow: visible;
+}
+
+.biq-header .line-top {
+  background-color: #f2f2f2;
+}
+
+.biq-footer {
+  background-color: #f2f2f2;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+.biq-footer .column {
+  width: 33%;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+}
+
+.biq-widgets.category-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 3px;
+  position: relative;
+  overflow: visible;
+}
+.biq-widgets.category-list > li > a {
+  line-height: 30px;
+  clear: both;
+  display: block;
+  padding: 0 15px;
+  color: #444444;
+  text-decoration: none;
+  position: relative;
+}
+.biq-widgets.category-list > li > a:hover {
+  background-color: #f2f2f2;
+}
+.biq-widgets.category-list > li > a:after {
+  display: none;
+  content: "";
+  background-color: #ff8d41;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.biq-widgets.category-list > li > a:hover:after {
+  display: block;
+}
+.biq-widgets.category-list > li.active > a {
+  background-color: #f5f5f5;
+}
+.biq-widgets.category-list > li.active > a:after {
+  display: block;
+  background-color: #ffc2ab;
+}
+
+.section-left {
+  color: #666666;
+  position: relative;
+  padding-bottom: 0.3rem;
+  margin: 0.5rem 0;
+  border-bottom: 1px solid #999999;
+  font-size: 18.7167px;
+}
+.section-left.highlight-default::after {
+  position: absolute;
+  display: block;
+  height: 3px;
+  background-color: #113481;
+  content: "";
+  bottom: -1px;
+  left: 0;
+  width: 80px;
+}
+.section-left.highlight-red::after {
+  position: absolute;
+  display: block;
+  height: 2px;
+  background-color: #df1f26;
+  content: "";
+  bottom: -1px;
+  left: 0;
+  width: 80px;
+}
+
+a.biq-widgets.logo {
+  min-height: 5rem;
+  width: 250px;
+}
+
+a.biq-widgets.logo img {
+  margin-left: 0.5rem;
+  display: inline-block;
+  /*avoid extra bottom margin to the wrapper when in default ( inline display )*/
+}
+
+.biq-widgets.menu-main {
+  min-height: 5rem;
+  margin: 0 0.5rem;
+  font-size: 1em;
+  overflow: visible;
+  z-index: 30;
+}
+.biq-widgets.menu-main.left {
+  float: left;
+}
+.biq-widgets.menu-main.right {
+  float: right;
+}
+.biq-widgets.menu-main input[type=checkbox] {
+  display: none;
+}
+.biq-widgets.menu-main label.show-menu-main {
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.6);
+  color: #fff;
+  background: #1f8fb4;
+  text-align: center;
+  padding: 0 10px;
+  display: none;
+}
+.biq-widgets.menu-main > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: visible;
+}
+.biq-widgets.menu-main > ul li {
+  display: inline-block;
+  float: left;
+  position: relative;
+  margin-right: 1px;
+  overflow: visible;
+}
+.biq-widgets.menu-main > ul li:hover ul {
+  width: 190px;
+  margin: 0 0 0 -10px;
+  padding: 10px;
+  position: relative;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.biq-widgets.menu-main > ul > li > a {
+  transition: background-color 0.5s ease;
+  display: block;
+  min-width: 110px;
+  height: 100%;
+  text-align: center;
+  line-height: 70px;
+  color: #000000;
+  text-decoration: none;
+}
+.biq-widgets.menu-main > ul > li.current-menu-item > a {
+  color: #328cc1;
+}
+.biq-widgets.menu-main > ul > li.current-menu-item:before, .biq-widgets.menu-main > ul > li.current-menu-ancestor:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #00a6db;
+  border-top: #1f8fb4 1px solid;
+  border-bottom: #00a6db 1px solid;
+}
+.biq-widgets.menu-main > ul > li:hover > a {
+  color: #ffffff;
+  background-color: #05c2ff;
+  font-weight: bold;
+}
+.biq-widgets.menu-main > ul > li:hover ul a:hover {
+  text-decoration: underline;
+}
+.biq-widgets.menu-main > ul > li ul {
+  display: none;
+}
+.biq-widgets.menu-main > ul > li ul a {
+  font-size: 0.95em;
+  width: auto;
+  text-align: left;
+  padding: 6px 0 6px 3px;
+  border-bottom: #05c2ff;
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+}
+.biq-widgets.menu-main > ul > li ul li {
+  display: block;
+  float: none;
+}
+.biq-widgets.menu-main > ul > li a:hover + .sub-menu {
+  display: block;
+  position: absolute;
+  z-index: 25;
+}
+.biq-widgets.menu-main .sub-menu:hover {
+  display: block;
+  position: absolute;
+  z-index: 25;
+}
+
+/*Prevent text wrapping*/
+/*
+.biq-widgets.menu-main li ul li a{
+    width:auto;
+    padding:0 10px;
+}
+*/
+/*Display dropdown on hover*/
+/*.biq-widgets.menu-main > ul > li a:hover + .sub-menu, .biq-widgets.menu-main .sub-menu:hover{
+    display:block;
+    position:absolute;
+    z-index: 25;
+}*/
+.biq-widgets .widget-not-ready {
+  display: none;
+}
+
+a.biq-widgets.contact-email-simple {
+  width: 250px;
+  float: left;
+  padding: 5px 5px 5px 0;
+}
+
+a.biq-widgets.contact-email-simple > * {
+  height: 1rem;
+  line-height: 1rem;
+  white-space: nowrap;
+  position: relative;
+}
+
+a.biq-widgets.contact-email-simple > div {
+  float: left;
+}
+
+a.biq-widgets.contact-email-simple .icon {
+  float: left;
+  width: 21px;
+}
+
+a.biq-widgets.contact-email-simple .text {
+  margin-left: 5px;
+  color: #666666;
+}
+
+ul.biq-products {
+  list-style: none;
+  list-style-type: none;
+  position: relative;
+  overflow: auto;
+  padding: 0;
+}
+ul.biq-products li.product {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 350px;
+  overflow: hidden;
+  text-align: center;
+  /*width: <?php echo floor( 100/$biq_sns_settings['woocommerce']['loop_shop_columns'] *100) / 100;?>%;*/
+}
+ul.biq-products li.product a {
+  display: block;
+  position: relative;
+  color: #444444;
+  text-decoration: none;
+}
+ul.biq-products li.product a img.wp-post-image {
+  width: 100%;
+  height: auto;
+}
+ul.biq-products li.product a h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+ul.biq-products li.product a .price {
+  color: #1f8fb4;
+  font-weight: bold;
+  margin: 5px auto;
+  display: block;
+}
+ul.biq-products li.product a .price .woocommerce-Price-currencySymbol {
+  margin-right: 5px;
+  text-decoration: none;
+}
+ul.biq-products li.product a .onsale {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ul.biq-products li.product a del {
+  font-weight: normal;
+  color: gray;
+  margin-right: 5px;
+  font-size: 0.9rem;
+}
+ul.biq-products li.product a .star-rating {
+  height: 16px;
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  width: 80px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+ul.biq-products li.product a .star-rating:before {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22929%22%20height%3D%22886%22%20viewBox%3D%220%200%20929%20886%22%3E%3Cstyle%3Epath%20%7B%20fill%3A%20%23082532%20!important%20%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M929%20343c0%208-5%2017-15%2027L711%20567l48%20279c1%203%201%207%201%2012%200%2015-8%2027-22%2027-7%201-15-1-23-6L464%20747%20214%20879c-9%205-16%207-23%207-14%200-23-15-23-28%200-3%200-7%201-12l48-279L14%20370c-9-10-14-19-14-27%200-14%2010-23%2031-26l280-40L437%2023c7-15%2016-23%2027-23s20%208%2028%2023l125%20254%20280%2040c21%203%2032%2012%2032%2026z%22%2F%3E%3C%2Fsvg%3E") !important;
+  background-repeat: repeat-x;
+  background-size: 16px;
+  /*background-color: $starActive;*/
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+}
+ul.biq-products li.product a .star-rating > span {
+  display: block;
+  text-indent: -10000px;
+  width: 80px;
+  height: 16px;
+  position: absolute;
+  overflow: hidden;
+}
+ul.biq-products li.product a .star-rating > span:before {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22929%22%20height%3D%22886%22%20viewBox%3D%220%200%20929%20886%22%3E%3Cstyle%3Epath%20%7B%20fill%3A%20%231F99CD%20!important%20%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M929%20343c0%208-5%2017-15%2027L711%20567l48%20279c1%203%201%207%201%2012%200%2015-8%2027-22%2027-7%201-15-1-23-6L464%20747%20214%20879c-9%205-16%207-23%207-14%200-23-15-23-28%200-3%200-7%201-12l48-279L14%20370c-9-10-14-19-14-27%200-14%2010-23%2031-26l280-40L437%2023c7-15%2016-23%2027-23s20%208%2028%2023l125%20254%20280%2040c21%203%2032%2012%2032%2026z%22%2F%3E%3C%2Fsvg%3E") !important;
+  background-repeat: repeat-x;
+  background-size: 16px;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-indent: 10000px;
+  top: 0;
+}
+ul.biq-products.col-3 {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+ul.biq-products.col-3:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+ul.biq-products.col-3 li.product {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+ul.biq-products.col-3 li.last {
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+}
+
+/* 
+    Created on : Sep 29, 2016, 3:41 PM
+    Author     : bayucandra@gmail.com
+    Version    : 0.6
+*/
+.biq-widgets.slider {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  /*background-color:#DDDDDD;*/
+  /*border-bottom:#ddaf94 2px solid;*/
+  background-image: url("images/loading.gif");
+  background-repeat: no-repeat;
+  background-position: center center;
+  /*    -moz-box-shadow: 0 2px 3px #999999;
+      -webkit-box-shadow: 0 2px 3px #999999;
+      box-shadow: 0 2px 3px #999999;*/
+  /*border-bottom: 5px solid #f4911e;*/
+  margin: 0;
+}
+
+/*.biq-widgets.slider img{
+    position:absolute;
+    width:800px;
+    height:auto;*/
+/*    -webkit-box-shadow: 0px 1px 5px 3px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 3px #4a4a4a;
+    box-shadow: 0px 1px 5px 3px #4a4a4a;*/
+/*border-bottom: #CCCCCC 1px solid;*/
+/*}*/
+.biq-widgets.slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.biq-widgets.slider .slide .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.biq-widgets.slider .slide .text h2 {
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.biq-widgets.slider .slide .text p {
+  margin-top: 0rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
+}
+
+.biq-widgets.slider .slide .text a.button:link {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 8px 20px;
+  text-decoration: none;
+  pointer-events: auto;
+  box-shadow: 4px 5px 2px rgba(0, 0, 0, 0.6);
+  box-sizing: content-box;
+  border: none;
+  height: auto;
+  line-height: inherit;
+}
+
+.biq-widgets.slider .slide .text a.button:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.biq-widgets.slider .slide .text a.button:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.biq-widgets.slider .slide.visible {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.biq-widgets.slider .slide.hidden {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+.biq-widgets.slider .slide.hidden .text a {
+  /*prevent invisible buttons from being clicked*/
+  display: none;
+}
+
+.biq-widgets.slider .next {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 8%;
+  height: 100%;
+}
+
+.biq-widgets.slider .prev {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8%;
+  height: 100%;
+}
+
+.biq-widgets.slider .pager {
+  position: absolute;
+  bottom: 7%;
+  right: 45%;
+}
+
+.biq-widgets.slider .pager .item {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  float: left;
+  margin: 0 0 0 20px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.biq-widgets.slider .pager .item.inactive {
+  /*background-image:url('images/pager.png');*/
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: #bfbfbf;
+}
+
+.biq-widgets.slider .pager .item.inactive:hover {
+  background-color: #ff6f0f;
+  border-color: #f9f9f9;
+}
+
+.biq-widgets.slider .pager .item.active {
+  /*background-image:url('images/pager_active.png');*/
+  border-color: #f9f9f9;
+  background-color: #328cc1;
+}
+
+.biq-widgets.slider_sh {
+  width: 95%;
+  height: 25px;
+  margin: 0 auto 0 auto;
+  background-image: url("images/sh_m.png");
+  background-repeat: repeat-x;
+}
+
+.biq-widgets.slider_sh .left {
+  background-image: url("images/sh_l.png");
+  position: absolute;
+  left: 0;
+  height: 25px;
+  width: 50px;
+}
+
+.biq-widgets.slider_sh .right {
+  background-image: url("images/sh_r.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  height: 25px;
+  width: 50px;
+}
+
+.biq-widgets.slider .description {
+  position: absolute;
+  height: 340px;
+  width: 525px;
+  text-align: left;
+  left: 800px;
+  bottom: 0;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+  padding: 0 0 0 1rem;
+  box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.7);
+}
+
+.biq-widgets.slider .description h3 {
+  font-size: 2em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: block;
+}
+
+.biq-widgets.slider .description h3.visible {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -webkit-transition: 1s ease-out;
+  -moz-transition: 1s ease-out;
+  -o-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+.biq-widgets.slider .description h3.hidden {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transform: translate(10em, 0);
+  -moz-transform: translate(10em, 0);
+  -o-transform: translate(10em, 0);
+  -ms-transform: translate(10em, 0);
+  transform: translate(10em, 0);
+}
+
+.biq-widgets.slider .description p {
+  position: absolute;
+  bottom: 0;
+  height: 14rem;
+  text-align: justify;
+  padding: 0 2rem 0 0;
+  font-size: 1.1rem;
+}
+
+.biq-widgets.slider .description p.visible {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -webkit-transition: 2s ease-out;
+  -moz-transition: 2s ease-out;
+  -o-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.biq-widgets.slider .description p.hidden {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}

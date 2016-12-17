@@ -27,8 +27,17 @@ $bimage = new BImage("");
 //biq_sns_settings_file_gen( true );//genereate biq_settings.php file, always do this after any modification to 'biq-sns-settings' for add_option() / update_uption()
 
 //BEGIN WOOCOMMERCE HOOKS================
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 add_filter( 'loop_shop_columns', function(){ global $biq_sns_settings; return $biq_sns_settings["woocommerce"]["loop_shop_columns"]; } );
 add_filter( 'loop_shop_per_page', function(){  global $biq_sns_settings; return $biq_sns_settings["woocommerce"]["loop_shop_per_page"]; } );
+
+//add_filter( 'post_class', 'prefix_post_class', 21 );
+//function prefix_post_class( $classes ) {
+//    if ( 'product' == get_post_type() ) {
+//        $classes = array_diff( $classes, array( 'first', 'last' ) );
+//    }
+//    return $classes;
+//}
 //END WOOCOMMERCE HOOKS*************
 
 //BEGIN FRONTEND====================
@@ -61,4 +70,9 @@ require 'shortcodes/functions/layout/content.php';
 //BEGIN HOOKS=========================
 require 'hooks/filters.php';
 //END HOOKS********************
+
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+if(!is_plugin_active('woocommerce/woocommerce.php') && !is_admin() ){
+    wp_die('<h1>Please install and activate "Woocommerce" plugin in order to use this themes</h1>');
+}
 ?>

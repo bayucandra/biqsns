@@ -1,0 +1,13 @@
+.biq-box-content{
+    width: $width-content;
+    position: relative;
+    &.right{
+        float:right;
+        margin-right: 0.5rem;
+    }
+    &.left{
+        float:left;
+        margin-left: 0.5rem;
+        overflow:hidden;
+    }
+}

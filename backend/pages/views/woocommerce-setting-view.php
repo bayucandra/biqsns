@@ -27,6 +27,14 @@
                 </tr>
                 <tr>
                     <th>
+                        <label>Hide shorting Option</label>
+                    </th>
+                    <td>
+                        <input type="checkbox" name="hide_shorting" value="1" <?php echo ($biq_sns_settings["woocommerce"]["hide_shorting"] == "1") ? "checked" : ""; ?> >
+                    </td>
+                </tr>
+                <tr>
+                    <th>
                         <label>loop_shop_column</label>
                     </th>
                     <td>

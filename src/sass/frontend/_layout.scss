@@ -1,6 +1,5 @@
-<?php
-    header("Content-type: text/css; charset: UTF-8");
-?>
+@import "layout/content";
+@import "layout/sidebar";
 .biq-table{
     display:table;
 }
@@ -17,7 +16,7 @@
 }
 .biq-footer{
     background-color:#f2f2f2;
-    padding: 1rem auto;
+    padding: 1rem 0;
     margin-top: 1rem;
 }
 .biq-footer .column{
@@ -25,7 +24,3 @@
     box-sizing: border-box;
     padding: 0.5rem 1rem;
 }
-<?php
-    require("layout/sidebar-css.php");
-    require("layout/content-css.php");
-?>
