@@ -11,7 +11,7 @@ ul{
                 list-style: none;
                 display: inline-block;
                 box-sizing: border-box;
-                height: 350px;
+                height: 360px;
                 overflow: hidden;
                 text-align: center;
                 a{
@@ -19,32 +19,29 @@ ul{
                     position: relative;
                     color: #444444;
                     text-decoration: none;
-                    .image{
+                    > .image{
                         width: 100%;
-                        height: 250px;
+                        height: 240px;
                         overflow: hidden;
                         @include display-flex(inline-flex);
                         @include align-items(center);
                         @include justify-content(center);
-                        img.wp-post-image{
-                            width: 100%;
-                            height: auto;
+                        
+                        > img.wp-post-image{
+                            width: auto;
+                            height: 100%;
+                            z-index: -1;
+                            @include transition(all 0.3s ease-in-out);
                         }//img.wp-post-image
-                        &:hover{
-                            img.wp-post-image{
-                                width: 130%;
-                                height: 130%;
-                            }
-                        }
                     }//.image
                     h3{
-                        margin: 0.5rem 0;
+                        margin: 0.5rem 0 0;
                         font-size: 1.1rem;
                     }//h3
                     .price{
                         color: $highlight-dark;
                         font-weight: bold;
-                        margin: 5px auto;
+                        margin: 0.5rem auto;
                         display: block;
                         .woocommerce-Price-currencySymbol{
                             margin-right: 5px;
@@ -61,7 +58,6 @@ ul{
                         margin-right: 5px;
                         font-size: 0.9rem;
                     }
-
                     
                     .star-rating {
                         $start-rating-width: 80px;
@@ -111,7 +107,35 @@ ul{
                             top: 0;
                         }
                     }//.start-rating
+                    &:hover{
+                        > .image{
+                            > img.wp-post-image{
+                                @include transform( scale( 1.3, 1.3 ) );
+                            }
+                        }
+                        > h3{
+                            text-decoration: underline;
+                        }
+                    }
                 }//a
+                
+                > a.add_to_cart_button{
+                    &:link{
+                        display:block;
+                        margin: 0 auto;
+                        width: 100px;
+                        padding: 5px 0;
+                        text-align: center;
+                        color: white;
+                        font-size: 15px;
+                        @include border-radius( 3px );
+                        @include background-image( linear-gradient( to bottom, $highlight-dark, $highlight-light ) );
+                        @include box-sizing(border-box);
+                    }
+                    &:hover{
+                        @include background-image( linear-gradient( to bottom, $highlight-light , $highlight-dark) );
+                    }
+                }
                 /*width: <?php echo floor( 100/$biq_sns_settings['woocommerce']['loop_shop_columns'] *100) / 100;?>%;*/
             }//&.product
         }//li

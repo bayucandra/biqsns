@@ -124,5 +124,5 @@ get_header( 'shop' );
                  */
 //                do_action( 'woocommerce_sidebar' );
         ?>
-    </div>
+    </div><!-- end biq-container -->
 <?php get_footer( 'shop' ); ?>
