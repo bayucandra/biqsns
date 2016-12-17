@@ -26,6 +26,16 @@ if( $biq_sns_settings["woocommerce"]["hide_shorting"] ){
     remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 }
 
+$product_display_mode = $biq_sns_settings["woocommerce"]["product_display_mode"];
+if( $product_display_mode == 'show' ){//begin removing some actions for this file
+    remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+    remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+}
+
+//BEGIN MOVE 'woocommerce_template_loop_rating' inside thumbnail
+remove_action( 'woocommerce_after_shop_loop_item_title' , 'woocommerce_template_loop_rating', 5);
+add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+
 get_header( 'shop' ); 
 ?>
     <div class="biq-box-wrapper short biq-container body biq-layout">
@@ -114,5 +124,5 @@ get_header( 'shop' );
                  */
 //                do_action( 'woocommerce_sidebar' );
         ?>
-    </div>
+    </div><!-- end biq-container -->
 <?php get_footer( 'shop' ); ?>
