@@ -27,10 +27,7 @@ $bimage = new BImage("");
 //Temporary disabling following 161026
 //biq_sns_settings_file_gen( true );//genereate biq_settings.php file, always do this after any modification to 'biq-sns-settings' for add_option() / update_uption()
 
-//BEGIN WOOCOMMERCE HOOKS================
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );
-add_filter( 'loop_shop_columns', function(){ global $biq_sns_settings; return $biq_sns_settings["woocommerce"]["loop_shop_columns"]; } );
-add_filter( 'loop_shop_per_page', function(){  global $biq_sns_settings; return $biq_sns_settings["woocommerce"]["loop_shop_per_page"]; } );
+
 
 //add_filter( 'post_class', 'prefix_post_class', 21 );
 //function prefix_post_class( $classes ) {
@@ -70,6 +67,7 @@ require 'shortcodes/functions/layout/content.php';
 
 //BEGIN HOOKS=========================
 require 'hooks/filters.php';
+require 'hooks/biq-wc-hooks.php';
 //END HOOKS********************
 
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );

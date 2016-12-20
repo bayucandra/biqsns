@@ -29,7 +29,7 @@ ul{
                         
                         > img.wp-post-image{
                             width: auto;
-                            height: 100%;
+                            height: 240px;
                             z-index: -1;
                             @include transition(all 0.3s ease-in-out);
                         }//img.wp-post-image
@@ -58,7 +58,6 @@ ul{
                         margin-right: 5px;
                         font-size: 0.9rem;
                     }
-                    
                     .star-rating {
                         $start-rating-width: 80px;
                         $starActive: '1F99CD';
@@ -119,22 +118,30 @@ ul{
                     }
                 }//a
                 
+                %add_to_cart_button{
+                    display:block;
+                    margin: 0 auto;
+                    width: 100px;
+                    padding: 5px 0;
+                    text-align: center;
+                    color: #ffffff !important;
+                    font-size: 15px;
+                    @include border-radius( 3px );
+                    @include box-sizing(border-box);
+                }
                 > a.add_to_cart_button{
-                    &:link{
-                        display:block;
-                        margin: 0 auto;
-                        width: 100px;
-                        padding: 5px 0;
-                        text-align: center;
-                        color: white;
-                        font-size: 15px;
-                        @include border-radius( 3px );
-                        @include background-image( linear-gradient( to bottom, $highlight-dark, $highlight-light ) );
-                        @include box-sizing(border-box);
-                    }
+                    @extend %add_to_cart_button;
+                    @include background-image( linear-gradient( to bottom, $highlight-dark, $highlight-light ) );
                     &:hover{
                         @include background-image( linear-gradient( to bottom, $highlight-light , $highlight-dark) );
                     }
+                    &.added{
+                        display: none;
+                    }
+                }
+                > a.added_to_cart{
+                    @extend %add_to_cart_button;
+                    @include background-image( linear-gradient( to bottom, $highlight-dark, $highlight-light ) );
                 }
                 /*width: <?php echo floor( 100/$biq_sns_settings['woocommerce']['loop_shop_columns'] *100) / 100;?>%;*/
             }//&.product

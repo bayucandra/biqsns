@@ -47,6 +47,9 @@ gulp.task('JS-backend', function(){
 	)
 	.pipe(sourcemaps.init())
 	    .pipe(concat('app.js'))
+                .on('error', function(err){
+                    console.log('Error: ', err.message);
+                })
 	    .pipe(gulp.dest('../backend'))
     
 	    .pipe(uglify({ preserveComments: 'license' }))
@@ -55,10 +58,39 @@ gulp.task('JS-backend', function(){
 	.pipe(gulp.dest('../backend'));
 });
 
-gulp.task('JS',['JS-backend']);
+gulp.task('JS-frontend', function(){
+    return gulp.src(
+                ['./js/frontend/**/*.js']
+            )
+            .pipe(sourcemaps.init())
+                .pipe(concat('biq-wp-sns.js'))
+                    .on('error', function(err){
+                        console.log('Error: ', err.message);
+                    })
+                .pipe(uglify({preserveComments: 'author'}))
+                .pipe(rename({extname:'.min.js'}))
+            .pipe(sourcemaps.write('./'))
+            .pipe(gulp.dest('../frontend/js'));
+});
+gulp.task('JS-woocommerce', function(){
+    return gulp.src('./js/woocommerce/**/*.js')
+            .pipe(sourcemaps.init())
+            .pipe(uglify({preserveComments: 'author'}))
+                .on('error', function(err){
+                    console.log('Error: ', err.message);
+                })
+            .pipe(rename({extname: '.min.js'}))
+            .pipe(sourcemaps.write('./'))
+            .pipe(gulp.dest('../frontend/js/woocommerce'));
+});
+
+gulp.task('JS',['JS-backend', 'JS-frontend', 'JS-woocommerce']);
 
 gulp.task('watch', function(){
-    gulp.watch('./js/backend/**/*.js', ['JS']);
+    gulp.watch( './js/backend/**/*.js', ['JS-backend']);
+    gulp.watch( './js/frontend/**/*.js', ['JS-frontend'] );
+    gulp.watch( './js/woocommerce/**/*.js', ['JS-woocommerce']);
+    
     gulp.watch('./sass/frontend/**/*.scss', ['compass']);
 });
 
