@@ -1,0 +1,12 @@
+.woocommerce-breadcrumb{
+    padding: 10px 5px;
+    color: $secondary-contrast;
+    a{
+        color: $secondary-inactive;
+        text-decoration: none;
+        &:hover{
+            color: $primary-blue-dark;
+            text-decoration: underline;
+        }
+    }
+}

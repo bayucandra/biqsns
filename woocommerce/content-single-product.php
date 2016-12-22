@@ -27,6 +27,8 @@ if( $product_display_mode == 'show' ){//Begin removing some action at this file
     remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
     remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 }
+//BEGIN MOVE .onsale INSIDE .image
+remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash'); // THE sale-flash.php moved inside custom product-image.php
 
 ?>
 

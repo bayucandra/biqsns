@@ -20,7 +20,7 @@
                 text-decoration: none;
                 text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.6);
                 color: #fff;
-                background: $highlight-dark;
+                background: $primary-blue-dark;
                 text-align: center;
                 padding: 0 10px;
                 display: none;
@@ -72,8 +72,8 @@
                     width:100%;
                     height:2px;
                     background:#00a6db;
-                    border-top:$highlight-dark 1px solid;
-                    border-bottom:$highlight-light 1px solid;
+                    border-top:$primary-blue-dark 1px solid;
+                    border-bottom:$primary-blue-light 1px solid;
                 }//
                 &:hover{
                     > a{

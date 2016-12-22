@@ -1,0 +1,34 @@
+div.product.type-product{
+    @include container(100%);
+    > .images{
+        position: relative;
+        overflow: hidden;
+        text-align: left;
+        @include span(6 of 12 no-gutter);
+        > .onsale{
+            text-align: center;
+            display: block;
+            background-color: darken(red, 10);
+            width: 150px; height: 20px;
+            line-height: 20px;
+            font-size: 16px;
+            position: absolute;
+            left: -40px; top: 15px;
+            color: #FFFFFF;
+            @include transform( rotate( -35deg ) );
+        }
+        > a{
+            overflow: auto;
+            display: block;
+            width: 100%;
+            > img{
+                height: auto;
+                width: auto;
+                max-width: 98%;
+            }
+        }
+    }
+    > .summary{
+        @include span(6 of 12 (gutter-position: inside));
+    }
+}
