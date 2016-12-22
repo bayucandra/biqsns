@@ -7,11 +7,11 @@
         
 	wp_enqueue_style( 'biq-style', $template_uri . '/frontend/css/style.css' );
         
-	if(WP_DEBUG){
-	    wp_enqueue_style( 'font-awesome', $template_uri . '/frontend/libs/font-awesome-4.6.3/css/font-awesome.css' );
-	}else{
-	    wp_enqueue_style( 'font-awesome', $template_uri . '/frontend/libs/font-awesome-4.6.3/css/font-awesome.min.css' );
-	}
+//	if(WP_DEBUG){
+//	    wp_enqueue_style( 'font-awesome', $template_uri . '/frontend/libs/font-awesome-4.6.3/css/font-awesome.css' );
+//	}else{
+//	    wp_enqueue_style( 'font-awesome', $template_uri . '/frontend/libs/font-awesome-4.6.3/css/font-awesome.min.css' );
+//	}
     }
     add_action( 'wp_enqueue_scripts', 'biq_sns_fe_styles' );
     

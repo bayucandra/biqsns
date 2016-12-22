@@ -1,0 +1,45 @@
+.biq-widgets{
+    &.category-list{
+        list-style-type: none;
+        margin:0;
+        padding:0 0 0 3px;
+        position:relative;
+        overflow:visible;
+
+        > li{
+            > a{
+                line-height: 30px;
+                clear: both;
+                display: block;
+                padding: 0 15px;
+                color: #444444;
+                text-decoration: none;
+                position: relative;
+                &:hover{
+                    background-color: #f2f2f2;
+                    &:after{
+                        display:block;
+                    }
+                }
+                &:after{
+                    display:none;
+                    content:"";
+                    background-color: $primary-yellow-dark;
+                    width:5px; height:100%;
+                    position:absolute;
+                    top:0; left:0;
+                }
+            }// > a
+            &.active{
+                > a{
+                    background-color: #f5f5f5;
+                    &:after{
+                        display:block;
+                        background-color: $primary-yellow-light;
+                    }
+                }//> a
+            }//&.active
+        }// > li
+    }//.category-list
+}//.biq-widgets
+
