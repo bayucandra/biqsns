@@ -6,16 +6,16 @@ div.product.type-product{
         text-align: left;
         @include span(6 of 12 no-gutter);
         > .onsale{
+            text-align: center;
             display: block;
             background-color: darken(red, 10);
-            width: 100px;
-            height: 20px;
+            width: 150px; height: 20px;
             line-height: 20px;
             font-size: 16px;
             position: absolute;
-            left: -20px; top: 5px;
+            left: -40px; top: 15px;
             color: #FFFFFF;
-            @include transform( rotate( -30deg ) );
+            @include transform( rotate( -35deg ) );
         }
         > a{
             overflow: auto;

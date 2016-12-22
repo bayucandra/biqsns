@@ -581,20 +581,21 @@ div.product.type-product > .images {
   float: left;
 }
 div.product.type-product > .images > .onsale {
+  text-align: center;
   display: block;
   background-color: #cc0000;
-  width: 100px;
+  width: 150px;
   height: 20px;
   line-height: 20px;
   font-size: 16px;
   position: absolute;
-  left: -20px;
-  top: 5px;
+  left: -40px;
+  top: 15px;
   color: #FFFFFF;
-  -moz-transform: rotate(-30deg);
-  -ms-transform: rotate(-30deg);
-  -webkit-transform: rotate(-30deg);
-  transform: rotate(-30deg);
+  -moz-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
 }
 div.product.type-product > .images > a {
   overflow: auto;
