@@ -662,6 +662,51 @@ div.product.type-product > .woocommerce-tabs > ul.wc-tabs > li:hover::after {
 div.product.type-product > .woocommerce-tabs > ul.wc-tabs > li:hover > a {
   color: #00a6db;
 }
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist {
+  list-style: none;
+  padding: 0;
+}
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container {
+  padding: 10px 0 10px 0;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .biq-avatar {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 16.66667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+}
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .comment-text {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 83.33333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .comment-text .description {
+  margin-top: 10px;
+}
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .comment-text .description > p {
+  margin: 0;
+}
 
 .woocommerce-breadcrumb {
   padding: 10px 5px;

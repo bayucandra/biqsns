@@ -16,7 +16,7 @@ div.product.type-product{
             left: -40px; top: 15px;
             color: #FFFFFF;
             @include transform( rotate( -35deg ) );
-        }
+        }// > .onsale
         > a{
             overflow: auto;
             display: block;
@@ -25,12 +25,12 @@ div.product.type-product{
                 height: auto;
                 width: auto;
                 max-width: 98%;
-            }
-        }
-    }
+            }// > img
+        }// > a
+    }// > .images
     > .summary{
         @include span(6 of 12 (gutter-position: inside));
-    }
+    }// > .summary
     > .woocommerce-tabs{
         clear: both;
         overflow: auto;
@@ -49,7 +49,7 @@ div.product.type-product{
                     color: $secondary-inactive;
                     text-decoration: none;
                     font-size: 16px;
-                }
+                }//> a
                 &.active{
                     &::after{
                         content: "";
@@ -58,11 +58,11 @@ div.product.type-product{
                         height: 2px;
                         bottom: 0; left: 0;
                         background-color:$primary-blue-dark;
-                    }
+                    }//&::after
                     > a{
                         color: $primary-blue-dark;
-                    }
-                }
+                    }//> a
+                }//&.active
                 &:hover{
                     &::after{
                         content: "";
@@ -71,12 +71,41 @@ div.product.type-product{
                         height: 1px;
                         bottom: 0; left: 0;
                         background-color:$primary-blue-light;
-                    }
+                    }//&::after
                     > a{
                         color: $primary-blue-light;
-                    }
-                }
-            }
-        }
-    }
-}
+                    }// > a
+                }//&:hover
+            }// > li
+        }// > ul.wc-tabs
+        #tab-reviews{
+            #reviews{
+                ol.commentlist{
+                    list-style: none;
+                    padding: 0;
+                    > li{
+                        border-bottom: 1px solid rgba(black, 0.4);
+                        > .comment_container{
+                            padding: 10px 0 10px 0;
+                            @include container(100%);
+                            .biq-avatar{
+                                @include span( 2 of 12 );
+                                display: block;
+                                @include clearfix;
+                            }
+                            .comment-text{
+                                .description{
+                                    margin-top: 10px;
+                                    > p{
+                                        margin: 0;
+                                    }
+                                }//.description
+                                @include span(10 of 12);
+                            }// .comment-text
+                        }// > .comment-container
+                    }// > li
+                }// ol.commentlist
+            }//#reviews
+        }//#tab-reviews
+    }// > .woocommerce-tabs
+}// div.product.type-product
