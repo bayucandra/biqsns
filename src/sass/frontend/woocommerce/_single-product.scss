@@ -31,4 +31,52 @@ div.product.type-product{
     > .summary{
         @include span(6 of 12 (gutter-position: inside));
     }
+    > .woocommerce-tabs{
+        clear: both;
+        overflow: auto;
+        > ul.wc-tabs{
+            list-style-type: none;
+            margin: 30px 0 0 0;
+            padding: 0;
+            overflow: auto;
+            > li{
+                display: inline-block;
+                float: left;
+                position: relative;
+                > a{
+                    display: block;
+                    padding: 8px 16px;
+                    color: $secondary-inactive;
+                    text-decoration: none;
+                    font-size: 16px;
+                }
+                &.active{
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        bottom: 0; left: 0;
+                        background-color:$primary-blue-dark;
+                    }
+                    > a{
+                        color: $primary-blue-dark;
+                    }
+                }
+                &:hover{
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        bottom: 0; left: 0;
+                        background-color:$primary-blue-light;
+                    }
+                    > a{
+                        color: $primary-blue-light;
+                    }
+                }
+            }
+        }
+    }
 }
