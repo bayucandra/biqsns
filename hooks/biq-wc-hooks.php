@@ -19,8 +19,6 @@
         wp_enqueue_script( 'wc-add-to-cart' );
     }
     add_action('wp_enqueue_scripts', 'biq_wc_add_to_cart');
-    
-//    remove_action( 'woocommerce_review_before', 'woocommerce_review_display_gravatar', 10 );
 
     add_filter( 'get_avatar', 'biq_get_avatar', 1, 5 );
     function biq_get_avatar($avatar, $id_or_email, $size, $default, $alt){
@@ -30,6 +28,8 @@
                 . '</div>';
         return $biq_avatar;
     }
-//    function biq_review_display_gravatar($comment){
-//        
-//    }
+
+remove_action( 'woocommerce_review_before', 'woocommerce_review_display_gravatar', 10 );
+add_action( 'woocommerce_review_before', function( $comment ){
+    echo get_avatar( $comment, apply_filters( 'woocommerce_review_gravatar_size', '70' ), '' );
+}, 10 );

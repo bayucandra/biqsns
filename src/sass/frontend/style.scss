@@ -3,7 +3,10 @@
 @import "susy";
 @import "breakpoint";
 
-@import "variable";
+@import "../lib/normalize.css";
+
+@import "include/variable";
+@import "include/mixin";
 
 $susy:(
     container: $width-content,
