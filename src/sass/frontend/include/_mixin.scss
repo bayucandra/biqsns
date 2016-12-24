@@ -46,3 +46,26 @@
         top: 0;
     }
 }
+
+@mixin biq-form-style( ){
+    %default-style{
+        display: block;
+        clear: both;
+        background: none;
+        border: 1px solid lighten(black, 80);
+        @include border-radius(2px);
+    }
+    input {
+        &[type="text"], &[type="email"]{
+            padding: 5px 10px;
+            @extend %default-style;
+        }
+    }
+    textarea{
+        @extend %default-style;
+    }
+    label{
+        display: block;
+        margin: 5px 10px;
+    }
+}

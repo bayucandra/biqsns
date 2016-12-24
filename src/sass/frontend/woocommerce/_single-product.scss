@@ -131,6 +131,7 @@ div.product.type-product{
                             .required{
                                 color: red;
                             }
+                            @include biq-form-style;
                         }
                     }
                 }

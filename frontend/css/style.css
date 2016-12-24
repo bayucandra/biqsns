@@ -781,6 +781,22 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .required {
   color: red;
 }
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform textarea {
+  display: block;
+  clear: both;
+  background: none;
+  border: 1px solid #cccccc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"] {
+  padding: 5px 10px;
+}
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform label {
+  display: block;
+  margin: 5px 10px;
+}
 
 .woocommerce-breadcrumb {
   padding: 10px 5px;
