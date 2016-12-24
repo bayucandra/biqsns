@@ -132,6 +132,23 @@ div.product.type-product{
                                 color: red;
                             }
                             @include biq-form-style;
+                            %comment-forms{
+                                float: left;
+                                width: 50%;
+                                @include box-sizing(border-box);
+                            }
+                            .comment-form-author{
+                                @extend %comment-forms;
+                            }
+                            .comment-form-email{
+                                @extend %comment-forms;
+                            }
+                            .comment-form-rating{
+                                > label{
+                                    display: none;
+                                }
+                                
+                            }
                         }
                     }
                 }
