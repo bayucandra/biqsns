@@ -1,0 +1,21 @@
+.woocommerce{
+    table.cart{
+        $border: lighten( $secondary-inactive, 40 );
+        border-spacing: 0;
+        border: 1px solid $border;
+            @include border-radius(3px);
+        thead{
+            background-color: #FAFAFA;
+            @include border-top-right-radius(3px);
+            @include border-top-left-radius(3px);
+            th{
+                padding: 10px;
+                border-right: 1px solid $border;
+                border-bottom: 1px solid $border;
+            }
+            th.product-subtotal{
+                border-right: 0;
+            }
+        }
+    }//table.cart
+}//.woocommerce
