@@ -70,6 +70,9 @@ ul{
                         margin-right: 5px;
                         font-size: 0.9rem;
                     }
+                    ins{
+                        text-decoration: none;
+                    }
                     .star-rating {
                         @include biq-wc-star-rating($top: 3px, $right: 5px);
                     }//.start-rating
@@ -101,10 +104,8 @@ ul{
                 }
                 > a.add_to_cart_button{
                     @extend %add_to_cart_button;
-                    @include background-image( linear-gradient( to bottom, $primary-blue-dark, $primary-blue-light ) );
-                    &:hover{
-                        @include background-image( linear-gradient( to bottom, $primary-blue-light , $primary-blue-dark) );
-                    }
+                    @include biq-btn-blue;
+                    
                     &.added{
                         display: none;
                     }
