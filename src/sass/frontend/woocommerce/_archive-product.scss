@@ -71,7 +71,7 @@ ul{
                         font-size: 0.9rem;
                     }
                     .star-rating {
-                        @include biq-wc-start-rating($top: 3px, $right: 5px);
+                        @include biq-wc-star-rating($top: 3px, $right: 5px);
                     }//.start-rating
                     &:hover{
                         > .image{
