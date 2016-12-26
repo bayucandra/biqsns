@@ -1,3 +1,15 @@
+.woocommerce-message{
+    padding:10px;
+    background-color: lighten( green, 70 );
+    margin: 5px 0 10px 0;
+    @include border-radius(3px);
+    a.button{
+        display: block;
+        float: right;
+        @include biq-btn-blue;
+        margin-top: -4px;
+    }
+}
 div.product.type-product{
     @include container(100%);
     > .images{
