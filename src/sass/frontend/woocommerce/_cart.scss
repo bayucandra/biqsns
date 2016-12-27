@@ -1,5 +1,6 @@
 .woocommerce{
     table.cart{
+        width: 100%;
         $border: lighten( $secondary-inactive, 40 );
         border-spacing: 0;
         border: 1px solid $border;
@@ -12,10 +13,32 @@
                 padding: 10px;
                 border-right: 1px solid $border;
                 border-bottom: 1px solid $border;
+                &.product-subtotal{
+                    border-right: 0;
+                }
             }
-            th.product-subtotal{
-                border-right: 0;
-            }
-        }
+        }//thead
+        tbody{
+            td{
+                padding: 10px;
+                &.product-thumbnail{
+                    a{
+                        text-align: center;
+                        display: block;
+                        overflow: auto;
+                        img{
+                            display: block;
+                            margin: 0 auto;
+                            width: auto; height: 60px;
+                        }
+                    }
+                }//&.product-thumbnail
+                &.product-quantity{
+                    input[type="number"]{
+                        width: 40px;
+                    }
+                }
+            }//td
+        }//tbody
     }//table.cart
 }//.woocommerce

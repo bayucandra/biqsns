@@ -1094,6 +1094,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
 }
 
 .woocommerce table.cart {
+  width: 100%;
   border-spacing: 0;
   border: 1px solid #e6e6e6;
   -moz-border-radius: 3px;
@@ -1116,6 +1117,23 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
 }
 .woocommerce table.cart thead th.product-subtotal {
   border-right: 0;
+}
+.woocommerce table.cart tbody td {
+  padding: 10px;
+}
+.woocommerce table.cart tbody td.product-thumbnail a {
+  text-align: center;
+  display: block;
+  overflow: auto;
+}
+.woocommerce table.cart tbody td.product-thumbnail a img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 60px;
+}
+.woocommerce table.cart tbody td.product-quantity input[type="number"] {
+  width: 40px;
 }
 
 /* 
