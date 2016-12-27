@@ -11,8 +11,13 @@
             @include border-top-left-radius(3px);
             th{
                 padding: 10px;
-                border-right: 1px solid $border;
                 border-bottom: 1px solid $border;
+                &.product-name{
+                    text-align:left;
+                }
+                &.product-price, &.product-subtotal{
+                    text-align: right;
+                }
                 &.product-subtotal{
                     border-right: 0;
                 }
@@ -27,6 +32,9 @@
                         display: block;
                         margin: 0 auto;
                         text-align: center;
+                        &:hover{
+                            color: lighten(red, 10);
+                        }
                     }
                 }
                 &.product-thumbnail{
@@ -62,6 +70,8 @@
                 }
             }//td
             td.actions{//for table footer
+                background-color: #FAFAFA;
+                border-top: 1px solid $border;
                 @include biq-form-style;
                 .coupon{
                     float: left;
