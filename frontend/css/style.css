@@ -1014,6 +1014,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   background: none;
   border: 0;
   padding: 0 10px;
+  cursor: pointer;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFmOGZiNCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1f8fb4), color-stop(100%, #00a6db));
@@ -1154,6 +1155,71 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
 .woocommerce table.cart tbody td.product-price, .woocommerce table.cart tbody td.product-subtotal {
   color: #1f8fb4;
   text-align: right;
+}
+.woocommerce table.cart tbody td.actions div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce table.cart tbody td.actions input[type="email"], .woocommerce table.cart tbody td.actions div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform textarea, div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce table.cart tbody td.actions textarea, .woocommerce table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions input[type="email"], .woocommerce table.cart tbody td.actions textarea {
+  display: block;
+  clear: both;
+  background: none;
+  border: 1px solid #cccccc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.woocommerce table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions input[type="email"] {
+  padding: 5px 10px;
+}
+.woocommerce table.cart tbody td.actions textarea {
+  padding: 10px;
+}
+.woocommerce table.cart tbody td.actions label {
+  display: block;
+  margin: 5px 5px;
+}
+.woocommerce table.cart tbody td.actions input[type="submit"] {
+  line-height: 30px;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: none;
+  border: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFmOGZiNCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1f8fb4), color-stop(100%, #00a6db));
+  background-image: -moz-linear-gradient(top, #1f8fb4, #00a6db);
+  background-image: -webkit-linear-gradient(top, #1f8fb4, #00a6db);
+  background-image: linear-gradient(to bottom, #1f8fb4, #00a6db);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.woocommerce table.cart tbody td.actions input[type="submit"]:hover {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFmOGZiNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00a6db), color-stop(100%, #1f8fb4));
+  background-image: -moz-linear-gradient(top, #00a6db, #1f8fb4);
+  background-image: -webkit-linear-gradient(top, #00a6db, #1f8fb4);
+  background-image: linear-gradient(to bottom, #00a6db, #1f8fb4);
+}
+.woocommerce table.cart tbody td.actions .coupon {
+  float: left;
+}
+.woocommerce table.cart tbody td.actions .coupon * {
+  float: left;
+  display: inline;
+  clear: none !important;
+  font-size: 16px;
+  height: 32px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 5px;
+}
+.woocommerce table.cart tbody td.actions .coupon label {
+  display: none;
+}
+.woocommerce table.cart tbody td.actions input[name="update_cart"] {
+  float: right;
 }
 
 /* 

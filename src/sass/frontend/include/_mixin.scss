@@ -75,6 +75,7 @@
             background: none;
             border: 0;
             padding: 0 10px;
+            cursor: pointer;
             @include background-image( linear-gradient( to bottom, $primary-blue-dark, $primary-blue-light ) );
             &:hover{
                 @include background-image( linear-gradient( to bottom, $primary-blue-light , $primary-blue-dark) );

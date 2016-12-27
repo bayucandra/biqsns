@@ -61,6 +61,27 @@
                     text-align: right;
                 }
             }//td
+            td.actions{//for table footer
+                @include biq-form-style;
+                .coupon{
+                    float: left;
+                    & *{
+                        float:left;
+                        display: inline;
+                        clear: none !important;
+                        font-size: 16px;
+                        height: 32px;
+                        @include box-sizing(border-box);
+                        margin-left: 5px;
+                    }
+                    label{
+                        display: none;
+                    }
+                }
+                input[name="update_cart"]{
+                    float: right;
+                }
+            }//td.action
         }//tbody
     }//table.cart
 }//.woocommerce
