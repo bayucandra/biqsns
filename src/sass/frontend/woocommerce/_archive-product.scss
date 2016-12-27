@@ -91,7 +91,7 @@ ul{
                 %add_to_cart_button{
                     display:block;
                     margin: 0 auto;
-                    width: 100px;
+                    width: 120px;
                     padding: 5px 0;
                     text-align: center;
                     color: #ffffff !important;
@@ -112,10 +112,7 @@ ul{
                 }
                 > a.added_to_cart{
                     @extend %add_to_cart_button;
-                    @include background-image( linear-gradient( to bottom, $primary-yellow-dark, lighten( $primary-yellow-dark, 10 ) ) );
-                    &:hover{
-                        @include background-image( linear-gradient( to bottom, lighten( $primary-yellow-dark, 10 ), $primary-yellow-dark ) );
-                    }
+                    @include biq-btn-yellow;
                 }
                 /*width: <?php echo floor( 100/$biq_sns_settings['woocommerce']['loop_shop_columns'] *100) / 100;?>%;*/
             }//&.product
