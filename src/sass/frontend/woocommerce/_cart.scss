@@ -21,6 +21,14 @@
         tbody{
             td{
                 padding: 10px;
+                &.product-remove{
+                    a{
+                        color: darken( red, 10 );
+                        display: block;
+                        margin: 0 auto;
+                        text-align: center;
+                    }
+                }
                 &.product-thumbnail{
                     a{
                         text-align: center;
@@ -33,10 +41,24 @@
                         }
                     }
                 }//&.product-thumbnail
+                &.product-name{
+                    a{
+                        text-decoration: none;
+                        color: #444444;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
                 &.product-quantity{
+                    text-align: center;
                     input[type="number"]{
                         width: 40px;
                     }
+                }
+                &.product-price, &.product-subtotal{
+                    color: $primary-blue-dark;
+                    text-align: right;
                 }
             }//td
         }//tbody

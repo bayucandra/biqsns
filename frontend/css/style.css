@@ -1121,6 +1121,12 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
 .woocommerce table.cart tbody td {
   padding: 10px;
 }
+.woocommerce table.cart tbody td.product-remove a {
+  color: #cc0000;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 .woocommerce table.cart tbody td.product-thumbnail a {
   text-align: center;
   display: block;
@@ -1132,8 +1138,22 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   width: auto;
   height: 60px;
 }
+.woocommerce table.cart tbody td.product-name a {
+  text-decoration: none;
+  color: #444444;
+}
+.woocommerce table.cart tbody td.product-name a:hover {
+  text-decoration: underline;
+}
+.woocommerce table.cart tbody td.product-quantity {
+  text-align: center;
+}
 .woocommerce table.cart tbody td.product-quantity input[type="number"] {
   width: 40px;
+}
+.woocommerce table.cart tbody td.product-price, .woocommerce table.cart tbody td.product-subtotal {
+  color: #1f8fb4;
+  text-align: right;
 }
 
 /* 
