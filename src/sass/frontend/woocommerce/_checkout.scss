@@ -1,0 +1,32 @@
+form.checkout.woocommerce-checkout{
+    @include biq-form-style( $full-width-text: true );
+    input[type="text"]{
+        display: block;
+    }
+    .col-1{
+        float:left; width: 60%;
+        #billing_first_name_field{
+            overflow: auto;
+            width: 50%;
+            float: left;
+            @include box-sizing(border-box);
+            padding-right: 2px;
+        }
+        #billing_last_name_field{
+            overflow: auto;
+            width: 50%;
+            float: left;
+            clear: right;
+            padding-left: 2px;
+            @include box-sizing(border-box);
+        }
+        #billing_company_field{
+            clear:both;
+        }
+    }//.col-1
+    #order_review{
+        label{
+            display: initial;
+        }
+    }
+}//form.checkout woocommerce-checkout
