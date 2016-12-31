@@ -1387,7 +1387,7 @@ form.checkout.woocommerce-checkout .select2-container a {
 }
 form.checkout.woocommerce-checkout .col-1 {
   float: left;
-  width: 60%;
+  width: 50%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1423,7 +1423,50 @@ form.checkout.woocommerce-checkout .col-2 {
   box-sizing: border-box;
   float: left;
   display: block;
-  width: 40%;
+  width: 50%;
+  padding-left: 5px;
+}
+form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 5px;
+  background-color: #f2f2f2;
+}
+form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields input {
+  background: #FFFFFF;
+}
+form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields #order_comments_field {
+  padding-bottom: 10px;
+}
+form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields #order_comments_field #order_comments {
+  background: #FFFFFF;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields #ship-to-different-address label {
+  display: initial;
+}
+form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields #shipping_first_name_field {
+  overflow: auto;
+  width: 50%;
+  float: left;
+  padding-right: 2px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields #shipping_last_name_field {
+  overflow: auto;
+  width: 50%;
+  float: left;
+  clear: right;
+  padding-left: 2px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 form.checkout.woocommerce-checkout #order_review_heading {
   clear: both;

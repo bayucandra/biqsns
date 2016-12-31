@@ -2,7 +2,7 @@ form.checkout.woocommerce-checkout{
     @include biq-form-style( $full-width-text: true, $line-height: 25px );
     color: #444444;
     .col-1{
-        float:left; width: 60%;
+        float:left; width: 50%;
         @include box-sizing(border-box);
         #billing_first_name_field{
             overflow: auto;
@@ -32,7 +32,44 @@ form.checkout.woocommerce-checkout{
         @include box-sizing(border-box);
         float:left;
         display: block;
-        width: 40%;
+        width: 50%;
+        padding-left: 5px;
+        .woocommerce-shipping-fields{
+            @include box-sizing(border-box);
+            padding: 0 5px;
+            background-color: lighten(black, 95);
+            input{
+                background: #FFFFFF;
+            }
+            #order_comments_field{
+                padding-bottom: 10px;
+                #order_comments{
+                    background: #FFFFFF;
+                    width: 100%;
+                    @include box-sizing(border-box);
+                }
+            }
+            #ship-to-different-address{
+                label{
+                    display: initial;
+                }
+            }
+            #shipping_first_name_field{
+                overflow: auto;
+                width: 50%;
+                float: left;
+                padding-right: 2px;
+                @include box-sizing(border-box);
+            }
+            #shipping_last_name_field{
+                overflow: auto;
+                width: 50%;
+                float: left;
+                clear: right;
+                padding-left: 2px;
+                @include box-sizing(border-box);
+            }
+        }
     }
     #order_review_heading{
         clear:both;
