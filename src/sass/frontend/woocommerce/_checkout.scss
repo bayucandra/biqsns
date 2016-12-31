@@ -1,67 +1,45 @@
-form.checkout.woocommerce-checkout{
-    @include biq-form-style( $full-width-text: true, $line-height: 25px );
-    color: #444444;
-    .col-1{
-        float:left; width: 50%;
+.woocommerce{
+    form.login{
+        background-color: lighten(black, 98);
+        @include clearfix;
+        @include biq-form-style( $full-width-text: true, $line-height: 25px );
         @include box-sizing(border-box);
-        #billing_first_name_field{
-            overflow: auto;
-            width: 50%;
-            float: left;
+        border-bottom: 2px solid $primary-blue-light;
+        padding: 0 15px;
+        margin-bottom: 20px;
+        .form-row{
+            width: 50%; float:left;
             @include box-sizing(border-box);
-            padding-right: 2px;
+            padding: 0 2px;
         }
-        #billing_last_name_field{
-            overflow: auto;
-            width: 50%;
-            float: left;
-            clear: right;
-            padding-left: 2px;
-            @include box-sizing(border-box);
-        }
-        #billing_company_field{
-            clear:both;
-        }
-        .create-account{
-            label{
-                display: initial;
-            }
-        }
-    }//.col-1
-    .col-2{
-        @include box-sizing(border-box);
-        float:left;
-        display: block;
-        width: 50%;
-        padding-left: 5px;
-        .woocommerce-shipping-fields{
-            @include box-sizing(border-box);
-            padding: 0 5px;
-            background-color: lighten(black, 95);
-            input{
-                background: #FFFFFF;
-            }
-            #order_comments_field{
-                padding-bottom: 10px;
-                #order_comments{
-                    background: #FFFFFF;
-                    width: 100%;
-                    @include box-sizing(border-box);
+        .lost_password{
+            a{
+                color: $primary-blue-dark;
+                text-decoration: none;
+                &:hover{
+                    color: $primary-blue-light;
+                    text-decoration: underline;
                 }
             }
-            #ship-to-different-address{
-                label{
-                    display: initial;
-                }
-            }
-            #shipping_first_name_field{
+        }
+    }
+    form.checkout_coupon{
+        @include biq-form-style( $line-height: 25px );
+    }
+    form.checkout.woocommerce-checkout{
+        @include biq-form-style( $full-width-text: true, $line-height: 25px );
+        color: #444444;
+        .col-1{
+            float:left; width: 50%;
+            @include box-sizing(border-box);
+            #billing_first_name_field{
                 overflow: auto;
                 width: 50%;
                 float: left;
-                padding-right: 2px;
                 @include box-sizing(border-box);
+                padding-right: 2px;
             }
-            #shipping_last_name_field{
+            #billing_last_name_field{
                 overflow: auto;
                 width: 50%;
                 float: left;
@@ -69,14 +47,64 @@ form.checkout.woocommerce-checkout{
                 padding-left: 2px;
                 @include box-sizing(border-box);
             }
+            #billing_company_field{
+                clear:both;
+            }
+            .create-account{
+                label{
+                    display: initial;
+                }
+            }
+        }//.col-1
+        .col-2{
+            @include box-sizing(border-box);
+            float:left;
+            display: block;
+            width: 50%;
+            padding-left: 5px;
+            padding-right: 3px;
+            .woocommerce-shipping-fields{
+                @include box-sizing(border-box);
+                padding: 0 5px;
+                background-color: lighten(black, 98);
+                box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+                #order_comments_field{
+                    padding-bottom: 10px;
+                    #order_comments{
+                        background: #FFFFFF;
+                        width: 100%;
+                        @include box-sizing(border-box);
+                    }
+                }
+                #ship-to-different-address{
+                    label{
+                        display: initial;
+                    }
+                }
+                #shipping_first_name_field{
+                    overflow: auto;
+                    width: 50%;
+                    float: left;
+                    padding-right: 2px;
+                    @include box-sizing(border-box);
+                }
+                #shipping_last_name_field{
+                    overflow: auto;
+                    width: 50%;
+                    float: left;
+                    clear: right;
+                    padding-left: 2px;
+                    @include box-sizing(border-box);
+                }
+            }
         }
-    }
-    #order_review_heading{
-        clear:both;
-    }
-    #order_review{
-        label{
-            display: initial;
+        #order_review_heading{
+            clear:both;
         }
-    }//#order_review
-}//form.checkout woocommerce-checkout
+        #order_review{
+            label{
+                display: initial;
+            }
+        }//#order_review
+    }//form.checkout woocommerce-checkout
+}//.woocommerce

@@ -45,7 +45,7 @@
     }
 }
 
-@mixin biq-form-style( $full-width-text: false, $line-height: none ){
+@mixin biq-form-style( $full-width-text: false, $bg-text: #FFFFFF, $line-height: none ){
     %default-style{
         display: block;
         clear: both;
@@ -57,13 +57,14 @@
         }
     }
     input {
-        &[type="text"], &[type="email"], &[type="tel"]{
+        &[type="text"], &[type="email"], &[type="password"], &[type="tel"]{
             padding: 5px 10px;
             @extend %default-style;
             @include box-sizing(border-box);
             @if $full-width-text == true{
                 display: block; width: 100%;
             }
+            background-color: $bg-text;
         }
     }
     textarea{
