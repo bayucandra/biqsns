@@ -45,13 +45,16 @@
     }
 }
 
-@mixin biq-form-style( $full-width-text: false ){
+@mixin biq-form-style( $full-width-text: false, $line-height: none ){
     %default-style{
         display: block;
         clear: both;
         background: none;
         border: 1px solid lighten(black, 80);
         @include border-radius(2px);
+        @if $line-height!= none{
+            line-height : $line-height;
+        }
     }
     input {
         &[type="text"], &[type="email"], &[type="tel"]{
@@ -88,8 +91,15 @@
         }
     }
     .select2-container{
-        line-height: 30px;
-        width: 100%;
+        @if $full-width-text == true{
+            display: block; width: 100%;
+        }
+        @if $line-height!= none{
+            line-height : $line-height;
+        }
+        a{
+            padding: 5px 10px;
+        }
     }
 }
 @mixin biq-bg-star-active( $color:'1F99CD' ){

@@ -1,10 +1,9 @@
 form.checkout.woocommerce-checkout{
-    @include biq-form-style( $full-width-text: true );
-    input[type="text"]{
-        display: block;
-    }
+    @include biq-form-style( $full-width-text: true, $line-height: 25px );
+    color: #444444;
     .col-1{
         float:left; width: 60%;
+        @include box-sizing(border-box);
         #billing_first_name_field{
             overflow: auto;
             width: 50%;
@@ -23,10 +22,24 @@ form.checkout.woocommerce-checkout{
         #billing_company_field{
             clear:both;
         }
+        .create-account{
+            label{
+                display: initial;
+            }
+        }
     }//.col-1
+    .col-2{
+        @include box-sizing(border-box);
+        float:left;
+        display: block;
+        width: 40%;
+    }
+    #order_review_heading{
+        clear:both;
+    }
     #order_review{
         label{
             display: initial;
         }
-    }
+    }//#order_review
 }//form.checkout woocommerce-checkout
