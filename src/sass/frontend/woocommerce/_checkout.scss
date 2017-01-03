@@ -104,6 +104,40 @@
         #order_review{
             label{
                 display: initial;
+            }//label
+            table.woocommerce-checkout-review-order-table{
+                font-size: 16px;
+                border-spacing : 0;
+                border: 1px solid lighten(black, 90);
+                thead{
+                    text-transform: uppercase;
+                    background-color: lighten(black, 95);
+                }
+                th,td{
+                   padding: 10px 5px;
+                   border-bottom: 1px solid lighten(black, 95);
+                   border-right: 1px solid lighten(black, 95);
+                }
+                .product-name{
+                    width: 250px;
+                    text-align: left;
+                }
+                .product-total{
+                    width: 100px;
+                    text-align: right;
+                }
+                tfoot{
+                    background-color: lighten(black, 98);
+                }
+                .amount{
+                    float: right;
+                }
+            }//table.woocommerce-checkout-review-order-table
+            .woocommerce-checkout-payment{
+                ul{
+                    list-style: none;
+                    padding: 0;
+                }
             }
         }//#order_review
     }//form.checkout woocommerce-checkout

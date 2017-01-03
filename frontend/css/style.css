@@ -1619,6 +1619,38 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
 .woocommerce form.checkout.woocommerce-checkout #order_review label {
   display: initial;
 }
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table {
+  font-size: 16px;
+  border-spacing: 0;
+  border: 1px solid #e6e6e6;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table thead {
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table th, .woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table td {
+  padding: 10px 5px;
+  border-bottom: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table .product-name {
+  width: 250px;
+  text-align: left;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table .product-total {
+  width: 100px;
+  text-align: right;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table tfoot {
+  background-color: #fafafa;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table .amount {
+  float: right;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review .woocommerce-checkout-payment ul {
+  list-style: none;
+  padding: 0;
+}
 
 /* 
     Created on : Sep 29, 2016, 3:41 PM
