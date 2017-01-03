@@ -20,12 +20,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-global $post, $product;
+global $post, $product, $biq_sns_settings;
+$product_display_mode = $biq_sns_settings["woocommerce"]["product_display_mode"];
 ?>
 <div class="images">
-        <?php if ( $product->is_on_sale() ) : ?>
-            <?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . __( 'Sale!', 'woocommerce' ) . '</span>', $post, $product ); ?>
-        <?php endif; ?>
+        <?php
+            if( $product_display_mode == 'shop' ){
+                if ( $product->is_on_sale() ){
+                    echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . __( 'Sale!', 'woocommerce' ) . '</span>', $post, $product );
+                }
+            }
+        ?>
     
 	<?php
 		if ( has_post_thumbnail() ) {
