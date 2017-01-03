@@ -79,6 +79,10 @@
                         },
                         {
                             "shortcode":"category_list"
+                        },
+                        {
+                            "shortcode":"heading_section_left",
+                            "content": "Promo"
                         }
                     ]
             }

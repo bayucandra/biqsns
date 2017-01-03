@@ -418,6 +418,11 @@ ul.biq-products li.product a h3 {
   margin: 0.5rem 0 0;
   font-size: 1.1rem;
 }
+ul.biq-products li.product a p.short-desc {
+  margin: 5px auto;
+  text-align: justify;
+  font-size: 14px;
+}
 ul.biq-products li.product a .price {
   color: #1f8fb4;
   margin: 0.5rem auto;
