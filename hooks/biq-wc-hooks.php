@@ -37,7 +37,11 @@
     }
     function biq_wc_template_loop_product_short_desc(){
         global $post;
-        echo '<p class="short-desc">'.substr( $post->post_excerpt, 0, 100 ).'</p>';
+        $desc_length = 100;
+        $desc = ( strlen($post->post_excerpt) > $desc_length ) ?
+                substr( $post->post_excerpt, 0, $desc_length ).'...'
+                : substr( $post->post_excerpt, 0, $desc_length );
+        echo '<p class="short-desc">'.$desc.'</p>';
     }
     
     function biq_wc_products_list(){
