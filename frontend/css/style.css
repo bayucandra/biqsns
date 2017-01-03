@@ -418,6 +418,11 @@ ul.biq-products li.product a h3 {
   margin: 0.5rem 0 0;
   font-size: 1.1rem;
 }
+ul.biq-products li.product a p.short-desc {
+  margin: 5px auto;
+  text-align: justify;
+  font-size: 14px;
+}
 ul.biq-products li.product a .price {
   color: #1f8fb4;
   margin: 0.5rem auto;
@@ -1006,7 +1011,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .required {
   color: red;
 }
-div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform textarea {
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="password"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="tel"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform textarea {
   display: block;
   clear: both;
   background: none;
@@ -1015,8 +1020,12 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"] {
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="password"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="tel"] {
   padding: 5px 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
 }
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform textarea {
   padding: 10px;
@@ -1050,6 +1059,9 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   background-image: -moz-linear-gradient(top, #00a6db, #1f8fb4);
   background-image: -webkit-linear-gradient(top, #00a6db, #1f8fb4);
   background-image: linear-gradient(to bottom, #00a6db, #1f8fb4);
+}
+div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .select2-container a {
+  padding: 5px 10px;
 }
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .comment-form-author, div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .comment-form-email {
   float: left;
@@ -1186,7 +1198,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   background-color: #FAFAFA;
   border-top: 1px solid #e6e6e6;
 }
-.woocommerce table.cart tbody td.actions div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce table.cart tbody td.actions input[type="email"], .woocommerce table.cart tbody td.actions div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform textarea, div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce table.cart tbody td.actions textarea, .woocommerce table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions input[type="email"], .woocommerce table.cart tbody td.actions textarea {
+.woocommerce table.cart tbody td.actions div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce table.cart tbody td.actions input[type="email"], .woocommerce table.cart tbody td.actions div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="password"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce table.cart tbody td.actions input[type="password"], .woocommerce table.cart tbody td.actions div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="tel"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce table.cart tbody td.actions input[type="tel"], .woocommerce table.cart tbody td.actions div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform textarea, div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce table.cart tbody td.actions textarea, .woocommerce table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions input[type="email"], .woocommerce table.cart tbody td.actions input[type="password"], .woocommerce table.cart tbody td.actions input[type="tel"], .woocommerce table.cart tbody td.actions textarea {
   display: block;
   clear: both;
   background: none;
@@ -1195,8 +1207,12 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-.woocommerce table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions input[type="email"] {
+.woocommerce table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions input[type="email"], .woocommerce table.cart tbody td.actions input[type="password"], .woocommerce table.cart tbody td.actions input[type="tel"] {
   padding: 5px 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
 }
 .woocommerce table.cart tbody td.actions textarea {
   padding: 10px;
@@ -1230,6 +1246,9 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   background-image: -moz-linear-gradient(top, #00a6db, #1f8fb4);
   background-image: -webkit-linear-gradient(top, #00a6db, #1f8fb4);
   background-image: linear-gradient(to bottom, #00a6db, #1f8fb4);
+}
+.woocommerce table.cart tbody td.actions .select2-container a {
+  padding: 5px 10px;
 }
 .woocommerce table.cart tbody td.actions .coupon {
   float: left;
@@ -1309,6 +1328,333 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   background-image: -moz-linear-gradient(top, #ffac74, #ff8d41);
   background-image: -webkit-linear-gradient(top, #ffac74, #ff8d41);
   background-image: linear-gradient(to bottom, #ffac74, #ff8d41);
+}
+
+.woocommerce form.login {
+  background-color: #fafafa;
+  overflow: hidden;
+  *zoom: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 2px solid #00a6db;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+.woocommerce form.login div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.login input[type="text"], .woocommerce form.login div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.login input[type="email"], .woocommerce form.login div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="password"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.login input[type="password"], .woocommerce form.login div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="tel"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.login input[type="tel"], .woocommerce form.login div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform textarea, div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.login textarea, .woocommerce form.login table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions form.login input[type="text"], .woocommerce form.login table.cart tbody td.actions input[type="email"], .woocommerce table.cart tbody td.actions form.login input[type="email"], .woocommerce form.login table.cart tbody td.actions input[type="password"], .woocommerce table.cart tbody td.actions form.login input[type="password"], .woocommerce form.login table.cart tbody td.actions input[type="tel"], .woocommerce table.cart tbody td.actions form.login input[type="tel"], .woocommerce form.login table.cart tbody td.actions textarea, .woocommerce table.cart tbody td.actions form.login textarea, .woocommerce form.login input[type="text"], .woocommerce form.login input[type="email"], .woocommerce form.login input[type="password"], .woocommerce form.login input[type="tel"], .woocommerce form.login textarea, .woocommerce form.login form.checkout.woocommerce-checkout input[type="text"], .woocommerce form.checkout.woocommerce-checkout form.login input[type="text"], .woocommerce form.login form.checkout.woocommerce-checkout input[type="email"], .woocommerce form.checkout.woocommerce-checkout form.login input[type="email"], .woocommerce form.login form.checkout.woocommerce-checkout input[type="password"], .woocommerce form.checkout.woocommerce-checkout form.login input[type="password"], .woocommerce form.login form.checkout.woocommerce-checkout input[type="tel"], .woocommerce form.checkout.woocommerce-checkout form.login input[type="tel"], .woocommerce form.login form.checkout.woocommerce-checkout textarea, .woocommerce form.checkout.woocommerce-checkout form.login textarea {
+  display: block;
+  clear: both;
+  background: none;
+  border: 1px solid #cccccc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  line-height: 25px;
+}
+.woocommerce form.login input[type="text"], .woocommerce form.login input[type="email"], .woocommerce form.login input[type="password"], .woocommerce form.login input[type="tel"] {
+  padding: 5px 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+.woocommerce form.login textarea {
+  padding: 10px;
+}
+.woocommerce form.login label {
+  display: block;
+  margin: 5px 5px;
+}
+.woocommerce form.login input[type="submit"] {
+  line-height: 30px;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: none;
+  border: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFmOGZiNCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1f8fb4), color-stop(100%, #00a6db));
+  background-image: -moz-linear-gradient(top, #1f8fb4, #00a6db);
+  background-image: -webkit-linear-gradient(top, #1f8fb4, #00a6db);
+  background-image: linear-gradient(to bottom, #1f8fb4, #00a6db);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.woocommerce form.login input[type="submit"]:hover {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFmOGZiNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00a6db), color-stop(100%, #1f8fb4));
+  background-image: -moz-linear-gradient(top, #00a6db, #1f8fb4);
+  background-image: -webkit-linear-gradient(top, #00a6db, #1f8fb4);
+  background-image: linear-gradient(to bottom, #00a6db, #1f8fb4);
+}
+.woocommerce form.login .select2-container {
+  display: block;
+  width: 100%;
+  line-height: 25px;
+}
+.woocommerce form.login .select2-container a {
+  padding: 5px 10px;
+}
+.woocommerce form.login .form-row {
+  width: 50%;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 2px;
+}
+.woocommerce form.login .lost_password a {
+  color: #1f8fb4;
+  text-decoration: none;
+}
+.woocommerce form.login .lost_password a:hover {
+  color: #00a6db;
+  text-decoration: underline;
+}
+.woocommerce form.checkout_coupon div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.checkout_coupon input[type="text"], .woocommerce form.checkout_coupon div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.checkout_coupon input[type="email"], .woocommerce form.checkout_coupon div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="password"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.checkout_coupon input[type="password"], .woocommerce form.checkout_coupon div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="tel"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.checkout_coupon input[type="tel"], .woocommerce form.checkout_coupon div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform textarea, div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.checkout_coupon textarea, .woocommerce form.checkout_coupon table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions form.checkout_coupon input[type="text"], .woocommerce form.checkout_coupon table.cart tbody td.actions input[type="email"], .woocommerce table.cart tbody td.actions form.checkout_coupon input[type="email"], .woocommerce form.checkout_coupon table.cart tbody td.actions input[type="password"], .woocommerce table.cart tbody td.actions form.checkout_coupon input[type="password"], .woocommerce form.checkout_coupon table.cart tbody td.actions input[type="tel"], .woocommerce table.cart tbody td.actions form.checkout_coupon input[type="tel"], .woocommerce form.checkout_coupon table.cart tbody td.actions textarea, .woocommerce table.cart tbody td.actions form.checkout_coupon textarea, .woocommerce form.checkout_coupon input[type="text"], .woocommerce form.checkout_coupon input[type="email"], .woocommerce form.checkout_coupon input[type="password"], .woocommerce form.checkout_coupon input[type="tel"], .woocommerce form.checkout_coupon textarea, .woocommerce form.checkout_coupon form.checkout.woocommerce-checkout input[type="text"], .woocommerce form.checkout.woocommerce-checkout form.checkout_coupon input[type="text"], .woocommerce form.checkout_coupon form.checkout.woocommerce-checkout input[type="email"], .woocommerce form.checkout.woocommerce-checkout form.checkout_coupon input[type="email"], .woocommerce form.checkout_coupon form.checkout.woocommerce-checkout input[type="password"], .woocommerce form.checkout.woocommerce-checkout form.checkout_coupon input[type="password"], .woocommerce form.checkout_coupon form.checkout.woocommerce-checkout input[type="tel"], .woocommerce form.checkout.woocommerce-checkout form.checkout_coupon input[type="tel"], .woocommerce form.checkout_coupon form.checkout.woocommerce-checkout textarea, .woocommerce form.checkout.woocommerce-checkout form.checkout_coupon textarea {
+  display: block;
+  clear: both;
+  background: none;
+  border: 1px solid #cccccc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  line-height: 25px;
+}
+.woocommerce form.checkout_coupon input[type="text"], .woocommerce form.checkout_coupon input[type="email"], .woocommerce form.checkout_coupon input[type="password"], .woocommerce form.checkout_coupon input[type="tel"] {
+  padding: 5px 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+.woocommerce form.checkout_coupon textarea {
+  padding: 10px;
+}
+.woocommerce form.checkout_coupon label {
+  display: block;
+  margin: 5px 5px;
+}
+.woocommerce form.checkout_coupon input[type="submit"] {
+  line-height: 30px;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: none;
+  border: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFmOGZiNCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1f8fb4), color-stop(100%, #00a6db));
+  background-image: -moz-linear-gradient(top, #1f8fb4, #00a6db);
+  background-image: -webkit-linear-gradient(top, #1f8fb4, #00a6db);
+  background-image: linear-gradient(to bottom, #1f8fb4, #00a6db);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.woocommerce form.checkout_coupon input[type="submit"]:hover {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFmOGZiNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00a6db), color-stop(100%, #1f8fb4));
+  background-image: -moz-linear-gradient(top, #00a6db, #1f8fb4);
+  background-image: -webkit-linear-gradient(top, #00a6db, #1f8fb4);
+  background-image: linear-gradient(to bottom, #00a6db, #1f8fb4);
+}
+.woocommerce form.checkout_coupon .select2-container {
+  line-height: 25px;
+}
+.woocommerce form.checkout_coupon .select2-container a {
+  padding: 5px 10px;
+}
+.woocommerce form.checkout.woocommerce-checkout {
+  color: #444444;
+}
+.woocommerce form.checkout.woocommerce-checkout div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="text"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.checkout.woocommerce-checkout input[type="text"], .woocommerce form.checkout.woocommerce-checkout div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="email"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.checkout.woocommerce-checkout input[type="email"], .woocommerce form.checkout.woocommerce-checkout div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="password"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.checkout.woocommerce-checkout input[type="password"], .woocommerce form.checkout.woocommerce-checkout div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform input[type="tel"], div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.checkout.woocommerce-checkout input[type="tel"], .woocommerce form.checkout.woocommerce-checkout div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform textarea, div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .woocommerce form.checkout.woocommerce-checkout textarea, .woocommerce form.checkout.woocommerce-checkout table.cart tbody td.actions input[type="text"], .woocommerce table.cart tbody td.actions form.checkout.woocommerce-checkout input[type="text"], .woocommerce form.checkout.woocommerce-checkout table.cart tbody td.actions input[type="email"], .woocommerce table.cart tbody td.actions form.checkout.woocommerce-checkout input[type="email"], .woocommerce form.checkout.woocommerce-checkout table.cart tbody td.actions input[type="password"], .woocommerce table.cart tbody td.actions form.checkout.woocommerce-checkout input[type="password"], .woocommerce form.checkout.woocommerce-checkout table.cart tbody td.actions input[type="tel"], .woocommerce table.cart tbody td.actions form.checkout.woocommerce-checkout input[type="tel"], .woocommerce form.checkout.woocommerce-checkout table.cart tbody td.actions textarea, .woocommerce table.cart tbody td.actions form.checkout.woocommerce-checkout textarea, .woocommerce form.checkout.woocommerce-checkout input[type="text"], .woocommerce form.checkout.woocommerce-checkout input[type="email"], .woocommerce form.checkout.woocommerce-checkout input[type="password"], .woocommerce form.checkout.woocommerce-checkout input[type="tel"], .woocommerce form.checkout.woocommerce-checkout textarea {
+  display: block;
+  clear: both;
+  background: none;
+  border: 1px solid #cccccc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  line-height: 25px;
+}
+.woocommerce form.checkout.woocommerce-checkout input[type="text"], .woocommerce form.checkout.woocommerce-checkout input[type="email"], .woocommerce form.checkout.woocommerce-checkout input[type="password"], .woocommerce form.checkout.woocommerce-checkout input[type="tel"] {
+  padding: 5px 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+.woocommerce form.checkout.woocommerce-checkout textarea {
+  padding: 10px;
+}
+.woocommerce form.checkout.woocommerce-checkout label {
+  display: block;
+  margin: 5px 5px;
+}
+.woocommerce form.checkout.woocommerce-checkout input[type="submit"] {
+  line-height: 30px;
+  font-size: 16px;
+  color: #FFFFFF;
+  background: none;
+  border: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFmOGZiNCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1f8fb4), color-stop(100%, #00a6db));
+  background-image: -moz-linear-gradient(top, #1f8fb4, #00a6db);
+  background-image: -webkit-linear-gradient(top, #1f8fb4, #00a6db);
+  background-image: linear-gradient(to bottom, #1f8fb4, #00a6db);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.woocommerce form.checkout.woocommerce-checkout input[type="submit"]:hover {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFmOGZiNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00a6db), color-stop(100%, #1f8fb4));
+  background-image: -moz-linear-gradient(top, #00a6db, #1f8fb4);
+  background-image: -webkit-linear-gradient(top, #00a6db, #1f8fb4);
+  background-image: linear-gradient(to bottom, #00a6db, #1f8fb4);
+}
+.woocommerce form.checkout.woocommerce-checkout .select2-container {
+  display: block;
+  width: 100%;
+  line-height: 25px;
+}
+.woocommerce form.checkout.woocommerce-checkout .select2-container a {
+  padding: 5px 10px;
+}
+.woocommerce form.checkout.woocommerce-checkout .col-1 {
+  float: left;
+  width: 50%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.woocommerce form.checkout.woocommerce-checkout .col-1 #billing_first_name_field {
+  overflow: auto;
+  width: 50%;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 2px;
+}
+.woocommerce form.checkout.woocommerce-checkout .col-1 #billing_last_name_field {
+  overflow: auto;
+  width: 50%;
+  float: left;
+  clear: right;
+  padding-left: 2px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.woocommerce form.checkout.woocommerce-checkout .col-1 #billing_company_field {
+  clear: both;
+}
+.woocommerce form.checkout.woocommerce-checkout .col-1 .create-account label {
+  display: initial;
+}
+.woocommerce form.checkout.woocommerce-checkout .col-2 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  display: block;
+  width: 50%;
+  padding-left: 5px;
+  padding-right: 3px;
+}
+.woocommerce form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 5px;
+  background-color: #fafafa;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+.woocommerce form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields #order_comments_field {
+  padding-bottom: 10px;
+}
+.woocommerce form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields #order_comments_field #order_comments {
+  background: #FFFFFF;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.woocommerce form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields #ship-to-different-address label {
+  display: initial;
+}
+.woocommerce form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields #shipping_first_name_field {
+  overflow: auto;
+  width: 50%;
+  float: left;
+  padding-right: 2px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.woocommerce form.checkout.woocommerce-checkout .col-2 .woocommerce-shipping-fields #shipping_last_name_field {
+  overflow: auto;
+  width: 50%;
+  float: left;
+  clear: right;
+  padding-left: 2px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review_heading {
+  clear: both;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review label {
+  display: initial;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table {
+  font-size: 16px;
+  border-spacing: 0;
+  border: 1px solid #e6e6e6;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table thead {
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table th, .woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table td {
+  padding: 10px 5px;
+  border-bottom: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table .product-name {
+  width: 250px;
+  text-align: left;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table .product-total {
+  width: 100px;
+  text-align: right;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table tfoot {
+  background-color: #fafafa;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table .amount {
+  float: right;
+}
+.woocommerce form.checkout.woocommerce-checkout #order_review .woocommerce-checkout-payment ul {
+  list-style: none;
+  padding: 0;
 }
 
 /* 

@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var compass = require('gulp-compass');
+var plumber = require('gulp-plumber');
 
 //var htmltojson = require('gulp-html-to-json');
 //gulp.task('template-default', function(){//!!!!!!!!!!!!!UNUSED for now==============
@@ -45,11 +46,9 @@ gulp.task('JS-backend', function(){
 		'./js/backend/app.js'//THe main APP
 	    ]
 	)
+        .pipe(plumber())
 	.pipe(sourcemaps.init())
 	    .pipe(concat('app.js'))
-                .on('error', function(err){
-                    console.log('Error: ', err.message);
-                })
 	    .pipe(gulp.dest('../backend'))
     
 	    .pipe(uglify({ preserveComments: 'license' }))
@@ -62,11 +61,9 @@ gulp.task('JS-frontend', function(){
     return gulp.src(
                 ['./js/frontend/**/*.js']
             )
+            .pipe(plumber())
             .pipe(sourcemaps.init())
                 .pipe(concat('biq-wp-sns.js'))
-                    .on('error', function(err){
-                        console.log('Error: ', err.message);
-                    })
                 .pipe(uglify({preserveComments: 'author'}))
                 .pipe(rename({extname:'.min.js'}))
             .pipe(sourcemaps.write('./'))
@@ -74,11 +71,9 @@ gulp.task('JS-frontend', function(){
 });
 gulp.task('JS-woocommerce', function(){
     return gulp.src('./js/woocommerce/**/*.js')
+            .pipe(plumber())
             .pipe(sourcemaps.init())
             .pipe(uglify({preserveComments: 'author'}))
-                .on('error', function(err){
-                    console.log('Error: ', err.message);
-                })
             .pipe(rename({extname: '.min.js'}))
             .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest('../frontend/js/woocommerce'));
