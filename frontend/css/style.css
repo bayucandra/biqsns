@@ -1025,9 +1025,26 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlis
   -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
 }
+@media (max-width: 360px) {
+  div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .biq-avatar {
+    text-align: center;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    clear: both;
+  }
+  div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .biq-avatar img {
+    margin: 0;
+  }
+}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .comment-text {
   position: relative;
   padding: 10px 10px 0 0;
+  text-align: justify;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1088,6 +1105,18 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlis
 }
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .comment-text .description {
   margin-top: 10px;
+}
+@media (max-width: 360px) {
+  div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .comment-text {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin: 0;
+  }
 }
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist li:nth-last-child(1) {
   border-bottom: none;
