@@ -34,10 +34,7 @@ add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loo
 
 get_header( 'shop' ); 
 ?>
-    <div class="biq-box-wrapper short biq-container body biq-layout">
-        <?php
-            echo do_shortcode( biq_get_shortcode_part( "sidebar", "widget" ) );//LEFT SIDEBAR
-        ?>
+    <div class="biq-box-wrapper short body biq-layout">
         <?php
                 /**
                  * woocommerce_before_main_content hook.
@@ -119,6 +116,9 @@ get_header( 'shop' );
                  * @hooked woocommerce_get_sidebar - 10
                  */
 //                do_action( 'woocommerce_sidebar' );
+        ?>
+        <?php
+            echo do_shortcode( biq_get_shortcode_part( "sidebar", "widget" ) );//LEFT SIDEBAR
         ?>
     </div><!-- end biq-container -->
 <?php get_footer( 'shop' ); ?>

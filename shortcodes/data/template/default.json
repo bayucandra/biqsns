@@ -74,15 +74,25 @@
                 "shortcode": "biq_box_sidebar",
                     "children" :[
                         {
-                            "shortcode":"heading_section_left",
-                            "content": "Categories"
+                            "shortcode":"biq_box_wrapper",
+                            "children":[
+                                {
+                                    "shortcode":"heading_section_left",
+                                    "content": "Categories"
+                                },
+                                {
+                                    "shortcode":"category_list"
+                                }
+                            ]
                         },
                         {
-                            "shortcode":"category_list"
-                        },
-                        {
-                            "shortcode":"heading_section_left",
-                            "content": "Promo"
+                            "shortcode":"biq_box_wrapper",
+                            "children":[
+                                {
+                                    "shortcode":"heading_section_left",
+                                    "content": "Promo"
+                                }
+                            ]
                         }
                     ]
             }
@@ -98,16 +108,17 @@
                         "attributes": {"classes" : "biq-home-body biq-layout"},
                         "children" : [
                             {
-                                "part":"sidebar", "sub_part":"widget"
-                            },
-                            {
                                 "shortcode":"biq_box_content",
+                                "attributes" : {"float":"right"},
                                 "children":[
                                     {
                                         "shortcode":"biq_slider",
                                         "attributes": { "list":"" }
                                     }
                                 ]
+                            },
+                            {
+                                "part":"sidebar", "sub_part":"widget"
                             }
                         ]
                     }

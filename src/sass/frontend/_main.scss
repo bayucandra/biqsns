@@ -21,6 +21,9 @@ h6 { font-size: 0.7em; }
 .biq-box-wrapper{
     margin: 0 auto; overflow: auto; position: relative;
 }
+.biq-box-wrapper.left{
+    margin: 0; float: left;
+}
 .biq-box-wrapper.full{
     width:100%;
 }
@@ -31,6 +34,11 @@ h6 { font-size: 0.7em; }
 .biq-box-wrapper.short{
     max-width: 63rem;
     width:100%;
+    @include breakpoint($break-sm){
+        padding-left: 8px;
+        padding-right: 8px;
+        @include box-sizing(border-box);
+    }
 }
 .biq-box-wrapper.overflow-visible{
     overflow: visible;

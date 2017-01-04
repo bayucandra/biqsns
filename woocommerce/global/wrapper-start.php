@@ -46,4 +46,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 //		break;
 //}
 ?>
-<div class="biq-container biq-box-content left">
+<div class="biq-box-content right">

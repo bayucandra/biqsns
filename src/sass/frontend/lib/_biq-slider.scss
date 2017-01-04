@@ -85,6 +85,7 @@
   text-decoration: none;
 }
 .biq-widgets.slider .slide.visible{
+    text-align: center;
     @include opacity(1);
     @include transition(opacity 1s ease-in-out);
 }
