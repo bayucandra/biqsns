@@ -17,4 +17,10 @@
             @include flex(1 0);
         }
     }
+    @include breakpoint($break-lt-xs){
+        @include flex-direction(column);
+        .biq-box-wrapper{
+            @include flex(0 1);
+        }
+    }
 }

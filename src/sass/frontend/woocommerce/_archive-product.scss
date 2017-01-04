@@ -5,6 +5,7 @@ ul{
         position:relative;
         overflow:auto;
         padding: 10px 5px;
+        @include box-sizing(border-box);
         li{
             &.product{
                 position: relative;
@@ -15,6 +16,10 @@ ul{
                 margin-bottom: 5px;
                 overflow: visible;
                 text-align: center;
+                @include breakpoint($break-lt-xs){
+                    height: 260px;
+                    overflow: hidden;
+                }
                 &:hover{
                     @include box-shadow( 0 0 5px 0 rgba(black, 0.5) );
                 }
@@ -54,6 +59,9 @@ ul{
                                 height: auto;
                             }
                         }//img.wp-post-image
+                        @include breakpoint($break-lt-xs){
+                            height: 150px;
+                        }
                     }//.image
                     h3{
                         margin: 0.5rem 0 0;
@@ -131,9 +139,20 @@ ul{
             li{
                 &.product{
                     @include span(4 of 12 (gutter-position: after));
+                    
+                    @include breakpoint($break-lt-xs){
+                        @include span(6 of 12 (gutter-position: after));
+                        &:nth-child(even){
+                            margin-right: 0;
+                        }
+                    }
                 }//&.product
                 &.last{
                     @include span(4 of 12 last (gutter-position: after));
+                    
+                    @include breakpoint($break-lt-xs){
+                        @include span(6 of 12 last (gutter-position: after));
+                    }
                 }//&.last
             }//li
         }//&.col-3

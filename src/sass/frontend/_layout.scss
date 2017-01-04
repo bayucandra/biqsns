@@ -21,6 +21,12 @@
 }
 .biq-footer .column{
     width: 33%;
-    box-sizing: border-box;
     padding: 0.5rem 1rem;
+    @include box-sizing(border-box);
+    @include breakpoint($break-xs){
+        width: 50%;
+    }
+    @include breakpoint(max-width 480px){
+        width: 100%;
+    }
 }
