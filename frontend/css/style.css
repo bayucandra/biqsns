@@ -45,6 +45,11 @@ h6 {
   position: relative;
 }
 
+.biq-box-wrapper.left {
+  margin: 0;
+  float: left;
+}
+
 .biq-box-wrapper.full {
   width: 100%;
 }
@@ -58,6 +63,15 @@ h6 {
   max-width: 63rem;
   width: 100%;
 }
+@media (min-width: 640px) and (max-width: 980px) {
+  .biq-box-wrapper.short {
+    padding-left: 8px;
+    padding-right: 8px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
 
 .biq-box-wrapper.overflow-visible {
   overflow: visible;
@@ -69,12 +83,15 @@ h6 {
 }
 .biq-box-content.right {
   float: right;
-  margin-right: 0.5rem;
 }
 .biq-box-content.left {
   float: left;
-  margin-left: 0.5rem;
   overflow: hidden;
+}
+@media (min-width: 640px) and (max-width: 980px) {
+  .biq-box-content {
+    width: 100%;
+  }
 }
 
 .biq-box-sidebar {
@@ -86,6 +103,21 @@ h6 {
 }
 .biq-box-sidebar.left {
   float: left;
+}
+@media (min-width: 640px) and (max-width: 980px) {
+  .biq-box-sidebar {
+    clear: both;
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+  .biq-box-sidebar .biq-box-wrapper {
+    margin: 10px;
+    -webkit-flex: 1 0;
+    flex: 1 0;
+  }
 }
 
 .biq-table {
@@ -414,12 +446,18 @@ ul.biq-products li.product a > .image > img.wp-post-image {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+@media (min-width: 640px) and (max-width: 980px) {
+  ul.biq-products li.product a > .image > img.wp-post-image {
+    width: 100%;
+    height: auto;
+  }
+}
 ul.biq-products li.product a h3 {
   margin: 0.5rem 0 0;
   font-size: 1.1rem;
 }
 ul.biq-products li.product a p.short-desc {
-  margin: 5px auto;
+  margin: 5px;
   text-align: justify;
   font-size: 14px;
 }
@@ -1759,6 +1797,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
 }
 
 .biq-widgets.slider .slide.visible {
+  text-align: center;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   -moz-transition: opacity 1s ease-in-out;

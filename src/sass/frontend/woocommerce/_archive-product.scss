@@ -49,6 +49,10 @@ ul{
                             height: 240px;
                             z-index: -1;
                             @include transition(all 0.3s ease-in-out);
+                            @include breakpoint($break-sm){
+                                width: 100%;
+                                height: auto;
+                            }
                         }//img.wp-post-image
                     }//.image
                     h3{
@@ -56,7 +60,7 @@ ul{
                         font-size: 1.1rem;
                     }//h3
                     p.short-desc{
-                        margin: 5px auto;
+                        margin: 5px;
                         text-align: justify;
                         font-size: 14px;
                     }

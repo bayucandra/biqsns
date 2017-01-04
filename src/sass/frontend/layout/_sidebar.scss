@@ -7,4 +7,14 @@
     &.left{
         float:left;
     }
+    @include breakpoint($break-sm){
+        clear: both;
+        width: 100%;
+        @include display-flex;
+        @include flex-direction(row);
+        .biq-box-wrapper{
+            margin: 10px;
+            @include flex(1 0);
+        }
+    }
 }

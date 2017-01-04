@@ -3,11 +3,12 @@
     position: relative;
     &.right{
         float:right;
-        margin-right: 0.5rem;
     }
     &.left{
         float:left;
-        margin-left: 0.5rem;
         overflow:hidden;
+    }
+    @include breakpoint($break-sm){
+        width: 100%;
     }
 }
