@@ -13,13 +13,12 @@
     } );
     add_action('wp_enqueue_scripts', 'biq_wc_add_to_cart');
 
-    add_filter( 'get_avatar', 'biq_get_avatar', 1, 5 );
-
     remove_action( 'woocommerce_review_before', 'woocommerce_review_display_gravatar', 10 );
     add_action( 'woocommerce_review_before', function( $comment ){
-        echo get_avatar( $comment, apply_filters( 'woocommerce_review_gravatar_size', '70' ), '' );
+        echo '<div class="biq-avatar">'
+                .get_avatar( $comment, apply_filters( 'woocommerce_review_gravatar_size', '70' ), '' )
+            .'</div>';
     }, 10 );
-    
     
     function biq_wc_add_to_cart(){
         global $template_uri;
@@ -28,13 +27,6 @@
         wp_enqueue_script( 'wc-add-to-cart' );
     }
     
-    function biq_get_avatar($avatar, $id_or_email, $size, $default, $alt){
-        $biq_avatar = 
-                '<div class="biq-avatar">'
-                    .$avatar
-                . '</div>';
-        return $biq_avatar;
-    }
     function biq_wc_template_loop_product_short_desc(){
         global $post;
         $desc_length = 100;
