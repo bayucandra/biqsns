@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(../lib/normalize.css);
+/*@import "../lib/normalize.css";*/
 body {
   margin: 0;
   padding: 0;
@@ -1789,7 +1789,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   overflow: hidden;
   /*background-color:#DDDDDD;*/
   /*border-bottom:#ddaf94 2px solid;*/
-  background-image: url("images/loading.gif");
+  background-image: url("../images/loading.gif");
   background-repeat: no-repeat;
   background-position: center center;
   /*    -moz-box-shadow: 0 2px 3px #999999;
