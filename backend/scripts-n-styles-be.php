@@ -13,11 +13,10 @@
 	wp_enqueue_style( 'angular-ui-notification', $template_uri . '/libs/angular/angular-ui-notification.css' );
 	if( WP_DEBUG ){
 	    wp_enqueue_style( 'font-awesome', $template_uri . '/frontend/libs/font-awesome-4.6.3/css/font-awesome.css' );
-	    wp_enqueue_style( 'angular-material', $template_uri . '/libs/angular/angular-material.css' );
 	}else{
 	    wp_enqueue_style( 'font-awesome', $template_uri . '/frontend/libs/font-awesome-4.6.3/css/font-awesome.min.css' );
-	    wp_enqueue_style( 'angular-material', $template_uri . '/libs/angular/angular-material.min.js' );
 	}
+        wp_enqueue_style( 'angular-material', $template_uri . '/libs/angular/angular-material.css' );
 	wp_enqueue_style( 'lf-ng-md-file-input', $template_uri . '/libs/angular/lf-ng-md-file-input.min.css' );
         wp_enqueue_style( 'jquery-ui.structure.min', $template_uri, '/libs/jquery-ui/jquery-ui.structure.min.css' );
         wp_enqueue_style( 'jquery-ui.theme.min', $template_uri, '/libs/jquery-ui/jquery-ui.theme.min.css' );
