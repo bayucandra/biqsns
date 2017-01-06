@@ -241,14 +241,27 @@ h6 {
 }
 
 a.biq-widgets.logo {
-  min-height: 5rem;
+  height: 70px;
   width: 250px;
+  float: left;
+  padding: 10px 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 a.biq-widgets.logo img {
-  margin-left: 0.5rem;
-  display: inline-block;
-  /*avoid extra bottom margin to the wrapper when in default ( inline display )*/
+  max-height: 100%;
+  width: auto;
+  /*display: inline-block;avoid extra bottom margin to the wrapper when in default ( inline display )*/
 }
 
 .biq-widgets.menu-main {

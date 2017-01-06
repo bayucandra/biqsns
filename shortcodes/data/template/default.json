@@ -32,7 +32,7 @@
                                 "children"  : [
                                     {
                                         "shortcode":"logo",
-                                        "attributes" : {"img_alt" : "Logo Default", "classes": "biq-table-cell"}
+                                        "attributes" : {"img_alt" : "Logo Default"}
                                     },
                                     {
                                         "shortcode":"menu_main",

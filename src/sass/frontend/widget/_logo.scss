@@ -1,9 +1,17 @@
 a.biq-widgets.logo{
-    min-height:5rem;
+    height: 70px;
     width : 250px;
+    float: left;
+    padding: 10px 0;
+    @include box-sizing(border-box);
+    @include display-flex(inline-flex);
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(center);
 }
 a.biq-widgets.logo img{
-    margin-left: 0.5rem;
-    display: inline-block;/*avoid extra bottom margin to the wrapper when in default ( inline display )*/
+    max-height: 100%;
+    width: auto;
+    /*display: inline-block;avoid extra bottom margin to the wrapper when in default ( inline display )*/
 }
 
