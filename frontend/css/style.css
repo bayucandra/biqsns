@@ -384,6 +384,24 @@ a.biq-widgets.logo img {
     position:absolute;
     z-index: 25;
 }*/
+/* 
+    Created on : Jan 6, 2017, 9:19:19 PM
+    Author     : BIQDev.com <bayucandra@gmail.com>
+*/
+.biq-widgets.footer-short-description {
+  overflow: auto;
+  padding-top: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.biq-widgets.footer-short-description h4 {
+  margin-top: 0;
+}
+.biq-widgets.footer-short-description ul {
+  padding-left: 10px;
+}
+
 .biq-widgets .widget-not-ready {
   display: none;
 }

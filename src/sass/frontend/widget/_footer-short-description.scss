@@ -1,0 +1,15 @@
+/* 
+    Created on : Jan 6, 2017, 9:19:19 PM
+    Author     : BIQDev.com <bayucandra@gmail.com>
+*/
+.biq-widgets.footer-short-description{
+    overflow: auto;
+    padding-top: 0;
+    @include box-sizing(border-box);
+    h4{
+        margin-top: 0;
+    }
+    ul{
+        padding-left: 10px;
+    }
+}
