@@ -15,6 +15,14 @@
 <h3>Preview</h3>
 <img style="width:300px; height:auto;" src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/14650689_1071964932922109_8699635541577508500_n.jpg?oh=f1f1e6b52dea3f1b5769afb839f7e5f0&oe=589822CC" />
 
+<h3>Requirements</h3>
+Please pay attention to following requirements in order to run this theme
+<ul>
+    <li>PHP-GD installed on server</li>
+    <li>Woocommerce plugin installed and activated</li>
+    <li>Wordpress V > 4</li>
+</ul>
+
 <h3>Supported by:</h3>
 <ul>
     <li>Sponsor: <a href="http://www.indonesiagreenfurniture.com">www.indonesiagreenfurniture.com</a></li>
