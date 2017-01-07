@@ -1,3 +1,12 @@
+.woocommerce-result-count{
+    float: left;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    width: 50%;
+}
+.woocommerce-ordering{
+    text-align: right;
+}
 ul{
     &.biq-products{
         list-style: none;

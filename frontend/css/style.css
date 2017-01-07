@@ -433,6 +433,17 @@ a.biq-widgets.contact-email-simple .text {
   color: #666666;
 }
 
+.woocommerce-result-count {
+  float: left;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  width: 50%;
+}
+
+.woocommerce-ordering {
+  text-align: right;
+}
+
 ul.biq-products {
   list-style: none;
   list-style-type: none;
