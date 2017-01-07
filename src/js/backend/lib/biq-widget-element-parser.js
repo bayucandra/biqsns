@@ -98,7 +98,7 @@ BIQWidgetElementParser.prototype.slider = function(p_el, p_structure_item){
     
     values["no_submit"] = true;
     values["main_attribute"] = p_structure_item.attribute_main[0];
-    
+    console.log(values);
     $b.ajax({
         method:'POST', url:ajaxurl,
         data:{ action:'widget_query', query_type:'slider', widget_id:values.widget_id },

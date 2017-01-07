@@ -117,8 +117,16 @@ BIQWidgetStructure.prototype.slider = {
     'attribute_main':[
         { 'key':'slider', type:'list', 'label':'Upload Slider',
             'inputs':[
-                { 'key':'title', type:'text', 'label':'Title' },
-                { 'key':'caption', type:'text', 'label':'Caption' },
+                { type: 'two_col', inputs:[
+                        { key: 'title', type:'text', 'label':'Title', flex: 70 },
+                        {type: 'spacer', flex: 5},
+                        { key: 'title-color', type:'text', 'label':'Color', 'placeholder': '#hex', flex: 30 }
+                ] },
+                { type: 'two_col', inputs:[
+                        { key: 'caption', type:'text', 'label':'Caption', flex: 70 },
+                        {type: 'spacer', flex: 5},
+                        { key: 'caption-color', type:'text', 'label':'Color', 'placeholder': '#hex', flex: 30 }
+                ] },
                 { 'key':'url', type:'text', 'label':'URL' }
             ],
             'inputs_disp':[
@@ -655,14 +663,17 @@ BIQThemeManager.prototype.generateWidgetInputAll = function(input_model){
     var html_form_css = '';
     for(var i=0; i<self.structure_item.attribute_css.length; i++){
 	var attribute_css = self.structure_item.attribute_css[i];
-	switch( attribute_css.type ){
-	    case "text":
-		html_form_css = html_form_css + self.generateInputForm.text( attribute_css, input_model );
-		break;
-	    case "radio":
-		html_form_css = html_form_css + self.generateInputForm.radio( attribute_css, input_model );
-		break;
-	}
+        
+        html_form_css = html_form_css + self.generateInputForm[ attribute_css.type ]( attribute_css, input_model );
+        
+//	switch( attribute_css.type ){
+//	    case "text":
+//		html_form_css = html_form_css + self.generateInputForm.text( attribute_css, input_model );
+//		break;
+//	    case "radio":
+//		html_form_css = html_form_css + self.generateInputForm.radio( attribute_css, input_model );
+//		break;
+//	}
     }
     ret.css = '<biq-tab-item title="CSS">'+html_form_css+'</biq-tab-item>';
     
@@ -683,23 +694,25 @@ BIQThemeManager.prototype.formMainConstruct = function( attribute_main, input_mo
     attribute_main = typeof attribute_main !== 'undefined' ? attribute_main : self.structure_item.attribute_main;
     for(var i=0; i<attribute_main.length; i++){
 	var attribute_main_item = attribute_main[i];
-	switch( attribute_main_item.type ){
-	    case "text":
-		html_form_main = html_form_main + self.generateInputForm.text( attribute_main_item,input_model );
-		break;
-	    case "textarea":
-		html_form_main = html_form_main + self.generateInputForm.textarea( attribute_main_item,input_model );
-		break;
-	    case "radio":
-		html_form_main = html_form_main + self.generateInputForm.radio( attribute_main_item,input_model );
-		break;
-            case "file":
-                html_form_main = html_form_main + self.generateInputForm.file( attribute_main_item );
-                break;
-            case "list":
-                html_form_main = html_form_main + self.generateInputForm.list( attribute_main_item,input_model );
-                break;
-	}
+        
+        html_form_main = html_form_main + self.generateInputForm[ attribute_main_item.type ]( attribute_main_item,input_model );
+//	switch( attribute_main_item.type ){
+//	    case "text":
+//		html_form_main = html_form_main + self.generateInputForm.text( attribute_main_item,input_model );
+//		break;
+//	    case "textarea":
+//		html_form_main = html_form_main + self.generateInputForm.textarea( attribute_main_item,input_model );
+//		break;
+//	    case "radio":
+//		html_form_main = html_form_main + self.generateInputForm.radio( attribute_main_item,input_model );
+//		break;
+//            case "file":
+//                html_form_main = html_form_main + self.generateInputForm.file( attribute_main_item );
+//                break;
+//            case "list":
+//                html_form_main = html_form_main + self.generateInputForm.list( attribute_main_item,input_model );
+//                break;
+//	}
     }
     return html_form_main;
 };
@@ -709,7 +722,23 @@ BIQThemeManager.prototype.formMainConstruct = function( attribute_main, input_mo
  * The element produced in angular material style. Will call inside loop check each element of 'main' and 'css' tab.
  */
 BIQThemeManager.prototype.generateInputForm = {
-    text : function( p_structure_item, input_model ){
+    two_col : function( p_structure_item, input_model ){
+        var self = this;
+        var ret_html = '<div layout="row">';
+        var inputs = p_structure_item.inputs;
+        for( var i=0; i < inputs.length; i++ ){
+            ret_html = ret_html + self[inputs[i].type]( inputs[i], input_model, {flex: inputs[i].flex} );
+        }
+        ret_html = ret_html+'</div>';
+        return ret_html;
+    },
+    spacer: function(p_structure_item, input_model, p_params_obj){//1st and 2nd params just dummy
+        p_params_obj = typeof p_params_obj !== 'undefined' ? p_params_obj : {};
+        var flex = p_params_obj.hasOwnProperty('flex') ? p_params_obj.flex : '1';
+        return '<div flex="'+flex+'"></div>';
+    },
+    text : function( p_structure_item, input_model, p_params_obj ){//p_params_obj : { flex: 1 }
+        p_params_obj = typeof p_params_obj !== 'undefined' ? p_params_obj : {};
 	var is_required = ( p_structure_item.hasOwnProperty('required') && (p_structure_item.required) );
 	var ngRequired = is_required ? ' ng-required="true"' : '';
         var input_wrapper_attrs = p_structure_item.hasOwnProperty( 'input_wrapper_attrs' ) ?
@@ -717,8 +746,10 @@ BIQThemeManager.prototype.generateInputForm = {
                 : '';
 	var input_attrs = p_structure_item.hasOwnProperty('input_attrs') ? ' '+p_structure_item.input_attrs : '';
 	var placeholder = bisnull(p_structure_item.placeholder) ? '' : '( '+p_structure_item.placeholder+' )';
+
+        var flex = p_params_obj.hasOwnProperty('flex') ? 'flex="'+p_params_obj.flex+'"' : 'flex';
 	var ret_html = 
-		'<md-input-container class="md-block" flex'+input_wrapper_attrs+'>'
+		'<md-input-container class="md-block" '+flex+' '+input_wrapper_attrs+'>'
 		    +'<label>'+p_structure_item.label+': '+placeholder+'</label> \
 		    <input name="'+p_structure_item.key+'"'+ngRequired+' ng-model="'+input_model+p_structure_item.key+'"'+input_attrs+'> \
 		    <div ng-if="'+is_required+'" ng-messages="widgetForm.'+p_structure_item.key+'.$error"> \
@@ -952,7 +983,7 @@ BIQWidgetElementParser.prototype.slider = function(p_el, p_structure_item){
     
     values["no_submit"] = true;
     values["main_attribute"] = p_structure_item.attribute_main[0];
-    
+    console.log(values);
     $b.ajax({
         method:'POST', url:ajaxurl,
         data:{ action:'widget_query', query_type:'slider', widget_id:values.widget_id },

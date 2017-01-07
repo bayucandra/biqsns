@@ -44,7 +44,7 @@ $bimage = new BImage("");
 //END WOOCOMMERCE HOOKS*************
 
 //BEGIN FRONTEND====================
-require 'frontend/scripts_n_styles_fe.php';
+require 'frontend/scripts-n-styles-fe.php';
 
 //BEGIN BACKEND=====================
 require 'backend/class.BIQTheme.php';
@@ -62,7 +62,7 @@ require 'shortcodes/functions/widgets/menu-main.php';
 require 'shortcodes/functions/widgets/heading-section-left.php';
 require 'shortcodes/functions/widgets/category-list.php';
 require 'shortcodes/functions/widgets/slider.php';
-require 'shortcodes/functions/widgets/footer_short_description.php';
+require 'shortcodes/functions/widgets/footer-short-description.php';
 
 require 'shortcodes/functions/layout/sidebar.php';
 require 'shortcodes/functions/layout/content.php';

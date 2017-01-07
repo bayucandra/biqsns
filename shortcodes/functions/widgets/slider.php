@@ -36,11 +36,12 @@
                 .'</div>';
         }else{
             foreach($list_arr AS $key=>$val){
+                $title_color = ( !empty( $val["inputs"]["color"] ) ) ? ' style="color:'.$val["inputs"]["color"].'"' : '';
                 $html_slider .= 
                     '<div class="slide">'
                         .'<img src="'.$val["uri_base"]."/".rawurlencode($val["img_name"]).'"/>'
                         .'<div class="text">'
-                            .( !empty($val["inputs"]["title"]) ? '<h2>' .$val["inputs"]["title"]. '</h2>' : '<br/><br/>' )
+                            .( !empty($val["inputs"]["title"]) ? '<h2'.$title_color.'>' .$val["inputs"]["title"]. '</h2>' : '<br/><br/>' )
                             .( !empty($val["inputs"]["caption"]) ? '<p>'. $val["inputs"]["caption"] .'</p>' : '<br/>' )
                             .( !empty($val["inputs"]["url"]) ? '<a class="button" href="'.$val["inputs"]["url"].'">View Detail</a>' : '')
                         .'</div>'
