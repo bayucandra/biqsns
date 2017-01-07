@@ -91,13 +91,12 @@ BIQThemeManager.prototype.hoverToEdit= function(){
     $b('.hover-to-edit .footer .button').on('click', function(e){
 	self.editWidget(e);
     });
-    $b('.hover-to-edit').on('hover', function(e){
-	if(e.type === 'mouseenter'){
-	    self.hover_to_edit.is_editing = false;//temporary unused variable handler
-	    clearTimeout(self.hover_to_edit.hide_timeout_obj);
-	}else if(e.type === 'mouseleave'){
-	    self.hover_to_edit.onmouseleave();
-	}
+    $b('.hover-to-edit').on('mouseenter', function(e){
+        self.hover_to_edit.is_editing = false;//temporary unused variable handler
+        clearTimeout(self.hover_to_edit.hide_timeout_obj);
+    });
+    $b('.hover-to-edit').on('mouseleave', function(e){
+        self.hover_to_edit.onmouseleave();
     });
     self.widgetHoverApply();
 };
@@ -115,20 +114,18 @@ BIQThemeManager.prototype.widgetHoverApply = function(p_widget_id){
     var selector = typeof p_widget_id!=='undefined' ?
             '.biq-widgets[data-biq-widget-id="'+p_widget_id+'"]'//Only match to specific data-biq-widget-id
             :'.biq-widgets'; //All widget
-    $b(selector).on('hover', function(e){
-	if(e.type === 'mouseenter'){
-            clearTimeout( self.hover_to_edit.hide_timeout_obj );
-            $b('.hover-to-edit .highlight').stop(false, true);//stop previous animation: $b('.hover-to-edit .highlight').show(200);
-            self.hover_to_edit.widget_sel = null;
-            self.hover_to_edit.widget_sel = $b(this);
-            self.hover_to_edit.set_overlay_sizes(
-                function(){
-                    $b('.hover-to-edit').show(0, function(){
-                        $b('.hover-to-edit .highlight').show(200);
-                    });
-                }
-            );
-	}
+    $b(selector).on('mouseenter', function(e){
+        clearTimeout( self.hover_to_edit.hide_timeout_obj );
+        $b('.hover-to-edit .highlight').stop(false, true);//stop previous animation: $b('.hover-to-edit .highlight').show(200);
+        self.hover_to_edit.widget_sel = null;
+        self.hover_to_edit.widget_sel = $b(this);
+        self.hover_to_edit.set_overlay_sizes(
+            function(){
+                $b('.hover-to-edit').show(0, function(){
+                    $b('.hover-to-edit .highlight').show(200);
+                });
+            }
+        );
     });
 };
 /**
@@ -388,7 +385,7 @@ BIQThemeManager.prototype.generateInputForm = {
                 +'<br>'
                 +'<md-list layout-padding>'
                     +'<md-list-item ng-repeat="record in inputs.list.server_data track by record.img_name">'
-                        +'<div style="height:80px;overflow:hidden;" layout="row" layout-align="center center"><img ng-cloack src="{{record.uri_base}}/thumb_{{record.img_name}}?token={{inputs.date}}"/></div>'
+                        +'<div style="height:80px;overflow:hidden;" layout="row" layout-align="center center"><img ng-cloack ng-src="{{record.uri_base}}/thumb_{{record.img_name}}?token={{inputs.date}}"/></div>'
                         +'<div style="height:80px;overflow:hidden;font-size:1.1rem;" layout="row" layout-padding layout-align="start center" class="flex">'
                             +'<span>{{record.inputs.title!==\'\' ? record.inputs.title : record.img_name }}</span>'
                         +'</div>'

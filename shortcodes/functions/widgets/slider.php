@@ -36,13 +36,14 @@
                 .'</div>';
         }else{
             foreach($list_arr AS $key=>$val){
-                $title_color = ( !empty( $val["inputs"]["color"] ) ) ? ' style="color:'.$val["inputs"]["color"].'"' : '';
+                $title_color = ( !empty( $val["inputs"]["title_color"] ) ) ? ' style="color:'.$val["inputs"]["title_color"].'"' : '';
+                $caption_color = ( !empty( $val["inputs"]["caption_color"] ) ) ? ' style="color:'.$val["inputs"]["caption_color"].'"' : '';
                 $html_slider .= 
                     '<div class="slide">'
                         .'<img src="'.$val["uri_base"]."/".rawurlencode($val["img_name"]).'"/>'
                         .'<div class="text">'
                             .( !empty($val["inputs"]["title"]) ? '<h2'.$title_color.'>' .$val["inputs"]["title"]. '</h2>' : '<br/><br/>' )
-                            .( !empty($val["inputs"]["caption"]) ? '<p>'. $val["inputs"]["caption"] .'</p>' : '<br/>' )
+                            .( !empty($val["inputs"]["caption"]) ? '<p'.$caption_color.'>'. $val["inputs"]["caption"] .'</p>' : '<br/>' )
                             .( !empty($val["inputs"]["url"]) ? '<a class="button" href="'.$val["inputs"]["url"].'">View Detail</a>' : '')
                         .'</div>'
                     .'</div>';
