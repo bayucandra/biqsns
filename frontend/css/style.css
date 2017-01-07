@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(../lib/normalize.css);
+/*@import "../lib/normalize.css";*/
 body {
   margin: 0;
   padding: 0;
@@ -241,14 +241,27 @@ h6 {
 }
 
 a.biq-widgets.logo {
-  min-height: 5rem;
+  height: 70px;
   width: 250px;
+  float: left;
+  padding: 10px 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 a.biq-widgets.logo img {
-  margin-left: 0.5rem;
-  display: inline-block;
-  /*avoid extra bottom margin to the wrapper when in default ( inline display )*/
+  max-height: 100%;
+  width: auto;
+  /*display: inline-block;avoid extra bottom margin to the wrapper when in default ( inline display )*/
 }
 
 .biq-widgets.menu-main {
@@ -371,6 +384,24 @@ a.biq-widgets.logo img {
     position:absolute;
     z-index: 25;
 }*/
+/* 
+    Created on : Jan 6, 2017, 9:19:19 PM
+    Author     : BIQDev.com <bayucandra@gmail.com>
+*/
+.biq-widgets.footer-short-description {
+  overflow: auto;
+  padding-top: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.biq-widgets.footer-short-description h4 {
+  margin-top: 0;
+}
+.biq-widgets.footer-short-description ul {
+  padding-left: 10px;
+}
+
 .biq-widgets .widget-not-ready {
   display: none;
 }
@@ -1789,7 +1820,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   overflow: hidden;
   /*background-color:#DDDDDD;*/
   /*border-bottom:#ddaf94 2px solid;*/
-  background-image: url("images/loading.gif");
+  background-image: url("../images/loading.gif");
   background-repeat: no-repeat;
   background-position: center center;
   /*    -moz-box-shadow: 0 2px 3px #999999;

@@ -15,7 +15,7 @@
 	$css_inline = !empty( $css_inline ) ? ' style = "'.$css_inline.'"' : '';
 	$classes = !empty( $classes ) ? ' '.$classes : '';
         
-        $element_attributes =  'class="biq-widgets footer-short-description'.$classes.'"'. $css_inline;
+        $element_attributes =  'class="biq-widgets'.$classes.' footer-short-description"'. $css_inline;
         $element_attributes .= is_admin() ?
                 ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="footer_short_description" data-biq-css-default="footer-short-description"'
                 .' data-description-source="'.$description_source.'" data-description="'.$description.'"'
