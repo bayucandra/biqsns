@@ -12,7 +12,7 @@
 	    <?php
 //		$menu_page_url = menu_page_url( 'biq-sns-theme-setting', false );
                 $template_active = $template_arr[ $biq_sns_settings["active_template"] ];
-		$action = ( isset($_REQUEST['action']) ) ? $_REQUEST['action'] : '';
+		$action = ( isset($_REQUEST['action']) ) ? $_REQUEST['action'] : 'home';
 		$has_active = false;
 		foreach( $template_active AS $key=>$val ){//Set all as inactive
 		    if($key === $action){
