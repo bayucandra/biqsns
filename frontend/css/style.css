@@ -433,6 +433,17 @@ a.biq-widgets.contact-email-simple .text {
   color: #666666;
 }
 
+.woocommerce-result-count {
+  float: left;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  width: 50%;
+}
+
+.woocommerce-ordering {
+  text-align: right;
+}
+
 ul.biq-products {
   list-style: none;
   list-style-type: none;
@@ -1820,7 +1831,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   overflow: hidden;
   /*background-color:#DDDDDD;*/
   /*border-bottom:#ddaf94 2px solid;*/
-  background-image: url("../images/loading.gif");
+  background-image: url("../../images/loading.gif");
   background-repeat: no-repeat;
   background-position: center center;
   /*    -moz-box-shadow: 0 2px 3px #999999;

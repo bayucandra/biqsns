@@ -25,6 +25,7 @@
                     $i=0;
                     $template_active_count = count($template_active);
                     foreach( $template_active AS $key=>$val ){
+                        if(!$template_active[$key]["interactive"]){ continue; }
                         if( empty($action) && ( $i==$template_active_count-1 ) ) { $action = $key; }
                 ?>
                     <biq-tab-item title="<?php echo $template_active[$key]["label"]?>"
