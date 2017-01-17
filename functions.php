@@ -25,6 +25,7 @@ require 'libs/php/bimage.php';
 
 require 'shortcodes/data/init.php';//INIT TEMPLATE
 //BEGIN GLOBAL VARS===================
+$biq_version = "0.0.2";
 $biq_sns_settings = get_option('biq-sns-settings');
 $template_arr= get_option('biq-sns-template');
 $bimage = new BImage("");
