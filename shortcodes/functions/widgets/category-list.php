@@ -35,6 +35,8 @@
         $root_term = biq_woo_get_root_term();
         $root_term_id = count( $root_term ) > 0 ? $root_term->term_id : -1;
         
+//        print_r($args);
+        
         $categories = get_categories( $args );
         $ret_html_li = '';
         

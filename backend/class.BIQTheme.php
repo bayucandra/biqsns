@@ -96,7 +96,7 @@
                 $this->bimage->load_image($img_file_name["tmp_name"]);
                 $image_is_valid=$this->bimage->get_error("success");
                 if($image_is_valid){
-                    $logo_path = $this->template_directory."/images/biq/widgets/contact-email-simple/".$img_file_name["name"];
+                    $logo_path = $this->template_directory."/images/biq/widgets/logo/".$img_file_name["name"];
                     $logo_upload_process = $this->bimage->save($logo_path);
                     if(!$logo_upload_process["success"]){
                         return $this->widget_error("Please make sure theme folder has write permission. Error when uploading logo image: ".$logo_upload_process["message"]);
