@@ -123,6 +123,13 @@ BIQWidgetElementParser.prototype.footerShortDescription = function(p_el, p_struc
     values["description"] = p_el.data('description');
     return values;
 };
+BIQWidgetElementParser.prototype.postFeed = function(p_el, p_structure_item){
+    var self = this;
+    var values = self.defaultFormValues(p_el);
+    values['post_category'] = p_el.data('postCategory');
+    values['type'] = p_el.data('type');
+    return values;
+};
 /**
  * Important to get default value of 'key'. Usually necessary when default input can be empty to load based on default value.
  * 
