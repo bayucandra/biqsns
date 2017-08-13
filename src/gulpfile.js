@@ -1,10 +1,11 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-var sourcemaps = require('gulp-sourcemaps');
-var compass = require('gulp-compass');
-var plumber = require('gulp-plumber');
+var gulp = require('gulp'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    sourcemaps = require('gulp-sourcemaps'),
+    compass = require('gulp-compass'),
+    plumber = require('gulp-plumber'),
+    notify = require('gulp-notify');
 
 //var htmltojson = require('gulp-html-to-json');
 //gulp.task('template-default', function(){//!!!!!!!!!!!!!UNUSED for now==============
@@ -30,9 +31,12 @@ gulp.task('compass-frontend', function(){
             .pipe(
                 compass(config)
             )
-            .on('error', function(err){
-                console.log('Error: ', err.message);
-            });
+            .on('error',
+                    notify.onError(function(error){
+                        return "Error Sass: " + error.message;
+                    })
+                )
+            .pipe(notify("Sass finish compiled")) ;
 });
 gulp.task('compass', ['compass-frontend']);
 

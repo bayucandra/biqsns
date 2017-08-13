@@ -368,7 +368,7 @@
                 }
                 $list_new_arr[] = $list;
             }
-            if( !unlink($path_base."/".$p_data["img_name"]) ){
+            if( (file_exists($path_base."/".$p_data["img_name"])) && !unlink($path_base."/".$p_data["img_name"]) ){
                 $ret_arr["is_found"] = false;
                 $ret_arr["message"] = "Error when deleting slider: ".$p_data["image_name"];
                 return $ret_arr;
