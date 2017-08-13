@@ -18,17 +18,17 @@
                 ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="post_feed"'
                 .' data-post-category="'.$post_category.'" data-type="'.$type.'" data-limit="'.$limit.'"'
                 : '' ;
-        
-        $posts_per_page = $limit!=-1 ? '&posts_per_page='.$limit : '';
+
+        $posts_per_page = $limit!=-1 ? '&posts_per_page'.$limit : '';
         
         $post_html = '';
-        query_post('category_name='.$post_category.$posts_per_page);
+        query_posts('category_name='.$post_category.$posts_per_page);
         while(have_posts()) : the_post();
-            $post_html .= the_title();
+            $post_html .= get_the_title();
         endwhile;
         
         return 
-            '<div '.$element_attributes.'>Test</div>';
+            '<div '.$element_attributes.'>'.$post_html.'</div>';
     }
     
     add_shortcode('post_feed', 'post_feed_shortcode');

@@ -151,3 +151,17 @@ BIQWidgetStructure.prototype.footer_short_description = {
     ],
     'attribute_css' : BIQWidgetStructureDefaults.attribute_css
 };
+BIQWidgetStructure.prototype.post_feed = {
+    'title': 'Setting - Post feed',
+    'attribute_main':[
+        { 'key' : 'post_category', 'type':'text', 'label':'Post Category' },
+        { 'key' : 'url', 'type':'text', 'label':'URL' },
+        { 'key' : 'type', 'type':'radio', 'label': 'Type',
+            'value' : [
+                {'label' : 'Two columns Rect.', 'value' : 'two_col_rect'},
+                {'label' : 'Two rows Rect.', 'value' : 'two_row_rect'}
+            ]
+        }
+    ],
+    'attribute_css' : BIQWidgetStructureDefaults.attribute_css
+};

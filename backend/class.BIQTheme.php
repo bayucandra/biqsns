@@ -63,6 +63,9 @@
                 case 'footer_short_description':
                     $widget_result = $this->footer_short_description_update($p_arr);
                     break;
+                case 'post_feed':
+                    $widget_result = $this->post_feed_update($p_arr);
+                    break;
             }
             echo json_encode($widget_result);
             update_option('biq-sns-template', $this->template_arr);
@@ -179,6 +182,23 @@
             $attributes["description"] = $p_data["description"]; $attributes["description_source"] =$p_data["description_source"];
             
             $update_arr = array( "attributes"=>$attributes );
+            $widget_update_res = $this->widget_update(
+                    $this->template_arr[ $this->biq_sns_settings["active_template"] ],
+                    $update_arr, $p_data["widget_id"]
+                );
+            return $widget_update_res;
+        }
+        /**
+         * @brief Update Post Feed
+         */
+        function post_feed_update($p_data){
+            $attributes = array();
+            if( !empty($p_data["css_inline"]) ){ $attributes["css_inline"] = $p_data["css_inline"]; }
+            if( !empty($p_data["classes"]) ){ $attributes["classes"] = $p_data["classes"]; }
+            $attributes["post_category"] = $p_data["post_category"];
+            $attributes["url"] = $p_data["url"];
+            
+            $update_arr = array("attributes"=>$attributes);
             $widget_update_res = $this->widget_update(
                     $this->template_arr[ $this->biq_sns_settings["active_template"] ],
                     $update_arr, $p_data["widget_id"]
@@ -368,7 +388,7 @@
                 }
                 $list_new_arr[] = $list;
             }
-            if( !unlink($path_base."/".$p_data["img_name"]) ){
+            if( (file_exists($path_base."/".$p_data["img_name"])) && !unlink($path_base."/".$p_data["img_name"]) ){
                 $ret_arr["is_found"] = false;
                 $ret_arr["message"] = "Error when deleting slider: ".$p_data["image_name"];
                 return $ret_arr;
