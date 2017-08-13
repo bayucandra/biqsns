@@ -4,7 +4,7 @@
             shortcode_atts(
                 array(
                     'widget_id' => '', 'css_inline'=> '', 'classes'=> '',
-                    'post_category'=>'post_category','type' => 'two_col_rect', 'limit'=> -1
+                    'post_category'=>'post_category', 'clickable'=>'true','type' => 'two_col_circle', 'limit'=> -1
 
                 ),
                 $atts
@@ -13,7 +13,7 @@
 	$css_inline = !empty( $css_inline ) ? ' style = "'.$css_inline.'"' : '';
 	$classes = !empty( $classes ) ? ' '.$classes : '';
         
-        $element_attributes = 'class="biq-widgets"'.$classes.' post-feed'.$css_inline;
+        $element_attributes = 'class="biq-widgets'.$classes.' post-feed"'.$css_inline;
         $element_attributes .= is_admin() ?
                 ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="post_feed"'
                 .' data-post-category="'.$post_category.'" data-type="'.$type.'" data-limit="'.$limit.'"'
@@ -24,7 +24,34 @@
         $post_html = '';
         query_posts('category_name='.$post_category.$posts_per_page);
         while(have_posts()) : the_post();
-            $post_html .= get_the_title();
+            switch($type){
+                case 'two_col_circle':
+                    if($clickable == 'false'){
+                        $post_html .= '<div class="box circle">';
+                    }else{
+                        $post_html .= '<a href="'.get_permalink().'" class="box circle">';
+                    }
+                    
+                    $post_html .= 
+                        '<div class="thumbnail-wrapper"'
+                            . (has_post_thumbnail() ? 
+                                'style="background-image: url(\''.get_the_post_thumbnail_url(get_the_id(), 'thumbnail').'\')"'
+                            :'')
+                            .'>'//closure of <div
+                        .'</div>'
+                        .'<div class="content-wrapper">'
+                            .'<h4>'
+                                . get_the_title()
+                            . '</h4>'
+                        . '</div>';
+                    
+                    if($clickable == 'false'){
+                        $post_html .= '</div>';
+                    }else{
+                        $post_html .= '</a>';
+                    }
+                    break;
+            }
         endwhile;
         
         return 

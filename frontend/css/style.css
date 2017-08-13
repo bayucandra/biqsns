@@ -402,6 +402,31 @@ a.biq-widgets.logo img {
   padding-left: 10px;
 }
 
+.biq-widgets.post-feed > .box {
+  overflow: auto;
+  display: block;
+  outline: none;
+  border: 0;
+}
+.biq-widgets.post-feed > .box.circle {
+  min-height: 50px;
+}
+.biq-widgets.post-feed > .box.circle > div {
+  float: left;
+}
+.biq-widgets.post-feed > .box.circle .thumbnail-wrapper:first-child {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  padding: 5px;
+  background-position: center center;
+}
+.biq-widgets.post-feed > .box.circle .content-wrapper h4 {
+  margin: 3px 0 0 8px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .biq-widgets .widget-not-ready {
   display: none;
 }

@@ -6,6 +6,7 @@
 
 add_theme_support( 'woocommerce' );
 add_theme_support( 'menus' );
+add_theme_support( 'post-thumbnails' );
 //BEGIN GLOBAL VARS===================
 $template_uri = get_template_directory_uri();
 $template_directory = get_template_directory();
