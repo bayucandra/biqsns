@@ -16,7 +16,7 @@
                                 "attributes" : { "classes" : "info" },
                                 "children" : [
                                     {
-                                        "shortcode" : "contact_email_simple", "attributes" : {}, "content" : "info@finefurniturecenter.com"
+                                        "shortcode" : "contact_email_simple", "attributes" : {}, "content" : "mail@example.com"
                                     }
                                 ]
                             }
@@ -94,6 +94,9 @@
                                 {
                                     "shortcode":"heading_section_left",
                                     "content": "Promo"
+                                },
+                                {
+                                    "shortcode":"post_feed"
                                 }
                             ]
                         }

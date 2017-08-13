@@ -65,6 +65,7 @@ require 'shortcodes/functions/widgets/heading-section-left.php';
 require 'shortcodes/functions/widgets/category-list.php';
 require 'shortcodes/functions/widgets/slider.php';
 require 'shortcodes/functions/widgets/footer-short-description.php';
+require 'shortcodes/functions/widgets/post-feed.php';
 
 require 'shortcodes/functions/layout/sidebar.php';
 require 'shortcodes/functions/layout/content.php';
