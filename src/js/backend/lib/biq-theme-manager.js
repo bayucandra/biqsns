@@ -353,9 +353,9 @@ BIQThemeManager.prototype.generateInputForm = {
     },
     radio : function(p_structure_item, input_model){
 	var ret_html=
-		'<md-input-container class="md-block" flex>\
-		    <md-radio-group ng-model="'+input_model+p_structure_item.key+'" layout="row">\n\
-		    <span class="label1 w10">'+p_structure_item.label+'</span>';
+		'<md-input-container layout="row">\n\
+		    <span class="label1" flex="30">'+p_structure_item.label+'</span>\n\
+		    <md-radio-group ng-model="'+input_model+p_structure_item.key+'" layout="row" layout-wrap flex="70">';
 	for(var i=0; i< p_structure_item.value.length; i++){
 	    var label = p_structure_item.value[i].label; var value = p_structure_item.value[i].value;
 	    ret_html = ret_html + '<md-radio-button value="'+value+'" class="md-primary">'+label+'</md-radio-button>';

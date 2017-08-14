@@ -402,6 +402,38 @@ a.biq-widgets.logo img {
   padding-left: 10px;
 }
 
+.biq-widgets.post-feed > .box {
+  margin-bottom: 5px;
+  overflow: auto;
+  display: block;
+  outline: none;
+  border: 0;
+}
+.biq-widgets.post-feed > .box.circle {
+  min-height: 50px;
+}
+.biq-widgets.post-feed > .box.circle > div {
+  float: left;
+}
+.biq-widgets.post-feed > .box.circle .thumbnail-wrapper:first-child {
+  width: 64px;
+  height: 64px;
+  margin: 5px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  background-position: center center;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.biq-widgets.post-feed > .box.circle .content-wrapper h4 {
+  margin: 8px 0 0 3px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2c89a0;
+}
+.biq-widgets.post-feed > a.box:hover {
+  background-color: #ececec;
+}
+
 .biq-widgets .widget-not-ready {
   display: none;
 }

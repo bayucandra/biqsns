@@ -196,7 +196,8 @@
             if( !empty($p_data["css_inline"]) ){ $attributes["css_inline"] = $p_data["css_inline"]; }
             if( !empty($p_data["classes"]) ){ $attributes["classes"] = $p_data["classes"]; }
             $attributes["post_category"] = $p_data["post_category"];
-            $attributes["url"] = $p_data["url"];
+            $attributes["clickable"] = $p_data["clickable"];
+            $attributes["size"] = $p_data["size"];
             
             $update_arr = array("attributes"=>$attributes);
             $widget_update_res = $this->widget_update(

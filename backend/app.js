@@ -155,11 +155,30 @@ BIQWidgetStructure.prototype.post_feed = {
     'title': 'Setting - Post feed',
     'attribute_main':[
         { 'key' : 'post_category', 'type':'text', 'label':'Post Category' },
-        { 'key' : 'url', 'type':'text', 'label':'URL' },
-        { 'key' : 'type', 'type':'radio', 'label': 'Type',
+        { 'key' : 'limit', 'type':'text', 'label':'Limit' },
+        { 'key' : 'clickable', 'type':'radio', 'label':'Clickable',
             'value' : [
-                {'label' : 'Two columns Rect.', 'value' : 'two_col_rect'},
-                {'label' : 'Two rows Rect.', 'value' : 'two_row_rect'}
+                {'label': 'true', 'value':'true'},
+                {'label':'false', 'value':'false'}
+            ]
+        },
+        { 'key' : 'staggered', 'type':'radio', 'label':'Staggered',
+            'value' :[
+                {'label': 'true', 'value': 'true'},
+                {'label': 'false', 'value': 'false'}
+            ]
+        },
+        { 'key' : 'type', 'type':'radio', 'label': 'Layout Type',
+            'value' : [
+                {'label' : '2 col circle', 'value' : 'two_col_circle'},
+                {'label' : '2 col rect.', 'value' : 'two_col_rect'}
+            ]
+        },
+        { 'key':'size', 'type': 'radio', 'label':'Size',
+            'value' :[
+                {'label':'Thumbnail', 'value':'thumbnail'},
+                {'label':'Medium', 'value':'medium'},
+                {'label':'Medium Large', 'value':'medium_large'}
             ]
         }
     ],
@@ -802,9 +821,9 @@ BIQThemeManager.prototype.generateInputForm = {
     },
     radio : function(p_structure_item, input_model){
 	var ret_html=
-		'<md-input-container class="md-block" flex>\
-		    <md-radio-group ng-model="'+input_model+p_structure_item.key+'" layout="row">\n\
-		    <span class="label1 w10">'+p_structure_item.label+'</span>';
+		'<md-input-container layout="row">\n\
+		    <span class="label1" flex="30">'+p_structure_item.label+'</span>\n\
+		    <md-radio-group ng-model="'+input_model+p_structure_item.key+'" layout="row" layout-wrap flex="70">';
 	for(var i=0; i< p_structure_item.value.length; i++){
 	    var label = p_structure_item.value[i].label; var value = p_structure_item.value[i].value;
 	    ret_html = ret_html + '<md-radio-button value="'+value+'" class="md-primary">'+label+'</md-radio-button>';
@@ -1023,7 +1042,11 @@ BIQWidgetElementParser.prototype.postFeed = function(p_el, p_structure_item){
     var self = this;
     var values = self.defaultFormValues(p_el);
     values['post_category'] = p_el.data('postCategory');
+    values['limit'] = p_el.data('limit');
+    values['clickable'] = p_el.data('clickable').toString();
+    values['staggered'] = p_el.data('staggered').toString();
     values['type'] = p_el.data('type');
+    values['size'] = p_el.data('size');
     return values;
 };
 /**

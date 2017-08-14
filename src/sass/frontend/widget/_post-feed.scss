@@ -1,0 +1,42 @@
+.biq-widgets{
+    &.post-feed{
+        > .box{
+            margin-bottom: 5px;
+            overflow: auto;
+            display: block;
+            outline: none;
+            border: 0;
+            &.circle{
+                min-height: 50px;
+                > div{
+                    float: left;
+                }
+                .thumbnail-wrapper{
+                    &:first-child{
+                        width: 64px; height: 64px;
+                        margin: 5px;
+                        border-radius: 50%;
+                        border: 2px solid #FFFFFF;
+                        background-position: center center;
+                        box-shadow: 0 0 2px 1px rgba(black, 0.2);
+                    }//&:first-child
+                }//.thumbnail-wrapper
+                .content-wrapper{
+                    h4{
+                        margin: 8px 0 0 3px;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        color: $color-primary-blue;
+                    }
+                }//.content-wrapper
+            }//&.circle
+        }//> .box
+        
+        > a.box{
+            &:hover{
+                background-color: $color-grey-bg-light;
+            }//&:hover
+        }//> .box
+        
+    }//&.post-feed
+}//.biq-widgets
