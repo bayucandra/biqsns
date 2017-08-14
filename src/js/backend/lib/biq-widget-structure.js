@@ -162,7 +162,13 @@ BIQWidgetStructure.prototype.post_feed = {
                 {'label':'false', 'value':'false'}
             ]
         },
-        { 'key' : 'type', 'type':'radio', 'label': 'Type',
+        { 'key' : 'staggered', 'type':'radio', 'label':'Staggered',
+            'value' :[
+                {'label': 'true', 'value': 'true'},
+                {'label': 'false', 'value': 'false'}
+            ]
+        },
+        { 'key' : 'type', 'type':'radio', 'label': 'Layout Type',
             'value' : [
                 {'label' : '2 col circle', 'value' : 'two_col_circle'},
                 {'label' : '2 col rect.', 'value' : 'two_col_rect'}

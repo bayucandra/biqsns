@@ -162,7 +162,13 @@ BIQWidgetStructure.prototype.post_feed = {
                 {'label':'false', 'value':'false'}
             ]
         },
-        { 'key' : 'type', 'type':'radio', 'label': 'Type',
+        { 'key' : 'staggered', 'type':'radio', 'label':'Staggered',
+            'value' :[
+                {'label': 'true', 'value': 'true'},
+                {'label': 'false', 'value': 'false'}
+            ]
+        },
+        { 'key' : 'type', 'type':'radio', 'label': 'Layout Type',
             'value' : [
                 {'label' : '2 col circle', 'value' : 'two_col_circle'},
                 {'label' : '2 col rect.', 'value' : 'two_col_rect'}
@@ -1038,6 +1044,7 @@ BIQWidgetElementParser.prototype.postFeed = function(p_el, p_structure_item){
     values['post_category'] = p_el.data('postCategory');
     values['limit'] = p_el.data('limit');
     values['clickable'] = p_el.data('clickable').toString();
+    values['staggered'] = p_el.data('staggered').toString();
     values['type'] = p_el.data('type');
     values['size'] = p_el.data('size');
     return values;

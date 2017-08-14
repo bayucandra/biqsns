@@ -4,7 +4,8 @@
             shortcode_atts(
                 array(
                     'widget_id' => '', 'css_inline'=> '', 'classes'=> '',
-                    'post_category'=>'post_category', 'limit'=> -1, 'clickable'=>'true', 'type' => 'two_col_circle', 'size'=>'medium'
+                    'post_category'=>'post_category', 'limit'=> -1, 'clickable'=>'true', 'staggered' => 'false',
+                    'type' => 'two_col_circle', 'size'=>'medium'
 
                 ),
                 $atts
@@ -13,11 +14,11 @@
 	$css_inline = !empty( $css_inline ) ? ' style = "'.$css_inline.'"' : '';
 	$classes = !empty( $classes ) ? ' '.$classes : '';
         
-        $element_attributes = 'class="biq-widgets'.$classes.' post-feed"'.$css_inline;
+        $element_attributes = 'class="biq-widgets'.$classes.' post-feed'.($staggered=='true'? ' staggered':'').'"'.$css_inline;
         $element_attributes .= is_admin() ?
                 ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="post_feed"'
                 .' data-post-category="'.$post_category.'" data-limit="'.$limit.'" data-type="'.$type.'"'
-                .' data-clickable="'.$clickable.'" data-size="'.$size.'"'
+                .' data-clickable="'.$clickable.'" data-staggered="'.$staggered.'" data-size="'.$size.'"'
                 : '' ;
         
         $posts_per_page = $limit!=-1 ? '&posts_per_page='.$limit : '';
