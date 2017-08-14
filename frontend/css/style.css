@@ -403,6 +403,7 @@ a.biq-widgets.logo img {
 }
 
 .biq-widgets.post-feed > .box {
+  margin-bottom: 5px;
   overflow: auto;
   display: block;
   outline: none;
@@ -427,6 +428,10 @@ a.biq-widgets.logo img {
   margin: 8px 0 0 3px;
   font-size: 1rem;
   font-weight: bold;
+  color: #2c89a0;
+}
+.biq-widgets.post-feed > a.box:hover {
+  background-color: #ececec;
 }
 
 .biq-widgets .widget-not-ready {
