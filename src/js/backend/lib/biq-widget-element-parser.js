@@ -127,8 +127,10 @@ BIQWidgetElementParser.prototype.postFeed = function(p_el, p_structure_item){
     var self = this;
     var values = self.defaultFormValues(p_el);
     values['post_category'] = p_el.data('postCategory');
+    values['limit'] = p_el.data('limit');
+    values['clickable'] = p_el.data('clickable').toString();
     values['type'] = p_el.data('type');
-    values['clickable'] = p_el.data('clickable');
+    values['size'] = p_el.data('size');
     return values;
 };
 /**

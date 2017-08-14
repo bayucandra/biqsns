@@ -155,6 +155,7 @@ BIQWidgetStructure.prototype.post_feed = {
     'title': 'Setting - Post feed',
     'attribute_main':[
         { 'key' : 'post_category', 'type':'text', 'label':'Post Category' },
+        { 'key' : 'limit', 'type':'text', 'label':'Limit' },
         { 'key' : 'clickable', 'type':'radio', 'label':'Clickable',
             'value' : [
                 {'label': 'true', 'value':'true'},
@@ -171,7 +172,7 @@ BIQWidgetStructure.prototype.post_feed = {
             'value' :[
                 {'label':'Thumbnail', 'value':'thumbnail'},
                 {'label':'Medium', 'value':'medium'},
-                {'label':'Medium Large', 'value':'medium_large'},
+                {'label':'Medium Large', 'value':'medium_large'}
             ]
         }
     ],
@@ -1035,8 +1036,10 @@ BIQWidgetElementParser.prototype.postFeed = function(p_el, p_structure_item){
     var self = this;
     var values = self.defaultFormValues(p_el);
     values['post_category'] = p_el.data('postCategory');
+    values['limit'] = p_el.data('limit');
+    values['clickable'] = p_el.data('clickable').toString();
     values['type'] = p_el.data('type');
-    values['clickable'] = p_el.data('clickable');
+    values['size'] = p_el.data('size');
     return values;
 };
 /**

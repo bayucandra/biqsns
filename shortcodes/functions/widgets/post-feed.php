@@ -4,7 +4,7 @@
             shortcode_atts(
                 array(
                     'widget_id' => '', 'css_inline'=> '', 'classes'=> '',
-                    'post_category'=>'post_category', 'clickable'=>'true','type' => 'two_col_circle', 'limit'=> -1
+                    'post_category'=>'post_category', 'limit'=> -1, 'clickable'=>'true', 'type' => 'two_col_circle', 'size'=>'medium'
 
                 ),
                 $atts
@@ -16,10 +16,11 @@
         $element_attributes = 'class="biq-widgets'.$classes.' post-feed"'.$css_inline;
         $element_attributes .= is_admin() ?
                 ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="post_feed"'
-                .' data-post-category="'.$post_category.'" data-type="'.$type.'" data-limit="'.$limit.'"'
+                .' data-post-category="'.$post_category.'" data-limit="'.$limit.'" data-type="'.$type.'"'
+                .' data-clickable="'.$clickable.'" data-size="'.$size.'"'
                 : '' ;
         
-        $posts_per_page = $limit!=-1 ? '&posts_per_page'.$limit : '';
+        $posts_per_page = $limit!=-1 ? '&posts_per_page='.$limit : '';
         
         $post_html = '';
         query_posts('category_name='.$post_category.$posts_per_page);
@@ -35,7 +36,7 @@
                     $post_html .= 
                         '<div class="thumbnail-wrapper"'
                             . (has_post_thumbnail() ? 
-                                'style="background-image: url(\''.get_the_post_thumbnail_url(get_the_id(), 'thumbnail').'\')"'
+                                'style="background-image: url(\''.get_the_post_thumbnail_url(get_the_id(), $size).'\')"'
                             :'')
                             .'>'//closure of <div
                         .'</div>'

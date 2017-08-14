@@ -155,6 +155,7 @@ BIQWidgetStructure.prototype.post_feed = {
     'title': 'Setting - Post feed',
     'attribute_main':[
         { 'key' : 'post_category', 'type':'text', 'label':'Post Category' },
+        { 'key' : 'limit', 'type':'text', 'label':'Limit' },
         { 'key' : 'clickable', 'type':'radio', 'label':'Clickable',
             'value' : [
                 {'label': 'true', 'value':'true'},
@@ -171,7 +172,7 @@ BIQWidgetStructure.prototype.post_feed = {
             'value' :[
                 {'label':'Thumbnail', 'value':'thumbnail'},
                 {'label':'Medium', 'value':'medium'},
-                {'label':'Medium Large', 'value':'medium_large'},
+                {'label':'Medium Large', 'value':'medium_large'}
             ]
         }
     ],

@@ -417,12 +417,14 @@ a.biq-widgets.logo img {
 .biq-widgets.post-feed > .box.circle .thumbnail-wrapper:first-child {
   width: 64px;
   height: 64px;
+  margin: 5px;
   border-radius: 50%;
-  padding: 5px;
+  border: 2px solid #FFFFFF;
   background-position: center center;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 .biq-widgets.post-feed > .box.circle .content-wrapper h4 {
-  margin: 3px 0 0 8px;
+  margin: 8px 0 0 3px;
   font-size: 1rem;
   font-weight: bold;
 }
