@@ -196,7 +196,10 @@
             if( !empty($p_data["css_inline"]) ){ $attributes["css_inline"] = $p_data["css_inline"]; }
             if( !empty($p_data["classes"]) ){ $attributes["classes"] = $p_data["classes"]; }
             $attributes["post_category"] = $p_data["post_category"];
+            $attributes["limit"] = $p_data["limit"];
             $attributes["clickable"] = $p_data["clickable"];
+            $attributes["staggered"] = $p_data["staggered"];
+            $attributes["type"] = $p_data["type"];
             $attributes["size"] = $p_data["size"];
             
             $update_arr = array("attributes"=>$attributes);

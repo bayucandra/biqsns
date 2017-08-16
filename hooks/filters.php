@@ -24,3 +24,13 @@ function biq_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'biq_wp_title', 10, 2 );
+
+function biq_excerpt_length($length){
+    return 5;
+}
+add_filter( 'excerpt_length', 'biq_excerpt_length',1 );
+
+function biq_excerpt_more(){
+    return ' …';
+}
+add_filter('excerpt_more', 'biq_excerpt_more');

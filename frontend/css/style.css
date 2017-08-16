@@ -151,6 +151,8 @@ h6 {
   background-color: #f2f2f2;
   padding: 1rem 0;
   margin-top: 1rem;
+  /*box-shadow: 0 -2px 1px 0 rgba(black, 0.1);*/
+  border-top: 1px solid #37abc8;
 }
 
 .biq-footer .column {
@@ -423,15 +425,27 @@ a.biq-widgets.logo img {
   border: 2px solid #FFFFFF;
   background-position: center center;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  background-size: cover;
+}
+.biq-widgets.post-feed > .box.circle .content-wrapper {
+  max-width: 160px;
+  margin-left: 3px;
+  color: #727e88;
 }
 .biq-widgets.post-feed > .box.circle .content-wrapper h4 {
-  margin: 8px 0 0 3px;
+  margin: 8px 0 0;
   font-size: 1rem;
   font-weight: bold;
   color: #2c89a0;
 }
 .biq-widgets.post-feed > a.box:hover {
   background-color: #ececec;
+}
+.biq-widgets.post-feed[data-staggered="true"] > .box:nth-child(even) .thumbnail-wrapper {
+  float: right;
+}
+.biq-widgets.post-feed[data-staggered="true"] > .box:nth-child(even) .content-wrapper {
+  text-align: right;
 }
 
 .biq-widgets .widget-not-ready {
