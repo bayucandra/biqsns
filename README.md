@@ -19,7 +19,7 @@
 Please pay attention to following requirements in order to run this theme
 <ul>
     <li>PHP-GD installed on server</li>
-    <li>Woocommerce plugin v 2.6.13 installed and activated</li>
+    <li>Woocommerce plugin v 2.6.13 installed and activated ( Download <a href="https://github.com/woocommerce/woocommerce/archive/2.6.13.zip">here</a> )</li>
     <li>Wordpress V > 4</li>
 </ul>
 

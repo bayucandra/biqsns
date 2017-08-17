@@ -20,7 +20,8 @@ var config ={
 };
 
 var compass_config = {
-    sourcemap: config.dev_mode ? false : true,
+    sourcemap: config.dev_mode ? true : false,
+    debug: config.dev_mode ? true : false,
     style: config.dev_mode ? 'expanded' : 'compressed',
     require: ['susy', 'breakpoint']
 };
@@ -28,14 +29,16 @@ var compass_config = {
 gulp.task('compass-frontend', function(){
     var config = biqExtend(compass_config, {sass : 'sass/frontend', css: '../frontend/css'});
     return gulp.src('sass/frontend/style.scss')
-            .pipe(
-                compass(config)
-            )
-            .on('error',
-                    notify.onError(function(error){
-                        return "Error Sass: " + error.message;
-                    })
+//            .pipe(sourcemaps.init())
+                .pipe(
+                    compass(config)
                 )
+                .on('error',
+                        notify.onError(function(error){
+                            return "Error Sass: " + error.message;
+                        })
+                    )
+//            .pipe(sourcemaps.write())
             .pipe(notify("Sass finish compiled")) ;
 });
 gulp.task('compass', ['compass-frontend']);
