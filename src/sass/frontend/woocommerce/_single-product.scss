@@ -35,7 +35,6 @@ div.product.type-product{
                 display:block;
                 margin: 2px auto;
                 overflow: hidden;
-                
                 img{
                     width: 100%; height: auto;
                     @include transition(all 0.3s ease-in-out);
@@ -48,6 +47,9 @@ div.product.type-product{
                     @include span(3 of 12 first (gutter-position: after));
                 }*/
                 &:last-child{
+                    margin-right: 0;
+                }
+                &:nth-child(4n){
                     margin-right: 0;
                 }
                 
