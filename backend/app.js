@@ -120,12 +120,12 @@ BIQWidgetStructure.prototype.slider = {
                 { type: 'two_col', inputs:[
                         { key: 'title', type:'text', 'label':'Title', flex: 70 },
                         {type: 'spacer', flex: 5},
-                        { key: 'title_color', type:'text', 'label':'Color', 'placeholder': '#hex', flex: 30 }
+                        { key: 'title_color', type:'text', 'label':'Color', 'placeholder': '#hex', 'required': true, flex: 30 }
                 ] },
                 { type: 'two_col', inputs:[
                         { key: 'caption', type:'text', 'label':'Caption', flex: 70 },
                         {type: 'spacer', flex: 5},
-                        { key: 'caption_color', type:'text', 'label':'Color', 'placeholder': '#hex', flex: 30 }
+                        { key: 'caption_color', type:'text', 'label':'Color', 'placeholder': '#hex', 'required': true, flex: 30 }
                 ] },
                 { 'key':'url', type:'text', 'label':'URL' }
             ],

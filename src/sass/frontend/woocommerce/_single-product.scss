@@ -34,18 +34,30 @@ div.product.type-product{
             a{
                 display:block;
                 margin: 2px auto;
+                overflow: hidden;
+                
                 img{
                     width: 100%; height: auto;
+                    @include transition(all 0.3s ease-in-out);
                 }
                 @include span(3 of 12 (gutter-position: after));
                 &.first{
                     @include span(3 of 12 first (gutter-position: after));
                 }
-                &.last{
+/*                &.last{
                     @include span(3 of 12 first (gutter-position: after));
+                }*/
+                &:last-child{
+                    margin-right: 0;
                 }
-            }
-        }
+                
+                &:hover{
+                    img{
+                        @include transform( scale( 1.3, 1.3 ) );
+                    }
+                }//&:hover
+            }//a
+        }//.thumbnails
         > a{
             overflow: auto;
             display: block;
@@ -53,7 +65,7 @@ div.product.type-product{
             > img{
                 height: auto;
                 width: auto;
-                max-width: 98%;
+                max-width: 100%;
             }// > img
         }// > a
     }// > .images

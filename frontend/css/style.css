@@ -466,7 +466,7 @@ a.biq-widgets.logo img {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-short-description\.scss}line{font-family:\000039}}
 .biq-widgets.footer-short-description h4 {
-  margin-top: 0;
+  margin: 0 0 -0.5rem 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-short-description\.scss}line{font-family:\0000312}}
 .biq-widgets.footer-short-description ul {
@@ -568,19 +568,20 @@ a.biq-widgets.contact-email-simple .text {
   margin: -1rem 0 1.5rem;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\000037}}
-.woocommerce.archive .woocommerce-result-count {
+.woocommerce.archive .woocommerce-result-count, .woocommerce.archive .woocommerce-info {
   float: left;
   margin: 0;
   margin-bottom: 0.5rem;
   width: 50%;
-  color: #aaaaaa;
+  color: #ff7f2a;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000314}}
 .woocommerce.archive .woocommerce-ordering {
   text-align: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000319}}
-.woocommerce.archive ul.biq-products {
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000320}}
+.woocommerce ul.biq-products {
   list-style: none;
   list-style-type: none;
   position: relative;
@@ -591,8 +592,8 @@ a.biq-widgets.contact-email-simple .text {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000328}}
-.woocommerce.archive ul.biq-products li.product {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000329}}
+.woocommerce ul.biq-products li.product {
   position: relative;
   list-style: none;
   display: inline-block;
@@ -604,28 +605,28 @@ a.biq-widgets.contact-email-simple .text {
   /*width: <?php echo floor( 100/$biq_sns_settings['woocommerce']['loop_shop_columns'] *100) / 100;?>%;*/
 }
 @media (max-width: 639px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000328}}
-  .woocommerce.archive ul.biq-products li.product {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000329}}
+  .woocommerce ul.biq-products li.product {
     height: 260px;
     overflow: hidden;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000341}}
-.woocommerce.archive ul.biq-products li.product:hover {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000342}}
+.woocommerce ul.biq-products li.product:hover {
   -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000344}}
-.woocommerce.archive ul.biq-products li.product a {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000345}}
+.woocommerce ul.biq-products li.product a {
   display: block;
   position: relative;
   overflow: hidden;
   color: #444444;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000350}}
-.woocommerce.archive ul.biq-products li.product a > .onsale {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000351}}
+.woocommerce ul.biq-products li.product a > .onsale {
   display: block;
   background-color: #cc0000;
   width: 100px;
@@ -641,8 +642,8 @@ a.biq-widgets.contact-email-simple .text {
   -webkit-transform: rotate(-30deg);
   transform: rotate(-30deg);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000362}}
-.woocommerce.archive ul.biq-products li.product a > .image {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000363}}
+.woocommerce ul.biq-products li.product a > .image {
   width: 100%;
   height: 240px;
   overflow: hidden;
@@ -653,8 +654,8 @@ a.biq-widgets.contact-email-simple .text {
   -webkit-justify-content: center;
   justify-content: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000370}}
-.woocommerce.archive ul.biq-products li.product a > .image > img.wp-post-image {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000371}}
+.woocommerce ul.biq-products li.product a > .image > img.wp-post-image {
   width: auto;
   height: 240px;
   z-index: -1;
@@ -664,53 +665,53 @@ a.biq-widgets.contact-email-simple .text {
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 980px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000370}}
-  .woocommerce.archive ul.biq-products li.product a > .image > img.wp-post-image {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000371}}
+  .woocommerce ul.biq-products li.product a > .image > img.wp-post-image {
     width: 100%;
     height: auto;
   }
 }
 @media (max-width: 639px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000362}}
-  .woocommerce.archive ul.biq-products li.product a > .image {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000363}}
+  .woocommerce ul.biq-products li.product a > .image {
     height: 150px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000384}}
-.woocommerce.archive ul.biq-products li.product a h3 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000385}}
+.woocommerce ul.biq-products li.product a h3 {
   margin: 0.5rem 0 0;
   font-size: 1.1rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000388}}
-.woocommerce.archive ul.biq-products li.product a p.short-desc {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000389}}
+.woocommerce ul.biq-products li.product a p.short-desc {
   margin: 5px;
   text-align: justify;
   font-size: 14px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000393}}
-.woocommerce.archive ul.biq-products li.product a .price {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000394}}
+.woocommerce ul.biq-products li.product a .price {
   color: #1f8fb4;
   margin: 0.5rem auto;
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000397}}
-.woocommerce.archive ul.biq-products li.product a .price .woocommerce-Price-currencySymbol {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\0000398}}
+.woocommerce ul.biq-products li.product a .price .woocommerce-Price-currencySymbol {
   margin-right: 5px;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003102}}
-.woocommerce.archive ul.biq-products li.product a del {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003103}}
+.woocommerce ul.biq-products li.product a del {
   font-weight: normal;
   color: gray;
   margin-right: 5px;
   font-size: 0.9rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003108}}
-.woocommerce.archive ul.biq-products li.product a ins {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003109}}
+.woocommerce ul.biq-products li.product a ins {
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003111}}
-.woocommerce.archive ul.biq-products li.product a .star-rating {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003112}}
+.woocommerce ul.biq-products li.product a .star-rating {
   height: 16px;
   position: absolute;
   top: 3px;
@@ -720,7 +721,7 @@ a.biq-widgets.contact-email-simple .text {
   opacity: 0.5;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/include\/_mixin\.scss}line{font-family:\000039}}
-.woocommerce.archive ul.biq-products li.product a .star-rating:before {
+.woocommerce ul.biq-products li.product a .star-rating:before {
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22929%22%20height%3D%22886%22%20viewBox%3D%220%200%20929%20886%22%3E%3Cstyle%3Epath%20%7B%20fill%3A%20%23082532%20!important%20%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M929%20343c0%208-5%2017-15%2027L711%20567l48%20279c1%203%201%207%201%2012%200%2015-8%2027-22%2027-7%201-15-1-23-6L464%20747%20214%20879c-9%205-16%207-23%207-14%200-23-15-23-28%200-3%200-7%201-12l48-279L14%20370c-9-10-14-19-14-27%200-14%2010-23%2031-26l280-40L437%2023c7-15%2016-23%2027-23s20%208%2028%2023l125%20254%20280%2040c21%203%2032%2012%2032%2026z%22%2F%3E%3C%2Fsvg%3E") !important;
   background-repeat: repeat-x;
   background-size: 16px;
@@ -736,7 +737,7 @@ a.biq-widgets.contact-email-simple .text {
   width: 80px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/include\/_mixin\.scss}line{font-family:\0000324}}
-.woocommerce.archive ul.biq-products li.product a .star-rating > span {
+.woocommerce ul.biq-products li.product a .star-rating > span {
   display: block;
   text-indent: -10000px;
   width: 80px;
@@ -745,7 +746,7 @@ a.biq-widgets.contact-email-simple .text {
   overflow: hidden;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/include\/_mixin\.scss}line{font-family:\0000332}}
-.woocommerce.archive ul.biq-products li.product a .star-rating > span:before {
+.woocommerce ul.biq-products li.product a .star-rating > span:before {
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22929%22%20height%3D%22886%22%20viewBox%3D%220%200%20929%20886%22%3E%3Cstyle%3Epath%20%7B%20fill%3A%20%231F99CD%20!important%20%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M929%20343c0%208-5%2017-15%2027L711%20567l48%20279c1%203%201%207%201%2012%200%2015-8%2027-22%2027-7%201-15-1-23-6L464%20747%20214%20879c-9%205-16%207-23%207-14%200-23-15-23-28%200-3%200-7%201-12l48-279L14%20370c-9-10-14-19-14-27%200-14%2010-23%2031-26l280-40L437%2023c7-15%2016-23%2027-23s20%208%2028%2023l125%20254%20280%2040c21%203%2032%2012%2032%2026z%22%2F%3E%3C%2Fsvg%3E") !important;
   background-repeat: repeat-x;
   background-size: 16px;
@@ -759,19 +760,19 @@ a.biq-widgets.contact-email-simple .text {
   text-indent: 10000px;
   top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003116}}
-.woocommerce.archive ul.biq-products li.product a:hover > .image > img.wp-post-image {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003117}}
+.woocommerce ul.biq-products li.product a:hover > .image > img.wp-post-image {
   -moz-transform: scale(1.3, 1.3);
   -ms-transform: scale(1.3, 1.3);
   -webkit-transform: scale(1.3, 1.3);
   transform: scale(1.3, 1.3);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003120}}
-.woocommerce.archive ul.biq-products li.product a:hover > h3 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003121}}
+.woocommerce ul.biq-products li.product a:hover > h3 {
   text-decoration: underline;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003126}}
-.woocommerce.archive ul.biq-products li.product > a.add_to_cart_button, .woocommerce.archive ul.biq-products li.product > a.added_to_cart {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003127}}
+.woocommerce ul.biq-products li.product > a.add_to_cart_button, .woocommerce ul.biq-products li.product > a.added_to_cart {
   display: block;
   margin: 0 auto;
   width: 120px;
@@ -786,12 +787,12 @@ a.biq-widgets.contact-email-simple .text {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003134}}
-.woocommerce.archive ul.biq-products li.product > a.add_to_cart_button > .fa, .woocommerce.archive ul.biq-products li.product > a.added_to_cart > .fa {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003135}}
+.woocommerce ul.biq-products li.product > a.add_to_cart_button > .fa, .woocommerce ul.biq-products li.product > a.added_to_cart > .fa {
   margin-left: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003140}}
-.woocommerce.archive ul.biq-products li.product > a.add_to_cart_button {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003141}}
+.woocommerce ul.biq-products li.product > a.add_to_cart_button {
   color: #FFFFFF;
   display: inline-block;
   background: none;
@@ -814,7 +815,7 @@ a.biq-widgets.contact-email-simple .text {
   background-image: linear-gradient(to bottom, #1f8fb4, #00a6db);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/include\/_mixin\.scss}line{font-family:\00003127}}
-.woocommerce.archive ul.biq-products li.product > a.add_to_cart_button:hover {
+.woocommerce ul.biq-products li.product > a.add_to_cart_button:hover {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYTZkYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFmOGZiNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00a6db), color-stop(100%, #1f8fb4));
@@ -822,12 +823,12 @@ a.biq-widgets.contact-email-simple .text {
   background-image: -webkit-linear-gradient(top, #00a6db, #1f8fb4);
   background-image: linear-gradient(to bottom, #00a6db, #1f8fb4);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003144}}
-.woocommerce.archive ul.biq-products li.product > a.add_to_cart_button.added {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003145}}
+.woocommerce ul.biq-products li.product > a.add_to_cart_button.added {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003148}}
-.woocommerce.archive ul.biq-products li.product > a.added_to_cart {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003149}}
+.woocommerce ul.biq-products li.product > a.added_to_cart {
   color: #FFFFFF;
   display: inline-block;
   background: none;
@@ -850,7 +851,7 @@ a.biq-widgets.contact-email-simple .text {
   background-image: linear-gradient(to bottom, #ff8d41, #ffac74);
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/include\/_mixin\.scss}line{font-family:\00003135}}
-.woocommerce.archive ul.biq-products li.product > a.added_to_cart:hover {
+.woocommerce ul.biq-products li.product > a.added_to_cart:hover {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYWM3NCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmOGQ0MSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffac74), color-stop(100%, #ff8d41));
@@ -858,45 +859,45 @@ a.biq-widgets.contact-email-simple .text {
   background-image: -webkit-linear-gradient(top, #ffac74, #ff8d41);
   background-image: linear-gradient(to bottom, #ffac74, #ff8d41);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003155}}
-.woocommerce.archive ul.biq-products.col-3 {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003156}}
+.woocommerce ul.biq-products.col-3 {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/gems\/2\.1\.0\/gems\/susy-2\.2\.12\/sass\/susy\/output\/support\/_clearfix\.scss}line{font-family:\0000312}}
-.woocommerce.archive ul.biq-products.col-3:after {
+.woocommerce ul.biq-products.col-3:after {
   content: " ";
   display: block;
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003158}}
-.woocommerce.archive ul.biq-products.col-3 li.product {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003159}}
+.woocommerce ul.biq-products.col-3 li.product {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
 }
 @media (max-width: 639px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003158}}
-  .woocommerce.archive ul.biq-products.col-3 li.product {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003159}}
+  .woocommerce ul.biq-products.col-3 li.product {
     width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003163}}
-  .woocommerce.archive ul.biq-products.col-3 li.product:nth-child(even) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003164}}
+  .woocommerce ul.biq-products.col-3 li.product:nth-child(even) {
     margin-right: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003168}}
-.woocommerce.archive ul.biq-products.col-3 li.last {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003169}}
+.woocommerce ul.biq-products.col-3 li.last {
   width: 32.20339%;
   float: right;
   margin-right: 0;
 }
 @media (max-width: 639px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003168}}
-  .woocommerce.archive ul.biq-products.col-3 li.last {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003169}}
+  .woocommerce ul.biq-products.col-3 li.last {
     width: 49.15254%;
     float: right;
     margin-right: 0;
@@ -1005,40 +1006,53 @@ div.product.type-product > .images .thumbnails:after {
 div.product.type-product > .images .thumbnails a {
   display: block;
   margin: 2px auto;
+  overflow: hidden;
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
+  /*                &.last{
+                      @include span(3 of 12 first (gutter-position: after));
+                  }*/
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000339}}
 div.product.type-product > .images .thumbnails a img {
   width: 100%;
   height: auto;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000344}}
 div.product.type-product > .images .thumbnails a.first {
   width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000344}}
-div.product.type-product > .images .thumbnails a.last {
-  width: 23.72881%;
-  float: left;
-  margin-right: 1.69492%;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000350}}
+div.product.type-product > .images .thumbnails a:last-child {
+  margin-right: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000355}}
+div.product.type-product > .images .thumbnails a:hover img {
+  -moz-transform: scale(1.3, 1.3);
+  -ms-transform: scale(1.3, 1.3);
+  -webkit-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000361}}
 div.product.type-product > .images > a {
   overflow: auto;
   display: block;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000365}}
 div.product.type-product > .images > a > img {
   height: auto;
   width: auto;
-  max-width: 98%;
+  max-width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000372}}
 div.product.type-product > .summary {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1048,11 +1062,11 @@ div.product.type-product > .summary {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000374}}
 div.product.type-product > .summary h1 {
   margin: 5px 0 15px auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000378}}
 div.product.type-product > .summary .woocommerce-product-rating .star-rating {
   height: 16px;
   position: relative;
@@ -1100,46 +1114,46 @@ div.product.type-product > .summary .woocommerce-product-rating .star-rating > s
   text-indent: 10000px;
   top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000381}}
 div.product.type-product > .summary .woocommerce-product-rating a.woocommerce-review-link {
   color: #1f8fb4;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000384}}
 div.product.type-product > .summary .woocommerce-product-rating a.woocommerce-review-link:hover {
   text-decoration: underline;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000389}}
 div.product.type-product > .summary p.price {
   font-size: 18px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000391}}
 div.product.type-product > .summary p.price del {
   color: #999999;
   margin-right: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000395}}
 div.product.type-product > .summary p.price ins {
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003100}}
 div.product.type-product > .summary div[itemprop="description"] p {
   text-align: justify;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003104}}
 div.product.type-product > .summary .cart {
   overflow: auto;
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003106}}
 div.product.type-product > .summary .cart .quantity {
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003108}}
 div.product.type-product > .summary .cart .quantity .input-text {
   width: 100px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003112}}
 div.product.type-product > .summary .cart .single_add_to_cart_button {
   float: left;
   margin-left: 5px;
@@ -1174,37 +1188,37 @@ div.product.type-product > .summary .cart .single_add_to_cart_button:hover {
   background-image: -webkit-linear-gradient(top, #00a6db, #1f8fb4);
   background-image: linear-gradient(to bottom, #00a6db, #1f8fb4);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003119}}
 div.product.type-product > .summary .product_meta {
   font-size: 15px;
   margin-top: 7px;
   padding-top: 3px;
   border-top: 1px solid #cccccc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003124}}
 div.product.type-product > .summary .product_meta a {
   color: #1f8fb4;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003130}}
 div.product.type-product > .woocommerce-tabs {
   clear: both;
   overflow: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003121}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003133}}
 div.product.type-product > .woocommerce-tabs > ul.wc-tabs {
   list-style-type: none;
   margin: 30px 0 0 0;
   padding: 0;
   overflow: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003138}}
 div.product.type-product > .woocommerce-tabs > ul.wc-tabs > li {
   display: inline-block;
   float: left;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003142}}
 div.product.type-product > .woocommerce-tabs > ul.wc-tabs > li > a {
   display: block;
   padding: 8px 16px;
@@ -1212,7 +1226,7 @@ div.product.type-product > .woocommerce-tabs > ul.wc-tabs > li > a {
   text-decoration: none;
   font-size: 16px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003150}}
 div.product.type-product > .woocommerce-tabs > ul.wc-tabs > li.active::after {
   content: "";
   position: absolute;
@@ -1222,11 +1236,11 @@ div.product.type-product > .woocommerce-tabs > ul.wc-tabs > li.active::after {
   left: 0;
   background-color: #1f8fb4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003146}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003158}}
 div.product.type-product > .woocommerce-tabs > ul.wc-tabs > li.active > a {
   color: #1f8fb4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003163}}
 div.product.type-product > .woocommerce-tabs > ul.wc-tabs > li:hover::after {
   content: "";
   position: absolute;
@@ -1236,20 +1250,20 @@ div.product.type-product > .woocommerce-tabs > ul.wc-tabs > li:hover::after {
   left: 0;
   background-color: #00a6db;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003171}}
 div.product.type-product > .woocommerce-tabs > ul.wc-tabs > li:hover > a {
   color: #00a6db;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003167}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003179}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist {
   list-style: none;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003182}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li {
   border-bottom: 1px solid #e6e6e6;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003172}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003184}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container {
   padding: 10px 0 10px 0;
   max-width: 100%;
@@ -1262,7 +1276,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlis
   display: block;
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003175}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003187}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .biq-avatar {
   display: block;
   padding: 3px;
@@ -1276,7 +1290,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlis
   overflow: hidden;
   *zoom: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003192}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .biq-avatar img {
   margin-left: 10px;
   -moz-border-radius: 50%;
@@ -1288,7 +1302,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlis
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 360px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003175}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003187}}
   div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .biq-avatar {
     text-align: center;
     -moz-box-sizing: border-box;
@@ -1300,12 +1314,12 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlis
     padding-right: 0.83333%;
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003190}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003202}}
   div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .biq-avatar img {
     margin: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003207}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .comment-text {
   position: relative;
   padding: 10px 10px 0 0;
@@ -1316,7 +1330,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlis
   width: 83.33333%;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003199}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003211}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .comment-text .star-rating {
   position: absolute;
   right: 10px;
@@ -1369,16 +1383,16 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlis
   text-indent: 10000px;
   top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003204}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003216}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .comment-text p {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003207}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003219}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .comment-text .description {
   margin-top: 10px;
 }
 @media (max-width: 360px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003207}}
   div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist > li > .comment_container .comment-text {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1390,20 +1404,20 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlis
     margin: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003218}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003230}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews ol.commentlist li:nth-last-child(1) {
   border-bottom: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003222}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003234}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper {
   margin-top: 10px;
   border-top: 2px solid #00a6db;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003225}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003237}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form {
   padding: 0 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003228}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003240}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .required {
   color: red;
 }
@@ -1466,7 +1480,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .select2-container a {
   padding: 5px 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003232}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003244}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .comment-form-author, div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .comment-form-email {
   float: left;
   width: 50%;
@@ -1474,17 +1488,17 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003243}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003255}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .comment-form-rating {
   clear: both;
   overflow: auto;
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003246}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003258}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .comment-form-rating > label {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003249}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003261}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .comment-form-rating p.stars {
   margin: 0;
   position: relative;
@@ -1493,7 +1507,7 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   /*                                        a:not(.active){
                                       }*/
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003252}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003264}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .comment-form-rating p.stars a {
   display: block;
   float: left;
@@ -1509,15 +1523,15 @@ div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_
   box-sizing: border-box;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22929%22%20height%3D%22886%22%20viewBox%3D%220%200%20929%20886%22%3E%3Cstyle%3Epath%20%7B%20fill%3A%20%23082532%20!important%20%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M929%20343c0%208-5%2017-15%2027L711%20567l48%20279c1%203%201%207%201%2012%200%2015-8%2027-22%2027-7%201-15-1-23-6L464%20747%20214%20879c-9%205-16%207-23%207-14%200-23-15-23-28%200-3%200-7%201-12l48-279L14%20370c-9-10-14-19-14-27%200-14%2010-23%2031-26l280-40L437%2023c7-15%2016-23%2027-23s20%208%2028%2023l125%20254%20280%2040c21%203%2032%2012%2032%2026z%22%2F%3E%3C%2Fsvg%3E") !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003266}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003278}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .comment-form-rating p.stars.selected a {
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22929%22%20height%3D%22886%22%20viewBox%3D%220%200%20929%20886%22%3E%3Cstyle%3Epath%20%7B%20fill%3A%20%231F99CD%20!important%20%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M929%20343c0%208-5%2017-15%2027L711%20567l48%20279c1%203%201%207%201%2012%200%2015-8%2027-22%2027-7%201-15-1-23-6L464%20747%20214%20879c-9%205-16%207-23%207-14%200-23-15-23-28%200-3%200-7%201-12l48-279L14%20370c-9-10-14-19-14-27%200-14%2010-23%2031-26l280-40L437%2023c7-15%2016-23%2027-23s20%208%2028%2023l125%20254%20280%2040c21%203%2032%2012%2032%2026z%22%2F%3E%3C%2Fsvg%3E") !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003269}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003281}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform .comment-form-rating p.stars.selected a.active ~ a {
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22929%22%20height%3D%22886%22%20viewBox%3D%220%200%20929%20886%22%3E%3Cstyle%3Epath%20%7B%20fill%3A%20%23082532%20!important%20%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M929%20343c0%208-5%2017-15%2027L711%20567l48%20279c1%203%201%207%201%2012%200%2015-8%2027-22%2027-7%201-15-1-23-6L464%20747%20214%20879c-9%205-16%207-23%207-14%200-23-15-23-28%200-3%200-7%201-12l48-279L14%20370c-9-10-14-19-14-27%200-14%2010-23%2031-26l280-40L437%2023c7-15%2016-23%2027-23s20%208%2028%2023l125%20254%20280%2040c21%203%2032%2012%2032%2026z%22%2F%3E%3C%2Fsvg%3E") !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003275}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_single-product\.scss}line{font-family:\00003287}}
 div.product.type-product > .woocommerce-tabs #tab-reviews #reviews #review_form_wrapper #review_form #commentform p {
   margin: 15px auto;
 }
