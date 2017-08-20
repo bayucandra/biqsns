@@ -187,29 +187,35 @@ div.product.type-product{
                             padding: 10px 0 10px 0;
                             @include container(100%);
                             .biq-avatar{
-                                display: block;
-                                padding: 3px;
-                                @include span( 2 of 12 );
-                                @include clearfix;
+                                text-align: center;
+                                @include span( 12 of 12 );
+                                clear: both;
+                                img{
+                                    margin:0;
+                                }
+                                @include breakpoint($break-lt-xs){
+                                    display: block;
+                                    padding: 3px;
+                                    text-align: left;
+                                    @include span( 2 of 12 );
+                                    @include clearfix;
+                                }
                                 img{
                                     margin-left: 10px;
                                     @include border-radius(50%);
                                     padding: 3px;
                                     @include box-shadow( 0 0 3px 0 rgba(black, 0.4) );
                                 }
-                                @include breakpoint($break-xss){
-                                    text-align: center;
-                                    @include span( 12 of 12 );
-                                    clear: both;
-                                    img{
-                                        margin:0;
-                                    }
-                                }
                             }//.biq-avatar
                             .comment-text{
                                 position: relative;
                                 padding: 10px 10px 0 0;
-                                text-align: justify;
+                                @include span( 12 of 12 );
+                                margin: 0;
+                                @include breakpoint($break-lt-xs){
+                                    text-align: justify;
+                                }
+                                
                                 .star-rating{
                                     position: absolute;
                                     right: 10px; top: 0;
@@ -222,10 +228,6 @@ div.product.type-product{
                                     margin-top: 10px;
                                 }//.description
                                 @include span(10 of 12 no-gutter);
-                                @include breakpoint($break-xss){
-                                    @include span( 12 of 12 );
-                                    margin: 0;
-                                }
                             }// .comment-text
                         }// > .comment-container
                     }// > li

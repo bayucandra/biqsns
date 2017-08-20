@@ -22,13 +22,14 @@
     border-top: 1px solid lighten($primary-blue, 10);
 }
 .biq-footer .column{
-    width: 33%;
-    padding: 0.5rem 1rem;
     @include box-sizing(border-box);
-    @include breakpoint($break-xs){
-        width: 50%;
-    }
+    width: 50%;
+    
     @include breakpoint(max-width 480px){
         width: 100%;
+    }
+    @include breakpoint($break-lg){
+        width: 50%;
+        padding: 0.5rem 1rem;
     }
 }

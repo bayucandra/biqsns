@@ -1,14 +1,14 @@
 .biq-box-content{
-    width: $width-content;
-    position: relative;
-    &.right{
-        float:right;
-    }
-    &.left{
-        float:left;
-        overflow:hidden;
-    }
+    width: 100%;
     @include breakpoint($break-sm){
-        width: 100%;
+        width: $width-content;
+        position: relative;
+        &.right{
+            float:right;
+        }
+        &.left{
+            float:left;
+            overflow:hidden;
+        }
     }
 }

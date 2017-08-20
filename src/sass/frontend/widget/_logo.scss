@@ -1,13 +1,16 @@
 a.biq-widgets.logo{
     height: 70px;
-    width : 250px;
-    float: left;
     padding: 10px 0;
+    width: 100%;
     @include box-sizing(border-box);
     @include display-flex(inline-flex);
     @include flex-direction(row);
     @include align-items(center);
     @include justify-content(center);
+    @include breakpoint($break-xs){
+        width : 250px;
+        float: left;
+    }
 }
 a.biq-widgets.logo img{
     max-height: 100%;
