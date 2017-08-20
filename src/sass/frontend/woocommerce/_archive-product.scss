@@ -29,7 +29,7 @@
                 &.product{
                     height: auto;
                     position: relative;
-                    margin-bottom: 5px;
+                    margin-bottom: 10px;
                     overflow: hidden;
                     text-align: center;
                     display: inline-block;
@@ -37,6 +37,7 @@
                     box-sizing: border-box;
                     @include breakpoint($break-xs){
                         height: 360px;
+                        margin-bottom: 5px;
                         overflow: visible;
                     }
                     &:hover{
@@ -82,13 +83,25 @@
                             }//img.wp-post-image
                         }//.image
                         h3{
-                            margin: 0.5rem 0 0;
+                            height: 1.5rem;
+                            overflow: hidden;
                             font-size: 1.1rem;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            margin: 0.5rem 0 0;
+                            @include breakpoint($break-sm){
+                                white-space: normal;
+                            }
                         }//h3
                         p.short-desc{
+                            height: 50px;
+                            overflow: hidden;
                             margin: 5px;
                             text-align: justify;
                             font-size: 14px;
+                            @include breakpoint($break-lg){
+                                height: auto;
+                            }
                         }
                         .price{
                             color: $primary-blue-dark;
