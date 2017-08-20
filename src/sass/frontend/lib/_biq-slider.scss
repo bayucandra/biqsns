@@ -7,7 +7,6 @@
     height:400px;
     width:98%;
     margin: 0px 2% 10px 0px;
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
     position:relative;
     overflow:hidden;
     /*background-color:#DDDDDD;*/
@@ -20,6 +19,9 @@
     box-shadow: 0 2px 3px #999999;*/
     /*border-bottom: 5px solid #f4911e;*/
     margin: 0;
+    &.ready{
+        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+    }//&.ready
     @media screen and ($break-sm){
         width: 90%;
         margin: 0;

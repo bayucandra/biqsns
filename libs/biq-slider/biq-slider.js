@@ -12,6 +12,7 @@ function BIQSlider(p_conf_overide){
     }
 
     self.init_view();
+    
     setTimeout(function(){ self.start(); },self.conf.player_start_timeout);
 }
 BIQSlider.prototype.conf = {
@@ -181,6 +182,7 @@ BIQSlider.prototype.check_images_isloaded = function(){
 	}
     });
     if(is_all_loaded){
+        jQuery(self.conf.wrapper).addClass('ready');
 	jQuery(self.conf.wrapper).css("background-image","none");
 	clearInterval(self.slider_state.check_image_interval);
 	if(self.slider_state.total_img>1){
