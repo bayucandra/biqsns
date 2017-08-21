@@ -1,15 +1,22 @@
 .biq-widgets{
     &.menu-main{
-        min-height:5rem;
-        margin:0 0.5rem;
+        min-height: 4rem;
         font-size:1em;
         overflow:visible;
         z-index:30;
+        @include breakpoint($break-xs){
+            min-height:5rem;
+        }
         &.left{
             float:left;
+            margin: 0 0.2rem;
+            @include breakpoint($break-xs){
+                margin-left: 1rem;
+            }
         }//&.left
         &.right{
             float:right;
+            margin-right: 0.5rem;
         }//&.right
         input[type=checkbox]{
             display: none;

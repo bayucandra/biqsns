@@ -1,16 +1,29 @@
-$width-content : 750px;
+$width-content : 740px;
 $width-sidebar : 250px;
 
+$primary-blue : #2c89a0;
 $primary-blue-dark     : #1f8fb4;
 $primary-blue-light    : #00a6db;
 
 $primary-yellow-light : #ffc2ab;
 $primary-yellow-dark : #ff8d41;
+$primary-orange : #ff7f2a;
+$primary-text: #444444;
+$secondary-text: lighten($primary-text, 40);
+
+$bg-grey-light: #ececec;
+$bg-grey-lighter: #f2f2f2;
+$steel-grey:   #727e88;
 
 $secondary-contrast: #444444;
 $secondary-inactive : lighten( black, 50 );
 
-$break-xss : max-width 360px;
+/*$break-xss : max-width 360px;
 $break-lt-xs : max-width 639px;
 $break-xs : max-width 640px;
-$break-sm : max-width 980px;
+$break-sm : max-width 980px;*/
+$break-xss: min-width 320px;
+$break-lt-xs: min-width 480px;
+$break-xs: min-width 768px;
+$break-sm: min-width 992px;
+$break-lg: min-width 1200px;

@@ -1,13 +1,10 @@
 .biq-box-sidebar{
-    position:relative;
-    width: $width-sidebar;
-    &.right{
-        float:right;
+    
+    @include flex-direction(column);
+    .biq-box-wrapper{
+        @include flex(0 1);
     }
-    &.left{
-        float:left;
-    }
-    @include breakpoint($break-sm){
+    @include breakpoint($break-xs){
         clear: both;
         width: 100%;
         @include display-flex;
@@ -17,10 +14,21 @@
             @include flex(1 0);
         }
     }
-    @include breakpoint($break-lt-xs){
-        @include flex-direction(column);
+    
+    @include breakpoint($break-sm){
+        display: block;
+        clear: none;
+        position:relative;
+        width: $width-sidebar;
+        &.right{
+            float:right;
+        }
+        &.left{
+            float:left;
+        }
+        
         .biq-box-wrapper{
-            @include flex(0 1);
+            margin: 0;
         }
     }
 }

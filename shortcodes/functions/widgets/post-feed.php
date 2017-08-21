@@ -14,17 +14,18 @@
 	$css_inline = !empty( $css_inline ) ? ' style = "'.$css_inline.'"' : '';
 	$classes = !empty( $classes ) ? ' '.$classes : '';
         
-        $element_attributes = 'class="biq-widgets'.$classes.' post-feed'.($staggered=='true'? ' staggered':'').'"'.$css_inline;
+        $element_attributes = 'class="biq-widgets'.$classes.' post-feed"'.$css_inline;
         $element_attributes .= is_admin() ?
-                ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="post_feed"'
+                ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="post_feed" data-biq-css-default="post-feed"'
                 .' data-post-category="'.$post_category.'" data-limit="'.$limit.'" data-type="'.$type.'"'
-                .' data-clickable="'.$clickable.'" data-staggered="'.$staggered.'" data-size="'.$size.'"'
+                .' data-clickable="'.$clickable.'" data-size="'.$size.'"'
                 : '' ;
+        $element_attributes .=  ' data-staggered="'.$staggered.'"';
         
         $posts_per_page = $limit!=-1 ? '&posts_per_page='.$limit : '';
         
         $post_html = '';
-        query_posts('category_name='.$post_category.$posts_per_page);
+        query_posts('category_name='.$post_category.'&order=ASC'.$posts_per_page);
         while(have_posts()) : the_post();
             switch($type){
                 case 'two_col_circle':
@@ -37,14 +38,13 @@
                     $post_html .= 
                         '<div class="thumbnail-wrapper"'
                             . (has_post_thumbnail() ? 
-                                'style="background-image: url(\''.get_the_post_thumbnail_url(get_the_id(), $size).'\')"'
+                                ' style="background-image: url(\''.get_the_post_thumbnail_url(get_the_id(), $size).'\')"'
                             :'')
                             .'>'//closure of <div
                         .'</div>'
                         .'<div class="content-wrapper">'
-                            .'<h4>'
-                                . get_the_title()
-                            . '</h4>'
+                            .'<h4>'. get_the_title(). '</h4>'
+                            . '<div>'.wp_strip_all_tags(get_the_excerpt()).'</div>'
                         . '</div>';
                     
                     if($clickable == 'false'){
@@ -55,6 +55,10 @@
                     break;
             }
         endwhile;
+        
+        if(!have_posts()){
+            $post_html.='***<h5> There is no post for category: '.$post_category.'</h5>***';
+        }
         
         return 
             '<div '.$element_attributes.'>'.$post_html.'</div>';

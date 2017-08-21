@@ -12,21 +12,24 @@
     overflow:visible;
 }
 .biq-header .line-top{
-    background-color:#f2f2f2;
+    background-color:$bg-grey-lighter;
 }
 .biq-footer{
-    background-color:#f2f2f2;
+    background-color:$bg-grey-lighter;
     padding: 1rem 0;
     margin-top: 1rem;
+    /*box-shadow: 0 -2px 1px 0 rgba(black, 0.1);*/
+    border-top: 1px solid lighten($primary-blue, 10);
 }
 .biq-footer .column{
-    width: 33%;
-    padding: 0.5rem 1rem;
     @include box-sizing(border-box);
-    @include breakpoint($break-xs){
-        width: 50%;
-    }
+    width: 50%;
+    
     @include breakpoint(max-width 480px){
         width: 100%;
+    }
+    @include breakpoint($break-lg){
+        width: 50%;
+        padding: 0.5rem 1rem;
     }
 }

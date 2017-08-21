@@ -19,14 +19,18 @@
                         border: 2px solid #FFFFFF;
                         background-position: center center;
                         box-shadow: 0 0 2px 1px rgba(black, 0.2);
+                        background-size: cover;
                     }//&:first-child
                 }//.thumbnail-wrapper
                 .content-wrapper{
+                    max-width: 160px;
+                    margin-left: 3px;
+                    color: $steel-grey;
                     h4{
-                        margin: 8px 0 0 3px;
+                        margin: 8px 0 0;
                         font-size: 1rem;
                         font-weight: bold;
-                        color: $color-primary-blue;
+                        color: $primary-blue;
                     }
                 }//.content-wrapper
             }//&.circle
@@ -34,9 +38,21 @@
         
         > a.box{
             &:hover{
-                background-color: $color-grey-bg-light;
+                background-color: $bg-grey-light;
             }//&:hover
         }//> .box
         
     }//&.post-feed
+    &.post-feed[data-staggered="true"]{
+        > .box{
+            &:nth-child(even){
+                .thumbnail-wrapper{
+                    float: right;
+                }
+                .content-wrapper{
+                    text-align: right;
+                }
+            }
+        }
+    }
 }//.biq-widgets

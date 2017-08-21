@@ -5,7 +5,8 @@
 */
 .biq-widgets.slider{
     height:400px;
-    width:100%;
+    width:98%;
+    margin: 0px 2% 10px 0px;
     position:relative;
     overflow:hidden;
     /*background-color:#DDDDDD;*/
@@ -18,6 +19,14 @@
     box-shadow: 0 2px 3px #999999;*/
     /*border-bottom: 5px solid #f4911e;*/
     margin: 0;
+    &.ready{
+        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+    }//&.ready
+    @media screen and ($break-sm){
+        width: 90%;
+        margin: 0;
+        box-shadow: none;
+    }
 }
 /*.biq-widgets.slider img{
     position:absolute;
@@ -35,6 +44,8 @@
 .biq-widgets.slider .slide .text{
     position:absolute; top:0; left:0;
     width:100%; height:100%;
+    padding: 0 5px;
+    box-sizing: border-box;
     text-align: center;
 }
 .biq-widgets.slider .slide .text h2{
