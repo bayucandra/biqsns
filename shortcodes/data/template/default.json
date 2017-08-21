@@ -61,6 +61,9 @@
                                 "shortcode": "footer_short_description",
                                 "attributes" : { "description": "Lorem ipsum dolor sit amet, nemore constituam cum te, id aperiam convenire sit.",
                                     "classes":"column" }
+                            },
+                            {
+                                "shortcode":"footer_developer_info"
                             }
                         ]
                     }
