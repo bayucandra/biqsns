@@ -204,6 +204,7 @@ h6 {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 50%;
+  float: left;
 }
 @media (max-width: 480px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000324}}
@@ -217,6 +218,18 @@ h6 {
     width: 50%;
     padding: 0.5rem 1rem;
   }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000336}}
+.biq-footer .column:first-child {
+  padding-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000339}}
+.biq-footer .column:last-child {
+  padding-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000342}}
+.biq-footer .column.right {
+  float: right;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_category-list\.scss}line{font-family:\000032}}
@@ -502,6 +515,61 @@ a.biq-widgets.logo img {
   padding-left: 10px;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\000032}}
+.biq-widgets.footer-developer-info {
+  width: 50%;
+  text-align: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\000036}}
+.biq-widgets.footer-developer-info .header h5 {
+  margin: 0;
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\000039}}
+.biq-widgets.footer-developer-info .header h5 span {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000311}}
+.biq-widgets.footer-developer-info .header h5 span:first-child {
+  color: #2c89a0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000314}}
+.biq-widgets.footer-developer-info .header h5 span:nth-child(2) {
+  color: #ff7f2a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000319}}
+.biq-widgets.footer-developer-info .header img {
+  width: auto;
+  height: 25px;
+  margin: 0 0 -5px 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000325}}
+.biq-widgets.footer-developer-info .footer {
+  margin-top: 10px;
+  line-height: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000328}}
+.biq-widgets.footer-developer-info .footer > * {
+  margin-left: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000331}}
+.biq-widgets.footer-developer-info .footer > a {
+  border: 0;
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000334}}
+.biq-widgets.footer-developer-info .footer > a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000337}}
+.biq-widgets.footer-developer-info .footer > a img {
+  display: block;
+  border: 0;
+  width: auto;
+  height: 20px;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_post-feed\.scss}line{font-family:\000033}}
 .biq-widgets.post-feed > .box {
   margin-bottom: 5px;
@@ -555,19 +623,19 @@ a.biq-widgets.logo img {
   text-align: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\000039}}
 .biq-widgets .widget-not-ready {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\0000313}}
 a.biq-widgets.contact-email-simple {
   width: 250px;
   float: left;
   padding: 5px 5px 5px 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\0000319}}
 a.biq-widgets.contact-email-simple > * {
   height: 1rem;
   line-height: 1rem;
@@ -575,18 +643,18 @@ a.biq-widgets.contact-email-simple > * {
   position: relative;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\0000325}}
 a.biq-widgets.contact-email-simple > div {
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\0000328}}
 a.biq-widgets.contact-email-simple .icon {
   float: left;
   width: 21px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_widget\.scss}line{font-family:\0000332}}
 a.biq-widgets.contact-email-simple .text {
   margin-left: 5px;
   color: #666666;

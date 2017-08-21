@@ -1,0 +1,46 @@
+.biq-widgets{
+    &.footer-developer-info{
+        width: 50%;
+        text-align: right;
+        .header{
+            h5{
+                margin: 0;
+                display: inline-block;
+                span{
+                    text-shadow: 1px 1px 1px rgba(black, 0.4);
+                    &:first-child{
+                        color: $primary-blue;
+                    }
+                    &:nth-child(2){
+                        color: $primary-orange;
+                    }
+                }
+            }//h5
+            img{
+                width: auto;
+                height: 25px;
+                margin: 0 0 -5px 10px;
+            }//img
+        }//.header
+        .footer{
+            margin-top: 10px;
+            line-height: 1;
+            > * {
+                margin-left: 10px;
+            }
+            > a{
+                border: 0;
+                display: inline-block;
+                &:hover{
+                    @include opacity(0.6);
+                }
+                img{
+                    display: block;
+                    border: 0;
+                    width: auto;
+                    height: 20px;
+                }
+            }
+        }//.footer
+    }//&.footer-developer-info
+}//.biq-widgets
