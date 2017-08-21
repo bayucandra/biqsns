@@ -151,6 +151,20 @@ BIQWidgetStructure.prototype.footer_short_description = {
     ],
     'attribute_css' : BIQWidgetStructureDefaults.attribute_css
 };
+
+BIQWidgetStructure.prototype.footer_developer_info = {
+    'title': 'Setting - Footer developer info',
+    'attribute_main':[
+        {'key':'visible', 'type':'radio', 'label':'Visible on web',
+            'value':[
+                {'label':'true', 'value':'true'},
+                {'label':'false', 'value':'false'}
+            ]
+        }
+    ],
+    'attribute_css' : BIQWidgetStructureDefaults.attribute_css
+};
+
 BIQWidgetStructure.prototype.post_feed = {
     'title': 'Setting - Post feed',
     'attribute_main':[
@@ -1038,6 +1052,12 @@ BIQWidgetElementParser.prototype.footerShortDescription = function(p_el, p_struc
     values["description"] = p_el.data('description');
     return values;
 };
+BIQWidgetElementParser.prototype.footerDeveloperInfo = function(p_el, p_structure_item){
+    var self = this;
+    var values = self.defaultFormValues(p_el);
+    values["visible"] = p_el.data('visible')!==true ? 'false' : 'true';
+    return values;
+};
 BIQWidgetElementParser.prototype.postFeed = function(p_el, p_structure_item){
     var self = this;
     var values = self.defaultFormValues(p_el);
@@ -1120,125 +1140,146 @@ BIQWidgetElementParser.prototype.typeToFunction = function(p_str){
     return ret;
 };
 
-var biqTab = function($rootScope){//named biqTab
-    return {
-	restrict : 'E',
-	transclude: true,
-	scope : {
-	    tabType : '@',//tab/url
-	    headerHeight: '@', 
-	    containerWidth: '@',//with 'px' / '%' sufix
-	    ngclass: '='
-	},
-	controller : ['$scope','$attrs', function($scope, $attrs){
-	    var self = this;
-	    var panes = $scope.panes = [];
-//	    $scope.getStyle = function(){ return 'tst';};
-//	    console.log(self.style);
-	    //BEGIN CSS CLASS GENERATE==========================
-	    $scope.headerHeightClass = function(){
-		return ' h'+$scope.headerHeight;
-	    };
-	    $scope.containerStyle = {};
-	    if( $attrs.hasOwnProperty( 'containerWidth') ) $scope.containerStyle['width'] = $attrs.containerWidth;
-//	    $scope.containerStyle = function(){
-//		var style = '';
-//		if($scope.containerWidth!=='')
-//		return ' w'+$scope.containerWidth;
-//	    };
-	    //END CSS CLASS GENERATE***************************
-	    $scope.select = function(pane) {
-		angular.forEach(panes, function(pane) {
-		    pane.selected = false;
-		});
-		pane.selected = true;
-	    };
-	    $scope.click = function(pane){
-		$scope.select(pane);
-		if($scope.tabType === 'url' ){
-		     window.location = pane.url;
-		}
-	    };
-	    self.addPane = function(pane) {
-		if ( (panes.length === 0) || ( typeof pane.active !== 'undefined' ) ) {
-		  $scope.select(pane);
-		}
-		panes.push(pane);
-	    };
-	}],
-	template: '<div class="biq-tab disable-select{{headerHeightClass()}}">\n\
-	    <ul>\n\
-	      <li ng-repeat="pane in panes" ng-class="{active:pane.selected}">\n\
-		<span ng-click="click(pane)">{{pane.title}}</span>\n\
-	      </li>\n\
-	    </ul>\n\
-	    <div ng-show="tabType===\'tab\'" class="tab-content" ng-transclude ng-style={{containerStyle}}></div>\n\
-	  </div>'
-    };
-//    "@"   (  Text binding / one-way binding )
-//"="   ( Direct model binding / two-way binding )
-//"&"   ( Behaviour binding / Method binding  )
-};
-
-var biqTabItem = function(){
-    return {
-	require: '^^biqTab',
-	restrict: 'E',
-	transclude: true,
-	scope: {
-	  title: '@', url:'@', active:'@'
-	},
-	link: function(scope, element, attrs, biqTabCtrl) {
-	    biqTabCtrl.addPane(scope);
-	},
-	template:
-	    '<div class="tab-pane animate-show" ng-show="selected">\n\
-		<div ng-transclude></div>\n\
-	    </div>'
-    };
-};
-
 /*
  *Created by: Bayu candra <bayucandra@gmail.com>
  *Creation Year: 2016
  */
-"use strict";
+(function(){
+    "use strict";
 
-var bngapp = angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', 'bsLoadingOverlay', 'ui-notification', 'ngMessages'])
-.controller('BCtrl', function($scope, $mdMedia, $rootScope, BIQThemeManager, $http, $q){
-    $rootScope.BIQThemeManager = BIQThemeManager;
-    $rootScope.BIQThemeManager.init();
-    $rootScope.scopeCtrl = $scope;
-	
-    angular.element(document).ready(function(){
-	$b('.notice').remove();
-    });
-})
-.factory('BIQThemeDialog', function($mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout, $mdSidenav){
-    var ref = new BIQThemeDialog($mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout, $mdSidenav);
-    
-    return ref;
-})
-.factory('BIQThemeManager', function(Notification, $q, BIQThemeDialog, BIQWidgetElementParser){
-    var ref = new BIQThemeManager(Notification, $q, BIQThemeDialog, BIQWidgetElementParser);
-//    ref.BIQWidgetElementParser = BIQWidgetElementParser;
-//    ref.dialog = BIQThemeDialog;
-    return ref;
-})
-.factory( 'BIQWidgetElementParser', function($http, $q, Notification){
-    var ref = new BIQWidgetElementParser($http, $q, Notification);
-    return ref;
-})
-.directive('biqTab', biqTab)
-.directive( 'biqTabItem', biqTabItem )
-.config(function(NotificationProvider) {
-    NotificationProvider.setOptions({
-	delay: 2500,
-	startTop: 20,
-	startRight: 10,
-	verticalSpacing: 20,
-	horizontalSpacing: 20,
-	positionX: 'left',
-	positionY: 'bottom'
-    });
-  });
+    var bngapp = angular.module('BApp',['ngAnimate','ngMaterial', 'lfNgMdFileInput', 'bsLoadingOverlay', 'ui-notification', 'ngMessages'])
+    .controller('BCtrl',
+        ['$scope', '$mdMedia', '$rootScope', 'BIQThemeManager', '$http', '$q',
+            function($scope, $mdMedia, $rootScope, BIQThemeManager, $http, $q){
+            $rootScope.BIQThemeManager = BIQThemeManager;
+            $rootScope.BIQThemeManager.init();
+            $rootScope.scopeCtrl = $scope;
+
+            angular.element(document).ready(function(){
+                $b('.notice').remove();
+            });
+        }]
+    )
+    .factory('BIQThemeDialog',
+        [ '$mdDialog', '$mdMedia', 'bsLoadingOverlayService', 'Notification', '$rootScope', '$timeout', '$mdSidenav',
+        function($mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout, $mdSidenav){
+            var ref = new BIQThemeDialog($mdDialog, $mdMedia, bsLoadingOverlayService, Notification, $rootScope, $timeout, $mdSidenav);
+
+            return ref;
+        }]
+    )
+    .factory('BIQThemeManager',
+        ['Notification', '$q', 'BIQThemeDialog', 'BIQWidgetElementParser',
+        function(Notification, $q, BIQThemeDialog, BIQWidgetElementParser){
+            var ref = new BIQThemeManager(Notification, $q, BIQThemeDialog, BIQWidgetElementParser);
+        //    ref.BIQWidgetElementParser = BIQWidgetElementParser;
+        //    ref.dialog = BIQThemeDialog;
+            return ref;
+        }]
+    )
+    .factory( 'BIQWidgetElementParser',
+        ['$http', '$q', 'Notification',
+        function($http, $q, Notification){
+            var ref = new BIQWidgetElementParser($http, $q, Notification);
+            return ref;
+        }]
+    )
+    .config(function(NotificationProvider) {
+        NotificationProvider.setOptions({
+            delay: 2500,
+            startTop: 20,
+            startRight: 10,
+            verticalSpacing: 20,
+            horizontalSpacing: 20,
+            positionX: 'left',
+            positionY: 'bottom'
+        });
+      });
+})();
+(function(){
+    "use strict";
+    angular.module('BApp')
+        .directive('biqTab',[
+            '$rootScope',
+            function($rootScope){//named biqTab
+                return {
+                    restrict : 'E',
+                    transclude: true,
+                    scope : {
+                        tabType : '@',//tab/url
+                        headerHeight: '@', 
+                        containerWidth: '@',//with 'px' / '%' sufix
+                        ngclass: '='
+                    },
+                    controller : ['$scope','$attrs', function($scope, $attrs){
+                        var self = this;
+                        var panes = $scope.panes = [];
+            //	    $scope.getStyle = function(){ return 'tst';};
+            //	    console.log(self.style);
+                        //BEGIN CSS CLASS GENERATE==========================
+                        $scope.headerHeightClass = function(){
+                            return ' h'+$scope.headerHeight;
+                        };
+                        $scope.containerStyle = {};
+                        if( $attrs.hasOwnProperty( 'containerWidth') ) $scope.containerStyle['width'] = $attrs.containerWidth;
+            //	    $scope.containerStyle = function(){
+            //		var style = '';
+            //		if($scope.containerWidth!=='')
+            //		return ' w'+$scope.containerWidth;
+            //	    };
+                        //END CSS CLASS GENERATE***************************
+                        $scope.select = function(pane) {
+                            angular.forEach(panes, function(pane) {
+                                pane.selected = false;
+                            });
+                            pane.selected = true;
+                        };
+                        $scope.click = function(pane){
+                            $scope.select(pane);
+                            if($scope.tabType === 'url' ){
+                                 window.location = pane.url;
+                            }
+                        };
+                        self.addPane = function(pane) {
+                            if ( (panes.length === 0) || ( typeof pane.active !== 'undefined' ) ) {
+                              $scope.select(pane);
+                            }
+                            panes.push(pane);
+                        };
+                    }],
+                    template: '<div class="biq-tab disable-select{{headerHeightClass()}}">\n\
+                        <ul>\n\
+                          <li ng-repeat="pane in panes" ng-class="{active:pane.selected}">\n\
+                            <span ng-click="click(pane)">{{pane.title}}</span>\n\
+                          </li>\n\
+                        </ul>\n\
+                        <div ng-show="tabType===\'tab\'" class="tab-content" ng-transclude ng-style={{containerStyle}}></div>\n\
+                      </div>'
+                };
+            //    "@"   (  Text binding / one-way binding )
+            //"="   ( Direct model binding / two-way binding )
+            //"&"   ( Behaviour binding / Method binding  )
+            }
+
+        ])
+        .directive('biqTabItem',[
+            function(){
+                return {
+                    require: '^^biqTab',
+                    restrict: 'E',
+                    transclude: true,
+                    scope: {
+                      title: '@', url:'@', active:'@'
+                    },
+                    link: function(scope, element, attrs, biqTabCtrl) {
+                        biqTabCtrl.addPane(scope);
+                    },
+                    template:
+                        '<div class="tab-pane animate-show" ng-show="selected">\n\
+                            <div ng-transclude></div>\n\
+                        </div>'
+                };
+            }
+        ]);
+})();
+        

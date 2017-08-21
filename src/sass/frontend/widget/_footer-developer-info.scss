@@ -42,5 +42,11 @@
                 }
             }
         }//.footer
+        &[data-visible*="false"]{
+            opacity: 0;
+        }
+        &[data-visible-admin*="false"]{
+            @include filter(grayscale(90%) blur(2px));
+        }
     }//&.footer-developer-info
 }//.biq-widgets

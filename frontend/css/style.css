@@ -569,6 +569,15 @@ a.biq-widgets.logo img {
   width: auto;
   height: 20px;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000345}}
+.biq-widgets.footer-developer-info[data-visible*="false"] {
+  opacity: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000348}}
+.biq-widgets.footer-developer-info[data-visible-admin*="false"] {
+  -webkit-filter: grayscale(90%) blur(2px);
+  filter: grayscale(90%) blur(2px);
+}
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_post-feed\.scss}line{font-family:\000033}}
 .biq-widgets.post-feed > .box {
