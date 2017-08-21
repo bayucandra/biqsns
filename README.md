@@ -23,8 +23,7 @@ Please pay attention to following requirements in order to run this theme
     <li>Wordpress V > 4</li>
 </ul>
 
-<h3>Supported by:</h3>
+<h3>Developed by:</h3>
 <ul>
-    <li>Sponsor: <a href="http://www.indonesiagreenfurniture.com">www.indonesiagreenfurniture.com</a></li>
-    <li>Hosting: <a href="http://www.biqdev.com">www.biqdev.com</a></li>
+    <li><a href="http://www.biqdev.com">www.biqdev.com</a></li>
 </ul>
