@@ -22,7 +22,8 @@
             },
             "option" : {
                 "home_meta_description" : "",
-                "home_meta_keywords" : ""
+                "home_meta_keywords" : "",
+                "maintenance_mode": ""
             }
         }';
     $settings_arr = json_decode($settings, true);

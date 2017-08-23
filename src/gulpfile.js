@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 //	    .pipe(gulp.dest('../backend/app/'));
 //});
 var config ={
-    dev_mode : true
+    dev_mode : false
 };
 
 var compass_config = {

@@ -169,19 +169,25 @@
                 @include container( 100% );
                 li{
                     &.product{
-
                         @include span(6 of 12 (gutter-position: after));
-                        &:nth-child(even){
-                            margin-right: 0;
+
+                        @include breakpoint(max-width $screen-lt-xs){
+                            &:nth-child(even){
+                                margin-right: 0;
+                            }
                         }
-                        @include breakpoint($break-xs){
+                        
+                        @include breakpoint($break-lt-xs){
                             @include span(4 of 12 (gutter-position: after));
                         }
+/*                        @include breakpoint($break-xs){
+                            @include span(4 of 12 (gutter-position: after));
+                        }*/
                     }//&.product
                     &.last{
                         @include span(6 of 12 last (gutter-position: after));
                         
-                        @include breakpoint($break-xs){
+                        @include breakpoint($break-lt-xs){
                             @include span(4 of 12 last (gutter-position: after));
                         }
                     }//&.last
