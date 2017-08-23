@@ -5,7 +5,7 @@
             shortcode_atts(
                 array(
                     'widget_id'=>'', 'css_inline'=> '', 'classes'=> '',
-                    'show'=>'true',
+                    'visible'=>'true',
                 ),
                 $atts
             )
@@ -18,6 +18,10 @@
         $element_attributes .= is_admin() ?
                 ' data-biq-widget-id="'.$widget_id.'" data-biq-widget-type="footer_developer_info" data-biq-css-default="footer-developer-info"'
                 : '';
+        $element_attributes .= ($visible == 'true') ? 
+                    'data-visible="true"'
+                    :
+                    (is_admin() ? 'data-visible-admin="false"' :'data-visible="false"');
         
         return '<div '.$element_attributes.'>'
                 .'<div class="header">'

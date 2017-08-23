@@ -63,6 +63,9 @@
                 case 'footer_short_description':
                     $widget_result = $this->footer_short_description_update($p_arr);
                     break;
+                case 'footer_developer_info':
+                    $widget_result = $this->footer_developer_info_update($p_arr);
+                    break;
                 case 'post_feed':
                     $widget_result = $this->post_feed_update($p_arr);
                     break;
@@ -182,6 +185,22 @@
             $attributes["description"] = $p_data["description"]; $attributes["description_source"] =$p_data["description_source"];
             
             $update_arr = array( "attributes"=>$attributes );
+            $widget_update_res = $this->widget_update(
+                    $this->template_arr[ $this->biq_sns_settings["active_template"] ],
+                    $update_arr, $p_data["widget_id"]
+                );
+            return $widget_update_res;
+        }
+        /*
+         * @breif Update Footer developer info widget
+         */
+        function footer_developer_info_update($p_data){
+            $attributes = array();
+            if( !empty($p_data["css_inline"]) ){ $attributes["css_inline"] = $p_data["css_inline"]; }
+            if( !empty($p_data["classes"]) ){ $attributes["classes"] = $p_data["classes"]; }
+            $attributes["visible"] = $p_data["visible"];
+            
+            $update_arr = array("attributes"=>$attributes);
             $widget_update_res = $this->widget_update(
                     $this->template_arr[ $this->biq_sns_settings["active_template"] ],
                     $update_arr, $p_data["widget_id"]

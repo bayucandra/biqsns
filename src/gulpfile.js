@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 //	    .pipe(gulp.dest('../backend/app/'));
 //});
 var config ={
-    dev_mode : true
+    dev_mode : false
 };
 
 var compass_config = {
@@ -47,10 +47,10 @@ gulp.task('JS-backend', function(){
     return gulp.src(
 	    ['./js/backend/lib/biq-widget-structure.js', './js/backend/lib/biq-theme-dialog.js', 
 		'./js/backend/lib/biq-theme-manager.js',  './js/backend/lib/biq-widget-element-parser.js',
+		'./js/backend/app.js',//THe main APP
 		//BEGIN BIQ-ANGULAR=============
-		'./js/backend/lib/biq-angular/biq-tab/biq-tab.js',
+		'./js/backend/lib/biq-angular/biq-tab/biq-tab.js'
 		//END BIQ-ANGULAR***************
-		'./js/backend/app.js'//THe main APP
 	    ]
 	)
         .pipe(plumber())

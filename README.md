@@ -1,6 +1,6 @@
 <p>A multi purpose Wordpress theme for display products and online store.</p>
 
-<h3>Current status ( August 21, 2017 ): <font style="color:#FF0000;">Ready for production use.</font></h3>
+<h3>Current status ( August 21, 2017 ): <font style="color:#FF0000;">Ready for production use for display product only, not yet support shopping cart.</font></h3>
 <p>Currently this project still in heavy development process, we will update the status soon when it is ready for production use. We have schedule to finish this theme at November 30, 2016.</p>
 
 <h3>About</h3>
@@ -25,5 +25,5 @@ Please pay attention to following requirements in order to run this theme
 
 <h3>Developed by:</h3>
 <ul>
-    <li><a href="http://www.biqdev.com">www.biqdev.com</a></li>
+    <li><a href="https://www.biqdev.com">www.biqdev.com</a></li>
 </ul>

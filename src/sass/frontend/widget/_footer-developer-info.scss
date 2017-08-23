@@ -1,6 +1,5 @@
 .biq-widgets{
     &.footer-developer-info{
-        width: 50%;
         text-align: right;
         .header{
             h5{
@@ -42,5 +41,11 @@
                 }
             }
         }//.footer
+        &[data-visible*="false"]{
+            opacity: 0;
+        }
+        &[data-visible-admin*="false"]{
+            @include filter(grayscale(90%) blur(2px));
+        }
     }//&.footer-developer-info
 }//.biq-widgets

@@ -151,6 +151,20 @@ BIQWidgetStructure.prototype.footer_short_description = {
     ],
     'attribute_css' : BIQWidgetStructureDefaults.attribute_css
 };
+
+BIQWidgetStructure.prototype.footer_developer_info = {
+    'title': 'Setting - Footer developer info',
+    'attribute_main':[
+        {'key':'visible', 'type':'radio', 'label':'Visible on web',
+            'value':[
+                {'label':'true', 'value':'true'},
+                {'label':'false', 'value':'false'}
+            ]
+        }
+    ],
+    'attribute_css' : BIQWidgetStructureDefaults.attribute_css
+};
+
 BIQWidgetStructure.prototype.post_feed = {
     'title': 'Setting - Post feed',
     'attribute_main':[

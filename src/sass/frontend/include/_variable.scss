@@ -22,8 +22,14 @@ $secondary-inactive : lighten( black, 50 );
 $break-lt-xs : max-width 639px;
 $break-xs : max-width 640px;
 $break-sm : max-width 980px;*/
-$break-xss: min-width 320px;
-$break-lt-xs: min-width 480px;
-$break-xs: min-width 768px;
-$break-sm: min-width 992px;
-$break-lg: min-width 1200px;
+$screen-xss: 320px;
+$screen-lt-xs: 480px;
+$screen-xs: 768px;
+$screen-sm: 992px;
+$screen-lg: 1200px;
+
+$break-xss: min-width $screen-xss;
+$break-lt-xs: min-width $screen-lt-xs;
+$break-xs: min-width $screen-xs;
+$break-sm: min-width $screen-sm;
+$break-lg: min-width $screen-lg;

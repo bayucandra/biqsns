@@ -196,38 +196,33 @@ h6 {
   margin-top: 1rem;
   /*box-shadow: 0 -2px 1px 0 rgba(black, 0.1);*/
   border-top: 1px solid #37abc8;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000325}}
 .biq-footer .column {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 50%;
+  width: 100%;
   float: left;
 }
-@media (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000324}}
-  .biq-footer .column {
-    width: 100%;
-  }
-}
-@media (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000324}}
+@media (min-width: 480px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000325}}
   .biq-footer .column {
     width: 50%;
     padding: 0.5rem 1rem;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000333}}
 .biq-footer .column:first-child {
   padding-left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000336}}
 .biq-footer .column:last-child {
   padding-right: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/_layout\.scss}line{font-family:\0000339}}
 .biq-footer .column.right {
   float: right;
 }
@@ -517,57 +512,65 @@ a.biq-widgets.logo img {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\000032}}
 .biq-widgets.footer-developer-info {
-  width: 50%;
   text-align: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\000035}}
 .biq-widgets.footer-developer-info .header h5 {
   margin: 0;
   display: inline-block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\000039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\000038}}
 .biq-widgets.footer-developer-info .header h5 span {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000310}}
 .biq-widgets.footer-developer-info .header h5 span:first-child {
   color: #2c89a0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000313}}
 .biq-widgets.footer-developer-info .header h5 span:nth-child(2) {
   color: #ff7f2a;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000318}}
 .biq-widgets.footer-developer-info .header img {
   width: auto;
   height: 25px;
   margin: 0 0 -5px 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000324}}
 .biq-widgets.footer-developer-info .footer {
   margin-top: 10px;
   line-height: 1;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000327}}
 .biq-widgets.footer-developer-info .footer > * {
   margin-left: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000330}}
 .biq-widgets.footer-developer-info .footer > a {
   border: 0;
   display: inline-block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000333}}
 .biq-widgets.footer-developer-info .footer > a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000336}}
 .biq-widgets.footer-developer-info .footer > a img {
   display: block;
   border: 0;
   width: auto;
   height: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000344}}
+.biq-widgets.footer-developer-info[data-visible*="false"] {
+  opacity: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_footer-developer-info\.scss}line{font-family:\0000347}}
+.biq-widgets.footer-developer-info[data-visible-admin*="false"] {
+  -webkit-filter: grayscale(90%) blur(2px);
+  filter: grayscale(90%) blur(2px);
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/widget\/_post-feed\.scss}line{font-family:\000033}}
@@ -991,12 +994,17 @@ a.biq-widgets.contact-email-simple .text {
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%;
+  /*                        @include breakpoint($break-xs){
+                              @include span(4 of 12 (gutter-position: after));
+                          }*/
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003174}}
-.woocommerce ul.biq-products.col-3 li.product:nth-child(even) {
-  margin-right: 0;
+@media (max-width: 480px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003175}}
+  .woocommerce ul.biq-products.col-3 li.product:nth-child(even) {
+    margin-right: 0;
+  }
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003171}}
   .woocommerce ul.biq-products.col-3 li.product {
     width: 32.20339%;
@@ -1004,28 +1012,28 @@ a.biq-widgets.contact-email-simple .text {
     margin-right: 1.69492%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003181}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003187}}
 .woocommerce ul.biq-products.col-3 li.last {
   width: 49.15254%;
   float: right;
   margin-right: 0;
 }
-@media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003181}}
+@media (min-width: 480px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003187}}
   .woocommerce ul.biq-products.col-3 li.last {
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003193}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003199}}
 .woocommerce .woocommerce-pagination {
   margin-top: 1em;
   width: 100%;
   float: left;
   text-align: center !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003197}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003203}}
 .woocommerce .woocommerce-pagination .page-numbers .current, .woocommerce .woocommerce-pagination .page-numbers li a:hover {
   padding: 3px 7px !important;
   background: #DDD !important;
@@ -1034,7 +1042,7 @@ a.biq-widgets.contact-email-simple .text {
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003206}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003212}}
 .woocommerce .woocommerce-pagination .page-numbers a:link, .woocommerce .woocommerce-pagination .page-numbers a:visited {
   display: inline !important;
   text-decoration: none !important;
@@ -1046,7 +1054,7 @@ a.biq-widgets.contact-email-simple .text {
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003218}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/html\/biqdev\/wp-content\/themes\/biqsns\/src\/sass\/frontend\/woocommerce\/_archive-product\.scss}line{font-family:\00003224}}
 .woocommerce .woocommerce-pagination .page-numbers li {
   display: inline;
   margin: 2px;

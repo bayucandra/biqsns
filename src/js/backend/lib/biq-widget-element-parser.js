@@ -123,6 +123,12 @@ BIQWidgetElementParser.prototype.footerShortDescription = function(p_el, p_struc
     values["description"] = p_el.data('description');
     return values;
 };
+BIQWidgetElementParser.prototype.footerDeveloperInfo = function(p_el, p_structure_item){
+    var self = this;
+    var values = self.defaultFormValues(p_el);
+    values["visible"] = p_el.data('visible')!==true ? 'false' : 'true';
+    return values;
+};
 BIQWidgetElementParser.prototype.postFeed = function(p_el, p_structure_item){
     var self = this;
     var values = self.defaultFormValues(p_el);
