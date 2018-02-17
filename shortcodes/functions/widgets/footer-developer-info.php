@@ -29,7 +29,7 @@
                     .'<img src="'.$template_uri.'/images/biq/biq-logo.png" alt="BIQDev Logo"/>'
                 .'</div>'
                 .'<div class="footer">'
-                    .'<a href="https://github.com/biqdev/biqsns" target="_blank"><img src="'.$template_uri.'/images/icon/GitHub_Logo.png" alt="Github Logo"/></a>'
+                    .'<a href="https://github.com/bayucandra/biqsns" target="_blank"><img src="'.$template_uri.'/images/icon/GitHub_Logo.png" alt="Github Logo"/></a>'
                     .'<div class="fb-like" data-href="https://web.facebook.com/biqdev" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>'
                 . '</div>'
         . '</div>';

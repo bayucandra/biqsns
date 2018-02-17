@@ -19,8 +19,12 @@
     padding: 1rem 0;
     margin-top: 1rem;
     /*box-shadow: 0 -2px 1px 0 rgba(black, 0.1);*/
-    border-top: 1px solid lighten($primary-blue, 10);
+    /*border-top: 1px solid lighten($primary-blue, 10);*/
+    border-top: 1px solid lighten($steel-grey, 30);
     box-shadow: 2px 2px 5px 0 rgba(black, 0.4);
+    @include breakpoint(min-height 710px){
+        margin-top: 2rem;
+    }
 }
 .biq-footer .column{
     @include box-sizing(border-box);
